@@ -1,7 +1,7 @@
-package dk.easv.presentation.Controller;
+package dk.easv.presentation.controller;
 
 import dk.easv.entities.*;
-import dk.easv.presentation.Model.AppModel;
+import dk.easv.presentation.model.AppModel;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.ListView;
@@ -22,7 +22,7 @@ public class AppController implements Initializable {
     private ListView<TopMovie> lvTopFromSimilar;
 
 
-    private AppModel model = new AppModel();
+    private AppModel model;
     private long timerStartMillis = 0;
     private String timerMsg = "";
 
@@ -37,6 +37,11 @@ public class AppController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+
+    }
+
+    public void setModel(AppModel model) {
+        this.model = model;
         lvUsers.setItems(model.getObsUsers());
         lvTopForUser.setItems(model.getObsTopMovieSeen());
         lvTopAvgNotSeen.setItems(model.getObsTopMovieNotSeen());
@@ -52,7 +57,8 @@ public class AppController implements Initializable {
                     startTimer("Loading all data for user: " + selectedUser);
                     model.loadData(selectedUser);
                 });
+
+        // Select the logged-in user in the listview, automagically trigger the listener above
+        lvUsers.getSelectionModel().select(model.getObsLoggedInUser());
     }
-
-
 }

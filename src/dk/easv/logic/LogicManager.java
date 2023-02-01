@@ -107,5 +107,12 @@ public class LogicManager {
         return favorites;
     }
 
-
+    public User getUser(String userName) {
+        try {
+            return dataMgr.getAllUsers().values().stream().filter(u -> u.getName().equals(userName)).findFirst().get();
+        }
+        catch (NoSuchElementException e){
+            return null;
+        }
+    }
 }

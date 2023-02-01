@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<BorderPane xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.Controller.LogInController">
+<BorderPane xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.LogInController">
    <center>
       <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="256.0" prefWidth="454.0">
          <children>
@@ -22,8 +22,8 @@
                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                </rowConstraints>
                <children>
-                  <PasswordField fx:id="passwordField" GridPane.rowIndex="1" />
-                  <TextField fx:id="userId" />
+                  <PasswordField disable="true" fx:id="passwordField" GridPane.rowIndex="1" />
+                  <TextField fx:id="userId" text="Georgi Facello" />
                </children>
             </GridPane>
             <GridPane layoutX="160.0" layoutY="159.0" prefHeight="30.0" prefWidth="133.0">
