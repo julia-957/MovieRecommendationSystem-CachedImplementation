@@ -1,4 +1,4 @@
-package dk.easv.presentation;
+package dk.easv.presentation.Model;
 
 import dk.easv.entities.*;
 import dk.easv.logic.LogicManager;
