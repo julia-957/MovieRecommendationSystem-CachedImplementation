@@ -12,6 +12,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("presentation/AppTile.fxml"));
         primaryStage.setTitle("Movie Recommendation System 0.01 Beta");
+        primaryStage.setFullScreen(true);
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
     }
