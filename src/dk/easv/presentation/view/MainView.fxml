@@ -7,32 +7,31 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-
-<BorderPane prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.AppController">
+<BorderPane prefHeight="1080.0" prefWidth="1920.0" stylesheets="@main.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.AppController">
    <left>
-      <HBox BorderPane.alignment="CENTER">
+      <HBox style="-fx-background-color: #3B3464;" BorderPane.alignment="CENTER">
          <children>
-            <VBox prefHeight="1000.0" prefWidth="75.0" spacing="30.0">
+            <VBox prefWidth="50.0" spacing="30.0">
                <children>
-                  <HBox prefHeight="75.0">
+                  <HBox prefHeight="50.0">
                      <children>
-                        <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Button" HBox.hgrow="ALWAYS" />
+                        <Button fx:id="homeButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Button" HBox.hgrow="ALWAYS" />
                      </children>
                   </HBox>
-                  <HBox layoutX="10.0" layoutY="10.0" prefHeight="75.0" prefWidth="200.0">
+                  <HBox layoutX="10.0" layoutY="10.0" prefHeight="50.0">
                      <children>
-                        <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Button" HBox.hgrow="ALWAYS" />
+                        <Button fx:id="searchButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Button" HBox.hgrow="ALWAYS" />
                      </children>
                   </HBox>
-                  <HBox layoutX="10.0" layoutY="10.0" prefHeight="75.0" prefWidth="200.0">
+                  <HBox layoutX="10.0" layoutY="10.0" prefHeight="50.0">
                      <children>
-                        <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Button" HBox.hgrow="ALWAYS" />
+                        <Button fx:id="favouritesButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Button" HBox.hgrow="ALWAYS" />
                      </children>
                   </HBox>
                   <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
-                  <HBox layoutX="10.0" layoutY="10.0" prefHeight="75.0" prefWidth="200.0">
+                  <HBox layoutX="10.0" layoutY="10.0" prefHeight="50.0">
                      <children>
-                        <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Button" HBox.hgrow="ALWAYS">
+                        <Button fx:id="accountButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Button" HBox.hgrow="ALWAYS">
                            <HBox.margin>
                               <Insets />
                            </HBox.margin>
@@ -51,6 +50,6 @@
       </HBox>
    </left>
    <center>
-      <FlowPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+      <FlowPane style="-fx-background-color: #2D2449;" stylesheets="@main.css" BorderPane.alignment="CENTER" />
    </center>
 </BorderPane>

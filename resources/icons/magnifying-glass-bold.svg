@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1em"
+   height="1em"
+   viewBox="0 0 256 256"
+   version="1.1"
+   id="svg4"
+   sodipodi:docname="magnifying-glass-bold.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     id="namedview6"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="3.1328125"
+     inkscape:cx="128.1596"
+     inkscape:cy="128.1596"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4" />
+  <path
+     fill="#ffffff"
+     d="M 93.774659,87.885596 79.644642,73.752892 A 32.946895,32.953162 0 0 0 86.657574,53.335127 33.328787,33.335127 0 1 0 53.328787,86.670253 32.946895,32.953162 0 0 0 73.742669,79.655987 l 14.130017,14.132705 a 4.2008159,4.2016149 0 0 0 5.901973,0 4.1660984,4.1668908 0 0 0 0,-5.903096 z M 28.332197,53.335127 a 24.99659,25.001345 0 1 1 24.99659,25.001345 25.031308,25.036069 0 0 1 -24.99659,-25.001345 z"
+     id="path2"
+     style="stroke-width:0.347208" />
+</svg>
