@@ -20,3 +20,8 @@
     -fx-background-color: black;
     -fx-text-fill: white;
 }
+
+#menuBarVBox {
+    -fx-border-radius: 10px;
+    -fx-border-color: white;
+}

@@ -9,9 +9,9 @@
 
 <BorderPane prefHeight="1080.0" prefWidth="1920.0" stylesheets="@main.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.AppController">
    <left>
-      <HBox style="-fx-background-color: #3B3464;" BorderPane.alignment="CENTER">
+      <HBox style="-fx-background-color: #2D2449;" BorderPane.alignment="CENTER">
          <children>
-            <VBox prefWidth="50.0" spacing="30.0">
+            <VBox fx:id="menuBarVBox" prefWidth="50.0" spacing="30.0">
                <children>
                   <HBox prefHeight="50.0">
                      <children>

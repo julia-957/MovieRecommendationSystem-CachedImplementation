@@ -9,6 +9,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.VBox;
 
 import java.net.URL;
 import java.util.*;
@@ -24,14 +25,15 @@ public class AppController implements Initializable {
     private ListView<UserSimilarity> lvTopSimilarUsers;
     @FXML
     private ListView<TopMovie> lvTopFromSimilar;
+    @FXML
+    private Button homeButton, searchButton, favouritesButton, accountButton;
+    @FXML
+    private VBox menuBarVBox;
 
 
     private AppModel model;
     private long timerStartMillis = 0;
     private String timerMsg = "";
-
-    @FXML
-    private Button homeButton, searchButton, favouritesButton, accountButton;
 
     private void startTimer(String message){
         timerStartMillis = System.currentTimeMillis();
@@ -48,25 +50,25 @@ public class AppController implements Initializable {
     }
 
     private void setButtonIcons(){
-        ImageView homeIconView = new ImageView(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/house-bold.png"))));
+        ImageView homeIconView = new ImageView(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/medium indigo/house-bold.sng.png"))));
         homeIconView.setFitHeight(50);
         homeIconView.setFitWidth(50);
         homeButton.setText("");
         homeButton.setGraphic(homeIconView);
 
-        ImageView searchIconView = new ImageView(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/magnifying-glass-bold.png"))));
+        ImageView searchIconView = new ImageView(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/medium indigo/magnifying-glass-bold.png"))));
         searchIconView.setFitHeight(50);
         searchIconView.setFitWidth(50);
         searchButton.setText("");
         searchButton.setGraphic(searchIconView);
 
-        ImageView favouritesIconView = new ImageView(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/star-bold.png"))));
+        ImageView favouritesIconView = new ImageView(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/medium indigo/star-bold.png"))));
         favouritesIconView.setFitHeight(50);
         favouritesIconView.setFitWidth(50);
         favouritesButton.setText("");
         favouritesButton.setGraphic(favouritesIconView);
 
-        ImageView accountIconView = new ImageView(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/user-circle-bold.png"))));
+        ImageView accountIconView = new ImageView(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/medium indigo/user-circle-bold.png"))));
         accountIconView.setFitHeight(50);
         accountIconView.setFitWidth(50);
         accountButton.setText("");
