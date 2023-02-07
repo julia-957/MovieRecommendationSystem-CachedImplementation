@@ -7,6 +7,9 @@
    id="svg4"
    sodipodi:docname="user-circle-bold.svg"
    inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   inkscape:export-filename="C:\Users\Lenovo\Documents\University\Assignments 2nd Semester\Compulsory Assignment 1\icons\medium indigo\user-circle-bold.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -32,8 +35,8 @@
      inkscape:window-maximized="1"
      inkscape:current-layer="svg4" />
   <path
-     fill="#ffffff"
+     fill="#f1edff"
      d="m 95.000026,57.423019 a 37.5,37.483531 0 1 0 -62.847222,27.592044 3.9583333,3.9565949 0 0 0 0.555555,0.520604 37.465278,37.448824 0 0 0 49.583334,0 3.9583333,3.9565949 0 0 0 0.555555,-0.520604 37.395833,37.37941 0 0 0 12.152778,-27.592044 z m -66.666667,0 a 29.166667,29.153857 0 1 1 52.048611,18.012919 29.166667,29.153857 0 0 0 -10.034722,-8.121431 18.055556,18.047626 0 1 0 -25.694444,0 29.166667,29.153857 0 0 0 -10.034722,8.121431 28.958333,28.945616 0 0 1 -6.284723,-18.012919 z m 19.444445,-2.776558 a 9.7222222,9.7179525 0 1 1 9.722222,9.717953 9.7569444,9.7526595 0 0 1 -9.722222,-9.717953 z M 40.69447,81.232003 a 20.798611,20.789477 0 0 1 33.611112,0 29.097222,29.084444 0 0 1 -33.611112,0 z"
      id="path2"
-     style="stroke-width:0.347146" />
+     style="stroke-width:0.347146;fill:#3b3464;fill-opacity:1" />
 </svg>

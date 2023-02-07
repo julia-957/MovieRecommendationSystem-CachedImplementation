@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="1em"
+   height="1em"
+   viewBox="0 0 256 256"
+   version="1.1"
+   id="svg4"
+   sodipodi:docname="star-bold.svg"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs8" />
+  <sodipodi:namedview
+     id="namedview6"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="3.1328125"
+     inkscape:cx="128.1596"
+     inkscape:cy="128.1596"
+     inkscape:window-width="1920"
+     inkscape:window-height="991"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg4" />
+  <path
+     fill="#f1edff"
+     d="M 68.653268,87.008103 A 6.6586458,6.8975709 0 0 1 65.130004,85.936635 L 49.485419,75.657246 34.972157,85.200002 A 7.0142045,7.2658878 0 0 1 27.052894,84.932135 7.2404692,7.5002713 0 0 1 24.273071,76.99658 L 28.507452,59.853103 14.382073,47.698645 a 6.7556163,6.998021 0 0 1 -2.068706,-7.500271 6.6263223,6.8640876 0 0 1 5.850558,-4.754637 l 18.359761,-1.2054 6.852587,-17.913595 a 6.5616752,6.7971209 0 0 1 12.218292,0 l 6.852587,17.913595 18.359761,1.2054 a 6.6263223,6.8640876 0 0 1 5.850558,4.754637 6.7556163,6.998021 0 0 1 -2.068706,7.500271 l -14.125379,12.154458 4.557616,18.516294 a 6.6586458,6.8975709 0 0 1 -2.553558,7.332855 6.4323811,6.6631875 0 0 1 -3.814176,1.305851 z m 0.646471,-7.868589 z M 49.485419,67.420341 a 6.4323811,6.6631875 0 0 1 3.490941,1.037984 l 13.834467,9.073988 -4.008116,-16.37336 A 6.7556163,6.998021 0 0 1 65.00071,54.093966 L 77.542237,43.278842 61.218858,42.207375 a 6.6263223,6.8640876 0 0 1 -5.68894,-4.319353 L 49.485419,22.150846 43.44092,37.888022 a 6.6263223,6.8640876 0 0 1 -5.68894,4.319353 l -16.323379,1.071467 12.541527,10.815124 a 6.7556163,6.998021 0 0 1 2.197999,7.064987 l -4.008116,16.37336 13.834468,-9.073988 a 6.4323811,6.6631875 0 0 1 3.49094,-1.037984 z m -0.64647,7.835104 z"
+     id="path2"
+     style="stroke-width:0.328983;fill:#3b3464;fill-opacity:1"
+     inkscape:export-filename="C:\Users\Lenovo\Documents\University\Assignments 2nd Semester\Compulsory Assignment 1\icons\medium indigo\star-bold.png"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96" />
+</svg>
