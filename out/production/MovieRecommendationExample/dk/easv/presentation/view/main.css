@@ -14,6 +14,14 @@
     -fx-background-color: transparent;
 }
 
+#carouselLeft #carouselLeftView{
+    -fx-image: url(/icons/mediumIndigo/arrow-left.png);
+}
+
+#carouselRight #carouselRightView{
+    -fx-image: url(/icons/mediumIndigo/arrow-right.png);
+}
+
 #homeButton #homeIconView{
     -fx-image: url(/icons/mediumIndigo/house-bold.png);
 }
