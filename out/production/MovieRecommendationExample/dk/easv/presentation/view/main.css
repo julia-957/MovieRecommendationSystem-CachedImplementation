@@ -1,5 +1,9 @@
 * {
     -fx-deep-indigo: #2D2449;
+    -fx-medium-indigo: #3B3464;
+    -fx-electric-lilac: #F1EDFF;
+    -fx-blue: #498CDC;
+    -fx-red: #DC5364;
 }
 
 .backgroundPane{
@@ -44,5 +48,6 @@
 
 #menuBarVBox {
     -fx-border-radius: 10px;
-    -fx-border-color: white;
+    -fx-border-color: #231a38;
+    -fx-effect: dropshadow(gaussian, #231a38, 10, 0, 0, 0);
 }
