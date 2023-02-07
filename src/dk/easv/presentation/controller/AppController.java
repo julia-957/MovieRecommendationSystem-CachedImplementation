@@ -3,6 +3,9 @@ package dk.easv.presentation.controller;
 import dk.easv.Main;
 import dk.easv.entities.*;
 import dk.easv.presentation.model.AppModel;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
+import javafx.event.EventType;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -29,6 +32,8 @@ public class AppController implements Initializable {
     private Button homeButton, searchButton, favouritesButton, accountButton;
     @FXML
     private VBox menuBarVBox;
+    @FXML
+    ImageView homeIconView, searchIconView;
 
 
     private AppModel model;
@@ -50,25 +55,27 @@ public class AppController implements Initializable {
     }
 
     private void setButtonIcons(){
-        ImageView homeIconView = new ImageView(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/medium indigo/house-bold.sng.png"))));
+        homeIconView = new ImageView();
+        homeIconView.setId("homeIconView");
         homeIconView.setFitHeight(50);
         homeIconView.setFitWidth(50);
         homeButton.setText("");
         homeButton.setGraphic(homeIconView);
 
-        ImageView searchIconView = new ImageView(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/medium indigo/magnifying-glass-bold.png"))));
+        searchIconView = new ImageView();
+        searchIconView.setId("searchIconView");
         searchIconView.setFitHeight(50);
         searchIconView.setFitWidth(50);
         searchButton.setText("");
         searchButton.setGraphic(searchIconView);
 
-        ImageView favouritesIconView = new ImageView(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/medium indigo/star-bold.png"))));
+        ImageView favouritesIconView = new ImageView();
         favouritesIconView.setFitHeight(50);
         favouritesIconView.setFitWidth(50);
         favouritesButton.setText("");
         favouritesButton.setGraphic(favouritesIconView);
 
-        ImageView accountIconView = new ImageView(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/medium indigo/user-circle-bold.png"))));
+        ImageView accountIconView = new ImageView(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/mediumIndigo/user-circle-bold.png"))));
         accountIconView.setFitHeight(50);
         accountIconView.setFitWidth(50);
         accountButton.setText("");
@@ -95,5 +102,25 @@ public class AppController implements Initializable {
 
         // Select the logged-in user in the listview, automagically trigger the listener above
         lvUsers.getSelectionModel().select(model.getObsLoggedInUser());
+    }
+
+    @FXML
+    private void handleHomeButton(ActionEvent actionEvent){
+    }
+
+    @FXML
+    private void handleSearchButton(javafx.event.ActionEvent actionEvent) {
+    }
+
+    @FXML
+    private void handleFavouritesButton(javafx.event.ActionEvent actionEvent) {
+    }
+
+    @FXML
+    private void handleAccountButton(javafx.event.ActionEvent actionEvent) {
+    }
+
+    private void buttonColors(ActionEvent actionEvent){
+
     }
 }
