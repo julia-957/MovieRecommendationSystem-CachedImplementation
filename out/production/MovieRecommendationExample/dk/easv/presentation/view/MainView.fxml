@@ -9,7 +9,7 @@
 
 <BorderPane prefHeight="1080.0" prefWidth="1920.0" stylesheets="@main.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.AppController">
    <left>
-      <HBox style="-fx-background-color: #2D2449;" BorderPane.alignment="CENTER">
+      <HBox id="menuHbox" styleClass="backgroundPane" BorderPane.alignment="CENTER">
          <children>
             <VBox fx:id="menuBarVBox" prefWidth="50.0" spacing="30.0">
                <children>
@@ -50,6 +50,6 @@
       </HBox>
    </left>
    <center>
-      <FlowPane style="-fx-background-color: #2D2449;" stylesheets="@main.css" BorderPane.alignment="CENTER" />
+      <FlowPane styleClass="backgroundPane" stylesheets="@main.css" BorderPane.alignment="CENTER" />
    </center>
 </BorderPane>

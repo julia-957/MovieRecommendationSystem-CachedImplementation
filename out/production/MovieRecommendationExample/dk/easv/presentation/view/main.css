@@ -1,3 +1,11 @@
+* {
+    -fx-deep-indigo: #2D2449;
+}
+
+.backgroundPane{
+    -fx-background-color: -fx-deep-indigo;
+}
+
 .button{
     -fx-background-color: transparent;
 }
