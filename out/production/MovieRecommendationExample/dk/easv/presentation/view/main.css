@@ -1,22 +1,4 @@
 .button{
-    -fx-border-color: transparent;
-    -fx-border-width: 0;
-    -fx-background-radius: 0;
-    -fx-background-color: transparent;
-    -fx-font-family:"Segoe UI", Helvetica, Arial, sans-serif;
-    -fx-font-size: 1em; /* 12 */
-    -fx-text-fill: #828282;
-}
-
-.button:focused {
-    -fx-border-color: transparent, white;
-    -fx-border-width: 1, 1;
-    -fx-border-style: solid, segments(1, 2);
-    -fx-border-radius: 0, 0;
-    -fx-border-insets: 1 1 1 1, 0;
-}
-
-.button:pressed {
     -fx-background-color: transparent;
 }
 
@@ -29,13 +11,28 @@
 }
 
 #searchButton #searchIconView{
-    -fx-image: url(icons/mediumIndigo/magnifying-glass-bold.png);
+    -fx-image: url(/icons/mediumIndigo/magnifying-glass-bold.png);
 }
 
 #searchButton:focused #searchIconView{
-    -fx-image: url(icons/electricLilac/magnifying-glass-bold.png);
+    -fx-image: url(/icons/electricLilac/magnifying-glass-bold.png);
 }
 
+#favouritesButton #favouritesIconView{
+    -fx-image: url(/icons/mediumIndigo/star-bold.png);
+}
+
+#favouritesButton:focused #favouritesIconView{
+    -fx-image: url(/icons/electricLilac/star-bold.png);
+}
+
+#accountButton #accountIconView{
+    -fx-image: url(/icons/mediumIndigo/user-circle-bold.png);
+}
+
+#accountButton:focused #accountIconView{
+    -fx-image: url(/icons/electricLilac/user-circle-bold.png);
+}
 
 #menuBarVBox {
     -fx-border-radius: 10px;

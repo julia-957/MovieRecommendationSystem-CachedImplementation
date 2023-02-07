@@ -32,9 +32,6 @@ public class AppController implements Initializable {
     private Button homeButton, searchButton, favouritesButton, accountButton;
     @FXML
     private VBox menuBarVBox;
-    @FXML
-    ImageView homeIconView, searchIconView;
-
 
     private AppModel model;
     private long timerStartMillis = 0;
@@ -55,27 +52,29 @@ public class AppController implements Initializable {
     }
 
     private void setButtonIcons(){
-        homeIconView = new ImageView();
+        ImageView homeIconView = new ImageView(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/mediumIndigo/house-bold.png"))));
         homeIconView.setId("homeIconView");
         homeIconView.setFitHeight(50);
         homeIconView.setFitWidth(50);
         homeButton.setText("");
         homeButton.setGraphic(homeIconView);
 
-        searchIconView = new ImageView();
+        ImageView searchIconView = new ImageView(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/mediumIndigo/magnifying-glass-bold.png"))));
         searchIconView.setId("searchIconView");
         searchIconView.setFitHeight(50);
         searchIconView.setFitWidth(50);
         searchButton.setText("");
         searchButton.setGraphic(searchIconView);
 
-        ImageView favouritesIconView = new ImageView();
+        ImageView favouritesIconView = new ImageView(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/mediumIndigo/star-bold.png"))));
+        favouritesIconView.setId("favouritesIconView");
         favouritesIconView.setFitHeight(50);
         favouritesIconView.setFitWidth(50);
         favouritesButton.setText("");
         favouritesButton.setGraphic(favouritesIconView);
 
         ImageView accountIconView = new ImageView(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/mediumIndigo/user-circle-bold.png"))));
+        accountIconView.setId("accountIconView");
         accountIconView.setFitHeight(50);
         accountIconView.setFitWidth(50);
         accountButton.setText("");
