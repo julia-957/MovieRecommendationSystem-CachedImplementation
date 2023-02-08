@@ -12,6 +12,12 @@
 
 .button{
     -fx-background-color: transparent;
+    -fx-text-fill: -fx-electric-lilac;
+}
+
+.searchMenuButtons{
+    -fx-font-weight: bold;
+    -fx-font-size: 24px;
 }
 
 #homeButton #homeIconView{
@@ -50,4 +56,8 @@
     -fx-border-radius: 10px;
     -fx-border-color: #231a38;
     -fx-effect: dropshadow(gaussian, #231a38, 10, 0, 0, 0);
+}
+
+.label{
+    -fx-text-fill: -fx-electric-lilac;
 }

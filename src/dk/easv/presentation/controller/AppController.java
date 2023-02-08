@@ -7,13 +7,18 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.event.EventType;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.*;
 
@@ -108,18 +113,31 @@ public class AppController implements Initializable {
     }
 
     @FXML
-    private void handleSearchButton(javafx.event.ActionEvent actionEvent) {
+    private void handleSearchButton(ActionEvent actionEvent) {
     }
 
     @FXML
-    private void handleFavouritesButton(javafx.event.ActionEvent actionEvent) {
+    private void handleFavouritesButton(ActionEvent actionEvent) {
     }
 
     @FXML
-    private void handleAccountButton(javafx.event.ActionEvent actionEvent) {
+    private void handleAccountButton(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/dk/easv/presentation/view/LogIn.fxml"));
+        Stage stage = new Stage();
+        Scene scene = new Scene(fxmlLoader.load());
+        stage.setScene(scene);
+        stage.setTitle("Budgetflix 2.1");
+        stage.getIcons().add(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/budgetflixIcon.png"))));
+        stage.centerOnScreen();
+        stage.show();
+
+        Button b = (Button) actionEvent.getSource();
+        Stage thisStage = (Stage) b.getScene().getWindow();
+        thisStage.close();
     }
 
     private void buttonColors(ActionEvent actionEvent){
 
     }
+
 }
