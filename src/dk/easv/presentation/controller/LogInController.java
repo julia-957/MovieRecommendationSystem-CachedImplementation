@@ -1,5 +1,6 @@
 package dk.easv.presentation.controller;
 
+import dk.easv.Main;
 import dk.easv.presentation.model.AppModel;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -21,6 +22,7 @@ public class LogInController implements Initializable {
     @FXML private PasswordField passwordField;
     @FXML private TextField userId;
     private AppModel model;
+    private Main mainApp;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -40,6 +42,7 @@ public class LogInController implements Initializable {
             stage.setMaximized(true);
             stage.show();
             AppController controller = loader.getController();
+            controller.setMainApp(mainApp);
 
             controller.setModel(model);
             Button b = (Button) actionEvent.getSource();
@@ -61,5 +64,9 @@ public class LogInController implements Initializable {
 
     public void signUp(ActionEvent actionEvent) {
         System.out.println("Sign-Up");
+    }
+
+    public void setMainApp(Main mainApp) {
+        this.mainApp = mainApp;
     }
 }

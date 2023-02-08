@@ -9,11 +9,13 @@ import javafx.event.EventType;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -129,7 +131,9 @@ public class AppController implements Initializable {
 
     @FXML
     private void handleSearchButton(ActionEvent actionEvent) throws IOException {
-        mainApp.openSearchScreen();
+        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        mainApp.openSearchWindow(stage);
+
     }
 
     @FXML
