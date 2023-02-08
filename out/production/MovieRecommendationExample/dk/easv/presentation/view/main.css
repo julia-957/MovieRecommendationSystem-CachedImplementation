@@ -8,6 +8,7 @@
 
 .backgroundPane{
     -fx-background-color: -fx-deep-indigo;
+    -fx-border-color: white;
 }
 
 .button{

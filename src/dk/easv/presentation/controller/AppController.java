@@ -55,7 +55,6 @@ public class AppController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         setButtonIcons();
-        System.out.println("created");
     }
 
     private void setButtonIcons(){
@@ -125,13 +124,13 @@ public class AppController implements Initializable {
     @FXML
     private void handleHomeButton(ActionEvent actionEvent) throws IOException {
         Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-        mainApp.openIntroScreen(stage);
+        mainApp.openIntroScreen();
     }
 
     @FXML
     private void handleSearchButton(ActionEvent actionEvent) throws IOException {
         Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-        mainApp.openSearchWindow(stage);
+        mainApp.openSearchWindow();
     }
 
     @FXML

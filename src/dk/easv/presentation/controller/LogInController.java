@@ -31,50 +31,12 @@ public class LogInController implements Initializable {
         model = new AppModel();
     }
 
-    public void logIn(ActionEvent actionEvent) {
+    public void logIn(ActionEvent actionEvent) throws IOException {
         model.loadUsers();
         model.loginUserFromUsername(userId.getText());
         if(model.getObsLoggedInUser()!=null){
-            //Close current window
             mainApp.initRootLayout();
-
-            Button b = (Button) actionEvent.getSource();
-            Stage thisStage = (Stage) b.getScene().getWindow();
-            thisStage.close();
-        /*
-            try {
-
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/dk/easv/presentation/view/MenuRootView.fxml"));
-            Parent root = loader.load();
-
-            GraphicsDevice gd = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
-            int width = gd.getDisplayMode().getWidth()-400;
-            int height = gd.getDisplayMode().getHeight()-350;
-
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root, width, height));
-            stage.setTitle("Budgetflix 2.1");
-            stage.centerOnScreen();
-            stage.show();
-
-            AppController appController = loader.getController();
-            mainApp.setAppController(appController);
-            appController.setMainApp(mainApp);
-            appController.setModel(model);
-
-            //Close current window
-            Button b = (Button) actionEvent.getSource();
-            Stage thisStage = (Stage) b.getScene().getWindow();
-            thisStage.hide();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-            Alert alert = new Alert(Alert.AlertType.ERROR, "Could not load App.fxml");
-            alert.showAndWait();
-        }
-
-         */
-
+            mainApp.openIntroScreen();
         }
         else{
             Alert alert = new Alert(Alert.AlertType.ERROR, "Wrong username or password");

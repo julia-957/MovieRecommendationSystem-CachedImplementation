@@ -4,7 +4,6 @@ import dk.easv.presentation.controller.AppController;
 import dk.easv.presentation.controller.LogInController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
@@ -58,6 +57,7 @@ public class Main extends Application {
             appController.setMainApp(this);
 
             primaryStage.centerOnScreen();
+            primaryStage.setMaximized(true);
             primaryStage.show();
         } catch (IOException e) {
             e.printStackTrace();
@@ -68,27 +68,21 @@ public class Main extends Application {
         launch(args);
     }
 
-   public void openSearchWindow(Stage currentStage) throws IOException {
+   public void openSearchWindow() throws IOException {
        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/dk/easv/presentation/view/SearchView.fxml"));
        BorderPane mainView = fxmlLoader.load();
 
        rootLayout.setCenter(mainView);
-       primaryStage = currentStage;
        primaryStage.centerOnScreen();
        primaryStage.setScene(shownScene);
    }
 
-    public void openIntroScreen(Stage currentStage) throws IOException {
+    public void openIntroScreen() throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/dk/easv/presentation/view/IntroScreen.fxml"));
         VBox introScreen = fxmlLoader.load();
 
         rootLayout.setCenter(introScreen);
-        primaryStage = currentStage;
         primaryStage.centerOnScreen();
         primaryStage.setScene(shownScene);
-    }
-
-    public void setAppController(AppController appController) {
-        this.appController = appController;
     }
 }
