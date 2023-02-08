@@ -7,9 +7,9 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane prefHeight="1080.0" prefWidth="1920.0" stylesheets="@main.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.AppController">
+<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="720.0" minWidth="1400.0" stylesheets="@main.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.AppController">
    <left>
-      <HBox id="menuHbox" styleClass="backgroundPane" BorderPane.alignment="CENTER">
+      <HBox id="menuHbox" maxWidth="100.0" styleClass="backgroundPane" BorderPane.alignment="CENTER">
          <children>
             <VBox fx:id="menuBarVBox" prefWidth="50.0" spacing="30.0">
                <children>

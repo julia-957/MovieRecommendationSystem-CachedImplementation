@@ -4,8 +4,6 @@ import dk.easv.Main;
 import dk.easv.entities.*;
 import dk.easv.presentation.model.AppModel;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
-import javafx.event.EventType;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -15,9 +13,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
-import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -59,6 +55,7 @@ public class AppController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         setButtonIcons();
+        System.out.println("created");
     }
 
     private void setButtonIcons(){
@@ -126,14 +123,15 @@ public class AppController implements Initializable {
     }
 
     @FXML
-    private void handleHomeButton(ActionEvent actionEvent){
+    private void handleHomeButton(ActionEvent actionEvent) throws IOException {
+        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        mainApp.openIntroScreen(stage);
     }
 
     @FXML
     private void handleSearchButton(ActionEvent actionEvent) throws IOException {
         Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
         mainApp.openSearchWindow(stage);
-
     }
 
     @FXML
@@ -163,5 +161,6 @@ public class AppController implements Initializable {
     public void setMainApp(Main mainApp){
         this.mainApp = mainApp;
     }
+
 }
 

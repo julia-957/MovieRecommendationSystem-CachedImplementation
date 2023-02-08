@@ -14,6 +14,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
+import java.awt.*;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -23,6 +24,7 @@ public class LogInController implements Initializable {
     @FXML private TextField userId;
     private AppModel model;
     private Main mainApp;
+    private AppController appController;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -33,27 +35,45 @@ public class LogInController implements Initializable {
         model.loadUsers();
         model.loginUserFromUsername(userId.getText());
         if(model.getObsLoggedInUser()!=null){
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/dk/easv/presentation/view/MenuRootView.fxml"));
-            Parent root = loader.load();
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.setTitle("Budgetflix 2.1");
-            stage.setMaximized(true);
-            stage.show();
-            AppController controller = loader.getController();
-            controller.setMainApp(mainApp);
+            //Close current window
+            mainApp.initRootLayout();
 
-            controller.setModel(model);
             Button b = (Button) actionEvent.getSource();
             Stage thisStage = (Stage) b.getScene().getWindow();
             thisStage.close();
+        /*
+            try {
+
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/dk/easv/presentation/view/MenuRootView.fxml"));
+            Parent root = loader.load();
+
+            GraphicsDevice gd = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
+            int width = gd.getDisplayMode().getWidth()-400;
+            int height = gd.getDisplayMode().getHeight()-350;
+
+            Stage stage = new Stage();
+            stage.setScene(new Scene(root, width, height));
+            stage.setTitle("Budgetflix 2.1");
+            stage.centerOnScreen();
+            stage.show();
+
+            AppController appController = loader.getController();
+            mainApp.setAppController(appController);
+            appController.setMainApp(mainApp);
+            appController.setModel(model);
+
+            //Close current window
+            Button b = (Button) actionEvent.getSource();
+            Stage thisStage = (Stage) b.getScene().getWindow();
+            thisStage.hide();
 
         } catch (IOException e) {
             e.printStackTrace();
             Alert alert = new Alert(Alert.AlertType.ERROR, "Could not load App.fxml");
             alert.showAndWait();
         }
+
+         */
 
         }
         else{
@@ -68,5 +88,9 @@ public class LogInController implements Initializable {
 
     public void setMainApp(Main mainApp) {
         this.mainApp = mainApp;
+    }
+
+    public void setAppController(AppController controller) {
+        this.appController = controller;
     }
 }
