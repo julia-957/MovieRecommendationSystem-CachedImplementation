@@ -5,54 +5,66 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" stylesheets="@main.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<VBox alignment="TOP_CENTER" prefHeight="800.0" prefWidth="1200.0" styleClass="backgroundPane" stylesheets="@main.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.AppController">
    <children>
-      <VBox prefHeight="200.0" styleClass="backgroundPane">
+      <HBox alignment="CENTER" prefHeight="400.0">
          <children>
-            <HBox alignment="CENTER" prefHeight="400.0" spacing="20.0">
+            <HBox alignment="CENTER" prefHeight="400.0" prefWidth="380.0">
                <children>
-                  <HBox alignment="CENTER" prefHeight="400.0" prefWidth="380.0">
+                  <ImageView fitHeight="300.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../cats_2_3.png" />
+                     </image>
+                  </ImageView>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
                      <children>
-                        <ImageView fitHeight="300.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../../../cats_2_3.png" />
-                           </image>
-                        </ImageView>
-                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
-                           <children>
-                              <Label layoutX="2.0" layoutY="52.0" prefHeight="300.0" prefWidth="194.0" text="A group of criminal profilers who work for the FBI as members of its Behavioral Analysis Unit (BAU) using behavioral analysis and profiling to help investigate crimes and find the suspect known as the unsub." wrapText="true" />
-                           </children>
-                        </AnchorPane>
+                        <Label layoutX="2.0" layoutY="52.0" prefHeight="300.0" prefWidth="194.0" text="A group of criminal profilers who work for the FBI as members of its Behavioral Analysis Unit (BAU) using behavioral analysis and profiling to help investigate crimes and find the suspect known as the unsub." wrapText="true" />
                      </children>
-                  </HBox>
-                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="50.0" text="&lt;" />
-                  <HBox alignment="CENTER" layoutX="409.0" layoutY="10.0" prefHeight="400.0" prefWidth="401.0">
+                  </AnchorPane>
+               </children>
+            </HBox>
+            <Button fx:id="carouselLeft" mnemonicParsing="false" prefHeight="25.0" prefWidth="50.0">
+               <graphic>
+                  <ImageView fx:id="carouselLeftView" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic></Button>
+            <HBox alignment="CENTER" layoutX="409.0" layoutY="10.0" prefHeight="400.0" prefWidth="401.0">
+               <children>
+                  <ImageView fitHeight="300.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../cats_2_3.png" />
+                     </image>
+                  </ImageView>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
                      <children>
-                        <ImageView fitHeight="300.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../../../cats_2_3.png" />
-                           </image>
-                        </ImageView>
-                        <Label prefHeight="300.0" prefWidth="200.0" text="A group of criminal profilers who work for the FBI as members of its Behavioral Analysis Unit (BAU) using behavioral analysis and profiling to help investigate crimes and find the suspect known as the unsub." wrapText="true" />
+                        <Label layoutX="2.0" layoutY="52.0" prefHeight="300.0" prefWidth="194.0" text="A group of criminal profilers who work for the FBI as members of its Behavioral Analysis Unit (BAU) using behavioral analysis and profiling to help investigate crimes and find the suspect known as the unsub." wrapText="true" />
                      </children>
-                  </HBox>
-                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="50.0" text="&gt;" />
-                  <HBox alignment="CENTER" layoutX="636.0" layoutY="10.0" prefHeight="400.0" prefWidth="401.0">
+                  </AnchorPane>
+               </children>
+            </HBox>
+            <Button fx:id="carouselRight" mnemonicParsing="false" prefHeight="25.0" prefWidth="50.0" text="&gt;">
+               <graphic>
+                  <ImageView fx:id="carouselRightView" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+               </graphic></Button>
+            <HBox alignment="CENTER" layoutX="636.0" layoutY="10.0" prefHeight="400.0" prefWidth="401.0">
+               <children>
+                  <ImageView fitHeight="300.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../cats_2_3.png" />
+                     </image>
+                  </ImageView>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
                      <children>
-                        <ImageView fitHeight="300.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../../../cats_2_3.png" />
-                           </image>
-                        </ImageView>
-                        <Label prefHeight="300.0" prefWidth="200.0" text="A group of criminal profilers who work for the FBI as members of its Behavioral Analysis Unit (BAU) using behavioral analysis and profiling to help investigate crimes and find the suspect known as the unsub." wrapText="true" />
+                        <Label layoutX="2.0" layoutY="52.0" prefHeight="300.0" prefWidth="194.0" text="A group of criminal profilers who work for the FBI as members of its Behavioral Analysis Unit (BAU) using behavioral analysis and profiling to help investigate crimes and find the suspect known as the unsub." wrapText="true" />
                      </children>
-                  </HBox>
+                  </AnchorPane>
                </children>
             </HBox>
          </children>
-      </VBox>
+      </HBox>
+      <FlowPane prefHeight="401.0" prefWidth="1200.0" />
    </children>
-</HBox>
+</VBox>

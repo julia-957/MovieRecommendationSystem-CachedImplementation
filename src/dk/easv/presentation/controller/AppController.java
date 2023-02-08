@@ -34,7 +34,9 @@ public class AppController implements Initializable {
     @FXML
     private ListView<TopMovie> lvTopFromSimilar;
     @FXML
-    private Button homeButton, searchButton, favouritesButton, accountButton;
+    private Button homeButton, searchButton, favouritesButton, accountButton, carouselLeft, carouselRight;
+    @FXML
+    private ImageView carouselRightView, carouselLeftView;
     @FXML
     private VBox menuBarVBox;
 
@@ -84,6 +86,14 @@ public class AppController implements Initializable {
         accountIconView.setFitWidth(50);
         accountButton.setText("");
         accountButton.setGraphic(accountIconView);
+
+        carouselLeftView.setImage(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/mediumIndigo/arrow-left.png"))));
+        carouselLeft.setText("");
+        carouselLeft.setGraphic(carouselLeftView);
+
+        carouselRightView.setImage(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/mediumIndigo/arrow-right.png"))));
+        carouselRight.setText("");
+        carouselRight.setGraphic(carouselRightView);
     }
 
     public void setModel(AppModel model) {
