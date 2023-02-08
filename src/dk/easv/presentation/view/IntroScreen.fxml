@@ -9,6 +9,7 @@
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
 <VBox alignment="TOP_CENTER" prefHeight="800.0" prefWidth="1200.0" styleClass="backgroundPane" stylesheets="@main.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.AppController">
    <children>
@@ -41,11 +42,11 @@
                         <Image url="@../../../../../resources/icons/mediumIndigo/arrow-left.png" />
                      </image></ImageView>
                </graphic></Button>
-            <HBox alignment="CENTER" layoutX="409.0" layoutY="10.0" prefHeight="400.0" prefWidth="400.0" style="-fx-background-color: #332E59; -fx-border-color: #282043; -fx-border-width: 3;">
+            <HBox fx:id="featuredMovieView" alignment="CENTER" layoutX="409.0" layoutY="10.0" prefHeight="400.0" prefWidth="400.0" style="-fx-background-color: #332E59; -fx-border-color: #282043; -fx-border-width: 3;">
                <children>
-                  <ImageView fitHeight="300.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="featuredMoviePoster" fitHeight="300.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../../cats_2_3.png" />
+                        <Image url="@../../../../../resources/images/cats_2_3.png" />
                      </image>
                      <HBox.margin>
                         <Insets bottom="20.0" left="20.0" top="20.0" />
@@ -53,10 +54,74 @@
                   </ImageView>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0">
                      <children>
-                        <Label layoutX="-5.0" layoutY="27.0" prefHeight="300.0" prefWidth="200.0" text="A group of criminal profilers who work for the FBI as members of its Behavioral Analysis Unit (BAU) using behavioral analysis and profiling to help investigate crimes and find the suspect known as the unsub." textFill="#f1edff" wrapText="true">
+                        <Label fx:id="featuredMovieDescription" alignment="TOP_LEFT" layoutX="1.0" layoutY="140.0" prefHeight="149.0" prefWidth="200.0" text="Mentally abused, enslaved, and coerced into prostitution, a left-for-dead merciless Sister will take on a mission straight from God: whacking sinners in a strictly personal, no-prisoners, vigilante Holy War." textFill="#f1edff" wrapText="true">
                            <padding>
-                              <Insets bottom="20.0" left="10.0" right="20.0" top="20.0" />
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                            </padding></Label>
+                        <Label fx:id="featuredMovieTitle" layoutX="1.0" layoutY="14.0" prefHeight="58.0" prefWidth="200.0" text="Nude Nuns With Big Guns" textFill="#f1edff" wrapText="true">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                        <Label layoutX="1.0" layoutY="87.0" prefHeight="20.0" prefWidth="200.0" text="Action, Comedy, Thriller" textFill="#f1edff">
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
+                        <HBox layoutX="1.0" layoutY="116.0" prefHeight="20.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../../resources/icons/imdb_icon.png" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <Label text="10.0" textFill="#f1edff">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../../resources/icons/imdb_icon.png" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets left="20.0" right="5.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <Label prefHeight="18.0" prefWidth="24.0" text="10.0" textFill="#f1edff">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </HBox>
+                        <Button fx:id="carouselAddBtn" layoutX="10.0" layoutY="293.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="94.0" style="-fx-background-color: #498CDC;" text="Add to favourites">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Button>
+                      <Button fx:id="carouselRemoveBtn" layoutX="124.0" layoutY="293.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="57.0" style="-fx-background-color: #DC5364;" text="Remove">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Button>
+                        <Label layoutY="63.0" prefHeight="20.0" prefWidth="200.0" text="2010" textFill="#f1edff">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </Label>
                      </children>
                   </AnchorPane>
                </children>
@@ -64,7 +129,7 @@
                   <Insets left="25.0" right="25.0" />
                </HBox.margin>
             </HBox>
-            <Button fx:id="carouselRight" mnemonicParsing="false" prefHeight="25.0" prefWidth="50.0" text="&gt;">
+            <Button fx:id="carouselRight" mnemonicParsing="false" prefHeight="25.0" prefWidth="50.0">
                <graphic>
                   <ImageView fx:id="carouselRightView" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                      <image>
