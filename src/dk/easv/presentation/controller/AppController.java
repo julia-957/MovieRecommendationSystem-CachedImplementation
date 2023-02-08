@@ -40,6 +40,7 @@ public class AppController implements Initializable {
     @FXML
     private VBox menuBarVBox;
 
+    private Main mainApp;
     private AppModel model;
     private long timerStartMillis = 0;
     private String timerMsg = "";
@@ -87,17 +88,20 @@ public class AppController implements Initializable {
         accountButton.setText("");
         accountButton.setGraphic(accountIconView);
 
-        carouselLeftView.setImage(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/mediumIndigo/arrow-left.png"))));
-        carouselLeft.setText("");
-        carouselLeft.setGraphic(carouselLeftView);
+        /**USE THIS WHEN OPENING THE INTRO SCREEN
+         carouselLeftView.setImage(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/mediumIndigo/arrow-left.png"))));
+         carouselLeft.setText("");
+         carouselLeft.setGraphic(carouselLeftView);
 
-        carouselRightView.setImage(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/mediumIndigo/arrow-right.png"))));
-        carouselRight.setText("");
-        carouselRight.setGraphic(carouselRightView);
+         carouselRightView.setImage(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/mediumIndigo/arrow-right.png"))));
+         carouselRight.setText("");
+         carouselRight.setGraphic(carouselRightView);
+         **/
     }
 
     public void setModel(AppModel model) {
         this.model = model;
+        /*
         lvUsers.setItems(model.getObsUsers());
         lvTopForUser.setItems(model.getObsTopMovieSeen());
         lvTopAvgNotSeen.setItems(model.getObsTopMovieNotSeen());
@@ -116,6 +120,7 @@ public class AppController implements Initializable {
 
         // Select the logged-in user in the listview, automagically trigger the listener above
         lvUsers.getSelectionModel().select(model.getObsLoggedInUser());
+         */
     }
 
     @FXML
@@ -123,7 +128,8 @@ public class AppController implements Initializable {
     }
 
     @FXML
-    private void handleSearchButton(ActionEvent actionEvent) {
+    private void handleSearchButton(ActionEvent actionEvent) throws IOException {
+        mainApp.openSearchScreen();
     }
 
     @FXML
@@ -132,6 +138,10 @@ public class AppController implements Initializable {
 
     @FXML
     private void handleAccountButton(ActionEvent actionEvent) throws IOException {
+        Button b = (Button) actionEvent.getSource();
+        Stage thisStage = (Stage) b.getScene().getWindow();
+        thisStage.close();
+
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/dk/easv/presentation/view/LogIn.fxml"));
         Stage stage = new Stage();
         Scene scene = new Scene(fxmlLoader.load());
@@ -140,14 +150,14 @@ public class AppController implements Initializable {
         stage.getIcons().add(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/budgetflixIcon.png"))));
         stage.centerOnScreen();
         stage.show();
-
-        Button b = (Button) actionEvent.getSource();
-        Stage thisStage = (Stage) b.getScene().getWindow();
-        thisStage.close();
     }
 
     private void buttonColors(ActionEvent actionEvent){
 
     }
 
+    public void setMainApp(Main mainApp){
+        this.mainApp = mainApp;
+    }
 }
+

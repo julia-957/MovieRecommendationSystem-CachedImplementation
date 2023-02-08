@@ -15,23 +15,23 @@
                <children>
                   <HBox prefHeight="50.0">
                      <children>
-                        <Button fx:id="homeButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleHomeButton" text="Button" HBox.hgrow="ALWAYS" />
+                        <Button fx:id="homeButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleHomeButton" text="Home" HBox.hgrow="ALWAYS" />
                      </children>
                   </HBox>
                   <HBox layoutX="10.0" layoutY="10.0" prefHeight="50.0">
                      <children>
-                        <Button fx:id="searchButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleSearchButton" text="Button" HBox.hgrow="ALWAYS" />
+                        <Button fx:id="searchButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleSearchButton" text="Search" HBox.hgrow="ALWAYS" />
                      </children>
                   </HBox>
                   <HBox layoutX="10.0" layoutY="10.0" prefHeight="50.0">
                      <children>
-                        <Button fx:id="favouritesButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleFavouritesButton" text="Button" HBox.hgrow="ALWAYS" />
+                        <Button fx:id="favouritesButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleFavouritesButton" text="Favourites" HBox.hgrow="ALWAYS" />
                      </children>
                   </HBox>
                   <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
                   <HBox layoutX="10.0" layoutY="10.0" prefHeight="50.0">
                      <children>
-                        <Button fx:id="accountButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleAccountButton" text="Button" HBox.hgrow="ALWAYS">
+                        <Button fx:id="accountButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleAccountButton" text="Account" HBox.hgrow="ALWAYS">
                            <HBox.margin>
                               <Insets />
                            </HBox.margin>

@@ -1,6 +1,5 @@
 package dk.easv.presentation.controller;
 
-import dk.easv.entities.User;
 import dk.easv.presentation.model.AppModel;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -9,6 +8,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -32,16 +32,19 @@ public class LogInController implements Initializable {
         model.loginUserFromUsername(userId.getText());
         if(model.getObsLoggedInUser()!=null){
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/dk/easv/presentation/view/App.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/dk/easv/presentation/view/MenuRootView.fxml"));
             Parent root = loader.load();
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
-            stage.setTitle("Movie Recommendation System 0.01 Beta");
+            stage.setTitle("Budgetflix 2.1");
+            stage.setMaximized(true);
             stage.show();
             AppController controller = loader.getController();
 
             controller.setModel(model);
-
+            Button b = (Button) actionEvent.getSource();
+            Stage thisStage = (Stage) b.getScene().getWindow();
+            thisStage.close();
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -59,5 +62,4 @@ public class LogInController implements Initializable {
     public void signUp(ActionEvent actionEvent) {
         System.out.println("Sign-Up");
     }
-
 }
