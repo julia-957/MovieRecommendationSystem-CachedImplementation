@@ -19,21 +19,16 @@ public class IntroScreenController implements Initializable {
     @FXML
     private HBox featuredMovieView;
     @FXML
-    private ImageView featuredMoviePoster, iconIMDBrating, iconUserRatings, carouselRightView, carouselLeftView;
+    private ImageView featuredMoviePoster, iconIMDBrating, iconUserRatings, carouselRightView, carouselLeftView, favouriteHeart;
     @FXML
     private Label featuredMovieDescription, featuredMovieTitle, carouselGenreTxt, carouselRatingIMDB, carouselRatingUsers, carouselYearTxt;
     @FXML
-    private Button carouselAddBtn, carouselRemoveBtn, carouselLeft, carouselRight;
+    private Button favouriteBtn, carouselLeft, carouselRight;
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         carouselSetup();
     }
 
-    public void clickCarouselAdd(ActionEvent actionEvent) {
-    }
-
-    public void clickCarouselRemove(ActionEvent actionEvent) {
-    }
 
     private void carouselSetup(){
      carouselLeftView.setImage(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/mediumIndigo/arrow-left.png"))));
@@ -44,9 +39,16 @@ public class IntroScreenController implements Initializable {
      carouselRight.setText("");
      carouselRight.setGraphic(carouselRightView);
 
+     favouriteHeart.setImage(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/electricLilac/heart-outline.png"))));
+     favouriteBtn.setText("");
+     favouriteBtn.setGraphic(favouriteHeart);
+
      featuredMoviePoster.setImage(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/images/nudenuns.png"))));
 
      iconIMDBrating.setImage(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/imdb_icon.png"))));
      }
 
+
+    public void clickFavourite(ActionEvent actionEvent) {
+    }
 }
