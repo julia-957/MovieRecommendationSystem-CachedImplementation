@@ -38,10 +38,6 @@ public class AppController implements Initializable {
     @FXML
     private ListView<TopMovie> lvTopFromSimilar;
     @FXML
-    private Button carouselLeft, carouselRight;
-    @FXML
-    private ImageView carouselRightView, carouselLeftView;
-    @FXML
     private VBox menuBarVBox;
 
     private Main mainApp;
