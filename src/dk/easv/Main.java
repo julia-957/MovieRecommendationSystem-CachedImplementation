@@ -1,21 +1,16 @@
 package dk.easv;
 
-import dk.easv.presentation.controller.AppController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
-import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 import java.awt.*;
 
 public class Main extends Application {
     private Stage primaryStage;
-    private BorderPane rootLayout;
-    private Scene shownScene;
     int width, height;
-    private AppController appController;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -32,8 +27,8 @@ public class Main extends Application {
 
         this.primaryStage.centerOnScreen();
         this.primaryStage.setScene(scene);
+        this.primaryStage.setMaximized(true);
         this.primaryStage.show();
-
     }
 
     public static void main(String[] args) {

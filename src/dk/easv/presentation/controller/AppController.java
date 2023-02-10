@@ -86,9 +86,9 @@ public class AppController implements Initializable {
         this.mainApp = mainApp;
     }
 
-    public void initRootLayout() {
+    public void openMenu() {
         try {
-            // Load root layout from fxml file.
+            // Load menu from fxml file.
             FXMLLoader loader = new FXMLLoader(Main.class.getResource("presentation/view/Menu.fxml"));
             borderPane.setLeft(loader.load());
             MenuController menuController = loader.getController();
@@ -107,6 +107,10 @@ public class AppController implements Initializable {
     }
     public void openSearchScreen() throws IOException {
         openCenterScreen("/dk/easv/presentation/view/SearchView.fxml");
+    }
+
+    public void openFavouritesScreen() throws IOException {
+        openCenterScreen("/dk/easv/presentation/view/FavouritesView.fxml");
     }
 }
 

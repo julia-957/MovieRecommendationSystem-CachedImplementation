@@ -15,7 +15,6 @@ import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class IntroScreenController implements Initializable {
-
     @FXML
     private HBox featuredMovieView;
     @FXML
@@ -48,5 +47,4 @@ public class IntroScreenController implements Initializable {
 
      iconIMDBrating.setImage(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/imdb_icon.png"))));
      }
-
 }

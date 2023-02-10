@@ -5,7 +5,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
@@ -59,17 +58,8 @@ public class MenuController implements Initializable {
         accountIconView.setFitWidth(50);
         accountButton.setText("");
         accountButton.setGraphic(accountIconView);
-
-        /**USE THIS WHEN OPENING THE INTRO SCREEN
-         carouselLeftView.setImage(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/mediumIndigo/arrow-left.png"))));
-         carouselLeft.setText("");
-         carouselLeft.setGraphic(carouselLeftView);
-
-         carouselRightView.setImage(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/mediumIndigo/arrow-right.png"))));
-         carouselRight.setText("");
-         carouselRight.setGraphic(carouselRightView);
-         **/
     }
+
     @FXML
     private void handleHomeButton(ActionEvent actionEvent) throws IOException {
         appController.openIntroScreen();
@@ -82,7 +72,7 @@ public class MenuController implements Initializable {
 
     @FXML
     private void handleFavouritesButton(ActionEvent actionEvent) throws IOException {
-       // appController.openCenterScreen("/dk/easv/presentation/view/IntroScreen.fxml");
+        appController.openFavouritesScreen();
     }
 
     @FXML
