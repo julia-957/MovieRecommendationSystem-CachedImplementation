@@ -30,13 +30,9 @@ public class Main extends Application {
         this.primaryStage.setTitle("Budgetflix 2.1");
         this.primaryStage.getIcons().add(new Image("file:resources/icons/budgetflixIcon.png"));
 
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/dk/easv/presentation/view/LogIn.fxml"));
-        Scene scene = new Scene(fxmlLoader.load());
-        LogInController logInController = fxmlLoader.getController();
-        logInController.setMainApp(this);
-
+        openLogInScreen();
         this.primaryStage.centerOnScreen();
-        this.primaryStage.setScene(scene);
+        this.primaryStage.setScene(shownScene);
         this.primaryStage.show();
     }
 
@@ -84,5 +80,12 @@ public class Main extends Application {
         rootLayout.setCenter(introScreen);
         primaryStage.centerOnScreen();
         primaryStage.setScene(shownScene);
+    }
+
+    public void openLogInScreen() throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/dk/easv/presentation/view/LogIn.fxml"));
+        shownScene = new Scene(fxmlLoader.load());
+        LogInController logInController = fxmlLoader.getController();
+        logInController.setMainApp(this);
     }
 }

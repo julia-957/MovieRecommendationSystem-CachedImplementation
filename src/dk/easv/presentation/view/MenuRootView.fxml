@@ -5,49 +5,54 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
 <BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="720.0" minWidth="1400.0" stylesheets="@main.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.AppController">
    <left>
-      <HBox id="menuHbox" maxWidth="100.0" styleClass="backgroundPane" BorderPane.alignment="CENTER">
+      <StackPane fx:id="stackPaneWrapper" BorderPane.alignment="CENTER">
          <children>
-            <VBox fx:id="menuBarVBox" prefWidth="50.0" spacing="30.0">
+            <HBox id="menuHbox" maxWidth="100.0" styleClass="backgroundPane">
                <children>
-                  <HBox prefHeight="50.0">
+                  <VBox fx:id="menuBarVBox" prefWidth="50.0" spacing="30.0">
                      <children>
-                        <Button fx:id="homeButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleHomeButton" text="Home" HBox.hgrow="ALWAYS" />
-                     </children>
-                  </HBox>
-                  <HBox layoutX="10.0" layoutY="10.0" prefHeight="50.0">
-                     <children>
-                        <Button fx:id="searchButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleSearchButton" text="Search" HBox.hgrow="ALWAYS" />
-                     </children>
-                  </HBox>
-                  <HBox layoutX="10.0" layoutY="10.0" prefHeight="50.0">
-                     <children>
-                        <Button fx:id="favouritesButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleFavouritesButton" text="Favourites" HBox.hgrow="ALWAYS" />
-                     </children>
-                  </HBox>
-                  <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
-                  <HBox layoutX="10.0" layoutY="10.0" prefHeight="50.0">
-                     <children>
-                        <Button fx:id="accountButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleAccountButton" text="Account" HBox.hgrow="ALWAYS">
-                           <HBox.margin>
+                        <HBox prefHeight="50.0">
+                           <children>
+                              <Button fx:id="homeButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleHomeButton" text="Home" HBox.hgrow="ALWAYS" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="10.0" prefHeight="50.0">
+                           <children>
+                              <Button fx:id="searchButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleSearchButton" text="Search" HBox.hgrow="ALWAYS" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="10.0" prefHeight="50.0">
+                           <children>
+                              <Button fx:id="favouritesButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleFavouritesButton" text="Favourites" HBox.hgrow="ALWAYS" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+                        <HBox layoutX="10.0" layoutY="10.0" prefHeight="50.0">
+                           <children>
+                              <Button fx:id="accountButton" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleAccountButton" text="Account" HBox.hgrow="ALWAYS">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                           <VBox.margin>
                               <Insets />
-                           </HBox.margin>
-                        </Button>
+                           </VBox.margin>
+                        </HBox>
                      </children>
-                     <VBox.margin>
-                        <Insets />
-                     </VBox.margin>
-                  </HBox>
+                  </VBox>
                </children>
-            </VBox>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </HBox>
          </children>
-         <padding>
-            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-         </padding>
-      </HBox>
+      </StackPane>
    </left>
    <center>
       <FlowPane styleClass="backgroundPane" stylesheets="@main.css" BorderPane.alignment="CENTER" />

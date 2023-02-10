@@ -13,6 +13,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
@@ -21,22 +22,14 @@ import java.net.URL;
 import java.util.*;
 
 public class AppController implements Initializable {
-    @FXML
-    private ListView<User> lvUsers;
-    @FXML
-    private ListView<Movie> lvTopForUser;
-    @FXML
-    private ListView<Movie> lvTopAvgNotSeen;
-    @FXML
-    private ListView<UserSimilarity> lvTopSimilarUsers;
-    @FXML
-    private ListView<TopMovie> lvTopFromSimilar;
-    @FXML
-    private Button homeButton, searchButton, favouritesButton, accountButton, carouselLeft, carouselRight;
-    @FXML
-    private ImageView carouselRightView, carouselLeftView;
-    @FXML
-    private VBox menuBarVBox;
+    @FXML private ListView<User> lvUsers;
+    @FXML private ListView<Movie> lvTopForUser;
+    @FXML private ListView<Movie> lvTopAvgNotSeen;
+    @FXML private ListView<UserSimilarity> lvTopSimilarUsers;
+    @FXML private ListView<TopMovie> lvTopFromSimilar;
+    @FXML private Button homeButton, searchButton, favouritesButton, accountButton, carouselLeft, carouselRight;
+    @FXML private ImageView carouselRightView, carouselLeftView;
+    @FXML private VBox menuBarVBox;
 
     private Main mainApp;
     private AppModel model;
@@ -60,29 +53,29 @@ public class AppController implements Initializable {
     private void setButtonIcons(){
         ImageView homeIconView = new ImageView(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/mediumIndigo/house-bold.png"))));
         homeIconView.setId("homeIconView");
-        homeIconView.setFitHeight(50);
-        homeIconView.setFitWidth(50);
+        homeIconView.setFitHeight(40);
+        homeIconView.setFitWidth(40);
         homeButton.setText("");
         homeButton.setGraphic(homeIconView);
 
         ImageView searchIconView = new ImageView(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/mediumIndigo/magnifying-glass-bold.png"))));
         searchIconView.setId("searchIconView");
-        searchIconView.setFitHeight(50);
-        searchIconView.setFitWidth(50);
+        searchIconView.setFitHeight(40);
+        searchIconView.setFitWidth(40);
         searchButton.setText("");
         searchButton.setGraphic(searchIconView);
 
         ImageView favouritesIconView = new ImageView(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/mediumIndigo/star-bold.png"))));
         favouritesIconView.setId("favouritesIconView");
-        favouritesIconView.setFitHeight(50);
-        favouritesIconView.setFitWidth(50);
+        favouritesIconView.setFitHeight(40);
+        favouritesIconView.setFitWidth(40);
         favouritesButton.setText("");
         favouritesButton.setGraphic(favouritesIconView);
 
         ImageView accountIconView = new ImageView(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/mediumIndigo/user-circle-bold.png"))));
         accountIconView.setId("accountIconView");
-        accountIconView.setFitHeight(50);
-        accountIconView.setFitWidth(50);
+        accountIconView.setFitHeight(40);
+        accountIconView.setFitWidth(40);
         accountButton.setText("");
         accountButton.setGraphic(accountIconView);
 
@@ -123,19 +116,16 @@ public class AppController implements Initializable {
 
     @FXML
     private void handleHomeButton(ActionEvent actionEvent) throws IOException {
-        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
         mainApp.openIntroScreen();
     }
 
     @FXML
     private void handleSearchButton(ActionEvent actionEvent) throws IOException {
-        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
         mainApp.openSearchWindow();
     }
 
     @FXML
-    private void handleFavouritesButton(ActionEvent actionEvent) {
-    }
+    private void handleFavouritesButton(ActionEvent actionEvent) {}
 
     @FXML
     private void handleAccountButton(ActionEvent actionEvent) throws IOException {
@@ -153,13 +143,8 @@ public class AppController implements Initializable {
         stage.show();
     }
 
-    private void buttonColors(ActionEvent actionEvent){
-
-    }
-
     public void setMainApp(Main mainApp){
         this.mainApp = mainApp;
     }
-
 }
 
