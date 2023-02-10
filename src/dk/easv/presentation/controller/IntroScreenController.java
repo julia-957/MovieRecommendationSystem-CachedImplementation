@@ -44,7 +44,7 @@ public class IntroScreenController implements Initializable {
      carouselRight.setText("");
      carouselRight.setGraphic(carouselRightView);
 
-     featuredMoviePoster.setImage(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/images/cats_2_3.png"))));
+     featuredMoviePoster.setImage(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/images/nudenuns.png"))));
 
      iconIMDBrating.setImage(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/imdb_icon.png"))));
      }
