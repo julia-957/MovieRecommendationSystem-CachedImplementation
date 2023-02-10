@@ -11,7 +11,11 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<GridPane prefHeight="1080" prefWidth="1920" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.LogInController">
+<GridPane prefHeight="720.0" prefWidth="1400.0"
+          xmlns="http://javafx.com/javafx/19"
+          xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="dk.easv.presentation.controller.LogInController"
+          fx:id="gridPane">
    <columnConstraints>
       <ColumnConstraints percentWidth="50" />
       <ColumnConstraints percentWidth="50" />

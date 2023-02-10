@@ -30,59 +30,16 @@ public class Main extends Application {
         this.primaryStage.setTitle("Budgetflix 2.1");
         this.primaryStage.getIcons().add(new Image("file:resources/icons/budgetflixIcon.png"));
 
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/dk/easv/presentation/view/LogIn.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/dk/easv/presentation/view/MenuRootView.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        LogInController logInController = fxmlLoader.getController();
-        logInController.setMainApp(this);
 
         this.primaryStage.centerOnScreen();
         this.primaryStage.setScene(scene);
         this.primaryStage.show();
-    }
 
-
-    public void initRootLayout() {
-        try {
-            // Load root layout from fxml file.
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(Main.class.getResource("presentation/view/MenuRootView.fxml"));
-            rootLayout = loader.load();
-
-            // Show the scene containing the root layout.
-            shownScene = new Scene(rootLayout, width, height);
-            primaryStage.setScene(shownScene);
-
-            // Give the controller access to the main app.
-            appController = loader.getController();
-            appController.setMainApp(this);
-
-            primaryStage.centerOnScreen();
-            primaryStage.setMaximized(true);
-            primaryStage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 
     public static void main(String[] args) {
         launch(args);
-    }
-
-   public void openSearchWindow() throws IOException {
-       FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/dk/easv/presentation/view/SearchView.fxml"));
-       BorderPane mainView = fxmlLoader.load();
-
-       rootLayout.setCenter(mainView);
-       primaryStage.centerOnScreen();
-       primaryStage.setScene(shownScene);
-   }
-
-    public void openIntroScreen() throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/dk/easv/presentation/view/IntroScreen.fxml"));
-        VBox introScreen = fxmlLoader.load();
-
-        rootLayout.setCenter(introScreen);
-        primaryStage.centerOnScreen();
-        primaryStage.setScene(shownScene);
     }
 }
