@@ -3,33 +3,33 @@ package dk.easv.presentation.controller;
 import dk.easv.Main;
 import dk.easv.entities.*;
 import dk.easv.presentation.model.AppModel;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import javafx.scene.layout.HBox;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
-import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.*;
 
 public class AppController implements Initializable {
-    @FXML private ListView<User> lvUsers;
-    @FXML private ListView<Movie> lvTopForUser;
-    @FXML private ListView<Movie> lvTopAvgNotSeen;
-    @FXML private ListView<UserSimilarity> lvTopSimilarUsers;
-    @FXML private ListView<TopMovie> lvTopFromSimilar;
-    @FXML private Button homeButton, searchButton, favouritesButton, accountButton, carouselLeft, carouselRight;
-    @FXML private ImageView carouselRightView, carouselLeftView;
-    @FXML private VBox menuBarVBox;
+    @FXML
+    private BorderPane borderPane;
+    @FXML
+    private ListView<User> lvUsers;
+    @FXML
+    private ListView<Movie> lvTopForUser;
+    @FXML
+    private ListView<Movie> lvTopAvgNotSeen;
+    @FXML
+    private ListView<UserSimilarity> lvTopSimilarUsers;
+    @FXML
+    private ListView<TopMovie> lvTopFromSimilar;
+    @FXML
+    private VBox menuBarVBox;
 
     private Main mainApp;
     private AppModel model;
@@ -47,47 +47,15 @@ public class AppController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        setButtonIcons();
-    }
-
-    private void setButtonIcons(){
-        ImageView homeIconView = new ImageView(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/mediumIndigo/house-bold.png"))));
-        homeIconView.setId("homeIconView");
-        homeIconView.setFitHeight(40);
-        homeIconView.setFitWidth(40);
-        homeButton.setText("");
-        homeButton.setGraphic(homeIconView);
-
-        ImageView searchIconView = new ImageView(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/mediumIndigo/magnifying-glass-bold.png"))));
-        searchIconView.setId("searchIconView");
-        searchIconView.setFitHeight(40);
-        searchIconView.setFitWidth(40);
-        searchButton.setText("");
-        searchButton.setGraphic(searchIconView);
-
-        ImageView favouritesIconView = new ImageView(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/mediumIndigo/star-bold.png"))));
-        favouritesIconView.setId("favouritesIconView");
-        favouritesIconView.setFitHeight(40);
-        favouritesIconView.setFitWidth(40);
-        favouritesButton.setText("");
-        favouritesButton.setGraphic(favouritesIconView);
-
-        ImageView accountIconView = new ImageView(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/mediumIndigo/user-circle-bold.png"))));
-        accountIconView.setId("accountIconView");
-        accountIconView.setFitHeight(40);
-        accountIconView.setFitWidth(40);
-        accountButton.setText("");
-        accountButton.setGraphic(accountIconView);
-
-        /**USE THIS WHEN OPENING THE INTRO SCREEN
-         carouselLeftView.setImage(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/mediumIndigo/arrow-left.png"))));
-         carouselLeft.setText("");
-         carouselLeft.setGraphic(carouselLeftView);
-
-         carouselRightView.setImage(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/mediumIndigo/arrow-right.png"))));
-         carouselRight.setText("");
-         carouselRight.setGraphic(carouselRightView);
-         **/
+        FXMLLoader loader = new FXMLLoader(Main.class.getResource("presentation/view/Login.fxml"));
+        try {
+            GridPane loginGridPane = loader.load();
+            LogInController logInController = loader.getController();
+            logInController.setAppController(this);
+            borderPane.setCenter(loginGridPane);
+        } catch (Exception e) {
+            System.out.println(e);
+        }
     }
 
     public void setModel(AppModel model) {
@@ -114,37 +82,31 @@ public class AppController implements Initializable {
          */
     }
 
-    @FXML
-    private void handleHomeButton(ActionEvent actionEvent) throws IOException {
-        mainApp.openIntroScreen();
-    }
-
-    @FXML
-    private void handleSearchButton(ActionEvent actionEvent) throws IOException {
-        mainApp.openSearchWindow();
-    }
-
-    @FXML
-    private void handleFavouritesButton(ActionEvent actionEvent) {}
-
-    @FXML
-    private void handleAccountButton(ActionEvent actionEvent) throws IOException {
-        Button b = (Button) actionEvent.getSource();
-        Stage thisStage = (Stage) b.getScene().getWindow();
-        thisStage.close();
-
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/dk/easv/presentation/view/LogIn.fxml"));
-        Stage stage = new Stage();
-        Scene scene = new Scene(fxmlLoader.load());
-        stage.setScene(scene);
-        stage.setTitle("Budgetflix 2.1");
-        stage.getIcons().add(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/budgetflixIcon.png"))));
-        stage.centerOnScreen();
-        stage.show();
-    }
-
     public void setMainApp(Main mainApp){
         this.mainApp = mainApp;
+    }
+
+    public void initRootLayout() {
+        try {
+            // Load root layout from fxml file.
+            FXMLLoader loader = new FXMLLoader(Main.class.getResource("presentation/view/Menu.fxml"));
+            borderPane.setLeft(loader.load());
+            MenuController menuController = loader.getController();
+            menuController.setAppController(this);
+            openIntroScreen();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    private void openCenterScreen(String url) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource(url));
+        borderPane.setCenter(fxmlLoader.load());
+    }
+    public void openIntroScreen() throws IOException {
+        openCenterScreen("/dk/easv/presentation/view/IntroScreen.fxml");
+    }
+    public void openSearchScreen() throws IOException {
+        openCenterScreen("/dk/easv/presentation/view/SearchView.fxml");
     }
 }
 
