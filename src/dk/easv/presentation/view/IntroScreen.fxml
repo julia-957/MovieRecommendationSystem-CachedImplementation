@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="TOP_CENTER" prefHeight="800.0" prefWidth="1200.0" styleClass="backgroundPane" stylesheets="@main.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.AppController">
+<VBox alignment="TOP_CENTER" prefHeight="800.0" prefWidth="1200.0" styleClass="backgroundPane" stylesheets="@main.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.IntroScreenController">
    <children>
       <HBox alignment="CENTER" prefHeight="340.0">
          <children>

@@ -4,16 +4,19 @@ import dk.easv.Main;
 import dk.easv.entities.*;
 import dk.easv.presentation.model.AppModel;
 import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
-import javafx.event.EventType;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.*;
 
@@ -35,6 +38,7 @@ public class AppController implements Initializable {
     @FXML
     private VBox menuBarVBox;
 
+    private Main mainApp;
     private AppModel model;
     private long timerStartMillis = 0;
     private String timerMsg = "";
@@ -82,17 +86,20 @@ public class AppController implements Initializable {
         accountButton.setText("");
         accountButton.setGraphic(accountIconView);
 
-        carouselLeftView.setImage(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/mediumIndigo/arrow-left.png"))));
-        carouselLeft.setText("");
-        carouselLeft.setGraphic(carouselLeftView);
+        /**USE THIS WHEN OPENING THE INTRO SCREEN
+         carouselLeftView.setImage(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/mediumIndigo/arrow-left.png"))));
+         carouselLeft.setText("");
+         carouselLeft.setGraphic(carouselLeftView);
 
-        carouselRightView.setImage(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/mediumIndigo/arrow-right.png"))));
-        carouselRight.setText("");
-        carouselRight.setGraphic(carouselRightView);
+         carouselRightView.setImage(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/mediumIndigo/arrow-right.png"))));
+         carouselRight.setText("");
+         carouselRight.setGraphic(carouselRightView);
+         **/
     }
 
     public void setModel(AppModel model) {
         this.model = model;
+        /*
         lvUsers.setItems(model.getObsUsers());
         lvTopForUser.setItems(model.getObsTopMovieSeen());
         lvTopAvgNotSeen.setItems(model.getObsTopMovieNotSeen());
@@ -111,25 +118,48 @@ public class AppController implements Initializable {
 
         // Select the logged-in user in the listview, automagically trigger the listener above
         lvUsers.getSelectionModel().select(model.getObsLoggedInUser());
+         */
     }
 
     @FXML
-    private void handleHomeButton(ActionEvent actionEvent){
+    private void handleHomeButton(ActionEvent actionEvent) throws IOException {
+        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        mainApp.openIntroScreen();
     }
 
     @FXML
-    private void handleSearchButton(javafx.event.ActionEvent actionEvent) {
+    private void handleSearchButton(ActionEvent actionEvent) throws IOException {
+        Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        mainApp.openSearchWindow();
     }
 
     @FXML
-    private void handleFavouritesButton(javafx.event.ActionEvent actionEvent) {
+    private void handleFavouritesButton(ActionEvent actionEvent) {
     }
 
     @FXML
-    private void handleAccountButton(javafx.event.ActionEvent actionEvent) {
+    private void handleAccountButton(ActionEvent actionEvent) throws IOException {
+        Button b = (Button) actionEvent.getSource();
+        Stage thisStage = (Stage) b.getScene().getWindow();
+        thisStage.close();
+
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/dk/easv/presentation/view/LogIn.fxml"));
+        Stage stage = new Stage();
+        Scene scene = new Scene(fxmlLoader.load());
+        stage.setScene(scene);
+        stage.setTitle("Budgetflix 2.1");
+        stage.getIcons().add(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/budgetflixIcon.png"))));
+        stage.centerOnScreen();
+        stage.show();
     }
 
     private void buttonColors(ActionEvent actionEvent){
 
     }
+
+    public void setMainApp(Main mainApp){
+        this.mainApp = mainApp;
+    }
+
 }
+
