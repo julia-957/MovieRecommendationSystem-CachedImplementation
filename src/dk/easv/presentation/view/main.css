@@ -72,6 +72,18 @@
     -fx-text-fill: -fx-electric-lilac;
 }
 
+#hboxSearchBar {
+    -fx-background-color: #332E59;
+    -fx-background-radius: 20px;
+}
+
+#txtSearchBar {
+    -fx-background-color: #332E59;
+    -fx-background-radius: 20px;
+    -fx-prompt-text-fill: gray;
+    -fx-text-fill: -fx-electric-lilac;
+}
+
 .movieBg{
     -fx-background-image: url(/images/moviesList.png);
     -fx-background-position: center;
@@ -93,6 +105,7 @@
 .loginImage{
     -fx-image: url(/icons/Login.png);
 }
+
 .passwordImage{
     -fx-image: url(/icons/Password.png);
 }
