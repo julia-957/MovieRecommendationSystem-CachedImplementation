@@ -85,4 +85,8 @@ public class AppModel {
         else
             return true;
     }
+
+    public List<Movie> searchMovies(String query) {
+        return logic.searchMovies(query);
+    }
 }

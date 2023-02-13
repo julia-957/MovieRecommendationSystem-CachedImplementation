@@ -115,4 +115,15 @@ public class LogicManager {
             return null;
         }
     }
+
+    public List<Movie> searchMovies(String query) {
+        Map<Integer, Movie> movies = dataMgr.getAllMovies();
+        List<Movie> filtered = new ArrayList<>();
+
+        for (Map.Entry<Integer, Movie> m: movies.entrySet()){
+            if (m.getValue().getTitle().toLowerCase().contains(query.toLowerCase()) || (("" + m.getValue().getYear()).contains(query)))
+                filtered.add(m.getValue());
+        }
+        return filtered;
+    }
 }
