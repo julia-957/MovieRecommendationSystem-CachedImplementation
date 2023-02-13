@@ -6,13 +6,18 @@ import java.util.List;
 public class User {
     private int id;
     private String name;
+
+    private List<Movie> favouriteMovies;
     private List<Rating> ratings;
 
     public User(int id, String name) {
         this.id = id;
         this.name = name;
         this.ratings = new ArrayList();
+        this.favouriteMovies = new ArrayList();
     }
+
+    public User(){}
 
     public int getId() {
         return id;
@@ -28,6 +33,10 @@ public class User {
 
     public List<Rating> getRatings() {
         return ratings;
+    }
+
+    public List<Movie> getFavouriteMovies() {
+        return favouriteMovies;
     }
 
     public int getRatingsSize(){
