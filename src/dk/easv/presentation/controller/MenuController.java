@@ -78,18 +78,7 @@ public class MenuController implements Initializable {
 
     @FXML
     private void handleAccountButton(ActionEvent actionEvent) throws IOException {
-        Button b = (Button) actionEvent.getSource();
-        Stage thisStage = (Stage) b.getScene().getWindow();
-        thisStage.close();
-
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/dk/easv/presentation/view/LogIn.fxml"));
-        Stage stage = new Stage();
-        Scene scene = new Scene(fxmlLoader.load());
-        stage.setScene(scene);
-        stage.setTitle("Budgetflix 2.1");
-        stage.getIcons().add(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/budgetflixIcon.png"))));
-        stage.centerOnScreen();
-        stage.show();
+        appController.openLogInScreen();
     }
 
     public void setFocusOnFavourites() {

@@ -1,5 +1,7 @@
 * {
+    -fx-deep-deep-indigo: #2D2449;
     -fx-deep-indigo: #2D2449;
+    -fx-dark-indigo: #332E59;
     -fx-medium-indigo: #3B3464;
     -fx-electric-lilac: #F1EDFF;
     -fx-blue: #498CDC;
@@ -68,4 +70,54 @@
 
 .label{
     -fx-text-fill: -fx-electric-lilac;
+}
+
+#hboxSearchBar {
+    -fx-background-color: #332E59;
+    -fx-background-radius: 20px;
+}
+
+#txtSearchBar {
+    -fx-background-color: #332E59;
+    -fx-background-radius: 20px;
+    -fx-prompt-text-fill: gray;
+    -fx-text-fill: -fx-electric-lilac;
+}
+
+.movieBg{
+    -fx-background-image: url(/images/moviesList.png);
+    -fx-background-position: center;
+    -fx-background-size: cover;
+}
+
+.loginInput{
+    -fx-background-color: transparent;
+    -fx-text-fill: -fx-electric-lilac;
+    -fx-font-size: 18;
+}
+.introInput{
+    -fx-fill: -fx-medium-indigo;
+}
+.introImage{
+    -fx-fill: -fx-dark-indigo;
+}
+
+.loginImage{
+    -fx-image: url(/icons/Login.png);
+}
+
+.passwordImage{
+    -fx-image: url(/icons/Password.png);
+}
+.loginButton{
+    -fx-background-color: -fx-electric-lilac;
+    -fx-text-fill: -fx-medium-indigo;
+    -fx-font-size: 18;
+}
+.rounded{
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+}
+.shadow{
+    -fx-effect: dropshadow(gaussian, #231a38, 10, 0, 0, 5);
 }

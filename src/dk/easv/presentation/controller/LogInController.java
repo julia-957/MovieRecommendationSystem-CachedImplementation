@@ -30,7 +30,6 @@ public class LogInController implements Initializable {
         model.loadUsers();
         model.loginUserFromUsername(userId.getText());
         if(model.getObsLoggedInUser()!=null){
-            gridPane.getParent();
             appController.openMenu();
         }
         else{
