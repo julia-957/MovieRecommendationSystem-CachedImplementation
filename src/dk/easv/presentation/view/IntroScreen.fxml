@@ -80,7 +80,7 @@
                                     <Insets left="20.0" right="5.0" />
                                  </HBox.margin>
                               </ImageView>
-                              <Label fx:id="carouselRatingUsers" prefHeight="18.0" prefWidth="24.0" text="10.0" textFill="#f1edff">
+                              <Label fx:id="carouselRatingUsers" prefHeight="18.0" prefWidth="33.0" text="10.0" textFill="#f1edff">
                                  <font>
                                     <Font name="System Bold" size="12.0" />
                                  </font>
