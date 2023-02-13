@@ -86,7 +86,7 @@ public class AppModel {
             return true;
     }
 
-    public List<Movie> searchMovies(String query) {
+    public ObservableList<Movie> searchMovies(String query) {
         return logic.searchMovies(query);
     }
 }

@@ -31,21 +31,10 @@ public class AppController implements Initializable {
     private ListView<TopMovie> lvTopFromSimilar;
     @FXML
     private VBox menuBarVBox;
-
-    private Main mainApp;
-    private AppModel model;
+    private AppModel model = new AppModel();
     private long timerStartMillis = 0;
     private String timerMsg = "";
     private MenuController menuController;
-
-    private void startTimer(String message){
-        timerStartMillis = System.currentTimeMillis();
-        timerMsg = message;
-    }
-
-    private void stopTimer(){
-        System.out.println(timerMsg + " took : " + (System.currentTimeMillis() - timerStartMillis) + "ms");
-    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -84,10 +73,6 @@ public class AppController implements Initializable {
          */
     }
 
-    public void setMainApp(Main mainApp){
-        this.mainApp = mainApp;
-    }
-
     public void openMenu() {
         try {
             // Load menu from fxml file.
@@ -110,7 +95,10 @@ public class AppController implements Initializable {
         openCenterScreen("/dk/easv/presentation/view/IntroScreen.fxml");
     }
     public FXMLLoader openSearchScreen() throws IOException {
-        return openCenterScreen("/dk/easv/presentation/view/SearchView.fxml");
+        FXMLLoader fxmlLoader = openCenterScreen("/dk/easv/presentation/view/SearchView.fxml");
+        SearchController searchController = fxmlLoader.getController();
+        searchController.setAppModel(model);
+        return fxmlLoader;
     }
 
     public void openFavouritesScreen() throws IOException {

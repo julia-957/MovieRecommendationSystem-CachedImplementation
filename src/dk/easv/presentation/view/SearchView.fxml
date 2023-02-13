@@ -18,7 +18,7 @@
                <children>
                   <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#forYouAction" styleClass="searchMenuButtons" text="For you" />
                   <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#myListAction" styleClass="searchMenuButtons" text="My List" />
-                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#searchTitles" styleClass="searchMenuButtons" text="Title Search" />
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#searchTitlesAction" styleClass="searchMenuButtons" text="Title Search" />
                   <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#genresAction" styleClass="searchMenuButtons" text="Genres" />
                </children>
             </HBox>

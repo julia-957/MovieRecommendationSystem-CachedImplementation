@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.HBox?>
@@ -20,6 +21,9 @@
          <padding>
             <Insets top="30.0" />
          </padding>
+         <children>
+            <ListView fx:id="listView" prefHeight="200.0" prefWidth="563.0" />
+         </children>
       </FlowPane>
    </children>
 </VBox>
