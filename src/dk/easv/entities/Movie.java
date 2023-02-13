@@ -5,7 +5,8 @@ import java.util.List;
 
 public class Movie {
     private int id;
-    private String title;
+    private String title, genre, posterFilepath, movieDescription;
+    private double ratingIMDB;
     private int year;
     private List<Rating> ratings;
 
@@ -16,6 +17,14 @@ public class Movie {
         this.ratings = new ArrayList<>();
     }
 
+    public Movie(int id, String title, int year, String genre, String posterFilepath,String movieDescription, double ratingIMDB){
+        this(id, title, year);
+        this.genre = genre;
+        this.movieDescription = movieDescription;
+        this.posterFilepath = posterFilepath;
+        this.ratingIMDB = ratingIMDB;
+    }
+
     public double getAverageRating(){
         double sum = 0;
         for (Rating r: ratings){
@@ -24,6 +33,38 @@ public class Movie {
         if(ratings.size()==0)
             return 0;
         return sum/ratings.size();
+    }
+
+    public String getGenre() {
+        return genre;
+    }
+
+    public void setGenre(String genre) {
+        this.genre = genre;
+    }
+
+    public String getPosterFilepath() {
+        return posterFilepath;
+    }
+
+    public void setPosterFilepath(String posterFilepath) {
+        this.posterFilepath = posterFilepath;
+    }
+
+    public String getMovieDescription() {
+        return movieDescription;
+    }
+
+    public void setMovieDescription(String movieDescription) {
+        this.movieDescription = movieDescription;
+    }
+
+    public Double getRatingIMDB() {
+        return ratingIMDB;
+    }
+
+    public void setRatingIMDB(Double ratingIMDB) {
+        this.ratingIMDB = ratingIMDB;
     }
 
     public int getId() {
