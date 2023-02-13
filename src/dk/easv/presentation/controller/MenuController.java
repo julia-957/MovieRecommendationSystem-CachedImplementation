@@ -20,7 +20,6 @@ public class MenuController implements Initializable {
 
     @FXML
     private Button homeButton, searchButton, favouritesButton, accountButton;
-
     private AppController appController;
 
     public void setAppController(AppController appController){ this.appController = appController; }
@@ -67,7 +66,9 @@ public class MenuController implements Initializable {
 
     @FXML
     private void handleSearchButton(ActionEvent actionEvent) throws IOException {
-        appController.openSearchScreen();
+        FXMLLoader fxmlLoader = appController.openSearchScreen();
+        SearchController searchController = fxmlLoader.getController();
+        searchController.setAppController(appController);
     }
 
     @FXML
@@ -89,5 +90,9 @@ public class MenuController implements Initializable {
         stage.getIcons().add(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/budgetflixIcon.png"))));
         stage.centerOnScreen();
         stage.show();
+    }
+
+    public void setFocusOnFavourites() {
+        favouritesButton.requestFocus();
     }
 }

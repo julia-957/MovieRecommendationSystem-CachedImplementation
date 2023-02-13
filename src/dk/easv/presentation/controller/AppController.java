@@ -12,6 +12,7 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 
 import java.io.IOException;
+import java.io.Serial;
 import java.net.URL;
 import java.util.*;
 
@@ -35,6 +36,7 @@ public class AppController implements Initializable {
     private AppModel model;
     private long timerStartMillis = 0;
     private String timerMsg = "";
+    private MenuController menuController;
 
     private void startTimer(String message){
         timerStartMillis = System.currentTimeMillis();
@@ -91,26 +93,29 @@ public class AppController implements Initializable {
             // Load menu from fxml file.
             FXMLLoader loader = new FXMLLoader(Main.class.getResource("presentation/view/Menu.fxml"));
             borderPane.setLeft(loader.load());
-            MenuController menuController = loader.getController();
+            menuController = loader.getController();
             menuController.setAppController(this);
             openIntroScreen();
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-    private void openCenterScreen(String url) throws IOException {
+    private FXMLLoader openCenterScreen(String url) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource(url));
         borderPane.setCenter(fxmlLoader.load());
+        return fxmlLoader;
     }
+
     public void openIntroScreen() throws IOException {
         openCenterScreen("/dk/easv/presentation/view/IntroScreen.fxml");
     }
-    public void openSearchScreen() throws IOException {
-        openCenterScreen("/dk/easv/presentation/view/SearchView.fxml");
+    public FXMLLoader openSearchScreen() throws IOException {
+        return openCenterScreen("/dk/easv/presentation/view/SearchView.fxml");
     }
 
     public void openFavouritesScreen() throws IOException {
         openCenterScreen("/dk/easv/presentation/view/FavouritesView.fxml");
+        menuController.setFocusOnFavourites();
     }
 }
 
