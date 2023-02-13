@@ -117,5 +117,12 @@ public class AppController implements Initializable {
         openCenterScreen("/dk/easv/presentation/view/FavouritesView.fxml");
         menuController.setFocusOnFavourites();
     }
+
+    public void openLogInScreen() throws IOException {
+        borderPane.setLeft(null);
+        FXMLLoader loader = openCenterScreen("/dk/easv/presentation/view/LogIn.fxml");
+        LogInController logInController = loader.getController();
+        logInController.setAppController(this);
+    }
 }
 
