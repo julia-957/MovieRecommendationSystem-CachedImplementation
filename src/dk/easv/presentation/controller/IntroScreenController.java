@@ -15,6 +15,7 @@ import javafx.scene.layout.HBox;
 
 import java.net.URL;
 import java.util.List;
+import java.util.Locale;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
@@ -29,13 +30,16 @@ public class IntroScreenController implements Initializable {
     @FXML
     private Button favouriteBtn, carouselLeft, carouselRight;
     private int moviePosition = 0;
+    private List<Movie> featuredMovies;
 
-    User user = new User();
-    AppModel model = new AppModel();
+    private User user = new User();
+    private AppModel model = new AppModel();
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         carouselSetup();
-        setFeaturedMovie(getTopMovies(), moviePosition);
+        featuredMovies = getTopMovies();
+        setFeaturedMovie(featuredMovies, moviePosition);
+        setFavouriteHeart();
     }
 
 
@@ -48,10 +52,6 @@ public class IntroScreenController implements Initializable {
          carouselRight.setText("");
          carouselRight.setGraphic(carouselRightView);
 
-         favouriteHeart.setImage(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/electricLilac/heart-outline.png"))));
-         favouriteBtn.setText("");
-         favouriteBtn.setGraphic(favouriteHeart);
-
          iconIMDBrating.setImage(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/imdb_icon.png"))));
      }
 
@@ -62,34 +62,57 @@ public class IntroScreenController implements Initializable {
      private void setFeaturedMovie(List<Movie> m, int moviePosition){
         if(!m.isEmpty()) {
             featuredMovieTitle.setText(m.get(moviePosition).getTitle());
-            featuredMoviePoster.setImage(new Image(m.get(moviePosition).getPosterFilepath()));
-            featuredMovieDescription.setText(m.get(moviePosition).getMovieDescription());
-            carouselRatingIMDB.setText(m.get(moviePosition).getRatingIMDB().toString());
-            carouselRatingUsers.setText(String.valueOf(m.get(moviePosition).getAverageRating()));
+            //featuredMoviePoster.setImage(new Image(m.get(moviePosition).getPosterFilepath()));
+            featuredMoviePoster.setImage(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/images/cats_2_3.png"))));
+            //featuredMovieDescription.setText(m.get(moviePosition).getMovieDescription());
+            //carouselRatingIMDB.setText(m.get(moviePosition).getRatingIMDB().toString());
+            carouselRatingUsers.setText(String.format(Locale.US,"%.1f",(m.get(moviePosition).getAverageRating())));
             carouselYearTxt.setText(String.valueOf(m.get(moviePosition).getYear()));
+            setFavouriteHeart();
         }
      }
 
 
     public void clickFavourite(ActionEvent actionEvent) {
-        user.getFavouriteMovies().add(getTopMovies().get(moviePosition));
-        favouriteHeart.setImage(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/electricLilac/heart.png"))));
+        if(user.getFavouriteMovies().contains(featuredMovies.get(moviePosition))){
+            favouriteHeart.setImage(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/electricLilac/heart-outline.png"))));
+            user.getFavouriteMovies().remove(featuredMovies.get(moviePosition));
+        }
+
+        else {
+            favouriteHeart.setImage(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/electricLilac/heart.png"))));
+            user.getFavouriteMovies().add(featuredMovies.get(moviePosition));
+        }
+        favouriteBtn.setText("");
+        favouriteBtn.setGraphic(favouriteHeart);
+    }
+
+    private void setFavouriteHeart(){
+        if(user.getFavouriteMovies().contains(featuredMovies.get(moviePosition))) {
+            favouriteHeart.setImage(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/electricLilac/heart.png"))));
+        }
+
+        else {
+            favouriteHeart.setImage(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/electricLilac/heart-outline.png"))));
+        }
         favouriteBtn.setText("");
         favouriteBtn.setGraphic(favouriteHeart);
     }
 
     public void clickPrevious(ActionEvent actionEvent) {
         if(moviePosition==0) {
-            setFeaturedMovie(getTopMovies(), getTopMovies().size()-1);
+            moviePosition = featuredMovies.size();
         }
-        setFeaturedMovie(getTopMovies(), moviePosition--);
+        moviePosition--;
+        setFeaturedMovie(featuredMovies, moviePosition);
 
     }
 
     public void clickNext(ActionEvent actionEvent) {
-        if(moviePosition==getTopMovies().size()-1){
-            setFeaturedMovie(getTopMovies(), 0);
+        if(moviePosition==featuredMovies.size()-1){
+            moviePosition = -1;
         }
-        setFeaturedMovie(getTopMovies(), moviePosition++);
+        moviePosition++;
+        setFeaturedMovie(featuredMovies, moviePosition);
     }
 }

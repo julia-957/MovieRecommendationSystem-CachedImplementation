@@ -17,7 +17,10 @@ public class User {
         this.favouriteMovies = new ArrayList();
     }
 
-    public User(){}
+    public User(){
+        this.ratings = new ArrayList();
+        this.favouriteMovies = new ArrayList();
+    }
 
     public int getId() {
         return id;
