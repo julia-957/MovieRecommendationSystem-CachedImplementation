@@ -24,15 +24,14 @@ public class TitleSearchController implements Initializable {
     @FXML private TextField txtSearchBar;
     @FXML private FlowPane flowPane;
     @FXML private ScrollPane scrollPane;
-    private ScrollBar scrollBar;
     private AppModel model;
     private MovieViewFactory movieViewFactory;
     private ObservableList<Movie> filteredMovies = FXCollections.observableArrayList();
-    private ObservableList<HBox> shownMovies = FXCollections.observableArrayList();
+    private final ObservableList<HBox> shownMovies = FXCollections.observableArrayList();
+    private final HashMap<Integer, HBox> loadedMovies = new HashMap<>();
 
     @Override
     public void initialize(URL location, ResourceBundle resources){
-        scrollBar = getVerticalScrollbar(scrollPane);
         scrollPane.vvalueProperty().addListener(this::scrolled);
 
         flowPane.minWidthProperty().bind(scrollPane.widthProperty());
@@ -96,40 +95,43 @@ public class TitleSearchController implements Initializable {
     }
 
     private void addMovies(){
-        int size = filteredMovies.size();
+        if (filteredMovies.size() > 0){
+            int size = (filteredMovies.size() > 6) ? 6 : filteredMovies.size();
+            HBox movieView;
+            int i = 0;
 
-        if (size > 0){
-            if (size >= 6){
-                for (int i = 0; i < 6; i++) {
-                    shownMovies.add(movieViewFactory.constructMovieView(filteredMovies.get(0)));
-                    filteredMovies.remove(0);
+            while (i < size){
+                if (loadedMovies.get(filteredMovies.get(0).getId()) == null) {
+                    movieView = movieViewFactory.constructMovieView(filteredMovies.get(0));
+                    loadedMovies.put(filteredMovies.get(0).getId(), movieView);
+                } else {
+                    movieView = loadedMovies.get(filteredMovies.get(0).getId());
                 }
+                shownMovies.add(movieView);
+                filteredMovies.remove(0);
+                i++;
             }
-            else{
-                for (int i = 0; i < size; i++){
-                    shownMovies.add(movieViewFactory.constructMovieView(filteredMovies.get(0)));
-                    filteredMovies.remove(0);
-                }
-            }
+
             flowPane.getChildren().setAll(shownMovies);
         }
     }
 
     private void setInitialMovies() {
-        int size = filteredMovies.size();
+        if (filteredMovies.size() > 0) {
+            int size = (filteredMovies.size() > 12) ? 12 : filteredMovies.size();
+            HBox movieView;
+            int i = 0;
 
-        if (size > 0){
-            if (size >= 12){
-                for (int i = 0; i < 12; i++) {
-                    shownMovies.add(movieViewFactory.constructMovieView(filteredMovies.get(0)));
-                    filteredMovies.remove(0);
+            while (i < size) {
+                if (loadedMovies.get(filteredMovies.get(0).getId()) == null) {
+                    movieView = movieViewFactory.constructMovieView(filteredMovies.get(0));
+                    loadedMovies.put(filteredMovies.get(0).getId(), movieView);
+                } else {
+                    movieView = loadedMovies.get(filteredMovies.get(0).getId());
                 }
-            }
-            else{
-                for (int i = 0; i < size; i++){
-                    shownMovies.add(movieViewFactory.constructMovieView(filteredMovies.get(0)));
-                    filteredMovies.remove(0);
-                }
+                shownMovies.add(movieView);
+                filteredMovies.remove(0);
+                i++;
             }
         }
         flowPane.getChildren().setAll(shownMovies);
