@@ -10,15 +10,15 @@
    <children>
       <TextField fx:id="txtSearchBar" minHeight="30.0" minWidth="200.0" prefWidth="400.0" promptText="Movie title">
          <VBox.margin>
-            <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+            <Insets bottom="15.0" left="30.0" right="30.0" />
          </VBox.margin>
       </TextField>
-      <ScrollPane fitToWidth="true" hbarPolicy="NEVER" minHeight="300.0" minWidth="500.0" prefWidth="900.0" styleClass="backgroundPane" stylesheets="@main.css" vbarPolicy="ALWAYS" VBox.vgrow="ALWAYS">
+      <ScrollPane fx:id="scrollPane" fitToWidth="true" hbarPolicy="NEVER" minHeight="300.0" minWidth="500.0" prefWidth="900.0" styleClass="backgroundPane" stylesheets="@main.css" vbarPolicy="ALWAYS" VBox.vgrow="ALWAYS">
          <VBox.margin>
-            <Insets />
+            <Insets top="15.0" />
          </VBox.margin>
          <content>
-            <FlowPane fx:id="flowPane" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="Infinity"  hgap="30.0" minHeight="-Infinity" prefWidth="900.0" styleClass="backgroundPane" stylesheets="@main.css" vgap="30.0">
+            <FlowPane fx:id="flowPane" alignment="TOP_CENTER" hgap="30.0" maxHeight="-Infinity" maxWidth="Infinity" minHeight="-Infinity" prefWidth="900.0" styleClass="backgroundPane" stylesheets="@main.css" vgap="30.0">
                <padding>
                   <Insets bottom="30.0" left="30.0" right="30.0" />
                </padding>

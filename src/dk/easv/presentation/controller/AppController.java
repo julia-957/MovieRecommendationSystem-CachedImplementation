@@ -2,6 +2,7 @@ package dk.easv.presentation.controller;
 
 import dk.easv.Main;
 import dk.easv.entities.*;
+import dk.easv.presentation.controller.util.MovieViewFactory;
 import dk.easv.presentation.model.AppModel;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -31,22 +32,32 @@ public class AppController implements Initializable {
     private final LogInController logInController = new LogInController();
     private FXMLLoader searchFXMLLoader, introFXMLLoader, favouritesFXMLLoader, logInFXMLLoader;
     private Node searchScene, introScene, favouritesScene, logInScene;
+    private final MovieViewFactory movieViewFactory = new MovieViewFactory();
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         try {
             loadScenes();
             openLogInScreen();
+
         } catch (Exception e) {
-            System.out.println(e);
+            throw new RuntimeException();
         }
     }
 
     private void loadScenes() throws IOException {
+        logInFXMLLoader = new FXMLLoader(Main.class.getResource("/dk/easv/presentation/view/LogIn.fxml"));
+        logInFXMLLoader.setController(logInController);
+        logInController.setAppController(this);
+        logInController.setModel(model);
+        logInController.setMovieViewFactory(movieViewFactory);
+        logInScene = logInFXMLLoader.load();
+
         searchFXMLLoader = new FXMLLoader(Main.class.getResource("/dk/easv/presentation/view/SearchView.fxml"));
         searchFXMLLoader.setController(searchController);
         searchController.setAppController(this);
         searchController.setAppModel(model);
+        searchController.setMovieViewFactory(movieViewFactory);
         searchScene = searchFXMLLoader.load();
 
         introFXMLLoader = new FXMLLoader(Main.class.getResource("/dk/easv/presentation/view/IntroScreen.fxml"));
@@ -58,12 +69,6 @@ public class AppController implements Initializable {
         favouritesFXMLLoader.setController(favouritesController);
         favouritesController.setModel(model);
         favouritesScene = favouritesFXMLLoader.load();
-
-        logInFXMLLoader = new FXMLLoader(Main.class.getResource("/dk/easv/presentation/view/LogIn.fxml"));
-        logInFXMLLoader.setController(logInController);
-        logInController.setAppController(this);
-        logInController.setModel(model);
-        logInScene = logInFXMLLoader.load();
     }
 
     public void openMenu() {
@@ -83,7 +88,7 @@ public class AppController implements Initializable {
     public void openIntroScreen() {
         borderPane.setCenter(introScene);
     }
-    
+
     public void openSearchScreen() {
         borderPane.setCenter(searchScene);
     }

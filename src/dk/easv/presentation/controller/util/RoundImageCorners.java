@@ -1,8 +1,7 @@
-package dk.easv.presentation.controller;
+package dk.easv.presentation.controller.util;
 
 import javafx.fxml.FXML;
 import javafx.scene.SnapshotParameters;
-import javafx.scene.effect.DropShadow;
 import javafx.scene.image.ImageView;
 import javafx.scene.image.WritableImage;
 import javafx.scene.paint.Color;
@@ -12,9 +11,7 @@ public class RoundImageCorners {
     @FXML
     public void clipImage(ImageView imageView) {
         // set a clip to apply rounded border to the original image.
-        Rectangle clip = new Rectangle(
-                imageView.getFitWidth(), imageView.getFitHeight()
-        );
+        Rectangle clip = new Rectangle(imageView.getFitWidth(), imageView.getFitHeight());
         clip.setArcWidth(10);
         clip.setArcHeight(10);
         imageView.setClip(clip);

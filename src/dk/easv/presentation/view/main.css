@@ -126,3 +126,21 @@
 .movieDisplayHBox {
     -fx-background-color: -fx-medium-indigo;
 }
+
+.scroll-bar {
+    -fx-background-color: -fx-deep-indigo;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: -fx-medium-indigo;
+}
+
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar .increment-button:hover,
+.scroll-bar .decrement-button:hover {
+    -fx-background-color: -fx-medium-indigo;
+}
