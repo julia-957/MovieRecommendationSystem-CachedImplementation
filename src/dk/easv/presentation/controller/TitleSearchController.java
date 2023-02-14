@@ -26,7 +26,6 @@ public class TitleSearchController implements Initializable {
     @FXML private TextField txtSearchBar;
     @FXML private FlowPane flowPane;
     private AppModel appModel;
-    private final RoundImageCorners roundImageCorners = new RoundImageCorners();
     private final MovieViewFactory movieViewFactory = new MovieViewFactory();
 
     @Override
@@ -35,10 +34,11 @@ public class TitleSearchController implements Initializable {
                 movieViewFactory.populateFlowPaneWithMovies(appModel.searchMovies(txtSearchBar.getText().toLowerCase().trim()), flowPane);
                 }
         );
-        movieViewFactory.populateFlowPaneWithMovies(appModel.getTopAverageRatedMoviesUserDidNotSee(appModel.getObsLoggedInUser()).subList(0,10), flowPane);
+        movieViewFactory.populateFlowPaneWithMovies(appModel.getTopAverageRatedMoviesUserDidNotSee(appModel.getObsLoggedInUser()).subList(0,12), flowPane);
         //TODO figure this out
-        //txtSearchBar.setPrefWidth();
-        txtSearchBar.relocate(flowPane.getChildren().get(0).getLayoutX(), txtSearchBar.getLayoutY());
+        HBox hbox = (HBox) flowPane.getChildren().get(0);
+        txtSearchBar.setMaxWidth(hbox.getPrefWidth());
+        txtSearchBar.relocate(hbox.getLayoutX(), txtSearchBar.getLayoutY());
     }
 
     public ObservableList<Movie> searchMovies(ActionEvent actionEvent) {

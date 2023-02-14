@@ -22,10 +22,14 @@ public class MovieViewFactory {
     public void populateFlowPaneWithMovies(List<Movie> movies, FlowPane flowPane){
         List<HBox> movieView = new ArrayList<>();
         for (Movie movie: movies){
+            int totalSpaceX = (int) (flowPane.getWidth() - flowPane.snappedLeftInset() - flowPane.snappedRightInset() + flowPane.getHgap());
+
             HBox mainContainer = new HBox(10);
             mainContainer.getStyleClass().addAll("movieDisplayHBox", "rounded");
+
             mainContainer.setPrefWidth(400);
             mainContainer.setPrefHeight(200);
+
             mainContainer.setPadding(new Insets(10,10,10,10));
 
             ImageView moviePoster = new ImageView(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/images/cats_2_3.png"))));

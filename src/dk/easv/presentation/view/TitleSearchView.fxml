@@ -1,31 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.FlowPane?>
-<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
 <VBox styleClass="backgroundPane" stylesheets="@main.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <HBox styleClass="backgroundPane" stylesheets="@main.css" VBox.vgrow="NEVER">
-         <children>
-            <TextField fx:id="txtSearchBar" minHeight="30.0" minWidth="200.0" prefWidth="400.0" promptText="Movie title" />
-         </children>
-         <padding>
-            <Insets bottom="10.0" top="10.0" />
-         </padding>
-      </HBox>
-      <FlowPane fx:id="flowPane" alignment="TOP_CENTER" columnHalignment="CENTER" hgap="30.0" minHeight="300.0" minWidth="500.0" prefWidth="900.0" styleClass="backgroundPane" stylesheets="@main.css" vgap="30.0" VBox.vgrow="ALWAYS">
-         <padding>
-            <Insets top="30.0" />
-         </padding>
+      <TextField fx:id="txtSearchBar" minHeight="30.0" minWidth="200.0" prefWidth="400.0" promptText="Movie title">
+         <VBox.margin>
+            <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+         </VBox.margin>
+      </TextField>
+      <ScrollPane fitToWidth="true" hbarPolicy="NEVER" minHeight="300.0" minWidth="500.0" prefWidth="900.0" styleClass="backgroundPane" stylesheets="@main.css" vbarPolicy="ALWAYS" VBox.vgrow="ALWAYS">
          <VBox.margin>
             <Insets />
          </VBox.margin>
-      </FlowPane>
+         <content>
+            <FlowPane fx:id="flowPane" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="Infinity"  hgap="30.0" minHeight="-Infinity" prefWidth="900.0" styleClass="backgroundPane" stylesheets="@main.css" vgap="30.0">
+               <padding>
+                  <Insets bottom="30.0" left="30.0" right="30.0" />
+               </padding>
+            </FlowPane>
+         </content>
+      </ScrollPane>
    </children>
-   <padding>
-      <Insets left="30.0" right="30.0" />
-   </padding>
 </VBox>
