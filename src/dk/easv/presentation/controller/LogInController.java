@@ -13,17 +13,13 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class LogInController implements Initializable {
+public class LogInController {
     @FXML
     public GridPane gridPane;
     @FXML private PasswordField passwordField;
     @FXML private TextField userId;
     private AppModel model;
     private AppController appController;
-
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-    }
 
     public void logIn(ActionEvent actionEvent) throws IOException {
         model.loadUsers();

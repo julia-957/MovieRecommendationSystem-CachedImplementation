@@ -37,6 +37,9 @@ public class TitleSearchController implements Initializable {
         for (int i = 0; i < 10; i++) {
             populateFlowPaneWithMovies(appModel.getTopAverageRatedMoviesUserDidNotSee(appModel.getObsLoggedInUser()).get(0));
         }
+        //TODO figure this out
+        //txtSearchBar.setPrefWidth();
+        txtSearchBar.relocate(flowPane.getChildren().get(0).getLayoutX(), txtSearchBar.getLayoutY());
     }
 
     public ObservableList<Movie> searchMovies(ActionEvent actionEvent) {
@@ -63,7 +66,8 @@ public class TitleSearchController implements Initializable {
         roundImageCorners.clipImage(moviePoster);
 
         Label movieTitle = new Label(movie.getTitle());
-        movieTitle.setStyle("-fx-font-size: 24px;");
+        movieTitle.setStyle("-fx-font-size: 20px;");
+        movieTitle.setWrapText(true);
 
         Label genres = new Label(movie.getGenre());
         genres.setStyle("-fx-font-size: 12px;");

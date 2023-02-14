@@ -32,7 +32,8 @@ public class IntroScreenController implements Initializable {
     private int moviePosition = 0;
     private List<Movie> featuredMovies;
     private User user = new User();
-    private AppModel model = new AppModel();
+    private AppModel model;
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         carouselSetup();
@@ -113,5 +114,9 @@ public class IntroScreenController implements Initializable {
         }
         moviePosition++;
         setFeaturedMovie(featuredMovies, moviePosition);
+    }
+
+    public void setModel(AppModel model) {
+        this.model = model;
     }
 }

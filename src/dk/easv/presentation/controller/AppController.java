@@ -6,6 +6,8 @@ import dk.easv.presentation.model.AppModel;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.ListView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
@@ -20,58 +22,50 @@ public class AppController implements Initializable {
     @FXML
     private BorderPane borderPane;
     @FXML
-    private ListView<User> lvUsers;
-    @FXML
-    private ListView<Movie> lvTopForUser;
-    @FXML
-    private ListView<Movie> lvTopAvgNotSeen;
-    @FXML
-    private ListView<UserSimilarity> lvTopSimilarUsers;
-    @FXML
-    private ListView<TopMovie> lvTopFromSimilar;
-    @FXML
     private VBox menuBarVBox;
     private AppModel model = new AppModel();
     private long timerStartMillis = 0;
     private String timerMsg = "";
     private MenuController menuController;
+    private SearchController searchController = new SearchController();
+    private IntroScreenController introScreenController = new IntroScreenController();
+    private FavouritesController favouritesController = new FavouritesController();
+    private LogInController logInController = new LogInController();
+    private FXMLLoader searchFXMLLoader, introFXMLLoader, favouritesFXMLLoader, logInFXMLLoader;
+    private Node searchScene, introScene, favouritesScene, logInScene;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        FXMLLoader loader = new FXMLLoader(Main.class.getResource("presentation/view/Login.fxml"));
         try {
-            GridPane loginGridPane = loader.load();
-            LogInController logInController = loader.getController();
-            logInController.setAppController(this);
-            logInController.setModel(model);
-            borderPane.setCenter(loginGridPane);
+            loadScenes();
+            openLogInScreen();
         } catch (Exception e) {
             System.out.println(e);
         }
     }
 
-    public void setModel(AppModel model) {
-        this.model = model;
-        /*
-        lvUsers.setItems(model.getObsUsers());
-        lvTopForUser.setItems(model.getObsTopMovieSeen());
-        lvTopAvgNotSeen.setItems(model.getObsTopMovieNotSeen());
-        lvTopSimilarUsers.setItems(model.getObsSimilarUsers());
-        lvTopFromSimilar.setItems(model.getObsTopMoviesSimilarUsers());
+    private void loadScenes() throws IOException {
+        searchFXMLLoader = new FXMLLoader(Main.class.getResource("/dk/easv/presentation/view/SearchView.fxml"));
+        searchFXMLLoader.setController(searchController);
+        searchController.setAppController(this);
+        searchController.setAppModel(model);
+        searchScene = searchFXMLLoader.load();
 
-        startTimer("Load users");
-        model.loadUsers();
-        stopTimer();
+        introFXMLLoader = new FXMLLoader(Main.class.getResource("/dk/easv/presentation/view/IntroScreen.fxml"));
+        introFXMLLoader.setController(introScreenController);
+        introScreenController.setModel(model);
+        introScene = introFXMLLoader.load();
 
-        lvUsers.getSelectionModel().selectedItemProperty().addListener(
-                (observableValue, oldUser, selectedUser) -> {
-                    startTimer("Loading all data for user: " + selectedUser);
-                    model.loadData(selectedUser);
-                });
+        favouritesFXMLLoader = new FXMLLoader(Main.class.getResource("/dk/easv/presentation/view/FavouritesView.fxml"));
+        favouritesFXMLLoader.setController(favouritesController);
+        favouritesController.setModel(model);
+        favouritesScene = favouritesFXMLLoader.load();
 
-        // Select the logged-in user in the listview, automagically trigger the listener above
-        lvUsers.getSelectionModel().select(model.getObsLoggedInUser());
-         */
+        logInFXMLLoader = new FXMLLoader(Main.class.getResource("/dk/easv/presentation/view/LogIn.fxml"));
+        logInFXMLLoader.setController(logInController);
+        logInController.setAppController(this);
+        logInController.setModel(model);
+        logInScene = logInFXMLLoader.load();
     }
 
     public void openMenu() {
@@ -94,25 +88,20 @@ public class AppController implements Initializable {
     }
 
     public void openIntroScreen() throws IOException {
-        openCenterScreen("/dk/easv/presentation/view/IntroScreen.fxml");
+        borderPane.setCenter(introScene);
     }
-    public FXMLLoader openSearchScreen() throws IOException {
-        FXMLLoader fxmlLoader = openCenterScreen("/dk/easv/presentation/view/SearchView.fxml");
-        SearchController searchController = fxmlLoader.getController();
-        searchController.setAppModel(model);
-        return fxmlLoader;
+    public void openSearchScreen() throws IOException {
+        borderPane.setCenter(searchScene);
     }
 
     public void openFavouritesScreen() throws IOException {
-        openCenterScreen("/dk/easv/presentation/view/FavouritesView.fxml");
+        borderPane.setCenter(favouritesScene);
         menuController.setFocusOnFavourites();
     }
 
     public void openLogInScreen() throws IOException {
         borderPane.setLeft(null);
-        FXMLLoader loader = openCenterScreen("/dk/easv/presentation/view/LogIn.fxml");
-        LogInController logInController = loader.getController();
-        logInController.setAppController(this);
+        borderPane.setCenter(logInScene);
     }
 }
 

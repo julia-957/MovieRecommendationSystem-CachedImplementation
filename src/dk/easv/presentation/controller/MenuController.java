@@ -68,9 +68,7 @@ public class MenuController implements Initializable {
 
     @FXML
     private void handleSearchButton(ActionEvent actionEvent) throws IOException {
-        FXMLLoader fxmlLoader = appController.openSearchScreen();
-        SearchController searchController = fxmlLoader.getController();
-        searchController.setAppController(appController);
+        appController.openSearchScreen();
     }
 
     @FXML
