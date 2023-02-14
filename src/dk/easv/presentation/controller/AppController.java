@@ -43,6 +43,7 @@ public class AppController implements Initializable {
             GridPane loginGridPane = loader.load();
             LogInController logInController = loader.getController();
             logInController.setAppController(this);
+            logInController.setModel(model);
             borderPane.setCenter(loginGridPane);
         } catch (Exception e) {
             System.out.println(e);
@@ -80,6 +81,7 @@ public class AppController implements Initializable {
             borderPane.setLeft(loader.load());
             menuController = loader.getController();
             menuController.setAppController(this);
+            menuController.setModel(model);
             openIntroScreen();
         } catch (IOException e) {
             e.printStackTrace();

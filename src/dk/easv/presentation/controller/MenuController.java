@@ -1,6 +1,7 @@
 package dk.easv.presentation.controller;
 
 import dk.easv.Main;
+import dk.easv.presentation.model.AppModel;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -21,6 +22,7 @@ public class MenuController implements Initializable {
     @FXML
     private Button homeButton, searchButton, favouritesButton, accountButton;
     private AppController appController;
+    private AppModel model;
 
     public void setAppController(AppController appController){ this.appController = appController; }
 
@@ -83,5 +85,9 @@ public class MenuController implements Initializable {
 
     public void setFocusOnFavourites() {
         favouritesButton.requestFocus();
+    }
+
+    public void setModel(AppModel model) {
+        this.model = model;
     }
 }

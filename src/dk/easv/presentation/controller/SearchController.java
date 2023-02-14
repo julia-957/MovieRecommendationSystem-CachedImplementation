@@ -12,6 +12,7 @@ import java.io.IOException;
 public class SearchController {
     @FXML private BorderPane searchBorderPane;
     private AppController appController;
+    private TitleSearchController titleSearchController = new TitleSearchController();
     private AppModel appModel;
 
     public void setAppController(AppController appController) {
@@ -32,9 +33,9 @@ public class SearchController {
     @FXML
     private void searchTitlesAction(ActionEvent actionEvent) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/dk/easv/presentation/view/TitleSearchView.fxml"));
-        searchBorderPane.setCenter(fxmlLoader.load());
-        TitleSearchController titleSearchController = fxmlLoader.getController();
         titleSearchController.setAppModel(appModel);
+        fxmlLoader.setController(titleSearchController);
+        searchBorderPane.setCenter(fxmlLoader.load());
     }
 
     @FXML

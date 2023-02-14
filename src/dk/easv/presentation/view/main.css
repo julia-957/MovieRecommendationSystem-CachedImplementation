@@ -109,6 +109,7 @@
 .passwordImage{
     -fx-image: url(/icons/Password.png);
 }
+
 .loginButton{
     -fx-background-color: -fx-electric-lilac;
     -fx-text-fill: -fx-medium-indigo;
@@ -120,4 +121,8 @@
 }
 .shadow{
     -fx-effect: dropshadow(gaussian, #231a38, 10, 0, 0, 5);
+}
+
+.movieDisplayHBox {
+    -fx-background-color: -fx-medium-indigo;
 }

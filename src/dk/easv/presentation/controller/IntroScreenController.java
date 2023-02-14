@@ -31,10 +31,8 @@ public class IntroScreenController implements Initializable {
     private Button favouriteBtn, carouselLeft, carouselRight;
     private int moviePosition = 0;
     private List<Movie> featuredMovies;
-
     private User user = new User();
     private AppModel model = new AppModel();
-    private List<Movie> featuredMovies;
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         carouselSetup();

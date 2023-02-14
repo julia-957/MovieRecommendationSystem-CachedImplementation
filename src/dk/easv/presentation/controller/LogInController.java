@@ -23,7 +23,6 @@ public class LogInController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        model = new AppModel();
     }
 
     public void logIn(ActionEvent actionEvent) throws IOException {
@@ -41,5 +40,9 @@ public class LogInController implements Initializable {
 
     public void signUp(ActionEvent actionEvent) {
         System.out.println("Sign-Up");
+    }
+
+    public void setModel(AppModel model) {
+        this.model = model;
     }
 }
