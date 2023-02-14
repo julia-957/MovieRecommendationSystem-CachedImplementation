@@ -23,14 +23,12 @@ public class AppController implements Initializable {
     private BorderPane borderPane;
     @FXML
     private VBox menuBarVBox;
-    private AppModel model = new AppModel();
-    private long timerStartMillis = 0;
-    private String timerMsg = "";
+    private final AppModel model = new AppModel();
     private MenuController menuController;
-    private SearchController searchController = new SearchController();
-    private IntroScreenController introScreenController = new IntroScreenController();
-    private FavouritesController favouritesController = new FavouritesController();
-    private LogInController logInController = new LogInController();
+    private final SearchController searchController = new SearchController();
+    private final IntroScreenController introScreenController = new IntroScreenController();
+    private final FavouritesController favouritesController = new FavouritesController();
+    private final LogInController logInController = new LogInController();
     private FXMLLoader searchFXMLLoader, introFXMLLoader, favouritesFXMLLoader, logInFXMLLoader;
     private Node searchScene, introScene, favouritesScene, logInScene;
 
@@ -81,25 +79,21 @@ public class AppController implements Initializable {
             e.printStackTrace();
         }
     }
-    private FXMLLoader openCenterScreen(String url) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource(url));
-        borderPane.setCenter(fxmlLoader.load());
-        return fxmlLoader;
-    }
 
-    public void openIntroScreen() throws IOException {
+    public void openIntroScreen() {
         borderPane.setCenter(introScene);
     }
-    public void openSearchScreen() throws IOException {
+    
+    public void openSearchScreen() {
         borderPane.setCenter(searchScene);
     }
 
-    public void openFavouritesScreen() throws IOException {
+    public void openFavouritesScreen() {
         borderPane.setCenter(favouritesScene);
         menuController.setFocusOnFavourites();
     }
 
-    public void openLogInScreen() throws IOException {
+    public void openLogInScreen() {
         borderPane.setLeft(null);
         borderPane.setCenter(logInScene);
     }
