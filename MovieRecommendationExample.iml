@@ -7,5 +7,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="io.github.palexdev.materialfx" level="project" />
+    <orderEntry type="library" name="konghq.unirest.java" level="project" />
   </component>
 </module>
