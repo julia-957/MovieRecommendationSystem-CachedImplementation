@@ -30,16 +30,16 @@ public class SearchController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        FXMLLoader searchTitlesfxmlLoader = new FXMLLoader(Main.class.getResource("/dk/easv/presentation/view/searchViews/TitleSearchView.fxml"));
+        FXMLLoader searchTitlesfxmlLoader = new FXMLLoader(Main.class.getResource("/views/searchViews/TitleSearchView.fxml"));
         searchTitlesfxmlLoader.setController(titleSearchController);
         titleSearchController.setAppModel(appModel);
         titleSearchController.setMovieViewFactory(movieViewFactory);
 
-        FXMLLoader genresFxmlLoader = new FXMLLoader(Main.class.getResource("/dk/easv/presentation/view/searchViews/GenresFilterView.fxml"));
+        FXMLLoader genresFxmlLoader = new FXMLLoader(Main.class.getResource("/views/searchViews/GenresFilterView.fxml"));
         genresFxmlLoader.setController(genresController);
         genresController.setModel(appModel);
 
-        FXMLLoader forYouFxmlLoader = new FXMLLoader(Main.class.getResource("/dk/easv/presentation/view/searchViews/ForYouView.fxml"));
+        FXMLLoader forYouFxmlLoader = new FXMLLoader(Main.class.getResource("/views/searchViews/ForYouView.fxml"));
         forYouFxmlLoader.setController(forYouController);
         forYouController.setModel(appModel);
         forYouController.setMovieViewFactory(movieViewFactory);

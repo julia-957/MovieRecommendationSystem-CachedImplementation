@@ -21,7 +21,7 @@
                <graphic>
                   <ImageView fx:id="carouselLeftView" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../../../resources/icons/mediumIndigo/arrow-left.png" />
+                        <Image url="@../../icons/mediumIndigo/arrow-left.png" />
                      </image></ImageView>
                </graphic></Button>
             <HBox fx:id="featuredMovieView" alignment="CENTER" layoutX="409.0" layoutY="10.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #332E59;" styleClass="rounded" stylesheets="@../main.css">
@@ -86,7 +86,7 @@
                            <graphic>
                               <ImageView fx:id="favouriteHeart" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../../../../../../resources/icons/electricLilac/heart-outline.png" />
+                                    <Image url="@../../icons/electricLilac/heart-outline.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -102,7 +102,7 @@
                <graphic>
                   <ImageView fx:id="carouselRightView" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../../../resources/icons/mediumIndigo/arrow-right.png" />
+                        <Image url="@../../icons/mediumIndigo/arrow-right.png" />
                      </image></ImageView>
                </graphic></Button>
          </children>
