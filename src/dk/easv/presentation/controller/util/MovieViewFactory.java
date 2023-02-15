@@ -21,7 +21,7 @@ public class MovieViewFactory {
 
     public HBox constructMovieView(Movie movie){
         HBox mainContainer = new HBox(10);
-        mainContainer.getStyleClass().addAll("movieDisplayHBox", "rounded");
+        mainContainer.getStyleClass().addAll("movieDisplayHBox", "rounded", "shadow");
 
         mainContainer.setPrefWidth(400);
         mainContainer.setPrefHeight(200);
