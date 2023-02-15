@@ -1,6 +1,7 @@
 package dk.easv.presentation.controller;
 
 import dk.easv.Main;
+import dk.easv.presentation.model.AppModel;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -21,6 +22,7 @@ public class MenuController implements Initializable {
     @FXML
     private Button homeButton, searchButton, favouritesButton, accountButton;
     private AppController appController;
+    private AppModel model;
 
     public void setAppController(AppController appController){ this.appController = appController; }
 
@@ -66,9 +68,7 @@ public class MenuController implements Initializable {
 
     @FXML
     private void handleSearchButton(ActionEvent actionEvent) throws IOException {
-        FXMLLoader fxmlLoader = appController.openSearchScreen();
-        SearchController searchController = fxmlLoader.getController();
-        searchController.setAppController(appController);
+        appController.openSearchScreen();
     }
 
     @FXML
@@ -78,21 +78,14 @@ public class MenuController implements Initializable {
 
     @FXML
     private void handleAccountButton(ActionEvent actionEvent) throws IOException {
-        Button b = (Button) actionEvent.getSource();
-        Stage thisStage = (Stage) b.getScene().getWindow();
-        thisStage.close();
-
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/dk/easv/presentation/view/LogIn.fxml"));
-        Stage stage = new Stage();
-        Scene scene = new Scene(fxmlLoader.load());
-        stage.setScene(scene);
-        stage.setTitle("Budgetflix 2.1");
-        stage.getIcons().add(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/budgetflixIcon.png"))));
-        stage.centerOnScreen();
-        stage.show();
+        appController.openLogInScreen();
     }
 
     public void setFocusOnFavourites() {
         favouritesButton.requestFocus();
+    }
+
+    public void setModel(AppModel model) {
+        this.model = model;
     }
 }

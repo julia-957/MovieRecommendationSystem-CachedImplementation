@@ -72,6 +72,18 @@
     -fx-text-fill: -fx-electric-lilac;
 }
 
+#hboxSearchBar {
+    -fx-background-color: #332E59;
+    -fx-background-radius: 20px;
+}
+
+#txtSearchBar {
+    -fx-background-color: #332E59;
+    -fx-background-radius: 20px;
+    -fx-prompt-text-fill: gray;
+    -fx-text-fill: -fx-electric-lilac;
+}
+
 .movieBg{
     -fx-background-image: url(/images/moviesList.png);
     -fx-background-position: center;
@@ -93,9 +105,11 @@
 .loginImage{
     -fx-image: url(/icons/Login.png);
 }
+
 .passwordImage{
     -fx-image: url(/icons/Password.png);
 }
+
 .loginButton{
     -fx-background-color: -fx-electric-lilac;
     -fx-text-fill: -fx-medium-indigo;
@@ -107,4 +121,26 @@
 }
 .shadow{
     -fx-effect: dropshadow(gaussian, #231a38, 10, 0, 0, 5);
+}
+
+.movieDisplayHBox {
+    -fx-background-color: -fx-medium-indigo;
+}
+
+.scroll-bar {
+    -fx-background-color: -fx-deep-indigo;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: -fx-medium-indigo;
+}
+
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar .increment-button:hover,
+.scroll-bar .decrement-button:hover {
+    -fx-background-color: -fx-medium-indigo;
 }

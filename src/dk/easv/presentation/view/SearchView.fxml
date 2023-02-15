@@ -1,23 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 
-<BorderPane minHeight="500.0" minWidth="1000.0" styleClass="backgroundPane" stylesheets="@main.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.SearchController">
+<BorderPane fx:id="searchBorderPane" minHeight="500.0" minWidth="1000.0" styleClass="backgroundPane" stylesheets="@main.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
    <center>
       <FlowPane />
    </center>
    <top>
-      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0" BorderPane.alignment="CENTER">
+      <VBox BorderPane.alignment="CENTER">
          <children>
-            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="searchMenuButtons" text="For you" />
-            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="searchMenuButtons" text="Trending" />
-            <Button onAction="#myListAction" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="searchMenuButtons" text="My List" />
-            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="searchMenuButtons" text="Recently Watched" />
-            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="searchMenuButtons" text="Genres" />
+            <HBox fx:id="hboxSearchBar" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+               <children>
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#forYouAction" styleClass="searchMenuButtons" text="For you" />
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#myListAction" styleClass="searchMenuButtons" text="My List" />
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#searchTitlesAction" styleClass="searchMenuButtons" text="Title Search" />
+                  <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#genresAction" styleClass="searchMenuButtons" text="Genres" />
+               </children>
+            </HBox>
          </children>
-      </HBox>
+         <padding>
+            <Insets bottom="20.0" left="30.0" right="30.0" top="30.0" />
+         </padding>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </VBox>
    </top>
 </BorderPane>

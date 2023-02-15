@@ -2,6 +2,9 @@ package dk.easv.logic;
 
 import dk.easv.dataaccess.DataAccessManager;
 import dk.easv.entities.*;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+
 import java.util.*;
 
 public class LogicManager {
@@ -114,5 +117,16 @@ public class LogicManager {
         catch (NoSuchElementException e){
             return null;
         }
+    }
+
+    public ObservableList<Movie> searchMovies(String query) {
+        Map<Integer, Movie> movies = dataMgr.getAllMovies();
+        ObservableList<Movie> filtered = FXCollections.observableArrayList();
+
+        for (Map.Entry<Integer, Movie> m: movies.entrySet()){
+            if (m.getValue().getTitle().toLowerCase().contains(query.toLowerCase()) || (("" + m.getValue().getYear()).contains(query)))
+                filtered.add(m.getValue());
+        }
+        return filtered;
     }
 }

@@ -10,7 +10,7 @@ import java.awt.*;
 
 public class Main extends Application {
     private Stage primaryStage;
-    int width, height;
+    private int width, height;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
