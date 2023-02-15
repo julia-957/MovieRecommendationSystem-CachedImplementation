@@ -2,7 +2,6 @@ package dk.easv.presentation.controller;
 
 import dk.easv.presentation.controller.util.MovieViewFactory;
 import dk.easv.presentation.model.AppModel;
-import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;

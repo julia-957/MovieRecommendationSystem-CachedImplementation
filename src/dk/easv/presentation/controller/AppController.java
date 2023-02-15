@@ -32,9 +32,9 @@ public class AppController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         try {
+            movieViewFactory.setModel(model);
             loadScenes();
             openLogInScreen();
-
         } catch (Exception e) {
             throw new RuntimeException();
         }
@@ -82,6 +82,8 @@ public class AppController implements Initializable {
     }
 
     public void openIntroScreen() {
+        introScreenController.setBestSimilarMovies(model.getObsTopMoviesSimilarUsers());
+        introScreenController.addMovies(9);
         borderPane.setCenter(introScene);
     }
 
