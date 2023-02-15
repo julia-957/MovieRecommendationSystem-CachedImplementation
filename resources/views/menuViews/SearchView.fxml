@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane fx:id="searchBorderPane" minHeight="500.0" minWidth="1000.0" styleClass="backgroundPane" stylesheets="@../main.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane fx:id="searchBorderPane" minHeight="500.0" minWidth="1000.0" styleClass="backgroundPane" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
    <center>
       <FlowPane />
    </center>

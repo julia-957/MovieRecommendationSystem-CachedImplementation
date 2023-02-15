@@ -4,9 +4,9 @@
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.FlowPane?>
 
-<ScrollPane fx:id="scrollPane" fitToWidth="true" hbarPolicy="NEVER" minHeight="300.0" minWidth="500.0" prefWidth="900.0" styleClass="backgroundPane" stylesheets="@../main.css" vbarPolicy="ALWAYS" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<ScrollPane fx:id="scrollPane" fitToWidth="true" hbarPolicy="NEVER" minHeight="300.0" minWidth="500.0" prefWidth="900.0" styleClass="backgroundPane" stylesheets="@../style.css" vbarPolicy="ALWAYS" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
    <content>
-      <FlowPane fx:id="flowPane" alignment="TOP_CENTER" hgap="30.0" maxHeight="-Infinity" maxWidth="Infinity" minHeight="-Infinity" prefWidth="900.0" styleClass="backgroundPane" stylesheets="@../main.css" vgap="30.0"> </FlowPane>
+      <FlowPane fx:id="flowPane" alignment="TOP_CENTER" hgap="30.0" maxHeight="-Infinity" maxWidth="Infinity" minHeight="-Infinity" prefWidth="900.0" styleClass="backgroundPane" stylesheets="@../style.css" vgap="30.0"> </FlowPane>
    </content>
    <padding>
       <Insets top="15.0" />
