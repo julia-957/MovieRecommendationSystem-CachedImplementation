@@ -20,19 +20,20 @@ public class MovieViewFactory {
     private AppModel model;
 
     public HBox constructMovieView(Movie movie){
+        //Create an HBox to hold everything
         HBox mainContainer = new HBox(10);
         mainContainer.getStyleClass().addAll("movieDisplayHBox", "rounded", "shadow");
-
         mainContainer.setPrefWidth(400);
         mainContainer.setPrefHeight(200);
-
         mainContainer.setPadding(new Insets(10,10,10,10));
 
+        //Movie poster
         ImageView moviePoster = new ImageView(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/images/cats_2_3.png"))));
         moviePoster.setFitWidth(120);
         moviePoster.setFitHeight(180);
         roundImageCorners.clipImage(moviePoster);
 
+        //Movie title, genres, release year labels
         Label movieTitle = new Label(movie.getTitle());
         movieTitle.setStyle("-fx-font-size: 20px;");
         movieTitle.setWrapText(true);
@@ -40,29 +41,36 @@ public class MovieViewFactory {
         Label genres = new Label(movie.getGenre());
         genres.setStyle("-fx-font-size: 12px;");
 
+        Label releaseYear = new Label(String.valueOf(movie.getYear()));
+        genres.setStyle("-fx-font-size: 12px;");
+
+        //Create IMDB rating icon and text
         ImageView imdbIcon = new ImageView(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/imdb_icon.png"))));
         imdbIcon.setFitWidth(20);
         imdbIcon.setFitHeight(20);
         Label imdbRating = new Label(String.valueOf(movie.getRatingIMDB()));
 
+        //Create average user rating icon and text
         ImageView userIcon = new ImageView(new Image(Objects.requireNonNull(Main.class.getResourceAsStream(   "/icons/electricLilac/users-icon.png"))));
         userIcon.setFitWidth(30);
         userIcon.setFitHeight(20);
         Label userRating = new Label(String.format(Locale.US, "%.1f", movie.getAverageRating()));
 
+        //Create an HBox to hold the ratings
         VBox fillerVBox = new VBox();
         HBox ratings = new HBox(5, imdbIcon, imdbRating, fillerVBox, userIcon, userRating);
         ratings.setAlignment(Pos.BOTTOM_LEFT);
         ratings.setHgrow(fillerVBox, Priority.SOMETIMES);
 
+        //Create a VBox to hold the labels and ratings
         HBox fillerHBox = new HBox();
-        VBox movieInfo = new VBox(10, movieTitle, genres, fillerHBox, ratings);
+        VBox movieInfo = new VBox(10, movieTitle, releaseYear, genres, fillerHBox, ratings);
         movieInfo.setPadding(new Insets(5));
         movieInfo.setVgrow(fillerHBox, Priority.ALWAYS);
 
+        //Add all elements into the main HBox and add it into a HashMap of loaded movie views in model
         mainContainer.getChildren().addAll(moviePoster, movieInfo);
         mainContainer.setHgrow(movieInfo, Priority.ALWAYS);
-
         model.updateHashMap(movie.getId(), mainContainer);
         return  mainContainer;
     }
