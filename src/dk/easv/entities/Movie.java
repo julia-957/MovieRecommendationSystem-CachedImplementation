@@ -6,7 +6,7 @@ import java.util.List;
 public class Movie {
     private int id;
     private String title, genre, posterFilepath, movieDescription;
-    private double ratingIMDB;
+    private String ratingIMDB;
     private int year;
     private List<Rating> ratings;
 
@@ -17,7 +17,7 @@ public class Movie {
         this.ratings = new ArrayList<>();
     }
 
-    public Movie(int id, String title, int year, String genre, String posterFilepath,String movieDescription, double ratingIMDB){
+    public Movie(int id, String title, int year, String genre, String posterFilepath,String movieDescription, String ratingIMDB){
         this(id, title, year);
         this.genre = genre;
         this.movieDescription = movieDescription;
@@ -59,11 +59,11 @@ public class Movie {
         this.movieDescription = movieDescription;
     }
 
-    public Double getRatingIMDB() {
+    public String getRatingIMDB() {
         return ratingIMDB;
     }
 
-    public void setRatingIMDB(Double ratingIMDB) {
+    public void setRatingIMDB(String ratingIMDB) {
         this.ratingIMDB = ratingIMDB;
     }
 
