@@ -7,10 +7,8 @@ import dk.easv.entities.User;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class DataAccessManager {
     private HashMap<Integer, User> users = new HashMap<>();
@@ -45,7 +43,21 @@ public class DataAccessManager {
             List<String> movieLines = Files.readAllLines(Path.of("data/movie_titles.txt"));
             for (String movieLine : movieLines) {
                 String[] split = movieLine.split(",");
-                Movie movie = new Movie(Integer.parseInt(split[0]), split[2], Integer.parseInt(split[1]));
+                Movie movie = null;
+                var id = Integer.parseInt(split[0]);
+                var title = split[2];
+                var year = Integer.parseInt(split[1]);
+                var length = split.length;
+                if(length >= 6){
+                    var posterFilepath = Arrays.stream(split).filter(s -> s.contains("https")).findFirst().orElse("N/A");
+                    var posterFilepathIndex = Arrays.asList(split).indexOf(posterFilepath);
+                    var genre = Arrays.stream(split).skip(posterFilepathIndex+1).limit(split.length-posterFilepathIndex-2).collect(Collectors.joining(", "));
+                    var movieDescription = Arrays.stream(split).skip(3).limit(posterFilepathIndex-3).collect(Collectors.joining(","));
+                    var ratingIMDB = split[length-1].equals("N/A") ? 0.0+"" : split[length-1];
+                    movie = new Movie(id, title, year, genre, posterFilepath, movieDescription, ratingIMDB);
+                }
+                else
+                    movie = new Movie(id, title, year);
                 movies.put(movie.getId(), movie);
             }
         } catch (IOException e) {
