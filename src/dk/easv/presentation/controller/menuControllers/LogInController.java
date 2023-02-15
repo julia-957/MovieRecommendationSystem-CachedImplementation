@@ -1,8 +1,8 @@
-package dk.easv.presentation.controller;
+package dk.easv.presentation.controller.menuControllers;
 
+import dk.easv.presentation.controller.AppController;
 import dk.easv.presentation.controller.util.MovieViewFactory;
 import dk.easv.presentation.model.AppModel;
-import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;

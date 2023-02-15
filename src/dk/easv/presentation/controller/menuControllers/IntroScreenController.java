@@ -1,12 +1,14 @@
-package dk.easv.presentation.controller;
+package dk.easv.presentation.controller.menuControllers;
 
 import dk.easv.Main;
 import dk.easv.entities.Movie;
 import dk.easv.entities.TopMovie;
 import dk.easv.entities.User;
+import dk.easv.presentation.controller.BudgetMother;
 import dk.easv.presentation.controller.util.MovieViewFactory;
 import dk.easv.presentation.controller.util.RoundImageCorners;
 import dk.easv.presentation.model.AppModel;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -14,6 +16,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ScrollBar;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -27,7 +30,7 @@ import java.net.URL;
 import java.util.*;
 import java.util.List;
 
-public class IntroScreenController implements Initializable {
+public class IntroScreenController extends BudgetMother implements Initializable {
     @FXML
     private HBox featuredMovieView;
     @FXML
@@ -45,13 +48,12 @@ public class IntroScreenController implements Initializable {
 
     private int moviePosition = 0;
     private List<Movie> featuredMovies;
-    private ObservableList<Movie> bestSimilarMovies = FXCollections.observableArrayList();
+    private final ObservableList<TopMovie> bestSimilarMovies = FXCollections.observableArrayList();
     private final ObservableList<HBox> shownMovies = FXCollections.observableArrayList();
     private User user = new User();
     private AppModel model;
     private MovieViewFactory movieViewFactory;
     private HashMap<Integer, HBox> loadedMovies;
-
     private RoundImageCorners roundImageCorners = new RoundImageCorners();
 
     @Override
@@ -60,19 +62,16 @@ public class IntroScreenController implements Initializable {
         featuredMovies = model.getTopAverageRatedMoviesUserDidNotSee(model.getObsLoggedInUser());
         setFeaturedMovie(featuredMovies, moviePosition);
         setFavouriteHeart();
+        scrollPane.vvalueProperty().addListener(this::scrolled);
 
         flowPane.minWidthProperty().bind(scrollPane.widthProperty());
         flowPane.minHeightProperty().bind(scrollPane.heightProperty());
-
-        //Retrieve loaded movies
-        bestSimilarMovies.setAll(featuredMovies);
-        addMovies(6);
     }
 
-    private void carouselSetup(){
-        carouselLeftView.setImage(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/mediumIndigo/arrow-left.png"))));
-        carouselLeft.setText("");
-        carouselLeft.setGraphic(carouselLeftView);
+    private void carouselSetup() {
+         carouselLeftView.setImage(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/mediumIndigo/arrow-left.png"))));
+         carouselLeft.setText("");
+         carouselLeft.setGraphic(carouselLeftView);
 
         carouselRightView.setImage(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/mediumIndigo/arrow-right.png"))));
         carouselRight.setText("");
@@ -84,7 +83,7 @@ public class IntroScreenController implements Initializable {
         iconUserRatings.setFitHeight(20);
      }
 
-     private void setFeaturedMovie(List<Movie> m, int moviePosition){
+     private void setFeaturedMovie(List<Movie> m, int moviePosition) {
         if(!m.isEmpty()) {
             featuredMovieTitle.setText(m.get(moviePosition).getTitle());
             //featuredMoviePoster.setImage(new Image(m.get(moviePosition).getPosterFilepath()));
@@ -98,7 +97,6 @@ public class IntroScreenController implements Initializable {
             setFavouriteHeart();
         }
      }
-
 
     public void clickFavourite(ActionEvent actionEvent) {
         if(user.getFavouriteMovies().contains(featuredMovies.get(moviePosition))){
@@ -114,7 +112,7 @@ public class IntroScreenController implements Initializable {
         favouriteBtn.setGraphic(favouriteHeart);
     }
 
-    private void setFavouriteHeart(){
+    private void setFavouriteHeart() {
         if(user.getFavouriteMovies().contains(featuredMovies.get(moviePosition))) {
             favouriteHeart.setImage(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/electricLilac/heart.png"))));
         }
@@ -152,23 +150,39 @@ public class IntroScreenController implements Initializable {
     }
 
     public void addMovies(int amount){
-        loadedMovies = movieViewFactory.getLoadedMovies();
+        loadedMovies = model.getLoadedMovies();
         if (bestSimilarMovies.size() > 0){
             int size = (bestSimilarMovies.size() > amount) ? amount : bestSimilarMovies.size();
             HBox movieView;
             int i = 0;
 
             while (i < size){
-                if (loadedMovies.get(bestSimilarMovies.get(0).getId()) == null) {
-                    movieView = movieViewFactory.constructMovieView(bestSimilarMovies.get(0));
+                if (loadedMovies.get(bestSimilarMovies.get(0).getMovie().getId()) == null) {
+                    movieView = movieViewFactory.constructMovieView(bestSimilarMovies.get(0).getMovie());
                 } else {
-                    movieView = loadedMovies.get(bestSimilarMovies.get(0).getId());
+                    movieView = loadedMovies.get(bestSimilarMovies.get(0).getMovie().getId());
                 }
                 shownMovies.add(movieView);
                 bestSimilarMovies.remove(0);
                 i++;
             }
             flowPane.getChildren().setAll(shownMovies);
+        }
+    }
+
+    public void setBestSimilarMovies(ObservableList<TopMovie> bestSimilarMovies) {
+        shownMovies.clear();
+        this.bestSimilarMovies.clear();
+        this.bestSimilarMovies.setAll(bestSimilarMovies);
+    }
+
+    void scrolled(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
+        double value = newValue.doubleValue();
+        ScrollBar bar = getVerticalScrollbar(scrollPane);
+        if (value == bar.getMax()) {
+            double targetValue = value * shownMovies.size();
+            addMovies(6);
+            bar.setValue(targetValue / shownMovies.size());
         }
     }
 }

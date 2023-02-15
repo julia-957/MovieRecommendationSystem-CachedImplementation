@@ -2,6 +2,7 @@ package dk.easv.presentation.controller.util;
 
 import dk.easv.Main;
 import dk.easv.entities.Movie;
+import dk.easv.presentation.model.AppModel;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
@@ -16,8 +17,7 @@ import java.util.*;
 
 public class MovieViewFactory {
     private final RoundImageCorners roundImageCorners = new RoundImageCorners();
-    //TODO maybe model should do this
-    private final HashMap<Integer, HBox> loadedMovies = new HashMap<>();
+    private AppModel model;
 
     public HBox constructMovieView(Movie movie){
         HBox mainContainer = new HBox(10);
@@ -63,11 +63,11 @@ public class MovieViewFactory {
         mainContainer.getChildren().addAll(moviePoster, movieInfo);
         mainContainer.setHgrow(movieInfo, Priority.ALWAYS);
 
-        loadedMovies.put(movie.getId(), mainContainer);
+        model.updateHashMap(movie.getId(), mainContainer);
         return  mainContainer;
     }
 
-    public HashMap<Integer, HBox> getLoadedMovies() {
-        return loadedMovies;
+    public void setModel(AppModel model) {
+        this.model = model;
     }
 }

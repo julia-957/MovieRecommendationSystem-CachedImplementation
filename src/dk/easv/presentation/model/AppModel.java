@@ -6,7 +6,9 @@ import javafx.beans.property.ObjectProperty;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.scene.layout.HBox;
 
+import java.util.HashMap;
 import java.util.List;
 
 public class AppModel {
@@ -20,6 +22,8 @@ public class AppModel {
     private final ObservableList<TopMovie> obsTopMoviesSimilarUsers = FXCollections.observableArrayList();
 
     private final SimpleObjectProperty<User> obsLoggedInUser = new SimpleObjectProperty<>();
+
+    private final HashMap<Integer, HBox> loadedMovies = new HashMap<>();
 
     public void loadUsers(){
         obsUsers.clear();
@@ -81,12 +85,21 @@ public class AppModel {
         obsLoggedInUser.set(u);
         if (u==null)
             return false;
-        else
+        else{
             loadData(u);
             return true;
+        }
     }
 
     public ObservableList<Movie> searchMovies(String query) {
         return logic.searchMovies(query);
+    }
+
+    public HashMap<Integer, HBox> getLoadedMovies() {
+        return loadedMovies;
+    }
+
+    public void updateHashMap(int movieID, HBox mainContainer){
+        loadedMovies.put(movieID, mainContainer);
     }
 }

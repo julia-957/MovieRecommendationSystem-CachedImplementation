@@ -1,6 +1,7 @@
-package dk.easv.presentation.controller;
+package dk.easv.presentation.controller.searchControllers;
 
 import dk.easv.entities.Movie;
+import dk.easv.presentation.controller.BudgetMother;
 import dk.easv.presentation.controller.util.MovieViewFactory;
 import dk.easv.presentation.model.AppModel;
 import javafx.beans.value.ObservableValue;
@@ -20,7 +21,7 @@ import javafx.scene.layout.HBox;
 import java.net.URL;
 import java.util.*;
 
-public class TitleSearchController implements Initializable {
+public class TitleSearchController extends BudgetMother implements Initializable {
     @FXML private TextField txtSearchBar;
     @FXML private FlowPane flowPane;
     @FXML private ScrollPane scrollPane;
@@ -37,7 +38,7 @@ public class TitleSearchController implements Initializable {
         flowPane.minHeightProperty().bind(scrollPane.heightProperty());
 
         //Retrieve loaded movies
-        loadedMovies = movieViewFactory.getLoadedMovies();
+        loadedMovies = model.getLoadedMovies();
 
         //Show the initial 50 movies
         filteredMovies.setAll(model.getTopAverageRatedMoviesUserDidNotSee(model.getObsLoggedInUser()));
@@ -80,19 +81,6 @@ public class TitleSearchController implements Initializable {
         });
     }
 
-    private ScrollBar getVerticalScrollbar(ScrollPane scrollPane) {
-        ScrollBar result = null;
-        for (Node n : scrollPane.lookupAll(".scroll-bar")) {
-            if (n instanceof ScrollBar) {
-                ScrollBar bar = (ScrollBar) n;
-                if (bar.getOrientation().equals(Orientation.VERTICAL)) {
-                    result = bar;
-                }
-            }
-        }
-        return result;
-    }
-
     void scrolled(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
         double value = newValue.doubleValue();
         ScrollBar bar = getVerticalScrollbar(scrollPane);
@@ -104,7 +92,7 @@ public class TitleSearchController implements Initializable {
     }
 
     private void addMovies(int amount){
-        loadedMovies = movieViewFactory.getLoadedMovies();
+        loadedMovies = model.getLoadedMovies();
         if (filteredMovies.size() > 0){
             int size = (filteredMovies.size() > amount) ? amount : filteredMovies.size();
             HBox movieView;

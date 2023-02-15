@@ -1,4 +1,4 @@
-package dk.easv.presentation.controller;
+package dk.easv.presentation.controller.searchControllers;
 
 import dk.easv.presentation.model.AppModel;
 
