@@ -42,27 +42,27 @@ public class AppController implements Initializable {
     }
 
     private void loadScenes() throws IOException {
-        logInFXMLLoader = new FXMLLoader(Main.class.getResource("/dk/easv/presentation/view/LogIn.fxml"));
+        logInFXMLLoader = new FXMLLoader(Main.class.getResource("/dk/easv/presentation/view/menuViews/LogIn.fxml"));
         logInFXMLLoader.setController(logInController);
         logInController.setAppController(this);
         logInController.setModel(model);
         logInController.setMovieViewFactory(movieViewFactory);
         logInScene = logInFXMLLoader.load();
 
-        searchFXMLLoader = new FXMLLoader(Main.class.getResource("/dk/easv/presentation/view/SearchView.fxml"));
+        searchFXMLLoader = new FXMLLoader(Main.class.getResource("/dk/easv/presentation/view/menuViews/SearchView.fxml"));
         searchFXMLLoader.setController(searchController);
         searchController.setAppController(this);
         searchController.setAppModel(model);
         searchController.setMovieViewFactory(movieViewFactory);
         searchScene = searchFXMLLoader.load();
 
-        introFXMLLoader = new FXMLLoader(Main.class.getResource("/dk/easv/presentation/view/IntroScreen.fxml"));
+        introFXMLLoader = new FXMLLoader(Main.class.getResource("/dk/easv/presentation/view/menuViews/IntroScreen.fxml"));
         introFXMLLoader.setController(introScreenController);
         introScreenController.setModel(model);
         introScreenController.setMovieViewFactory(movieViewFactory);
         introScene = introFXMLLoader.load();
 
-        favouritesFXMLLoader = new FXMLLoader(Main.class.getResource("/dk/easv/presentation/view/FavouritesView.fxml"));
+        favouritesFXMLLoader = new FXMLLoader(Main.class.getResource("/dk/easv/presentation/view/menuViews/FavouritesView.fxml"));
         favouritesFXMLLoader.setController(favouritesController);
         favouritesController.setModel(model);
         favouritesScene = favouritesFXMLLoader.load();
@@ -71,7 +71,7 @@ public class AppController implements Initializable {
     public void openMenu() {
         try {
             // Load menu from fxml file.
-            FXMLLoader loader = new FXMLLoader(Main.class.getResource("presentation/view/Menu.fxml"));
+            FXMLLoader loader = new FXMLLoader(Main.class.getResource("presentation/view/menuViews/Menu.fxml"));
             borderPane.setLeft(loader.load());
             menuController = loader.getController();
             menuController.setAppController(this);

@@ -13,7 +13,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="TOP_CENTER" prefHeight="800.0" prefWidth="1200.0" styleClass="backgroundPane" stylesheets="@main.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<VBox alignment="TOP_CENTER" prefHeight="800.0" prefWidth="1200.0" styleClass="backgroundPane" stylesheets="@../main.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <HBox alignment="CENTER" prefHeight="340.0" prefWidth="1200.0">
          <children>
@@ -21,10 +21,10 @@
                <graphic>
                   <ImageView fx:id="carouselLeftView" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../../resources/icons/mediumIndigo/arrow-left.png" />
+                        <Image url="@../../../../../../resources/icons/mediumIndigo/arrow-left.png" />
                      </image></ImageView>
                </graphic></Button>
-            <HBox fx:id="featuredMovieView" alignment="CENTER" layoutX="409.0" layoutY="10.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #332E59;" styleClass="rounded" stylesheets="@main.css">
+            <HBox fx:id="featuredMovieView" alignment="CENTER" layoutX="409.0" layoutY="10.0" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #332E59;" styleClass="rounded" stylesheets="@../main.css">
                <children>
                   <VBox fx:id="saveUsJebus">
                      <HBox.margin>
@@ -86,7 +86,7 @@
                            <graphic>
                               <ImageView fx:id="favouriteHeart" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../../../../../resources/icons/electricLilac/heart-outline.png" />
+                                    <Image url="@../../../../../../resources/icons/electricLilac/heart-outline.png" />
                                  </image>
                               </ImageView>
                            </graphic>
@@ -102,7 +102,7 @@
                <graphic>
                   <ImageView fx:id="carouselRightView" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../../resources/icons/mediumIndigo/arrow-right.png" />
+                        <Image url="@../../../../../../resources/icons/mediumIndigo/arrow-right.png" />
                      </image></ImageView>
                </graphic></Button>
          </children>
@@ -116,7 +116,7 @@
       <Rectangle fx:id="lineDivider" arcHeight="5.0" arcWidth="5.0" fill="#332e59" height="7.0" stroke="#332e59" strokeType="INSIDE" strokeWidth="0.0" styleClass="backgroundPane" width="800.0" />
       <ScrollPane fx:id="scrollPane" fitToWidth="true" hbarPolicy="NEVER" minHeight="300.0" minWidth="500.0" prefWidth="900.0" styleClass="button" stylesheets="@main.css" vbarPolicy="ALWAYS" VBox.vgrow="ALWAYS">
          <content>
-            <FlowPane fx:id="flowPane" alignment="TOP_CENTER" hgap="30.0" maxHeight="-Infinity" maxWidth="Infinity" minHeight="-Infinity" prefWidth="900.0" styleClass="backgroundPane" stylesheets="@main.css" vgap="30.0">
+            <FlowPane fx:id="flowPane" alignment="TOP_CENTER" hgap="30.0" maxHeight="-Infinity" maxWidth="Infinity" minHeight="-Infinity" prefWidth="900.0" styleClass="backgroundPane" stylesheets="@../main.css" vgap="30.0">
                <padding>
                   <Insets bottom="30.0" left="30.0" right="30.0" />
                </padding></FlowPane>

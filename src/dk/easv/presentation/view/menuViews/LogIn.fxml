@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.shape.*?>
 
-<GridPane fx:id="gridPane" minWidth="630.0" prefHeight="720.0" prefWidth="1400.0" stylesheets="@main.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+<GridPane fx:id="gridPane" minWidth="630.0" prefHeight="720.0" prefWidth="1400.0" stylesheets="@../main.css" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
    <columnConstraints>
       <ColumnConstraints percentWidth="45" />
       <ColumnConstraints percentWidth="55" />
