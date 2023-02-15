@@ -10,7 +10,6 @@ import javafx.collections.ObservableList;
 import java.util.List;
 
 public class AppModel {
-
     LogicManager logic = new LogicManager();
     // Models of the data in the view
     User user = new User();
@@ -83,6 +82,7 @@ public class AppModel {
         if (u==null)
             return false;
         else
+            loadData(u);
             return true;
     }
 

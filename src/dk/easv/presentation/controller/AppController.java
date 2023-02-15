@@ -1,21 +1,16 @@
 package dk.easv.presentation.controller;
 
 import dk.easv.Main;
-import dk.easv.entities.*;
 import dk.easv.presentation.controller.util.MovieViewFactory;
 import dk.easv.presentation.model.AppModel;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
-import javafx.scene.Scene;
-import javafx.scene.control.ListView;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
 
 import java.io.IOException;
-import java.io.Serial;
 import java.net.URL;
 import java.util.*;
 
@@ -63,6 +58,7 @@ public class AppController implements Initializable {
         introFXMLLoader = new FXMLLoader(Main.class.getResource("/dk/easv/presentation/view/IntroScreen.fxml"));
         introFXMLLoader.setController(introScreenController);
         introScreenController.setModel(model);
+        introScreenController.setMovieViewFactory(movieViewFactory);
         introScene = introFXMLLoader.load();
 
         favouritesFXMLLoader = new FXMLLoader(Main.class.getResource("/dk/easv/presentation/view/FavouritesView.fxml"));

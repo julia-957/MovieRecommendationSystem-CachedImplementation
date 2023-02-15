@@ -28,34 +28,22 @@ public class TitleSearchController implements Initializable {
     private MovieViewFactory movieViewFactory;
     private ObservableList<Movie> filteredMovies = FXCollections.observableArrayList();
     private final ObservableList<HBox> shownMovies = FXCollections.observableArrayList();
-    private final HashMap<Integer, HBox> loadedMovies = new HashMap<>();
+    private HashMap<Integer, HBox> loadedMovies;
 
     @Override
     public void initialize(URL location, ResourceBundle resources){
-        scrollPane.vvalueProperty().addListener(this::scrolled);
-
+        //Prevent flowPane from shrinking with less than 12 movies
         flowPane.minWidthProperty().bind(scrollPane.widthProperty());
         flowPane.minHeightProperty().bind(scrollPane.heightProperty());
 
+        //Retrieve loaded movies
+        loadedMovies = movieViewFactory.getLoadedMovies();
+
+        //Show the initial 50 movies
         filteredMovies.setAll(model.getTopAverageRatedMoviesUserDidNotSee(model.getObsLoggedInUser()));
-        setInitialMovies();
+        addMovies(50);
 
-        txtSearchBar.textProperty().addListener((observable, oldValue, newValue) -> {
-            if (txtSearchBar.getText().isEmpty()){
-                shownMovies.clear();
-                filteredMovies.setAll(model.getTopAverageRatedMoviesUserDidNotSee(model.getObsLoggedInUser()));
-                setInitialMovies();
-            }
-        });
-
-        txtSearchBar.setOnKeyReleased(event -> {
-            if(event.getCode() == KeyCode.ENTER){
-                shownMovies.clear();
-                scrollPane.setVvalue(0);
-                filteredMovies = searchMovies(txtSearchBar.getText().trim().toLowerCase());
-                setInitialMovies();
-            }
-        });
+        setUpListeners();
 
         //TODO figure this out
         //HBox hbox = (HBox) flowPane.getChildren().get(0);
@@ -68,6 +56,28 @@ public class TitleSearchController implements Initializable {
         ObservableList<Movie> filteredMovies = FXCollections.observableArrayList();
         filteredMovies.addAll(movies);
         return filteredMovies;
+    }
+
+    private void setUpListeners(){
+        //Add listeners
+        scrollPane.vvalueProperty().addListener(this::scrolled);
+
+        txtSearchBar.textProperty().addListener((observable, oldValue, newValue) -> {
+            if (txtSearchBar.getText().isEmpty()){
+                shownMovies.clear();
+                filteredMovies.setAll(model.getTopAverageRatedMoviesUserDidNotSee(model.getObsLoggedInUser()));
+                addMovies(50);
+            }
+        });
+
+        txtSearchBar.setOnKeyReleased(event -> {
+            if(event.getCode() == KeyCode.ENTER){
+                shownMovies.clear();
+                scrollPane.setVvalue(0);
+                filteredMovies = searchMovies(txtSearchBar.getText().trim().toLowerCase());
+                addMovies(50);
+            }
+        });
     }
 
     private ScrollBar getVerticalScrollbar(ScrollPane scrollPane) {
@@ -86,24 +96,23 @@ public class TitleSearchController implements Initializable {
     void scrolled(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
         double value = newValue.doubleValue();
         ScrollBar bar = getVerticalScrollbar(scrollPane);
-
         if (value == bar.getMax()) {
             double targetValue = value * shownMovies.size();
-            addMovies();
+            addMovies(6);
             bar.setValue(targetValue / shownMovies.size());
         }
     }
 
-    private void addMovies(){
+    private void addMovies(int amount){
+        loadedMovies = movieViewFactory.getLoadedMovies();
         if (filteredMovies.size() > 0){
-            int size = (filteredMovies.size() > 6) ? 6 : filteredMovies.size();
+            int size = (filteredMovies.size() > amount) ? amount : filteredMovies.size();
             HBox movieView;
             int i = 0;
 
             while (i < size){
                 if (loadedMovies.get(filteredMovies.get(0).getId()) == null) {
                     movieView = movieViewFactory.constructMovieView(filteredMovies.get(0));
-                    loadedMovies.put(filteredMovies.get(0).getId(), movieView);
                 } else {
                     movieView = loadedMovies.get(filteredMovies.get(0).getId());
                 }
@@ -111,30 +120,8 @@ public class TitleSearchController implements Initializable {
                 filteredMovies.remove(0);
                 i++;
             }
-
             flowPane.getChildren().setAll(shownMovies);
         }
-    }
-
-    private void setInitialMovies() {
-        if (filteredMovies.size() > 0) {
-            int size = (filteredMovies.size() > 12) ? 12 : filteredMovies.size();
-            HBox movieView;
-            int i = 0;
-
-            while (i < size) {
-                if (loadedMovies.get(filteredMovies.get(0).getId()) == null) {
-                    movieView = movieViewFactory.constructMovieView(filteredMovies.get(0));
-                    loadedMovies.put(filteredMovies.get(0).getId(), movieView);
-                } else {
-                    movieView = loadedMovies.get(filteredMovies.get(0).getId());
-                }
-                shownMovies.add(movieView);
-                filteredMovies.remove(0);
-                i++;
-            }
-        }
-        flowPane.getChildren().setAll(shownMovies);
     }
 
     public void setAppModel(AppModel model) {

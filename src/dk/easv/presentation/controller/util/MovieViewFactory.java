@@ -12,13 +12,12 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Locale;
-import java.util.Objects;
+import java.util.*;
 
 public class MovieViewFactory {
-    private RoundImageCorners roundImageCorners = new RoundImageCorners();
+    private final RoundImageCorners roundImageCorners = new RoundImageCorners();
+    //TODO maybe model should do this
+    private final HashMap<Integer, HBox> loadedMovies = new HashMap<>();
 
     public HBox constructMovieView(Movie movie){
         HBox mainContainer = new HBox(10);
@@ -64,6 +63,11 @@ public class MovieViewFactory {
         mainContainer.getChildren().addAll(moviePoster, movieInfo);
         mainContainer.setHgrow(movieInfo, Priority.ALWAYS);
 
+        loadedMovies.put(movie.getId(), mainContainer);
         return  mainContainer;
+    }
+
+    public HashMap<Integer, HBox> getLoadedMovies() {
+        return loadedMovies;
     }
 }
