@@ -22,7 +22,7 @@ public class Main extends Application {
         this.primaryStage.setTitle("Budgetflix 2.1");
         this.primaryStage.getIcons().add(new Image("file:resources/icons/budgetflixIcon.png"));
 
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/dk/easv/presentation/view/MenuRootView.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/views/menuViews/MenuRootView.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
 
         this.primaryStage.centerOnScreen();

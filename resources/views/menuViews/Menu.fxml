@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<HBox id="menuHbox" maxWidth="100.0" styleClass="backgroundPane" stylesheets="@main.css" BorderPane.alignment="CENTER" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.menuControllers.MenuController">
+<HBox id="menuHbox" maxWidth="100.0" styleClass="backgroundPane" stylesheets="@../style.css" BorderPane.alignment="CENTER" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dk.easv.presentation.controller.menuControllers.MenuController">
 <children>
     <VBox fx:id="menuBarVBox" prefWidth="50.0" spacing="30.0">
         <children>
