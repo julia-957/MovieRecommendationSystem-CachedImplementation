@@ -85,9 +85,10 @@ public class AppModel {
         obsLoggedInUser.set(u);
         if (u==null)
             return false;
-        else
+        else{
             loadData(u);
             return true;
+        }
     }
 
     public ObservableList<Movie> searchMovies(String query) {

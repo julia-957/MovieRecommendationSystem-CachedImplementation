@@ -1,9 +1,10 @@
-package dk.easv.presentation.controller;
+package dk.easv.presentation.controller.menuControllers;
 
 import dk.easv.Main;
 import dk.easv.entities.Movie;
 import dk.easv.entities.TopMovie;
 import dk.easv.entities.User;
+import dk.easv.presentation.controller.BudgetMother;
 import dk.easv.presentation.controller.util.MovieViewFactory;
 import dk.easv.presentation.controller.util.RoundImageCorners;
 import dk.easv.presentation.model.AppModel;
@@ -13,8 +14,6 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.geometry.Orientation;
-import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollBar;
@@ -44,7 +43,7 @@ public class IntroScreenController extends BudgetMother implements Initializable
 
     private int moviePosition = 0;
     private List<Movie> featuredMovies;
-    private ObservableList<TopMovie> bestSimilarMovies = FXCollections.observableArrayList();
+    private final ObservableList<TopMovie> bestSimilarMovies = FXCollections.observableArrayList();
     private final ObservableList<HBox> shownMovies = FXCollections.observableArrayList();
     private User user = new User();
     private AppModel model;

@@ -1,6 +1,7 @@
 package dk.easv.presentation.controller;
 
 import dk.easv.Main;
+import dk.easv.presentation.controller.menuControllers.*;
 import dk.easv.presentation.controller.util.MovieViewFactory;
 import dk.easv.presentation.model.AppModel;
 import javafx.fxml.FXML;
@@ -87,7 +88,8 @@ public class AppController implements Initializable {
         borderPane.setCenter(introScene);
     }
 
-    public void openSearchScreen() {
+    public void openSearchScreen() throws IOException {
+        searchController.forYouAction(null);
         borderPane.setCenter(searchScene);
     }
 

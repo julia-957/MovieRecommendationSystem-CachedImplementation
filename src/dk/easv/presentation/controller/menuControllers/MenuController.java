@@ -1,6 +1,7 @@
-package dk.easv.presentation.controller;
+package dk.easv.presentation.controller.menuControllers;
 
 import dk.easv.Main;
+import dk.easv.presentation.controller.AppController;
 import dk.easv.presentation.model.AppModel;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -18,7 +19,6 @@ import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class MenuController implements Initializable {
-
     @FXML
     private Button homeButton, searchButton, favouritesButton, accountButton;
     private AppController appController;

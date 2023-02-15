@@ -1,6 +1,7 @@
-package dk.easv.presentation.controller;
+package dk.easv.presentation.controller.searchControllers;
 
 import dk.easv.entities.Movie;
+import dk.easv.presentation.controller.BudgetMother;
 import dk.easv.presentation.controller.util.MovieViewFactory;
 import dk.easv.presentation.model.AppModel;
 import javafx.beans.value.ObservableValue;

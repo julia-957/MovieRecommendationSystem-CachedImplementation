@@ -7,12 +7,12 @@
 
 <VBox xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" >
    <children>
-      <HBox styleClass="backgroundPane" stylesheets="@main.css" VBox.vgrow="SOMETIMES">
+      <HBox styleClass="backgroundPane" stylesheets="@../main.css" VBox.vgrow="SOMETIMES">
          <padding>
             <Insets bottom="10.0" left="30.0" right="30.0" top="10.0" />
          </padding>
       </HBox>
-      <FlowPane hgap="20.0" minHeight="300.0" minWidth="500.0" prefWidth="900.0" styleClass="backgroundPane" stylesheets="@main.css" vgap="20.0">
+      <FlowPane hgap="20.0" minHeight="300.0" minWidth="500.0" prefWidth="900.0" styleClass="backgroundPane" stylesheets="@../main.css" vgap="20.0">
          <padding>
             <Insets top="30.0" />
          </padding>
