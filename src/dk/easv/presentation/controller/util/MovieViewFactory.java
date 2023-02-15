@@ -27,8 +27,13 @@ public class MovieViewFactory {
         mainContainer.setPrefHeight(200);
 
         mainContainer.setPadding(new Insets(10,10,10,10));
-
-        ImageView moviePoster = new ImageView(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/images/cats_2_3.png"))));
+        ImageView moviePoster;
+        try{
+            moviePoster = new ImageView(new Image(movie.getPosterFilepath()));
+        }
+        catch (Exception e){
+            moviePoster = new ImageView(new Image( Objects.requireNonNull(Main.class.getResourceAsStream("/images/cats_2_3.png"))));
+        }
         moviePoster.setFitWidth(120);
         moviePoster.setFitHeight(180);
         roundImageCorners.clipImage(moviePoster);
@@ -43,7 +48,7 @@ public class MovieViewFactory {
         ImageView imdbIcon = new ImageView(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/imdb_icon.png"))));
         imdbIcon.setFitWidth(20);
         imdbIcon.setFitHeight(20);
-        Label imdbRating = new Label(String.valueOf(movie.getRatingIMDB()));
+        Label imdbRating = new Label(movie.getRatingIMDB());
 
         ImageView userIcon = new ImageView(new Image(Objects.requireNonNull(Main.class.getResourceAsStream(   "/icons/electricLilac/users-icon.png"))));
         userIcon.setFitWidth(30);
