@@ -19,7 +19,7 @@
          <children>
             <HBox alignment="CENTER">
                <children>
-                  <VBox alignment="CENTER" minWidth="150.0" prefHeight="95.0" prefWidth="248.0" spacing="10.0">
+                  <VBox alignment="CENTER" minWidth="150.0" prefHeight="95.0" prefWidth="248.0" spacing="20.0">
                      <children>
                         <AnchorPane styleClass="shadow">
                            <children>
