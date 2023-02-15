@@ -5,6 +5,7 @@ import dk.easv.entities.Movie;
 import dk.easv.entities.TopMovie;
 import dk.easv.entities.User;
 import dk.easv.presentation.controller.util.MovieViewFactory;
+import dk.easv.presentation.controller.util.RoundImageCorners;
 import dk.easv.presentation.model.AppModel;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -18,6 +19,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 
 import java.net.URL;
 import java.util.*;
@@ -25,6 +27,8 @@ import java.util.*;
 public class IntroScreenController implements Initializable {
     @FXML
     private HBox featuredMovieView;
+    @FXML
+    private VBox saveUsJebus;
     @FXML
     private ImageView featuredMoviePoster, iconIMDBrating, iconUserRatings, carouselRightView, carouselLeftView, favouriteHeart;
     @FXML
@@ -43,6 +47,8 @@ public class IntroScreenController implements Initializable {
     private MovieViewFactory movieViewFactory;
     private HashMap<Integer, HBox> loadedMovies;
 
+    private RoundImageCorners roundImageCorners = new RoundImageCorners();
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         carouselSetup();
@@ -59,15 +65,18 @@ public class IntroScreenController implements Initializable {
     }
 
     private void carouselSetup(){
-         carouselLeftView.setImage(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/mediumIndigo/arrow-left.png"))));
-         carouselLeft.setText("");
-         carouselLeft.setGraphic(carouselLeftView);
+        carouselLeftView.setImage(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/mediumIndigo/arrow-left.png"))));
+        carouselLeft.setText("");
+        carouselLeft.setGraphic(carouselLeftView);
 
-         carouselRightView.setImage(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/mediumIndigo/arrow-right.png"))));
-         carouselRight.setText("");
-         carouselRight.setGraphic(carouselRightView);
+        carouselRightView.setImage(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/mediumIndigo/arrow-right.png"))));
+        carouselRight.setText("");
+        carouselRight.setGraphic(carouselRightView);
 
-         iconIMDBrating.setImage(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/imdb_icon.png"))));
+        iconIMDBrating.setImage(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/imdb_icon.png"))));
+        iconUserRatings.setImage(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/electricLilac/users-icon.png"))));
+        iconUserRatings.setFitWidth(30);
+        iconUserRatings.setFitHeight(20);
      }
 
      private void setFeaturedMovie(List<Movie> m, int moviePosition){
@@ -75,6 +84,8 @@ public class IntroScreenController implements Initializable {
             featuredMovieTitle.setText(m.get(moviePosition).getTitle());
             //featuredMoviePoster.setImage(new Image(m.get(moviePosition).getPosterFilepath()));
             featuredMoviePoster.setImage(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/images/cats_2_3.png"))));
+            saveUsJebus.getStyleClass().addAll("movieDisplayHBox", "rounded");
+            roundImageCorners.clipImage(featuredMoviePoster);
             //featuredMovieDescription.setText(m.get(moviePosition).getMovieDescription());
             //carouselRatingIMDB.setText(m.get(moviePosition).getRatingIMDB().toString());
             carouselRatingUsers.setText(String.format(Locale.US,"%.1f",(m.get(moviePosition).getAverageRating())));
@@ -82,6 +93,7 @@ public class IntroScreenController implements Initializable {
             setFavouriteHeart();
         }
      }
+
 
     public void clickFavourite(ActionEvent actionEvent) {
         if(user.getFavouriteMovies().contains(featuredMovies.get(moviePosition))){
