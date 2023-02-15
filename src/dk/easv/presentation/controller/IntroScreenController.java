@@ -20,15 +20,20 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.shape.Rectangle;
 
+import java.awt.*;
 import java.net.URL;
 import java.util.*;
+import java.util.List;
 
 public class IntroScreenController implements Initializable {
     @FXML
     private HBox featuredMovieView;
     @FXML
     private VBox saveUsJebus;
+    @FXML
+    private Rectangle lineDivider;
     @FXML
     private ImageView featuredMoviePoster, iconIMDBrating, iconUserRatings, carouselRightView, carouselLeftView, favouriteHeart;
     @FXML
