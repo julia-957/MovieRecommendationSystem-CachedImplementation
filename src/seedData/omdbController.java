@@ -11,7 +11,8 @@ public class omdbController {
      * @return JSONObject - All the movie data for the searched movie
      */
     private JSONObject getDataFromImdb(String key, String movieName, String movieYear){
-        HttpResponse<String> searchResponse = Unirest.get("http://www.omdbapi.com/?t="+movieName.trim()+"&y="+movieYear.trim()+"&apikey="+key)
+        var url = "http://www.omdbapi.com/?t="+movieName.trim()+"&y="+movieYear.trim()+"&apikey="+key;
+        HttpResponse<String> searchResponse = Unirest.get(url)
                 .asString();
         return new JSONObject(searchResponse.getBody());
     }

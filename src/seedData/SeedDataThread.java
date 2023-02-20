@@ -25,9 +25,12 @@ public class SeedDataThread extends Thread {
         var outputList = new ArrayList<String>();
         System.out.println("Starting thread: " + name);
         for ( int j = 0; j < movieList.size(); j++ ) {
+            if(j%100 == 0){
+                System.out.println("Thread: " + name + " is at line: " + j);
+            }
             String[] split = movieList.get(j).split(",");
             try {
-                outputList.add((movieList.get(j) + "," + omdbController.searchImdb(this.key,split[1],split[2])).replace("\n"," "));
+                outputList.add((movieList.get(j) + "," + omdbController.searchImdb(this.key,split[2],split[1])).replace("\n"," "));
             } catch (Exception e) {
                 outputList.add(movieList.get(j) + ",,,,");
             }
