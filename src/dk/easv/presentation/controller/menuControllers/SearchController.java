@@ -21,6 +21,7 @@ import java.util.ResourceBundle;
 public class SearchController implements Initializable {
     @FXML private BorderPane searchBorderPane;
     private AppController appController;
+    private MenuController menuController;
     private TitleSearchController titleSearchController = new TitleSearchController();
     private GenresController genresController = new GenresController();
     private ForYouController forYouController = new ForYouController();
@@ -65,11 +66,14 @@ public class SearchController implements Initializable {
     @FXML
     private void genresAction(ActionEvent actionEvent) throws IOException {
         searchBorderPane.setCenter(genresScene);
+        menuController.setFocusOnSearch();
     }
 
     @FXML
     private void searchTitlesAction(ActionEvent actionEvent) throws IOException {
         searchBorderPane.setCenter(searchTitlesScene);
+        titleSearchController.addMovies(50);
+        menuController.setFocusOnSearch();
     }
 
     @FXML
@@ -77,6 +81,7 @@ public class SearchController implements Initializable {
         forYouController.setBestSimilarMovies(appModel.getObsTopMoviesSimilarUsers());
         forYouController.addMovies(24);
         searchBorderPane.setCenter(forYouScene);
+        menuController.setFocusOnSearch();
     }
 
     public void setAppModel(AppModel model) {
@@ -85,5 +90,9 @@ public class SearchController implements Initializable {
 
     public void setMovieViewFactory(MovieViewFactory movieViewFactory) {
         this.movieViewFactory = movieViewFactory;
+    }
+
+    public void setMenuController(MenuController menuController) {
+        this.menuController = menuController;
     }
 }

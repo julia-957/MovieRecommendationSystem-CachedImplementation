@@ -4,6 +4,7 @@ import dk.easv.Main;
 import dk.easv.presentation.controller.menuControllers.*;
 import dk.easv.presentation.controller.util.MovieViewFactory;
 import dk.easv.presentation.model.AppModel;
+import dk.easv.presentation.model.LoadMoviesTask;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -14,12 +15,12 @@ import javafx.scene.layout.VBox;
 import java.io.IOException;
 import java.net.URL;
 import java.util.*;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class AppController implements Initializable {
-    @FXML
-    private BorderPane borderPane;
-    @FXML
-    private VBox menuBarVBox;
+    @FXML private BorderPane borderPane;
+    @FXML private VBox menuBarVBox;
     private final AppModel model = new AppModel();
     private MenuController menuController;
     private final SearchController searchController = new SearchController();
@@ -28,14 +29,14 @@ public class AppController implements Initializable {
     private final LogInController logInController = new LogInController();
     private FXMLLoader searchFXMLLoader, introFXMLLoader, favouritesFXMLLoader, logInFXMLLoader;
     private Node searchScene, introScene, favouritesScene, logInScene;
-    private final MovieViewFactory movieViewFactory = new MovieViewFactory();
+    private MovieViewFactory movieViewFactory = new MovieViewFactory();
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         try {
-            movieViewFactory.setModel(model);
             loadScenes();
             openLogInScreen();
+            movieViewFactory.setModel(model);
         } catch (Exception e) {
             throw new RuntimeException();
         }
@@ -46,7 +47,6 @@ public class AppController implements Initializable {
         logInFXMLLoader.setController(logInController);
         logInController.setAppController(this);
         logInController.setModel(model);
-        logInController.setMovieViewFactory(movieViewFactory);
         logInScene = logInFXMLLoader.load();
 
         searchFXMLLoader = new FXMLLoader(Main.class.getResource("/views/menuViews/SearchView.fxml"));
@@ -70,12 +70,24 @@ public class AppController implements Initializable {
 
     public void openMenu() {
         try {
+            LoadMoviesTask loadMoviesTask = new LoadMoviesTask(24, model.getTopAverageRatedMoviesUserDidNotSee(model.getObsLoggedInUser()));
+            loadMoviesTask.setOnSucceeded((succeededEvent) -> {
+                System.out.println("hooray");
+                    });
+
+            //ExecutorService executorService = Executors.newFixedThreadPool(1);
+            //executorService.execute(loadMoviesTask);
+            //executorService.shutdown();
+
             // Load menu from fxml file.
             FXMLLoader loader = new FXMLLoader(Main.class.getResource("/views/menuViews/Menu.fxml"));
             borderPane.setLeft(loader.load());
             menuController = loader.getController();
             menuController.setAppController(this);
-            menuController.setModel(model);
+            searchController.setMenuController(menuController);
+
+
+
             openIntroScreen();
         } catch (IOException e) {
             e.printStackTrace();
@@ -84,7 +96,7 @@ public class AppController implements Initializable {
 
     public void openIntroScreen() {
         introScreenController.setBestSimilarMovies(model.getObsTopMoviesSimilarUsers());
-        introScreenController.addMovies(9);
+        introScreenController.addMovies(24);
         borderPane.setCenter(introScene);
     }
 

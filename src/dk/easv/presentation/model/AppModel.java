@@ -2,6 +2,7 @@ package dk.easv.presentation.model;
 
 import dk.easv.entities.*;
 import dk.easv.logic.LogicManager;
+import dk.easv.presentation.controller.util.MovieViewFactory;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -19,10 +20,12 @@ public class AppModel {
     private final ObservableList<Movie> obsTopMovieNotSeen = FXCollections.observableArrayList();
     private final ObservableList<UserSimilarity>  obsSimilarUsers = FXCollections.observableArrayList();
     private final ObservableList<TopMovie> obsTopMoviesSimilarUsers = FXCollections.observableArrayList();
+    private final ObservableList<Movie> topMoviesSimilarUsersMovies = FXCollections.observableArrayList();
 
     private final SimpleObjectProperty<User> obsLoggedInUser = new SimpleObjectProperty<>();
 
     private final HashMap<Integer, HBox> loadedMovies = new HashMap<>();
+    //private final MovieViewFactory movieViewFactory = new MovieViewFactory();
 
     public void loadUsers(){
         obsUsers.clear();
@@ -41,6 +44,14 @@ public class AppModel {
 
         obsTopMoviesSimilarUsers.clear();
         obsTopMoviesSimilarUsers.addAll(logic.getTopMoviesFromSimilarPeople(user));
+
+
+        for (TopMovie topMovie: obsTopMoviesSimilarUsers){
+            topMoviesSimilarUsersMovies.add(topMovie.getMovie());
+        }
+
+        //loadMovies(50, obsTopMovieNotSeen);
+        //loadMovies(24, topMoviesSimilarUsersMovies);
     }
 
     public List<Movie> getTopAverageRatedMoviesUserDidNotSee(User u) {
@@ -101,4 +112,21 @@ public class AppModel {
     public void updateHashMap(int movieID, HBox mainContainer){
         loadedMovies.put(movieID, mainContainer);
     }
+
+    /*
+    private void loadMovies(int amount, List<Movie> list){
+        if (list.size() > 0) {
+            int size = (list.size() > amount) ? amount : list.size();
+
+            int i = 0;
+            while (i < size) {
+                if (loadedMovies.get(list.get(0).getId()) == null)
+                    movieViewFactory.constructMovieView(list.get(0));
+                list.remove(0);
+                i++;
+            }
+        }
+    }
+
+     */
 }

@@ -18,7 +18,6 @@ public class LogInController {
     @FXML private TextField userId;
     private AppModel model;
     private AppController appController;
-    private MovieViewFactory movieViewFactory;
 
     public void logIn(ActionEvent actionEvent) throws IOException {
         model.loadUsers();
@@ -40,9 +39,5 @@ public class LogInController {
 
     public void setModel(AppModel model) {
         this.model = model;
-    }
-
-    public void setMovieViewFactory(MovieViewFactory movieViewFactory) {
-        this.movieViewFactory = movieViewFactory;
     }
 }

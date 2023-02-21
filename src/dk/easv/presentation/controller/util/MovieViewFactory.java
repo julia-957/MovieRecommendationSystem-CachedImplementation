@@ -5,10 +5,10 @@ import dk.easv.entities.Movie;
 import dk.easv.presentation.model.AppModel;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
@@ -62,9 +62,22 @@ public class MovieViewFactory {
         userIcon.setFitHeight(20);
         Label userRating = new Label(String.format(Locale.US, "%.1f", movie.getAverageRating()));
 
+        //Create a like button
+        ImageView likeButtonGraphic = new ImageView();
+        Button likeButton = new Button("", likeButtonGraphic);
+        likeButton.setMaxWidth(20);
+        likeButton.setMaxHeight(20);
+        likeButtonGraphic.setFitWidth(20);
+        likeButtonGraphic.setFitHeight(18.4);
+
+        if(model.getObsLoggedInUser().getFavouriteMovies().contains(movie))
+            likeButtonGraphic.setImage(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/electricLilac/heart.png"))));
+        else
+            likeButtonGraphic.setImage(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/electricLilac/heart-outline.png"))));
+
         //Create an HBox to hold the ratings
         VBox fillerVBox = new VBox();
-        HBox ratings = new HBox(5, imdbIcon, imdbRating, fillerVBox, userIcon, userRating);
+        HBox ratings = new HBox(10, imdbIcon, imdbRating, userIcon, userRating, fillerVBox, likeButton);
         ratings.setAlignment(Pos.BOTTOM_LEFT);
         ratings.setHgrow(fillerVBox, Priority.SOMETIMES);
 

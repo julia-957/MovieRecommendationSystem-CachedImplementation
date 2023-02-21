@@ -25,7 +25,6 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.shape.Rectangle;
 
-import java.awt.*;
 import java.net.URL;
 import java.util.*;
 import java.util.List;
@@ -130,7 +129,6 @@ public class IntroScreenController extends BudgetMother implements Initializable
         }
         moviePosition--;
         setFeaturedMovie(featuredMovies, moviePosition);
-
     }
 
     public void clickNext(ActionEvent actionEvent) {
@@ -184,5 +182,9 @@ public class IntroScreenController extends BudgetMother implements Initializable
             addMovies(6);
             bar.setValue(targetValue / shownMovies.size());
         }
+    }
+
+    public void setInitialMovies(HashMap<Integer, HBox> initialMovies) {
+        flowPane.getChildren().setAll(initialMovies.values());
     }
 }

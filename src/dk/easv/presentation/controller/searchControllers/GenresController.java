@@ -23,7 +23,6 @@ import java.util.ResourceBundle;
 
 public class GenresController extends BudgetMother implements Initializable {
     private AppModel model;
-
     @FXML private FlowPane flowPane;
     @FXML private ScrollPane scrollPane;
     private MovieViewFactory movieViewFactory;
@@ -42,7 +41,7 @@ public class GenresController extends BudgetMother implements Initializable {
 
         //Show the initial 50 movies
         filteredMovies.setAll(model.getTopAverageRatedMoviesUserDidNotSee(model.getObsLoggedInUser()));
-        addMovies(50);
+        //addMovies(50);
 
         setUpListeners();
 

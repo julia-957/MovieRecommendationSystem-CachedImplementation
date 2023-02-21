@@ -9,8 +9,6 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.geometry.Orientation;
-import javafx.scene.Node;
 import javafx.scene.control.ScrollBar;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
@@ -42,7 +40,7 @@ public class TitleSearchController extends BudgetMother implements Initializable
 
         //Show the initial 50 movies
         filteredMovies.setAll(model.getTopAverageRatedMoviesUserDidNotSee(model.getObsLoggedInUser()));
-        addMovies(50);
+        //addMovies(50);
 
         setUpListeners();
 
@@ -91,7 +89,7 @@ public class TitleSearchController extends BudgetMother implements Initializable
         }
     }
 
-    private void addMovies(int amount){
+    public void addMovies(int amount){
         loadedMovies = model.getLoadedMovies();
         if (filteredMovies.size() > 0){
             int size = (filteredMovies.size() > amount) ? amount : filteredMovies.size();

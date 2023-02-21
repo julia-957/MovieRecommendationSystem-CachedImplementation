@@ -1,15 +1,20 @@
 package dk.easv.presentation.controller;
 
+import javafx.fxml.Initializable;
 import javafx.geometry.Orientation;
 import javafx.scene.Node;
 import javafx.scene.control.ScrollBar;
 import javafx.scene.control.ScrollPane;
-import javafx.scene.layout.FlowPane;
-import javafx.scene.layout.HBox;
 
-import java.util.HashMap;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class BudgetMother {
+public class BudgetMother implements Initializable {
+
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+
+    }
     protected ScrollBar getVerticalScrollbar(ScrollPane scrollPane) {
         ScrollBar result = null;
         for (Node n : scrollPane.lookupAll(".scroll-bar")) {
