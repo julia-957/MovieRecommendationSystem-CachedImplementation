@@ -9,6 +9,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.ScrollBar;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
@@ -51,6 +52,8 @@ public class GenresController extends BudgetMother implements Initializable {
         //txtSearchBar.setMaxWidth(hbox.getPrefWidth());
         //txtSearchBar.relocate(hbox.getLayoutX(), txtSearchBar.getLayoutY());
     }
+
+    public void getAllGenres(){}
 
     public ObservableList<Movie> searchMovies(String query) {
         List<Movie> movies = model.searchMovies(query);

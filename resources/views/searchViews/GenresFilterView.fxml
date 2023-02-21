@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 
-<VBox xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+<VBox xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <HBox styleClass="backgroundPane" stylesheets="@../style.css" VBox.vgrow="SOMETIMES">
          <padding>
@@ -13,10 +16,10 @@
          <children>
             <VBox prefHeight="200.0" prefWidth="100.0">
                <children>
-                  <Label prefHeight="17.0" prefWidth="102.0" text="Genres" />
+                  <Label prefHeight="17.0" prefWidth="102.0" text="Genres:" />
                </children>
             </VBox>
-            <ScrollPane fx:id="scrollPane" fitToWidth="true" hbarPolicy="NEVER" minHeight="300.0" minWidth="500.0" prefWidth="900.0" styleClass="backgroundPane" stylesheets="@../style.css" vbarPolicy="ALWAYS" VBox.vgrow="ALWAYS">
+            <ScrollPane fx:id="scrollPane" centerShape="false" fitToWidth="true" hbarPolicy="NEVER" minHeight="300.0" minWidth="500.0" styleClass="backgroundPane" stylesheets="@../style.css" vbarPolicy="ALWAYS" VBox.vgrow="ALWAYS">
                <VBox.margin>
                   <Insets top="15.0" />
                </VBox.margin>

@@ -31,6 +31,16 @@ public class LogicManager {
         return top;
     }
 
+    public List<String> getAllGenres(){
+        List<String> allGenres = new ArrayList<>();
+
+        for(Movie m: dataMgr.getAllMovies().values()){
+            if(!allGenres.contains(m.getGenre()))
+                allGenres.add(m.getGenre());
+        }
+        return allGenres;
+    }
+
     // Gets all rated movies for one user and returns them sorted by avg. best by all users.
     public List<Movie> getTopAverageRatedMoviesUserDidNotSee(User u) {
         List<Movie> top = new ArrayList<>();
