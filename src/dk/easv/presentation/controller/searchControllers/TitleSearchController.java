@@ -65,7 +65,7 @@ public class TitleSearchController extends BudgetMother implements Initializable
             if (txtSearchBar.getText().isEmpty()){
                 shownMovies.clear();
                 filteredMovies.setAll(model.getTopAverageRatedMoviesUserDidNotSee(model.getObsLoggedInUser()));
-                addMovies(50);
+                //addMovies(50);
             }
         });
 
@@ -74,7 +74,7 @@ public class TitleSearchController extends BudgetMother implements Initializable
                 shownMovies.clear();
                 scrollPane.setVvalue(0);
                 filteredMovies = searchMovies(txtSearchBar.getText().trim().toLowerCase());
-                addMovies(50);
+                //addMovies(50);
             }
         });
     }
@@ -84,11 +84,12 @@ public class TitleSearchController extends BudgetMother implements Initializable
         ScrollBar bar = getVerticalScrollbar(scrollPane);
         if (value == bar.getMax()) {
             double targetValue = value * shownMovies.size();
-            addMovies(6);
+            //addMovies(6);
             bar.setValue(targetValue / shownMovies.size());
         }
     }
 
+    /*
     public void addMovies(int amount){
         loadedMovies = model.getLoadedMovies();
         if (filteredMovies.size() > 0){
@@ -109,6 +110,8 @@ public class TitleSearchController extends BudgetMother implements Initializable
             flowPane.getChildren().setAll(shownMovies);
         }
     }
+
+     */
 
     public void setAppModel(AppModel model) {
         this.model = model;

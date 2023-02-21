@@ -1,6 +1,8 @@
 package dk.easv.presentation.controller;
 
 import dk.easv.Main;
+import dk.easv.entities.Movie;
+import dk.easv.entities.TopMovie;
 import dk.easv.presentation.controller.menuControllers.*;
 import dk.easv.presentation.controller.util.MovieViewFactory;
 import dk.easv.presentation.model.AppModel;
@@ -60,6 +62,7 @@ public class AppController implements Initializable {
         introFXMLLoader.setController(introScreenController);
         introScreenController.setModel(model);
         introScreenController.setMovieViewFactory(movieViewFactory);
+        introScreenController.setParentModel();
         introScene = introFXMLLoader.load();
 
         favouritesFXMLLoader = new FXMLLoader(Main.class.getResource("/views/menuViews/FavouritesView.fxml"));
@@ -70,15 +73,6 @@ public class AppController implements Initializable {
 
     public void openMenu() {
         try {
-            LoadMoviesTask loadMoviesTask = new LoadMoviesTask(24, model.getTopAverageRatedMoviesUserDidNotSee(model.getObsLoggedInUser()));
-            loadMoviesTask.setOnSucceeded((succeededEvent) -> {
-                System.out.println("hooray");
-                    });
-
-            //ExecutorService executorService = Executors.newFixedThreadPool(1);
-            //executorService.execute(loadMoviesTask);
-            //executorService.shutdown();
-
             // Load menu from fxml file.
             FXMLLoader loader = new FXMLLoader(Main.class.getResource("/views/menuViews/Menu.fxml"));
             borderPane.setLeft(loader.load());
@@ -86,7 +80,13 @@ public class AppController implements Initializable {
             menuController.setAppController(this);
             searchController.setMenuController(menuController);
 
-
+            introScreenController.setBestSimilarMovies(model.getObsTopMoviesSimilarUsers());
+            List<Movie> movies = new ArrayList<>();
+            for (TopMovie topMovie: model.getObsTopMoviesSimilarUsers()){
+                movies.add(topMovie.getMovie());
+            }
+            introScreenController.setMovieBestSimilarMovies(movies);
+            introScreenController.addMovies(24, movies);
 
             openIntroScreen();
         } catch (IOException e) {
@@ -95,8 +95,6 @@ public class AppController implements Initializable {
     }
 
     public void openIntroScreen() {
-        introScreenController.setBestSimilarMovies(model.getObsTopMoviesSimilarUsers());
-        introScreenController.addMovies(24);
         borderPane.setCenter(introScene);
     }
 

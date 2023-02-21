@@ -68,11 +68,12 @@ public class GenresController extends BudgetMother implements Initializable {
         ScrollBar bar = getVerticalScrollbar(scrollPane);
         if (value == bar.getMax()) {
             double targetValue = value * shownMovies.size();
-            addMovies(6);
+            //addMovies(6);
             bar.setValue(targetValue / shownMovies.size());
         }
     }
 
+    /*
     private void addMovies(int amount){
         loadedMovies = model.getLoadedMovies();
         if (filteredMovies.size() > 0){
@@ -93,6 +94,8 @@ public class GenresController extends BudgetMother implements Initializable {
             flowPane.getChildren().setAll(shownMovies);
         }
     }
+
+     */
 
     public void setAppModel(AppModel model) {
         this.model = model;

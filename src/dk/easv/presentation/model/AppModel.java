@@ -12,6 +12,7 @@ import java.util.HashMap;
 import java.util.List;
 
 public class AppModel {
+    private static AppModel instance = null;
     LogicManager logic = new LogicManager();
     // Models of the data in the view
     User user = new User();
@@ -26,6 +27,12 @@ public class AppModel {
 
     private final HashMap<Integer, HBox> loadedMovies = new HashMap<>();
     //private final MovieViewFactory movieViewFactory = new MovieViewFactory();
+
+    public static AppModel getInstance(){
+        if(instance == null){
+            instance = new AppModel();
+        } return instance;
+    }
 
     public void loadUsers(){
         obsUsers.clear();

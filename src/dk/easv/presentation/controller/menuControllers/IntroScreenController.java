@@ -44,10 +44,10 @@ public class IntroScreenController extends BudgetMother implements Initializable
     private Button favouriteBtn, carouselLeft, carouselRight;
     @FXML private FlowPane flowPane;
     @FXML private ScrollPane scrollPane;
-
     private int moviePosition = 0;
     private List<Movie> featuredMovies;
     private final ObservableList<TopMovie> bestSimilarMovies = FXCollections.observableArrayList();
+    private final ObservableList<Movie> movieBestSimilarMovies = FXCollections.observableArrayList();
     private final ObservableList<HBox> shownMovies = FXCollections.observableArrayList();
     private User user = new User();
     private AppModel model;
@@ -147,27 +147,6 @@ public class IntroScreenController extends BudgetMother implements Initializable
         this.movieViewFactory = movieViewFactory;
     }
 
-    public void addMovies(int amount){
-        loadedMovies = model.getLoadedMovies();
-        if (bestSimilarMovies.size() > 0){
-            int size = (bestSimilarMovies.size() > amount) ? amount : bestSimilarMovies.size();
-            HBox movieView;
-            int i = 0;
-
-            while (i < size){
-                if (loadedMovies.get(bestSimilarMovies.get(0).getMovie().getId()) == null) {
-                    movieView = movieViewFactory.constructMovieView(bestSimilarMovies.get(0).getMovie());
-                } else {
-                    movieView = loadedMovies.get(bestSimilarMovies.get(0).getMovie().getId());
-                }
-                shownMovies.add(movieView);
-                bestSimilarMovies.remove(0);
-                i++;
-            }
-            flowPane.getChildren().setAll(shownMovies);
-        }
-    }
-
     public void setBestSimilarMovies(ObservableList<TopMovie> bestSimilarMovies) {
         shownMovies.clear();
         this.bestSimilarMovies.clear();
@@ -179,7 +158,8 @@ public class IntroScreenController extends BudgetMother implements Initializable
         ScrollBar bar = getVerticalScrollbar(scrollPane);
         if (value == bar.getMax()) {
             double targetValue = value * shownMovies.size();
-            addMovies(6);
+            setParentModel();
+            flowPane.getChildren().addAll(addMovies(6, movieBestSimilarMovies));
             bar.setValue(targetValue / shownMovies.size());
         }
     }
@@ -187,4 +167,13 @@ public class IntroScreenController extends BudgetMother implements Initializable
     public void setInitialMovies(HashMap<Integer, HBox> initialMovies) {
         flowPane.getChildren().setAll(initialMovies.values());
     }
+
+    public void setMovieBestSimilarMovies(List<Movie> movies){
+        movieBestSimilarMovies.setAll(movies);
+    }
+
+    public void setParentModel(){
+        super.setModel(model);
+    }
 }
+

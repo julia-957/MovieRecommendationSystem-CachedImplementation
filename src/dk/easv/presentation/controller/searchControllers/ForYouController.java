@@ -35,6 +35,7 @@ public class ForYouController extends BudgetMother implements Initializable {
         flowPane.minHeightProperty().bind(scrollPane.heightProperty());
     }
 
+    /*
     public void addMovies(int amount){
         loadedMovies = model.getLoadedMovies();
         if (bestSimilarMovies.size() > 0){
@@ -56,12 +57,14 @@ public class ForYouController extends BudgetMother implements Initializable {
         }
     }
 
+     */
+
     void scrolled(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
         double value = newValue.doubleValue();
         ScrollBar bar = getVerticalScrollbar(scrollPane);
         if (value == bar.getMax()) {
             double targetValue = value * shownMovies.size();
-            addMovies(6);
+            //addMovies(6);
             bar.setValue(targetValue / shownMovies.size());
         }
     }
