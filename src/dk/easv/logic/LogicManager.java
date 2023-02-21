@@ -31,6 +31,7 @@ public class LogicManager {
         return top;
     }
 
+    //TODO get the individual genres from the string containing multiple genres
     public List<String> getAllGenres(){
         List<String> allGenres = new ArrayList<>();
 

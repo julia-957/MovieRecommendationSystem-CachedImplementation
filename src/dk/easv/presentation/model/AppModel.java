@@ -90,6 +90,11 @@ public class AppModel {
         }
     }
 
+    //TODO
+    public List<String> getAllGenres(){
+        return logic.getAllGenres();
+    }
+
     public ObservableList<Movie> searchMovies(String query) {
         return logic.searchMovies(query);
     }

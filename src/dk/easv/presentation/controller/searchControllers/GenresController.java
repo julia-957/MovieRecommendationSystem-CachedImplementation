@@ -16,6 +16,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 
 import java.net.URL;
 import java.util.HashMap;
@@ -27,10 +28,14 @@ public class GenresController extends BudgetMother implements Initializable {
 
     @FXML private FlowPane flowPane;
     @FXML private ScrollPane scrollPane;
+    @FXML
+    private VBox genresVBox;
     private MovieViewFactory movieViewFactory;
     private ObservableList<Movie> filteredMovies = FXCollections.observableArrayList();
     private final ObservableList<HBox> shownMovies = FXCollections.observableArrayList();
     private HashMap<Integer, HBox> loadedMovies;
+
+    private List<String> genres;
 
     @Override
     public void initialize(URL location, ResourceBundle resources){
@@ -40,6 +45,10 @@ public class GenresController extends BudgetMother implements Initializable {
 
         //Retrieve loaded movies
         loadedMovies = model.getLoadedMovies();
+
+        //Makes Buttons for each genre
+        genres = model.getAllGenres();
+        createGenreButtons(genres);
 
         //Show the initial 50 movies
         filteredMovies.setAll(model.getTopAverageRatedMoviesUserDidNotSee(model.getObsLoggedInUser()));
@@ -53,7 +62,12 @@ public class GenresController extends BudgetMother implements Initializable {
         //txtSearchBar.relocate(hbox.getLayoutX(), txtSearchBar.getLayoutY());
     }
 
-    public void getAllGenres(){}
+    //TODO
+    private void createGenreButtons(List<String> genres){
+        for (String g: genres)
+        //genresVBox.getChildren().add(new Button(g.toString()));
+            System.out.println(g);
+    }
 
     public ObservableList<Movie> searchMovies(String query) {
         List<Movie> movies = model.searchMovies(query);
