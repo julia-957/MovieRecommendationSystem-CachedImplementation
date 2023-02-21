@@ -34,29 +34,29 @@ public class MenuController implements Initializable {
     private void setButtonIcons(){
         ImageView homeIconView = new ImageView(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/mediumIndigo/house-bold.png"))));
         homeIconView.setId("homeIconView");
-        homeIconView.setFitHeight(50);
-        homeIconView.setFitWidth(50);
+        homeIconView.setFitHeight(35);
+        homeIconView.setFitWidth(35);
         homeButton.setText("");
         homeButton.setGraphic(homeIconView);
 
         ImageView searchIconView = new ImageView(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/mediumIndigo/magnifying-glass-bold.png"))));
         searchIconView.setId("searchIconView");
-        searchIconView.setFitHeight(50);
-        searchIconView.setFitWidth(50);
+        searchIconView.setFitHeight(35);
+        searchIconView.setFitWidth(35);
         searchButton.setText("");
         searchButton.setGraphic(searchIconView);
 
         ImageView favouritesIconView = new ImageView(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/mediumIndigo/star-bold.png"))));
         favouritesIconView.setId("favouritesIconView");
-        favouritesIconView.setFitHeight(50);
-        favouritesIconView.setFitWidth(50);
+        favouritesIconView.setFitHeight(35);
+        favouritesIconView.setFitWidth(35);
         favouritesButton.setText("");
         favouritesButton.setGraphic(favouritesIconView);
 
         ImageView accountIconView = new ImageView(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/mediumIndigo/user-circle-bold.png"))));
         accountIconView.setId("accountIconView");
-        accountIconView.setFitHeight(50);
-        accountIconView.setFitWidth(50);
+        accountIconView.setFitHeight(35);
+        accountIconView.setFitWidth(35);
         accountButton.setText("");
         accountButton.setGraphic(accountIconView);
     }

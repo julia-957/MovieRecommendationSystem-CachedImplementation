@@ -37,7 +37,7 @@ public class SearchController implements Initializable {
 
         FXMLLoader genresFxmlLoader = new FXMLLoader(Main.class.getResource("/views/searchViews/GenresFilterView.fxml"));
         genresFxmlLoader.setController(genresController);
-        genresController.setModel(appModel);
+        genresController.setAppModel(appModel);
 
         FXMLLoader forYouFxmlLoader = new FXMLLoader(Main.class.getResource("/views/searchViews/ForYouView.fxml"));
         forYouFxmlLoader.setController(forYouController);

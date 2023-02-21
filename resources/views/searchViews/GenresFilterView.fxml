@@ -1,21 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.layout.FlowPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-<VBox xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" >
+<VBox xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <HBox styleClass="backgroundPane" stylesheets="@../style.css" VBox.vgrow="SOMETIMES">
          <padding>
             <Insets bottom="10.0" left="30.0" right="30.0" top="10.0" />
          </padding>
+         <children>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="102.0" text="Genres" />
+               </children>
+            </VBox>
+            <ScrollPane fx:id="scrollPane" fitToWidth="true" hbarPolicy="NEVER" minHeight="300.0" minWidth="500.0" prefWidth="900.0" styleClass="backgroundPane" stylesheets="@../style.css" vbarPolicy="ALWAYS" VBox.vgrow="ALWAYS">
+               <VBox.margin>
+                  <Insets top="15.0" />
+               </VBox.margin>
+               <content>
+                  <FlowPane fx:id="flowPane" alignment="TOP_CENTER" hgap="30.0" maxHeight="-Infinity" maxWidth="Infinity" minHeight="-Infinity" prefWidth="900.0" styleClass="backgroundPane" stylesheets="@../style.css" vgap="30.0">
+                     <padding>
+                        <Insets bottom="30.0" left="30.0" right="30.0" />
+                     </padding>
+                  </FlowPane>
+               </content>
+            </ScrollPane>
+         </children>
       </HBox>
-      <FlowPane hgap="20.0" minHeight="300.0" minWidth="500.0" prefWidth="900.0" styleClass="backgroundPane" stylesheets="@../style.css" vgap="20.0">
-         <padding>
-            <Insets top="30.0" />
-         </padding>
-      </FlowPane>
    </children>
 </VBox>
