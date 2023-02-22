@@ -60,7 +60,7 @@ public class SearchController implements Initializable {
     private void genresAction(ActionEvent actionEvent) throws IOException {
         searchBorderPane.setCenter(genresScene);
         genresController.clearShownMovies();
-        genresController.addMovies(50);
+        genresController.addMovies(30);
         menuController.setFocusOnSearch();
     }
 
@@ -68,7 +68,7 @@ public class SearchController implements Initializable {
     private void searchTitlesAction(ActionEvent actionEvent) throws IOException {
         searchBorderPane.setCenter(searchTitlesScene);
         titleSearchController.clearShownMovies();
-        titleSearchController.addMovies(50);
+        titleSearchController.addMovies(30);
         menuController.setFocusOnSearch();
     }
 

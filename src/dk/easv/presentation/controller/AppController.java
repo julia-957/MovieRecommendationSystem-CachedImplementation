@@ -73,7 +73,7 @@ public class AppController implements Initializable {
 
     public void openIntroScreen() {
         introScreenController.clearShownMovies();
-        introScreenController.addMovies(24);
+        introScreenController.addMovies(30);
         borderPane.setCenter(introScene);
     }
 

@@ -1,7 +1,6 @@
 package dk.easv.presentation.controller.searchControllers;
 
 import dk.easv.entities.Movie;
-import dk.easv.entities.TopMovie;
 import dk.easv.presentation.controller.BudgetMother;
 import dk.easv.presentation.model.AppModel;
 import javafx.beans.value.ObservableValue;
@@ -15,7 +14,6 @@ import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.HBox;
 
 import java.net.URL;
-import java.util.HashMap;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -60,5 +58,9 @@ public class ForYouController extends BudgetMother implements Initializable {
         shownMovies.clear();
         flowPane.getChildren().clear();
         scrollPane.setVvalue(0);
+    }
+
+    private void likeButtonAction(){
+
     }
 }

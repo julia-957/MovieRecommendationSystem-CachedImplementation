@@ -51,13 +51,17 @@ public class AppModel {
         obsTopMoviesSimilarUsers.clear();
         obsTopMoviesSimilarUsers.addAll(logic.getTopMoviesFromSimilarPeople(user));
 
-
         for (TopMovie topMovie: obsTopMoviesSimilarUsers){
             topMoviesSimilarUsersMovies.add(topMovie.getMovie());
         }
 
-        loadMovies(50, obsTopMovieNotSeen);
-        loadMovies(24, topMoviesSimilarUsersMovies);
+        long timerStartMillis = System.currentTimeMillis();
+        loadMovies(30, obsTopMovieNotSeen);
+        System.out.println("Loading took : " + (System.currentTimeMillis() - timerStartMillis) + "ms");
+
+        timerStartMillis = System.currentTimeMillis();
+        loadMovies(30, topMoviesSimilarUsersMovies);
+        System.out.println("Loading took : " + (System.currentTimeMillis() - timerStartMillis) + "ms");
     }
 
     public List<Movie> getTopAverageRatedMoviesUserDidNotSee(User u) {

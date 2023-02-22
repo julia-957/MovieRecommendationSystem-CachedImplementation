@@ -2,10 +2,8 @@ package dk.easv.presentation.controller.menuControllers;
 
 import dk.easv.Main;
 import dk.easv.entities.Movie;
-import dk.easv.entities.TopMovie;
 import dk.easv.entities.User;
 import dk.easv.presentation.controller.BudgetMother;
-import dk.easv.presentation.controller.util.MovieViewFactory;
 import dk.easv.presentation.controller.util.RoundImageCorners;
 import dk.easv.presentation.model.AppModel;
 import javafx.beans.value.ObservableValue;
@@ -77,7 +75,7 @@ public class IntroScreenController extends BudgetMother implements Initializable
         if(!m.isEmpty()) {
             featuredMovieTitle.setText(m.get(moviePosition).getTitle());
             featuredMoviePoster.setImage(new Image(m.get(moviePosition).getPosterFilepath()));
-            saveUsJebus.getStyleClass().addAll("movieDisplayHBox", "rounded");
+            saveUsJebus.getStyleClass().addAll("rounded");
             roundImageCorners.clipImage(featuredMoviePoster);
             featuredMovieDescription.setText(m.get(moviePosition).getMovieDescription());
             carouselRatingIMDB.setText(m.get(moviePosition).getRatingIMDB());
