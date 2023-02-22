@@ -20,6 +20,20 @@
 .searchMenuButtons{
     -fx-font-weight: bold;
     -fx-font-size: 20px;
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+    -fx-border-insets: 15 5 15 5;
+    -fx-background-insets: 15 5 15 5;
+    -fx-border-color: -fx-medium-indigo;
+}
+
+.searchMenuButtons:hover{
+    -fx-border-color: -fx-electric-lilac;
+}
+
+.searchMenuButtons:pressed{
+    -fx-background-color: -fx-electric-lilac;
+    -fx-text-fill: -fx-dark-indigo;
 }
 
 #carouselLeft #carouselLeftView{
