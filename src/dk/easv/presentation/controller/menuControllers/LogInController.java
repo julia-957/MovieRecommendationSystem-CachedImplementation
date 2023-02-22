@@ -16,7 +16,7 @@ public class LogInController {
     @FXML private GridPane gridPane;
     @FXML private PasswordField passwordField;
     @FXML private TextField userId;
-    private AppModel model = AppModel.getInstance();
+    private final AppModel model = AppModel.getInstance();
     private AppController appController;
 
     public void logIn(ActionEvent actionEvent) throws IOException {

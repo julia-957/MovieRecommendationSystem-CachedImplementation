@@ -11,6 +11,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
 
 import java.io.IOException;
@@ -19,6 +20,7 @@ import java.util.ResourceBundle;
 
 public class SearchController implements Initializable {
     @FXML private BorderPane searchBorderPane;
+    @FXML private Button btnForYou, btnMyList, btnSearchTitles, btnGenres;
     private AppController appController;
     private MenuController menuController;
     private final TitleSearchController titleSearchController = new TitleSearchController();
@@ -54,31 +56,41 @@ public class SearchController implements Initializable {
     @FXML
     private void myListAction(ActionEvent actionEvent) throws IOException {
         appController.openFavouritesScreen();
+        menuController.requestFocusOnFavourites();
     }
 
     @FXML
     private void genresAction(ActionEvent actionEvent) throws IOException {
+        btnForYou.setId("");
+        btnSearchTitles.setId("");
+        btnGenres.setId("btnGenresFocused");
+
         searchBorderPane.setCenter(genresScene);
         genresController.clearShownMovies();
         genresController.addMovies(30);
-        menuController.setFocusOnSearch();
     }
 
     @FXML
     private void searchTitlesAction(ActionEvent actionEvent) throws IOException {
+        btnForYou.setId("");
+        btnSearchTitles.setId("btnSearchTitlesFocused");
+        btnGenres.setId("");
+
         searchBorderPane.setCenter(searchTitlesScene);
         titleSearchController.clearShownMovies();
         titleSearchController.addMovies(30);
-        menuController.setFocusOnSearch();
     }
 
     @FXML
     public void forYouAction(ActionEvent actionEvent) throws IOException {
+        btnForYou.setId("btnForYouFocused");
+        btnSearchTitles.setId("");
+        btnGenres.setId("");
+
         forYouController.setBestSimilarMovies(model.getTopMoviesSimilarUsersMovies());
         forYouController.clearShownMovies();
         forYouController.addMovies(24);
         searchBorderPane.setCenter(forYouScene);
-        menuController.setFocusOnSearch();
     }
 
     public void setMenuController(MenuController menuController) {

@@ -3,6 +3,7 @@ package dk.easv.presentation.controller.searchControllers;
 import dk.easv.entities.Movie;
 import dk.easv.presentation.controller.BudgetMother;
 import dk.easv.presentation.model.AppModel;
+import javafx.application.Platform;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -32,11 +33,13 @@ public class TitleSearchController extends BudgetMother implements Initializable
         flowPane.minWidthProperty().bind(scrollPane.widthProperty());
         flowPane.minHeightProperty().bind(scrollPane.heightProperty());
 
-        //Show the initial 50 movies
         filteredMovies.setAll(model.getTopAverageRatedMoviesUserDidNotSee(model.getObsLoggedInUser()));
         setUpListeners();
 
         //TODO figure this out
+        Platform.runLater(() -> {
+
+        });
         //HBox hbox = (HBox) flowPane.getChildren().get(0);
         //txtSearchBar.setMaxWidth(hbox.getPrefWidth());
         //txtSearchBar.relocate(hbox.getLayoutX(), txtSearchBar.getLayoutY());

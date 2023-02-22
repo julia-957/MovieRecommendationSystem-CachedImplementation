@@ -76,11 +76,28 @@ public class MenuController implements Initializable {
         appController.openLogInScreen();
     }
 
-    public void setFocusOnFavourites() {
-        favouritesButton.requestFocus();
+    public void setFocusOnHome() {
+        homeButton.setId("homeButtonFocused");
+        searchButton.setId("searchButton");
+        favouritesButton.setId("favouritesButton");
+        accountButton.setId("accountButton");
     }
 
     public void setFocusOnSearch(){
-        searchButton.requestFocus();
+        homeButton.setId("homeButton");
+        searchButton.setId("searchButtonFocused");
+        favouritesButton.setId("favouritesButton");
+        accountButton.setId("accountButton");
+    }
+
+    public void setFocusOnFavourites() {
+        homeButton.setId("homeButton");
+        searchButton.setId("searchButton");
+        favouritesButton.setId("favouritesButtonFocused");
+        accountButton.setId("accountButton");
+    }
+
+    public void requestFocusOnFavourites(){
+        favouritesButton.requestFocus();
     }
 }

@@ -75,11 +75,13 @@ public class AppController implements Initializable {
         introScreenController.clearShownMovies();
         introScreenController.addMovies(30);
         borderPane.setCenter(introScene);
+        menuController.setFocusOnHome();
     }
 
     public void openSearchScreen() throws IOException {
         searchController.forYouAction(null);
         borderPane.setCenter(searchScene);
+        menuController.setFocusOnSearch();
     }
 
     public void openFavouritesScreen() {

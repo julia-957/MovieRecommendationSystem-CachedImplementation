@@ -153,7 +153,8 @@ public class IntroScreenController extends BudgetMother implements Initializable
         shownMovies.clear();
         flowPane.getChildren().clear();
         scrollPane.setVvalue(0);
-        movieBestSimilarMovies.setAll(model.getTopMoviesSimilarUsersMovies());
+        movieBestSimilarMovies.clear();
+        movieBestSimilarMovies.addAll(model.getTopMoviesSimilarUsersMovies());
     }
 }
 

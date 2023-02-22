@@ -17,6 +17,7 @@
     -fx-text-fill: -fx-electric-lilac;
 }
 
+/* Search menu buttons */
 .searchMenuButtons{
     -fx-font-weight: bold;
     -fx-font-size: 20px;
@@ -29,6 +30,9 @@
 
 .searchMenuButtons:hover{
     -fx-border-color: -fx-electric-lilac;
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+    -fx-scale-z: 1.1;
 }
 
 .searchMenuButtons:pressed{
@@ -36,6 +40,14 @@
     -fx-text-fill: -fx-dark-indigo;
 }
 
+#btnForYouFocused, #btnSearchTitlesFocused, #btnGenresFocused{
+    -fx-border-color: -fx-electric-lilac;
+    -fx-background-color: -fx-electric-lilac;
+    -fx-text-fill: -fx-dark-indigo;
+}
+
+
+/* Carousel menu buttons */
 #carouselLeft #carouselLeftView{
     -fx-image: url(/icons/mediumIndigo/arrow-left.png);
 }
@@ -44,6 +56,7 @@
     -fx-image: url(/icons/mediumIndigo/arrow-right.png);
 }
 
+/* Home menu button */
 #homeButton #homeIconView{
     -fx-image: url(/icons/mediumIndigo/house-bold.png);
 }
@@ -52,6 +65,11 @@
     -fx-image: url(/icons/electricLilac/house-bold.png);
 }
 
+#homeButtonFocused #homeIconView{
+    -fx-image: url(/icons/electricLilac/house-bold.png);
+}
+
+/* Search menu button */
 #searchButton #searchIconView{
     -fx-image: url(/icons/mediumIndigo/magnifying-glass-bold.png);
 }
@@ -60,6 +78,11 @@
     -fx-image: url(/icons/electricLilac/magnifying-glass-bold.png);
 }
 
+#searchButtonFocused #searchIconView{
+    -fx-image: url(/icons/electricLilac/magnifying-glass-bold.png);
+}
+
+/* Favourites menu button */
 #favouritesButton #favouritesIconView{
     -fx-image: url(/icons/mediumIndigo/star-bold.png);
 }
@@ -68,6 +91,12 @@
     -fx-image: url(/icons/electricLilac/star-bold.png);
 }
 
+#favouritesButtonFocused #favouritesIconView{
+    -fx-image: url(/icons/electricLilac/star-bold.png);
+}
+
+
+/* Account menu button */
 #accountButton #accountIconView{
     -fx-image: url(/icons/mediumIndigo/user-circle-bold.png);
 }
@@ -76,6 +105,11 @@
     -fx-image: url(/icons/electricLilac/user-circle-bold.png);
 }
 
+#accountButtonFocused #accountIconView{
+    -fx-image: url(/icons/electricLilac/user-circle-bold.png);
+}
+
+/* Menu bar */
 #menuBarVBox {
     -fx-background-color: -fx-deep-indigo;
     -fx-background-radius: 10px;
@@ -104,6 +138,7 @@
     -fx-background-size: cover;
 }
 
+/* Log in screen */
 .loginInput{
     -fx-background-color: transparent;
     -fx-text-fill: -fx-electric-lilac;
@@ -129,6 +164,8 @@
     -fx-text-fill: -fx-medium-indigo;
     -fx-font-size: 18;
 }
+
+/* Styling classes */
 .rounded{
     -fx-background-radius: 10px;
     -fx-border-radius: 10px;
@@ -137,6 +174,7 @@
     -fx-effect: dropshadow(gaussian, #231a38, 10, 0, 0, 5);
 }
 
+/* Movie view */
 .movieDisplayHBox {
     -fx-background-color: -fx-medium-indigo;
 }
@@ -147,6 +185,7 @@
     -fx-scale-z: 1.1;
 }
 
+/* Scroll bar */
 .scroll-bar {
     -fx-background-color: -fx-deep-indigo;
 }
