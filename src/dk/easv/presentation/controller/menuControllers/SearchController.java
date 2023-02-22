@@ -60,20 +60,24 @@ public class SearchController implements Initializable {
     @FXML
     private void genresAction(ActionEvent actionEvent) throws IOException {
         searchBorderPane.setCenter(genresScene);
+        genresController.clearShownMovies();
+        genresController.addMovies(50);
         menuController.setFocusOnSearch();
     }
 
     @FXML
     private void searchTitlesAction(ActionEvent actionEvent) throws IOException {
         searchBorderPane.setCenter(searchTitlesScene);
+        titleSearchController.clearShownMovies();
         titleSearchController.addMovies(50);
         menuController.setFocusOnSearch();
     }
 
     @FXML
     public void forYouAction(ActionEvent actionEvent) throws IOException {
-        forYouController.setBestSimilarMovies(model.getObsTopMoviesSimilarUsers());
-        //forYouController.addMovies(24);
+        forYouController.setBestSimilarMovies(model.getTopMoviesSimilarUsersMovies());
+        forYouController.clearShownMovies();
+        forYouController.addMovies(24);
         searchBorderPane.setCenter(forYouScene);
         menuController.setFocusOnSearch();
     }

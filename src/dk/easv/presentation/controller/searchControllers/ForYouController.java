@@ -1,8 +1,8 @@
 package dk.easv.presentation.controller.searchControllers;
 
+import dk.easv.entities.Movie;
 import dk.easv.entities.TopMovie;
 import dk.easv.presentation.controller.BudgetMother;
-import dk.easv.presentation.controller.util.MovieViewFactory;
 import dk.easv.presentation.model.AppModel;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -16,14 +16,14 @@ import javafx.scene.layout.HBox;
 
 import java.net.URL;
 import java.util.HashMap;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class ForYouController extends BudgetMother implements Initializable {
     @FXML private ScrollPane scrollPane;
     @FXML private FlowPane flowPane;
     private final AppModel model = AppModel.getInstance();
-    private HashMap<Integer, HBox> loadedMovies;
-    private final ObservableList<TopMovie> bestSimilarMovies = FXCollections.observableArrayList();
+    private ObservableList<Movie> bestSimilarMovies = FXCollections.observableArrayList();
     private final ObservableList<HBox> shownMovies = FXCollections.observableArrayList();
 
     @Override
@@ -34,43 +34,31 @@ public class ForYouController extends BudgetMother implements Initializable {
         flowPane.minHeightProperty().bind(scrollPane.heightProperty());
     }
 
-    /*
     public void addMovies(int amount){
-        loadedMovies = model.getLoadedMovies();
-        if (bestSimilarMovies.size() > 0){
-            int size = (bestSimilarMovies.size() > amount) ? amount : bestSimilarMovies.size();
-            HBox movieView;
-            int i = 0;
-
-            while (i < size){
-                if (loadedMovies.get(bestSimilarMovies.get(0).getMovie().getId()) == null) {
-                    movieView = movieViewFactory.constructMovieView(bestSimilarMovies.get(0).getMovie());
-                } else {
-                    movieView = loadedMovies.get(bestSimilarMovies.get(0).getMovie().getId());
-                }
-                shownMovies.add(movieView);
-                bestSimilarMovies.remove(0);
-                i++;
-            }
-            flowPane.getChildren().setAll(shownMovies);
-        }
+        amount = Math.min(bestSimilarMovies.size(), amount);
+        List[] results = super.addMovies(amount, bestSimilarMovies);
+        shownMovies.addAll(results[0]);
+        bestSimilarMovies = FXCollections.observableArrayList(results[1]);
+        flowPane.getChildren().setAll(shownMovies);
     }
-
-     */
 
     void scrolled(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
         double value = newValue.doubleValue();
         ScrollBar bar = getVerticalScrollbar(scrollPane);
         if (value == bar.getMax()) {
             double targetValue = value * shownMovies.size();
-            //addMovies(6);
+            addMovies(6);
             bar.setValue(targetValue / shownMovies.size());
         }
     }
 
-    public void setBestSimilarMovies(ObservableList<TopMovie> bestSimilarMovies) {
+    public void setBestSimilarMovies(List<Movie> movies){
+        bestSimilarMovies.setAll(movies);
+    }
+
+    public void clearShownMovies(){
         shownMovies.clear();
-        this.bestSimilarMovies.clear();
-        this.bestSimilarMovies.setAll(bestSimilarMovies);
+        flowPane.getChildren().clear();
+        scrollPane.setVvalue(0);
     }
 }

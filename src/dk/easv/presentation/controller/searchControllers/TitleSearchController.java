@@ -81,4 +81,11 @@ public class TitleSearchController extends BudgetMother implements Initializable
         filteredMovies = FXCollections.observableArrayList(results[1]);
         flowPane.getChildren().setAll(shownMovies);
     }
+
+    public void clearShownMovies(){
+        shownMovies.clear();
+        flowPane.getChildren().clear();
+        scrollPane.setVvalue(0);
+        filteredMovies.setAll(model.getTopAverageRatedMoviesUserDidNotSee(model.getObsLoggedInUser()));
+    }
 }

@@ -51,7 +51,15 @@ public class BudgetMother {
         return new List[] {shownMovies, moviesToLoad};
     }
 
-    public void setModel(AppModel model) {
-        this.model = model;
+    /*
+    protected void scrollBarAction(List<HBox> shownMovies, ScrollPane scrollPane, Number newValue){
+        double value = newValue.doubleValue();
+        ScrollBar bar = getVerticalScrollbar(scrollPane);
+        if (value == bar.getMax()) {
+            double targetValue = value * shownMovies.size();
+            addMovies(6);
+            bar.setValue(targetValue / shownMovies.size());
+        }
     }
+     */
 }
