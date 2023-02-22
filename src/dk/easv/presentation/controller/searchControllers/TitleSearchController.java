@@ -37,12 +37,13 @@ public class TitleSearchController extends BudgetMother implements Initializable
         setUpListeners();
 
         //TODO figure this out
+        /*
         Platform.runLater(() -> {
-
+            HBox hbox = (HBox) flowPane.getChildren().get(0);
+            txtSearchBar.setMaxWidth(hbox.getPrefWidth());
+            txtSearchBar.relocate(hbox.getLayoutX(), txtSearchBar.getLayoutY());
         });
-        //HBox hbox = (HBox) flowPane.getChildren().get(0);
-        //txtSearchBar.setMaxWidth(hbox.getPrefWidth());
-        //txtSearchBar.relocate(hbox.getLayoutX(), txtSearchBar.getLayoutY());
+         */
     }
 
     private void setUpListeners(){
@@ -53,7 +54,7 @@ public class TitleSearchController extends BudgetMother implements Initializable
             if (txtSearchBar.getText().isEmpty()){
                 shownMovies.clear();
                 filteredMovies.setAll(model.getTopAverageRatedMoviesUserDidNotSee(model.getObsLoggedInUser()));
-                addMovies(30);
+                addMovies(2);
             }
         });
 

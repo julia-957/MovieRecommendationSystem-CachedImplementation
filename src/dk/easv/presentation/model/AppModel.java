@@ -13,8 +13,9 @@ import java.util.List;
 
 public class AppModel {
     private static AppModel instance = null;
-    LogicManager logic = new LogicManager();
-    User user = new User();
+    private final LogicManager logic = new LogicManager();
+    private final User user = new User();
+
     private final ObservableList<User>  obsUsers = FXCollections.observableArrayList();
     private final ObservableList<Movie> obsTopMovieSeen = FXCollections.observableArrayList();
     private final ObservableList<Movie> obsTopMovieNotSeen = FXCollections.observableArrayList();
@@ -25,7 +26,7 @@ public class AppModel {
     private final SimpleObjectProperty<User> obsLoggedInUser = new SimpleObjectProperty<>();
 
     private final HashMap<Integer, HBox> loadedMovies = new HashMap<>();
-    private MovieViewFactory movieViewFactory = new MovieViewFactory();
+    private final MovieViewFactory movieViewFactory = new MovieViewFactory();
 
     public static AppModel getInstance(){
         if(instance == null)
@@ -56,11 +57,11 @@ public class AppModel {
         }
 
         long timerStartMillis = System.currentTimeMillis();
-        loadMovies(30, obsTopMovieNotSeen);
+        loadMovies(2, obsTopMovieNotSeen);
         System.out.println("Loading took : " + (System.currentTimeMillis() - timerStartMillis) + "ms");
 
         timerStartMillis = System.currentTimeMillis();
-        loadMovies(30, topMoviesSimilarUsersMovies);
+        loadMovies(2, topMoviesSimilarUsersMovies);
         System.out.println("Loading took : " + (System.currentTimeMillis() - timerStartMillis) + "ms");
     }
 
@@ -139,5 +140,13 @@ public class AppModel {
 
     public ObservableList<Movie> getTopMoviesSimilarUsersMovies() {
         return topMoviesSimilarUsersMovies;
+    }
+
+    public void addMovieToFavourites(Movie movie, User user){
+        logic.addMovieToFavourites(movie, user);
+    }
+
+    public void removeMovieFromFavourites(Movie movie, User user){
+        logic.removeMovieFromFavourites(movie, user);
     }
 }

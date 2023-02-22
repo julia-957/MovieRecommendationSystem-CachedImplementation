@@ -67,7 +67,7 @@ public class SearchController implements Initializable {
 
         searchBorderPane.setCenter(genresScene);
         genresController.clearShownMovies();
-        genresController.addMovies(30);
+        genresController.addMovies(2);
     }
 
     @FXML
@@ -78,7 +78,7 @@ public class SearchController implements Initializable {
 
         searchBorderPane.setCenter(searchTitlesScene);
         titleSearchController.clearShownMovies();
-        titleSearchController.addMovies(30);
+        titleSearchController.addMovies(2);
     }
 
     @FXML

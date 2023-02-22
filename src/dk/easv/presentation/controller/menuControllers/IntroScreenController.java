@@ -37,7 +37,7 @@ public class IntroScreenController extends BudgetMother implements Initializable
     @FXML private FlowPane flowPane;
     @FXML private ScrollPane scrollPane;
     private int moviePosition = 0;
-    private List<Movie> featuredMovies;
+    private List<Movie> featuredMovies = new ArrayList<>();
     private ObservableList<Movie> movieBestSimilarMovies = FXCollections.observableArrayList();
     private final ObservableList<HBox> shownMovies = FXCollections.observableArrayList();
     private User user = new User();
@@ -47,9 +47,7 @@ public class IntroScreenController extends BudgetMother implements Initializable
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         carouselSetup();
-        featuredMovies = model.getTopAverageRatedMoviesUserDidNotSee(model.getObsLoggedInUser());
-        setFeaturedMovie(featuredMovies, moviePosition);
-        setFavouriteHeart();
+
         scrollPane.vvalueProperty().addListener(this::scrolled);
 
         flowPane.minWidthProperty().bind(scrollPane.widthProperty());
@@ -88,11 +86,13 @@ public class IntroScreenController extends BudgetMother implements Initializable
     public void clickFavourite(ActionEvent actionEvent) {
         if(user.getFavouriteMovies().contains(featuredMovies.get(moviePosition))){
             favouriteHeart.setImage(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/electricLilac/heart-outline.png"))));
+            model.removeMovieFromFavourites(featuredMovies.get(moviePosition), user);
             user.getFavouriteMovies().remove(featuredMovies.get(moviePosition));
         }
 
         else {
             favouriteHeart.setImage(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/electricLilac/heart.png"))));
+            model.addMovieToFavourites(featuredMovies.get(moviePosition), user);
             user.getFavouriteMovies().add(featuredMovies.get(moviePosition));
         }
         favouriteBtn.setText("");
@@ -137,10 +137,6 @@ public class IntroScreenController extends BudgetMother implements Initializable
         }
     }
 
-    public void setMovieBestSimilarMovies(List<Movie> movies){
-        movieBestSimilarMovies.setAll(movies);
-    }
-
     public void addMovies(int amount){
         amount = Math.min(movieBestSimilarMovies.size(), amount);
         List[] results = super.addMovies(amount, movieBestSimilarMovies);
@@ -155,6 +151,16 @@ public class IntroScreenController extends BudgetMother implements Initializable
         scrollPane.setVvalue(0);
         movieBestSimilarMovies.clear();
         movieBestSimilarMovies.addAll(model.getTopMoviesSimilarUsersMovies());
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public void setFeaturedMovies(){
+        featuredMovies = model.getTopAverageRatedMoviesUserDidNotSee(model.getObsLoggedInUser());
+        setFeaturedMovie(featuredMovies, moviePosition);
+        setFavouriteHeart();
     }
 }
 

@@ -17,14 +17,12 @@ import java.util.*;
 public class AppController implements Initializable {
     @FXML private BorderPane borderPane;
     @FXML private VBox menuBarVBox;
-    private final AppModel model = AppModel.getInstance();
     private MenuController menuController;
-    private final SearchController searchController = new SearchController();
     private final IntroScreenController introScreenController = new IntroScreenController();
+    private final SearchController searchController = new SearchController();
     private final FavouritesController favouritesController = new FavouritesController();
     private final LogInController logInController = new LogInController();
-    private FXMLLoader searchFXMLLoader, introFXMLLoader, favouritesFXMLLoader, logInFXMLLoader;
-    private Node searchScene, introScene, favouritesScene, logInScene;
+    private Node introScene, searchScene, favouritesScene, logInScene;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -37,21 +35,21 @@ public class AppController implements Initializable {
     }
 
     private void loadScenes() throws IOException {
-        logInFXMLLoader = new FXMLLoader(Main.class.getResource("/views/menuViews/LogIn.fxml"));
+        FXMLLoader logInFXMLLoader = new FXMLLoader(Main.class.getResource("/views/menuViews/LogIn.fxml"));
         logInFXMLLoader.setController(logInController);
         logInController.setAppController(this);
         logInScene = logInFXMLLoader.load();
 
-        searchFXMLLoader = new FXMLLoader(Main.class.getResource("/views/menuViews/SearchView.fxml"));
+        FXMLLoader introFXMLLoader = new FXMLLoader(Main.class.getResource("/views/menuViews/IntroScreen.fxml"));
+        introFXMLLoader.setController(introScreenController);
+        introScene = introFXMLLoader.load();
+
+        FXMLLoader searchFXMLLoader = new FXMLLoader(Main.class.getResource("/views/menuViews/SearchView.fxml"));
         searchFXMLLoader.setController(searchController);
         searchController.setAppController(this);
         searchScene = searchFXMLLoader.load();
 
-        introFXMLLoader = new FXMLLoader(Main.class.getResource("/views/menuViews/IntroScreen.fxml"));
-        introFXMLLoader.setController(introScreenController);
-        introScene = introFXMLLoader.load();
-
-        favouritesFXMLLoader = new FXMLLoader(Main.class.getResource("/views/menuViews/FavouritesView.fxml"));
+        FXMLLoader favouritesFXMLLoader = new FXMLLoader(Main.class.getResource("/views/menuViews/FavouritesView.fxml"));
         favouritesFXMLLoader.setController(favouritesController);
         favouritesScene = favouritesFXMLLoader.load();
     }
@@ -73,7 +71,10 @@ public class AppController implements Initializable {
 
     public void openIntroScreen() {
         introScreenController.clearShownMovies();
-        introScreenController.addMovies(30);
+        introScreenController.addMovies(2);
+        introScreenController.setUser(AppModel.getInstance().getObsLoggedInUser());
+        introScreenController.setFeaturedMovies();
+
         borderPane.setCenter(introScene);
         menuController.setFocusOnHome();
     }
