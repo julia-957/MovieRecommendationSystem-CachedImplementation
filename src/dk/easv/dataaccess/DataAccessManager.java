@@ -9,6 +9,7 @@ import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.StandardOpenOption;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -135,22 +136,13 @@ public class DataAccessManager {
     }
 
     public void removeMovieFromFavourites(Movie movie, User user) {
-        File inputFile = new File("data/favourites.txt");
-        File tempFile = new File("data/myTempFile.txt");
-
-        try (BufferedReader reader = new BufferedReader(new FileReader(inputFile));
-             BufferedWriter writer = new BufferedWriter(new FileWriter(tempFile))) {
-
-            String lineToRemove = movie.getId() + "," + user.getId();
-            String currentLine;
-
-            while ((currentLine = reader.readLine()) != null) {
-                // trim newline when comparing with lineToRemove
-                String trimmedLine = currentLine.trim();
-                if (trimmedLine.equals(lineToRemove)) continue;
-                writer.write(currentLine + System.getProperty("line.separator"));
-            }
-            tempFile.renameTo(inputFile);
+        File file = new File("data/favourites.txt");
+        List<String> out = null;
+        try {
+            out = Files.lines(file.toPath())
+                    .filter(line -> !line.contains(movie.getId()+","+user.getId()))
+                    .collect(Collectors.toList());
+            Files.write(file.toPath(), out, StandardOpenOption.WRITE, StandardOpenOption.TRUNCATE_EXISTING);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
