@@ -5,7 +5,6 @@ import dk.easv.presentation.controller.AppController;
 import dk.easv.presentation.controller.searchControllers.ForYouController;
 import dk.easv.presentation.controller.searchControllers.GenresController;
 import dk.easv.presentation.controller.searchControllers.TitleSearchController;
-import dk.easv.presentation.controller.util.MovieViewFactory;
 import dk.easv.presentation.model.AppModel;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

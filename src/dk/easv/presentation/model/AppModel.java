@@ -14,7 +14,6 @@ import java.util.List;
 public class AppModel {
     private static AppModel instance = null;
     LogicManager logic = new LogicManager();
-    // Models of the data in the view
     User user = new User();
     private final ObservableList<User>  obsUsers = FXCollections.observableArrayList();
     private final ObservableList<Movie> obsTopMovieSeen = FXCollections.observableArrayList();
@@ -26,12 +25,12 @@ public class AppModel {
     private final SimpleObjectProperty<User> obsLoggedInUser = new SimpleObjectProperty<>();
 
     private final HashMap<Integer, HBox> loadedMovies = new HashMap<>();
-    //private MovieViewFactory movieViewFactory;
+    private MovieViewFactory movieViewFactory = new MovieViewFactory();
 
     public static AppModel getInstance(){
-        if(instance == null){
+        if(instance == null)
             instance = new AppModel();
-        } return instance;
+        return instance;
     }
 
     public void loadUsers(){
@@ -57,8 +56,8 @@ public class AppModel {
             topMoviesSimilarUsersMovies.add(topMovie.getMovie());
         }
 
-        //loadMovies(50, obsTopMovieNotSeen);
-        //loadMovies(24, topMoviesSimilarUsersMovies);
+        loadMovies(50, obsTopMovieNotSeen);
+        loadMovies(24, topMoviesSimilarUsersMovies);
     }
 
     public List<Movie> getTopAverageRatedMoviesUserDidNotSee(User u) {
@@ -120,10 +119,9 @@ public class AppModel {
         loadedMovies.put(movieID, mainContainer);
     }
 
-    /*
     private void loadMovies(int amount, List<Movie> list){
         if (list.size() > 0) {
-            int size = (list.size() > amount) ? amount : list.size();
+            int size = Math.min(list.size(), amount);
 
             int i = 0;
             while (i < size) {
@@ -134,8 +132,6 @@ public class AppModel {
             }
         }
     }
-
-     */
 
     public ObservableList<Movie> getTopMoviesSimilarUsersMovies() {
         return topMoviesSimilarUsersMovies;

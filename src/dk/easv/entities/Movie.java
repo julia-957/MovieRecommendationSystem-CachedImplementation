@@ -15,6 +15,7 @@ public class Movie {
         this.title = title;
         this.year = year;
         this.ratings = new ArrayList<>();
+        this.posterFilepath = "\\/images/cats_2_3.png\\";
     }
 
     public Movie(int id, String title, int year, String genre, String posterFilepath,String movieDescription, String ratingIMDB){

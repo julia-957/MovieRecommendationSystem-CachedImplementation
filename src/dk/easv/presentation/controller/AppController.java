@@ -65,8 +65,6 @@ public class AppController implements Initializable {
             menuController.setAppController(this);
             searchController.setMenuController(menuController);
 
-            introScreenController.setMovieBestSimilarMovies(model.getTopMoviesSimilarUsersMovies());
-            introScreenController.addMovies(24);
             openIntroScreen();
         } catch (IOException e) {
             e.printStackTrace();
@@ -74,6 +72,8 @@ public class AppController implements Initializable {
     }
 
     public void openIntroScreen() {
+        introScreenController.clearShownMovies();
+        introScreenController.addMovies(24);
         borderPane.setCenter(introScene);
     }
 

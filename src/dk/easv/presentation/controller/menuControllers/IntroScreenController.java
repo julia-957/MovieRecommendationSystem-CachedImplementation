@@ -43,7 +43,7 @@ public class IntroScreenController extends BudgetMother implements Initializable
     private ObservableList<Movie> movieBestSimilarMovies = FXCollections.observableArrayList();
     private final ObservableList<HBox> shownMovies = FXCollections.observableArrayList();
     private User user = new User();
-    private AppModel model = AppModel.getInstance();
+    private final AppModel model = AppModel.getInstance();
     private RoundImageCorners roundImageCorners = new RoundImageCorners();
 
     @Override
@@ -76,12 +76,11 @@ public class IntroScreenController extends BudgetMother implements Initializable
      private void setFeaturedMovie(List<Movie> m, int moviePosition) {
         if(!m.isEmpty()) {
             featuredMovieTitle.setText(m.get(moviePosition).getTitle());
-            //featuredMoviePoster.setImage(new Image(m.get(moviePosition).getPosterFilepath()));
-            featuredMoviePoster.setImage(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/images/cats_2_3.png"))));
+            featuredMoviePoster.setImage(new Image(m.get(moviePosition).getPosterFilepath()));
             saveUsJebus.getStyleClass().addAll("movieDisplayHBox", "rounded");
             roundImageCorners.clipImage(featuredMoviePoster);
-            //featuredMovieDescription.setText(m.get(moviePosition).getMovieDescription());
-            //carouselRatingIMDB.setText(m.get(moviePosition).getRatingIMDB().toString());
+            featuredMovieDescription.setText(m.get(moviePosition).getMovieDescription());
+            carouselRatingIMDB.setText(m.get(moviePosition).getRatingIMDB());
             carouselRatingUsers.setText(String.format(Locale.US,"%.1f",(m.get(moviePosition).getAverageRating())));
             carouselYearTxt.setText(String.valueOf(m.get(moviePosition).getYear()));
             setFavouriteHeart();
@@ -150,6 +149,13 @@ public class IntroScreenController extends BudgetMother implements Initializable
         shownMovies.addAll(results[0]);
         movieBestSimilarMovies = FXCollections.observableArrayList(results[1]);
         flowPane.getChildren().setAll(shownMovies);
+    }
+
+    public void clearShownMovies(){
+        shownMovies.clear();
+        flowPane.getChildren().clear();
+        scrollPane.setVvalue(0);
+        movieBestSimilarMovies.setAll(model.getTopMoviesSimilarUsersMovies());
     }
 }
 

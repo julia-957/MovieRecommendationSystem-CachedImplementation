@@ -17,9 +17,9 @@ import java.util.*;
 
 public class MovieViewFactory {
     private final RoundImageCorners roundImageCorners = new RoundImageCorners();
-    private AppModel model = AppModel.getInstance();
 
     public HBox constructMovieView(Movie movie){
+        AppModel model = AppModel.getInstance();
         long timerStartMillis = System.currentTimeMillis();
 
         //Create an HBox to hold everything
@@ -94,9 +94,5 @@ public class MovieViewFactory {
         model.updateHashMap(movie.getId(), mainContainer);
         System.out.println(movie.getTitle() + "took : " + (System.currentTimeMillis() - timerStartMillis) + "ms");
         return  mainContainer;
-    }
-
-    public void setModel(AppModel model) {
-        this.model = model;
     }
 }
