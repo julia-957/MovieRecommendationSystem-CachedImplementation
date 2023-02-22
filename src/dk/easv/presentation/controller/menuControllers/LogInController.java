@@ -16,7 +16,7 @@ public class LogInController {
     @FXML private GridPane gridPane;
     @FXML private PasswordField passwordField;
     @FXML private TextField userId;
-    private AppModel model;
+    private AppModel model = AppModel.getInstance();
     private AppController appController;
 
     public void logIn(ActionEvent actionEvent) throws IOException {
@@ -35,9 +35,5 @@ public class LogInController {
 
     public void signUp(ActionEvent actionEvent) {
         System.out.println("Sign-Up");
-    }
-
-    public void setModel(AppModel model) {
-        this.model = model;
     }
 }

@@ -22,28 +22,22 @@ public class SearchController implements Initializable {
     @FXML private BorderPane searchBorderPane;
     private AppController appController;
     private MenuController menuController;
-    private TitleSearchController titleSearchController = new TitleSearchController();
-    private GenresController genresController = new GenresController();
-    private ForYouController forYouController = new ForYouController();
-    private AppModel appModel;
+    private final TitleSearchController titleSearchController = new TitleSearchController();
+    private final GenresController genresController = new GenresController();
+    private final ForYouController forYouController = new ForYouController();
+    private final AppModel model = AppModel.getInstance();
     private Node searchTitlesScene, genresScene, forYouScene;
-    private MovieViewFactory movieViewFactory;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         FXMLLoader searchTitlesfxmlLoader = new FXMLLoader(Main.class.getResource("/views/searchViews/TitleSearchView.fxml"));
         searchTitlesfxmlLoader.setController(titleSearchController);
-        titleSearchController.setAppModel(appModel);
-        titleSearchController.setMovieViewFactory(movieViewFactory);
 
         FXMLLoader genresFxmlLoader = new FXMLLoader(Main.class.getResource("/views/searchViews/GenresFilterView.fxml"));
         genresFxmlLoader.setController(genresController);
-        genresController.setAppModel(appModel);
 
         FXMLLoader forYouFxmlLoader = new FXMLLoader(Main.class.getResource("/views/searchViews/ForYouView.fxml"));
         forYouFxmlLoader.setController(forYouController);
-        forYouController.setModel(appModel);
-        forYouController.setMovieViewFactory(movieViewFactory);
 
         try {
             searchTitlesScene = searchTitlesfxmlLoader.load();
@@ -72,24 +66,16 @@ public class SearchController implements Initializable {
     @FXML
     private void searchTitlesAction(ActionEvent actionEvent) throws IOException {
         searchBorderPane.setCenter(searchTitlesScene);
-        //titleSearchController.addMovies(50);
+        titleSearchController.addMovies(50);
         menuController.setFocusOnSearch();
     }
 
     @FXML
     public void forYouAction(ActionEvent actionEvent) throws IOException {
-        forYouController.setBestSimilarMovies(appModel.getObsTopMoviesSimilarUsers());
+        forYouController.setBestSimilarMovies(model.getObsTopMoviesSimilarUsers());
         //forYouController.addMovies(24);
         searchBorderPane.setCenter(forYouScene);
         menuController.setFocusOnSearch();
-    }
-
-    public void setAppModel(AppModel model) {
-        this.appModel = model;
-    }
-
-    public void setMovieViewFactory(MovieViewFactory movieViewFactory) {
-        this.movieViewFactory = movieViewFactory;
     }
 
     public void setMenuController(MenuController menuController) {

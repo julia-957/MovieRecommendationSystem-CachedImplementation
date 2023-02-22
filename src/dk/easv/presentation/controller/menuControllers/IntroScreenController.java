@@ -30,29 +30,20 @@ import java.util.*;
 import java.util.List;
 
 public class IntroScreenController extends BudgetMother implements Initializable {
-    @FXML
-    private HBox featuredMovieView;
-    @FXML
-    private VBox saveUsJebus;
-    @FXML
-    private Rectangle lineDivider;
-    @FXML
-    private ImageView featuredMoviePoster, iconIMDBrating, iconUserRatings, carouselRightView, carouselLeftView, favouriteHeart;
-    @FXML
-    private Label featuredMovieDescription, featuredMovieTitle, carouselGenreTxt, carouselRatingIMDB, carouselRatingUsers, carouselYearTxt;
-    @FXML
-    private Button favouriteBtn, carouselLeft, carouselRight;
+    @FXML private HBox featuredMovieView;
+    @FXML private VBox saveUsJebus;
+    @FXML private Rectangle lineDivider;
+    @FXML private ImageView featuredMoviePoster, iconIMDBrating, iconUserRatings, carouselRightView, carouselLeftView, favouriteHeart;
+    @FXML private Label featuredMovieDescription, featuredMovieTitle, carouselGenreTxt, carouselRatingIMDB, carouselRatingUsers, carouselYearTxt;
+    @FXML private Button favouriteBtn, carouselLeft, carouselRight;
     @FXML private FlowPane flowPane;
     @FXML private ScrollPane scrollPane;
     private int moviePosition = 0;
     private List<Movie> featuredMovies;
-    private final ObservableList<TopMovie> bestSimilarMovies = FXCollections.observableArrayList();
-    private final ObservableList<Movie> movieBestSimilarMovies = FXCollections.observableArrayList();
+    private ObservableList<Movie> movieBestSimilarMovies = FXCollections.observableArrayList();
     private final ObservableList<HBox> shownMovies = FXCollections.observableArrayList();
     private User user = new User();
-    private AppModel model;
-    private MovieViewFactory movieViewFactory;
-    private HashMap<Integer, HBox> loadedMovies;
+    private AppModel model = AppModel.getInstance();
     private RoundImageCorners roundImageCorners = new RoundImageCorners();
 
     @Override
@@ -139,41 +130,26 @@ public class IntroScreenController extends BudgetMother implements Initializable
         setFeaturedMovie(featuredMovies, moviePosition);
     }
 
-    public void setModel(AppModel model) {
-        this.model = model;
-    }
-
-    public void setMovieViewFactory(MovieViewFactory movieViewFactory) {
-        this.movieViewFactory = movieViewFactory;
-    }
-
-    public void setBestSimilarMovies(ObservableList<TopMovie> bestSimilarMovies) {
-        shownMovies.clear();
-        this.bestSimilarMovies.clear();
-        this.bestSimilarMovies.setAll(bestSimilarMovies);
-    }
-
     void scrolled(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
         double value = newValue.doubleValue();
         ScrollBar bar = getVerticalScrollbar(scrollPane);
         if (value == bar.getMax()) {
             double targetValue = value * shownMovies.size();
-            setParentModel();
-            flowPane.getChildren().addAll(addMovies(6, movieBestSimilarMovies));
+            addMovies(6);
             bar.setValue(targetValue / shownMovies.size());
         }
-    }
-
-    public void setInitialMovies(HashMap<Integer, HBox> initialMovies) {
-        flowPane.getChildren().setAll(initialMovies.values());
     }
 
     public void setMovieBestSimilarMovies(List<Movie> movies){
         movieBestSimilarMovies.setAll(movies);
     }
 
-    public void setParentModel(){
-        super.setModel(model);
+    public void addMovies(int amount){
+        amount = Math.min(movieBestSimilarMovies.size(), amount);
+        List[] results = super.addMovies(amount, movieBestSimilarMovies);
+        shownMovies.addAll(results[0]);
+        movieBestSimilarMovies = FXCollections.observableArrayList(results[1]);
+        flowPane.getChildren().setAll(shownMovies);
     }
 }
 

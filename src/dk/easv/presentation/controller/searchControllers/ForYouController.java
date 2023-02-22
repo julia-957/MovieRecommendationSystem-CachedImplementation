@@ -21,8 +21,7 @@ import java.util.ResourceBundle;
 public class ForYouController extends BudgetMother implements Initializable {
     @FXML private ScrollPane scrollPane;
     @FXML private FlowPane flowPane;
-    private AppModel model;
-    private MovieViewFactory movieViewFactory;
+    private final AppModel model = AppModel.getInstance();
     private HashMap<Integer, HBox> loadedMovies;
     private final ObservableList<TopMovie> bestSimilarMovies = FXCollections.observableArrayList();
     private final ObservableList<HBox> shownMovies = FXCollections.observableArrayList();
@@ -67,14 +66,6 @@ public class ForYouController extends BudgetMother implements Initializable {
             //addMovies(6);
             bar.setValue(targetValue / shownMovies.size());
         }
-    }
-
-    public void setModel(AppModel model) {
-        this.model = model;
-    }
-
-    public void setMovieViewFactory(MovieViewFactory movieViewFactory) {
-        this.movieViewFactory = movieViewFactory;
     }
 
     public void setBestSimilarMovies(ObservableList<TopMovie> bestSimilarMovies) {

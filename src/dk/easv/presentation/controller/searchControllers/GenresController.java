@@ -22,10 +22,9 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 public class GenresController extends BudgetMother implements Initializable {
-    private AppModel model;
+    private AppModel model = AppModel.getInstance();
     @FXML private FlowPane flowPane;
     @FXML private ScrollPane scrollPane;
-    private MovieViewFactory movieViewFactory;
     private ObservableList<Movie> filteredMovies = FXCollections.observableArrayList();
     private final ObservableList<HBox> shownMovies = FXCollections.observableArrayList();
     private HashMap<Integer, HBox> loadedMovies;
@@ -96,12 +95,4 @@ public class GenresController extends BudgetMother implements Initializable {
     }
 
      */
-
-    public void setAppModel(AppModel model) {
-        this.model = model;
-    }
-
-    public void setMovieViewFactory(MovieViewFactory movieViewFactory) {
-        this.movieViewFactory = movieViewFactory;
-    }
 }

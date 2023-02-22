@@ -2,7 +2,6 @@ package dk.easv.presentation.controller.searchControllers;
 
 import dk.easv.entities.Movie;
 import dk.easv.presentation.controller.BudgetMother;
-import dk.easv.presentation.controller.util.MovieViewFactory;
 import dk.easv.presentation.model.AppModel;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -23,11 +22,9 @@ public class TitleSearchController extends BudgetMother implements Initializable
     @FXML private TextField txtSearchBar;
     @FXML private FlowPane flowPane;
     @FXML private ScrollPane scrollPane;
-    private AppModel model;
-    private MovieViewFactory movieViewFactory;
+    private final AppModel model = AppModel.getInstance();
     private ObservableList<Movie> filteredMovies = FXCollections.observableArrayList();
     private final ObservableList<HBox> shownMovies = FXCollections.observableArrayList();
-    private HashMap<Integer, HBox> loadedMovies;
 
     @Override
     public void initialize(URL location, ResourceBundle resources){
@@ -35,26 +32,14 @@ public class TitleSearchController extends BudgetMother implements Initializable
         flowPane.minWidthProperty().bind(scrollPane.widthProperty());
         flowPane.minHeightProperty().bind(scrollPane.heightProperty());
 
-        //Retrieve loaded movies
-        loadedMovies = model.getLoadedMovies();
-
         //Show the initial 50 movies
         filteredMovies.setAll(model.getTopAverageRatedMoviesUserDidNotSee(model.getObsLoggedInUser()));
-        //addMovies(50);
-
         setUpListeners();
 
         //TODO figure this out
         //HBox hbox = (HBox) flowPane.getChildren().get(0);
         //txtSearchBar.setMaxWidth(hbox.getPrefWidth());
         //txtSearchBar.relocate(hbox.getLayoutX(), txtSearchBar.getLayoutY());
-    }
-
-    public ObservableList<Movie> searchMovies(String query) {
-        List<Movie> movies = model.searchMovies(query);
-        ObservableList<Movie> filteredMovies = FXCollections.observableArrayList();
-        filteredMovies.addAll(movies);
-        return filteredMovies;
     }
 
     private void setUpListeners(){
@@ -65,7 +50,7 @@ public class TitleSearchController extends BudgetMother implements Initializable
             if (txtSearchBar.getText().isEmpty()){
                 shownMovies.clear();
                 filteredMovies.setAll(model.getTopAverageRatedMoviesUserDidNotSee(model.getObsLoggedInUser()));
-                //addMovies(50);
+                addMovies(50);
             }
         });
 
@@ -73,8 +58,8 @@ public class TitleSearchController extends BudgetMother implements Initializable
             if(event.getCode() == KeyCode.ENTER){
                 shownMovies.clear();
                 scrollPane.setVvalue(0);
-                filteredMovies = searchMovies(txtSearchBar.getText().trim().toLowerCase());
-                //addMovies(50);
+                filteredMovies.setAll(model.searchMovies(txtSearchBar.getText().trim().toLowerCase()));
+                addMovies(20);
             }
         });
     }
@@ -84,40 +69,16 @@ public class TitleSearchController extends BudgetMother implements Initializable
         ScrollBar bar = getVerticalScrollbar(scrollPane);
         if (value == bar.getMax()) {
             double targetValue = value * shownMovies.size();
-            //addMovies(6);
+            addMovies(6);
             bar.setValue(targetValue / shownMovies.size());
         }
     }
 
-    /*
     public void addMovies(int amount){
-        loadedMovies = model.getLoadedMovies();
-        if (filteredMovies.size() > 0){
-            int size = (filteredMovies.size() > amount) ? amount : filteredMovies.size();
-            HBox movieView;
-            int i = 0;
-
-            while (i < size){
-                if (loadedMovies.get(filteredMovies.get(0).getId()) == null) {
-                    movieView = movieViewFactory.constructMovieView(filteredMovies.get(0));
-                } else {
-                    movieView = loadedMovies.get(filteredMovies.get(0).getId());
-                }
-                shownMovies.add(movieView);
-                filteredMovies.remove(0);
-                i++;
-            }
-            flowPane.getChildren().setAll(shownMovies);
-        }
-    }
-
-     */
-
-    public void setAppModel(AppModel model) {
-        this.model = model;
-    }
-
-    public void setMovieViewFactory(MovieViewFactory movieViewFactory) {
-        this.movieViewFactory = movieViewFactory;
+        amount = Math.min(filteredMovies.size(), amount);
+        List[] results = super.addMovies(amount, filteredMovies);
+        shownMovies.addAll(results[0]);
+        filteredMovies = FXCollections.observableArrayList(results[1]);
+        flowPane.getChildren().setAll(shownMovies);
     }
 }

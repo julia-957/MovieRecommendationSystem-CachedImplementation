@@ -26,7 +26,7 @@ public class AppModel {
     private final SimpleObjectProperty<User> obsLoggedInUser = new SimpleObjectProperty<>();
 
     private final HashMap<Integer, HBox> loadedMovies = new HashMap<>();
-    //private final MovieViewFactory movieViewFactory = new MovieViewFactory();
+    //private MovieViewFactory movieViewFactory;
 
     public static AppModel getInstance(){
         if(instance == null){
@@ -136,4 +136,8 @@ public class AppModel {
     }
 
      */
+
+    public ObservableList<Movie> getTopMoviesSimilarUsersMovies() {
+        return topMoviesSimilarUsersMovies;
+    }
 }

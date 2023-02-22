@@ -14,7 +14,7 @@ import java.util.HashMap;
 import java.util.List;
 
 public class BudgetMother {
-    private AppModel model;
+    private AppModel model = AppModel.getInstance();
     private final MovieViewFactory movieViewFactory = new MovieViewFactory();
 
     protected ScrollBar getVerticalScrollbar(ScrollPane scrollPane) {
@@ -30,15 +30,14 @@ public class BudgetMother {
         return result;
     }
 
-    protected List<HBox> addMovies(int amount, List<Movie> moviesToLoad){
+    protected List[] addMovies(int amount, List<Movie> moviesToLoad){
+        model = AppModel.getInstance();
         HashMap<Integer, HBox> loadedMovies = model.getLoadedMovies();
         List<HBox> shownMovies = new ArrayList<>();
         if (moviesToLoad.size() > 0){
-            int size = (moviesToLoad.size() > amount) ? amount : moviesToLoad.size();
             HBox movieView;
             int i = 0;
-
-            while (i < size){
+            while (i < amount){
                 if (loadedMovies.get(moviesToLoad.get(0).getId()) == null) {
                     movieView = movieViewFactory.constructMovieView(moviesToLoad.get(0));
                 } else {
@@ -49,7 +48,7 @@ public class BudgetMother {
                 i++;
             }
         }
-        return shownMovies;
+        return new List[] {shownMovies, moviesToLoad};
     }
 
     public void setModel(AppModel model) {

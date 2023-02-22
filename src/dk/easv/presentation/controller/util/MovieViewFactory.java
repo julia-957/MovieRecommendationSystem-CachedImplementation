@@ -17,17 +17,18 @@ import java.util.*;
 
 public class MovieViewFactory {
     private final RoundImageCorners roundImageCorners = new RoundImageCorners();
-    private AppModel model;
+    private AppModel model = AppModel.getInstance();
 
     public HBox constructMovieView(Movie movie){
+        long timerStartMillis = System.currentTimeMillis();
+
         //Create an HBox to hold everything
         HBox mainContainer = new HBox(10);
         mainContainer.getStyleClass().addAll("movieDisplayHBox", "rounded", "shadow");
-
         mainContainer.setPrefWidth(400);
         mainContainer.setPrefHeight(200);
-
         mainContainer.setPadding(new Insets(10,10,10,10));
+
         ImageView moviePoster;
         try{
             moviePoster = new ImageView(new Image(movie.getPosterFilepath()));
@@ -91,6 +92,7 @@ public class MovieViewFactory {
         mainContainer.getChildren().addAll(moviePoster, movieInfo);
         mainContainer.setHgrow(movieInfo, Priority.ALWAYS);
         model.updateHashMap(movie.getId(), mainContainer);
+        //System.out.println(movie.getTitle() + "took : " + (System.currentTimeMillis() - timerStartMillis) + "ms");
         return  mainContainer;
     }
 
