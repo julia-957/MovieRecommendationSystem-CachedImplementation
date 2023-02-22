@@ -47,8 +47,7 @@ public class GenresController extends BudgetMother implements Initializable {
         loadedMovies = model.getLoadedMovies();
 
         //Makes Buttons for each genre
-        genres = model.getAllGenres();
-        createGenreButtons(genres);
+        createGenreButtons(model.getAllGenres());
 
         //Show the initial 50 movies
         filteredMovies.setAll(model.getTopAverageRatedMoviesUserDidNotSee(model.getObsLoggedInUser()));

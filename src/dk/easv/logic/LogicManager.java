@@ -33,12 +33,25 @@ public class LogicManager {
 
     //TODO get the individual genres from the string containing multiple genres
     public List<String> getAllGenres(){
+        List<String> allGenresRaw = new ArrayList<>();
+        List<String> allGenresNotUnique = new ArrayList<>();
         List<String> allGenres = new ArrayList<>();
 
         for(Movie m: dataMgr.getAllMovies().values()){
-            if(!allGenres.contains(m.getGenre()))
-                allGenres.add(m.getGenre());
+            if(!allGenresRaw.contains(m.getGenre()))
+                allGenresRaw.add(m.getGenre());
         }
+
+        for(String g: allGenresRaw){
+            allGenresNotUnique.addAll(List.of(g.split(",")));
+        }
+
+        for(String genre: allGenresNotUnique){
+            if(!allGenres.contains(genre)){
+                allGenres.add(genre);
+            }
+        }
+
         return allGenres;
     }
 

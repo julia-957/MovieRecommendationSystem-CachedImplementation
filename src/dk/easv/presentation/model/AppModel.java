@@ -90,7 +90,6 @@ public class AppModel {
         }
     }
 
-    //TODO
     public List<String> getAllGenres(){
         return logic.getAllGenres();
     }
