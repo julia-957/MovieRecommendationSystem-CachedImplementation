@@ -3,6 +3,7 @@ package dk.easv.presentation.controller.searchControllers;
 import dk.easv.entities.Movie;
 import dk.easv.presentation.controller.BudgetMother;
 import dk.easv.presentation.model.AppModel;
+import javafx.application.Platform;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -30,16 +31,8 @@ public class GenresController extends BudgetMother implements Initializable {
         flowPane.minWidthProperty().bind(scrollPane.widthProperty());
         flowPane.minHeightProperty().bind(scrollPane.heightProperty());
 
-        //Show the initial 50 movies
         filteredMovies.setAll(model.getTopAverageRatedMoviesUserDidNotSee(model.getObsLoggedInUser()));
         setUpListeners();
-    }
-
-    public ObservableList<Movie> searchMovies(String query) {
-        List<Movie> movies = model.searchMovies(query);
-        ObservableList<Movie> filteredMovies = FXCollections.observableArrayList();
-        filteredMovies.addAll(movies);
-        return filteredMovies;
     }
 
     private void setUpListeners(){
@@ -69,5 +62,7 @@ public class GenresController extends BudgetMother implements Initializable {
         shownMovies.addAll(results[0]);
         filteredMovies = FXCollections.observableArrayList(results[1]);
         flowPane.getChildren().setAll(shownMovies);
+
+        Platform.runLater(() -> System.out.println(flowPane.getWidth()));
     }
 }

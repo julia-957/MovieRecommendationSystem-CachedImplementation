@@ -3,6 +3,7 @@ package dk.easv.presentation.controller.util;
 import dk.easv.Main;
 import dk.easv.entities.Movie;
 import dk.easv.presentation.model.AppModel;
+import javafx.application.Platform;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
@@ -92,7 +93,7 @@ public class MovieViewFactory {
         mainContainer.getChildren().addAll(moviePoster, movieInfo);
         mainContainer.setHgrow(movieInfo, Priority.ALWAYS);
         model.updateHashMap(movie.getId(), mainContainer);
-        System.out.println(movie.getTitle() + "took : " + (System.currentTimeMillis() - timerStartMillis) + "ms");
+        //System.out.println(movie.getTitle() + "took : " + (System.currentTimeMillis() - timerStartMillis) + "ms");
         return  mainContainer;
     }
 }
