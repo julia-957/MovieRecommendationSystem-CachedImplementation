@@ -40,7 +40,7 @@ public class IntroScreenController extends BudgetMother implements Initializable
     private List<Movie> featuredMovies = new ArrayList<>();
     private ObservableList<Movie> movieBestSimilarMovies = FXCollections.observableArrayList();
     private final ObservableList<HBox> shownMovies = FXCollections.observableArrayList();
-    private User user = new User();
+    private User user;
     private final AppModel model = AppModel.getInstance();
     private RoundImageCorners roundImageCorners = new RoundImageCorners();
 

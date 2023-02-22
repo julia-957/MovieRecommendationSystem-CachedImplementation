@@ -57,11 +57,11 @@ public class AppModel {
         }
 
         long timerStartMillis = System.currentTimeMillis();
-        loadMovies(2, obsTopMovieNotSeen);
+        loadMovies(20, obsTopMovieNotSeen);
         System.out.println("Loading took : " + (System.currentTimeMillis() - timerStartMillis) + "ms");
 
         timerStartMillis = System.currentTimeMillis();
-        loadMovies(2, topMoviesSimilarUsersMovies);
+        loadMovies(20, topMoviesSimilarUsersMovies);
         System.out.println("Loading took : " + (System.currentTimeMillis() - timerStartMillis) + "ms");
     }
 
@@ -143,10 +143,15 @@ public class AppModel {
     }
 
     public void addMovieToFavourites(Movie movie, User user){
+        obsLoggedInUser.get().getFavouriteMovies().add(movie);
         logic.addMovieToFavourites(movie, user);
     }
 
     public void removeMovieFromFavourites(Movie movie, User user){
         logic.removeMovieFromFavourites(movie, user);
+    }
+
+    public HashMap<User, Movie> getFavouriteMovies() {
+        return logic.getFavouriteMovies();
     }
 }

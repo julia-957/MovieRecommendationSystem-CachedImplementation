@@ -18,6 +18,7 @@ public class AppController implements Initializable {
     @FXML private BorderPane borderPane;
     @FXML private VBox menuBarVBox;
     private MenuController menuController;
+    private final AppModel model = AppModel.getInstance();
     private final IntroScreenController introScreenController = new IntroScreenController();
     private final SearchController searchController = new SearchController();
     private final FavouritesController favouritesController = new FavouritesController();
@@ -71,8 +72,8 @@ public class AppController implements Initializable {
 
     public void openIntroScreen() {
         introScreenController.clearShownMovies();
-        introScreenController.addMovies(2);
-        introScreenController.setUser(AppModel.getInstance().getObsLoggedInUser());
+        introScreenController.addMovies(20);
+        introScreenController.setUser(model.getObsLoggedInUser());
         introScreenController.setFeaturedMovies();
 
         borderPane.setCenter(introScene);
@@ -86,6 +87,8 @@ public class AppController implements Initializable {
     }
 
     public void openFavouritesScreen() {
+        favouritesController.clearShownMovies();
+        favouritesController.addMovies(20);
         borderPane.setCenter(favouritesScene);
         menuController.setFocusOnFavourites();
     }

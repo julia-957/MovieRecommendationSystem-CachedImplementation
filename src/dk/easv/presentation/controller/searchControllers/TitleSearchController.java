@@ -54,7 +54,7 @@ public class TitleSearchController extends BudgetMother implements Initializable
             if (txtSearchBar.getText().isEmpty()){
                 shownMovies.clear();
                 filteredMovies.setAll(model.getTopAverageRatedMoviesUserDidNotSee(model.getObsLoggedInUser()));
-                addMovies(2);
+                addMovies(20);
             }
         });
 

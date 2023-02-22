@@ -20,6 +20,7 @@ public class DataAccessManager {
     private HashMap<Integer, Movie> movies = new HashMap<>();
     private List<String> genres = new ArrayList<>();
     private List<Rating> ratings = new ArrayList<>();
+    private HashMap<User, Movie> favouriteMovies = new HashMap<>();
 
     // Loads all data from disk and stores in memory
     // For performance, data is only updated if updateCacheFromDisk() is called
@@ -37,6 +38,9 @@ public class DataAccessManager {
 
     public List<Rating> getAllRatings() {
         return ratings;
+    }
+    public HashMap<User, Movie> getFavouriteMovies() {
+        return favouriteMovies;
     }
 
     public void updateCacheFromDisk() {
@@ -120,6 +124,7 @@ public class DataAccessManager {
                 int movieId = Integer.parseInt(split[0]);
                 int userId = Integer.parseInt(split[1]);
                 users.get(userId).getFavouriteMovies().add(movies.get(movieId));
+                favouriteMovies.put(users.get(userId), movies.get(movieId));
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -134,6 +139,12 @@ public class DataAccessManager {
             e.printStackTrace();
         }
     }
+
+    /**
+     * Files.lines gets a Stream<String> of the lines of the file, filter takes out the lines we don't want,
+     * then collect puts all the lines of the new file into a List. We then write the list over top of the existing file
+     * with Files.write, using the additional option TRUNCATE so the old contents of the file are replaced.
+     */
 
     public void removeMovieFromFavourites(Movie movie, User user) {
         File file = new File("data/favourites.txt");

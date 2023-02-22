@@ -137,5 +137,9 @@ public class LogicManager {
     public void removeMovieFromFavourites(Movie movie, User user){
         dataMgr.removeMovieFromFavourites(movie, user);
     }
+
+    public HashMap<User, Movie> getFavouriteMovies() {
+        return dataMgr.getFavouriteMovies();
+    }
 }
 
