@@ -143,7 +143,6 @@ public class AppModel {
     }
 
     public void addMovieToFavourites(Movie movie, User user){
-        obsLoggedInUser.get().getFavouriteMovies().add(movie);
         logic.addMovieToFavourites(movie, user);
     }
 

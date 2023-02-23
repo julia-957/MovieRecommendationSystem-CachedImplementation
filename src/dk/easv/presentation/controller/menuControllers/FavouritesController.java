@@ -14,7 +14,6 @@ import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.HBox;
 
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -23,7 +22,7 @@ public class FavouritesController extends BudgetMother implements Initializable 
     @FXML private ScrollPane scrollPane;
     private final AppModel model = AppModel.getInstance();
     private ObservableList<Movie> favouriteMovies = FXCollections.observableArrayList();
-    private List<HBox> shownMovies = new ArrayList<>();
+    private final ObservableList<HBox> shownMovies = FXCollections.observableArrayList();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -53,9 +52,9 @@ public class FavouritesController extends BudgetMother implements Initializable 
     }
 
     public void clearShownMovies(){
-        shownMovies.clear();
         flowPane.getChildren().clear();
+        shownMovies.clear();
         scrollPane.setVvalue(0);
-        favouriteMovies.setAll(model.getObsLoggedInUser().getFavouriteMovies());
+        favouriteMovies = FXCollections.observableArrayList(model.getObsLoggedInUser().getFavouriteMovies());
     }
 }
