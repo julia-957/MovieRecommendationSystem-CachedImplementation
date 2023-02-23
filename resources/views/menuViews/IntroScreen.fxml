@@ -128,7 +128,7 @@
          <content>
             <FlowPane fx:id="flowPane" alignment="TOP_CENTER" hgap="30.0" maxHeight="-Infinity" maxWidth="Infinity" minHeight="-Infinity" prefWidth="900.0" styleClass="backgroundPane" stylesheets="@../style.css" vgap="30.0">
                <padding>
-                  <Insets bottom="30.0" left="30.0" right="30.0" />
+                  <Insets bottom="30.0" left="30.0" right="30.0" top="15.0" />
                </padding></FlowPane>
          </content>
          <VBox.margin>

@@ -2,10 +2,8 @@ package dk.easv.presentation.controller.menuControllers;
 
 import dk.easv.Main;
 import dk.easv.entities.Movie;
-import dk.easv.entities.TopMovie;
 import dk.easv.entities.User;
 import dk.easv.presentation.controller.BudgetMother;
-import dk.easv.presentation.controller.util.MovieViewFactory;
 import dk.easv.presentation.controller.util.RoundImageCorners;
 import dk.easv.presentation.model.AppModel;
 import javafx.beans.value.ObservableValue;
@@ -25,43 +23,31 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.shape.Rectangle;
 
-import java.awt.*;
 import java.net.URL;
 import java.util.*;
 import java.util.List;
 
 public class IntroScreenController extends BudgetMother implements Initializable {
-    @FXML
-    private HBox featuredMovieView;
-    @FXML
-    private VBox saveUsJebus;
-    @FXML
-    private Rectangle lineDivider;
-    @FXML
-    private ImageView featuredMoviePoster, iconIMDBrating, iconUserRatings, carouselRightView, carouselLeftView, favouriteHeart;
-    @FXML
-    private Label featuredMovieDescription, featuredMovieTitle, carouselGenreTxt, carouselRatingIMDB, carouselRatingUsers, carouselYearTxt;
-    @FXML
-    private Button favouriteBtn, carouselLeft, carouselRight;
+    @FXML private HBox featuredMovieView;
+    @FXML private VBox saveUsJebus;
+    @FXML private Rectangle lineDivider;
+    @FXML private ImageView featuredMoviePoster, iconIMDBrating, iconUserRatings, carouselRightView, carouselLeftView, favouriteHeart;
+    @FXML private Label featuredMovieDescription, featuredMovieTitle, carouselGenreTxt, carouselRatingIMDB, carouselRatingUsers, carouselYearTxt;
+    @FXML private Button favouriteBtn, carouselLeft, carouselRight;
     @FXML private FlowPane flowPane;
     @FXML private ScrollPane scrollPane;
-
     private int moviePosition = 0;
-    private List<Movie> featuredMovies;
-    private final ObservableList<TopMovie> bestSimilarMovies = FXCollections.observableArrayList();
+    private List<Movie> featuredMovies = new ArrayList<>();
+    private ObservableList<Movie> movieBestSimilarMovies = FXCollections.observableArrayList();
     private final ObservableList<HBox> shownMovies = FXCollections.observableArrayList();
-    private User user = new User();
-    private AppModel model;
-    private MovieViewFactory movieViewFactory;
-    private HashMap<Integer, HBox> loadedMovies;
+    private User user;
+    private final AppModel model = AppModel.getInstance();
     private RoundImageCorners roundImageCorners = new RoundImageCorners();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         carouselSetup();
-        featuredMovies = model.getTopAverageRatedMoviesUserDidNotSee(model.getObsLoggedInUser());
-        setFeaturedMovie(featuredMovies, moviePosition);
-        setFavouriteHeart();
+
         scrollPane.vvalueProperty().addListener(this::scrolled);
 
         flowPane.minWidthProperty().bind(scrollPane.widthProperty());
@@ -86,12 +72,11 @@ public class IntroScreenController extends BudgetMother implements Initializable
      private void setFeaturedMovie(List<Movie> m, int moviePosition) {
         if(!m.isEmpty()) {
             featuredMovieTitle.setText(m.get(moviePosition).getTitle());
-            //featuredMoviePoster.setImage(new Image(m.get(moviePosition).getPosterFilepath()));
-            featuredMoviePoster.setImage(new Image(Objects.requireNonNull(getClass().getResourceAsStream("/images/cats_2_3.png"))));
-            saveUsJebus.getStyleClass().addAll("movieDisplayHBox", "rounded");
+            featuredMoviePoster.setImage(new Image(m.get(moviePosition).getPosterFilepath()));
+            saveUsJebus.getStyleClass().addAll("rounded");
             roundImageCorners.clipImage(featuredMoviePoster);
-            //featuredMovieDescription.setText(m.get(moviePosition).getMovieDescription());
-            //carouselRatingIMDB.setText(m.get(moviePosition).getRatingIMDB().toString());
+            featuredMovieDescription.setText(m.get(moviePosition).getMovieDescription());
+            carouselRatingIMDB.setText(m.get(moviePosition).getRatingIMDB());
             carouselRatingUsers.setText(String.format(Locale.US,"%.1f",(m.get(moviePosition).getAverageRating())));
             carouselYearTxt.setText(String.valueOf(m.get(moviePosition).getYear()));
             setFavouriteHeart();
@@ -101,11 +86,13 @@ public class IntroScreenController extends BudgetMother implements Initializable
     public void clickFavourite(ActionEvent actionEvent) {
         if(user.getFavouriteMovies().contains(featuredMovies.get(moviePosition))){
             favouriteHeart.setImage(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/electricLilac/heart-outline.png"))));
+            model.removeMovieFromFavourites(featuredMovies.get(moviePosition), user);
             user.getFavouriteMovies().remove(featuredMovies.get(moviePosition));
         }
 
         else {
             favouriteHeart.setImage(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/electricLilac/heart.png"))));
+            model.addMovieToFavourites(featuredMovies.get(moviePosition), user);
             user.getFavouriteMovies().add(featuredMovies.get(moviePosition));
         }
         favouriteBtn.setText("");
@@ -130,7 +117,6 @@ public class IntroScreenController extends BudgetMother implements Initializable
         }
         moviePosition--;
         setFeaturedMovie(featuredMovies, moviePosition);
-
     }
 
     public void clickNext(ActionEvent actionEvent) {
@@ -139,41 +125,6 @@ public class IntroScreenController extends BudgetMother implements Initializable
         }
         moviePosition++;
         setFeaturedMovie(featuredMovies, moviePosition);
-    }
-
-    public void setModel(AppModel model) {
-        this.model = model;
-    }
-
-    public void setMovieViewFactory(MovieViewFactory movieViewFactory) {
-        this.movieViewFactory = movieViewFactory;
-    }
-
-    public void addMovies(int amount){
-        loadedMovies = model.getLoadedMovies();
-        if (bestSimilarMovies.size() > 0){
-            int size = (bestSimilarMovies.size() > amount) ? amount : bestSimilarMovies.size();
-            HBox movieView;
-            int i = 0;
-
-            while (i < size){
-                if (loadedMovies.get(bestSimilarMovies.get(0).getMovie().getId()) == null) {
-                    movieView = movieViewFactory.constructMovieView(bestSimilarMovies.get(0).getMovie());
-                } else {
-                    movieView = loadedMovies.get(bestSimilarMovies.get(0).getMovie().getId());
-                }
-                shownMovies.add(movieView);
-                bestSimilarMovies.remove(0);
-                i++;
-            }
-            flowPane.getChildren().setAll(shownMovies);
-        }
-    }
-
-    public void setBestSimilarMovies(ObservableList<TopMovie> bestSimilarMovies) {
-        shownMovies.clear();
-        this.bestSimilarMovies.clear();
-        this.bestSimilarMovies.setAll(bestSimilarMovies);
     }
 
     void scrolled(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
@@ -185,4 +136,31 @@ public class IntroScreenController extends BudgetMother implements Initializable
             bar.setValue(targetValue / shownMovies.size());
         }
     }
+
+    public void addMovies(int amount){
+        amount = Math.min(movieBestSimilarMovies.size(), amount);
+        List[] results = super.addMovies(amount, movieBestSimilarMovies);
+        shownMovies.addAll(results[0]);
+        movieBestSimilarMovies = FXCollections.observableArrayList(results[1]);
+        flowPane.getChildren().setAll(shownMovies);
+    }
+
+    public void clearShownMovies(){
+        shownMovies.clear();
+        flowPane.getChildren().clear();
+        scrollPane.setVvalue(0);
+        movieBestSimilarMovies.clear();
+        movieBestSimilarMovies.addAll(model.getTopMoviesSimilarUsersMovies());
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public void setFeaturedMovies(){
+        featuredMovies = model.getTopAverageRatedMoviesUserDidNotSee(model.getObsLoggedInUser());
+        setFeaturedMovie(featuredMovies, moviePosition);
+        setFavouriteHeart();
+    }
 }
+

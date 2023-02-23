@@ -2,16 +2,12 @@ package dk.easv.presentation.controller.menuControllers;
 
 import dk.easv.Main;
 import dk.easv.presentation.controller.AppController;
-import dk.easv.presentation.model.AppModel;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
@@ -22,7 +18,6 @@ public class MenuController implements Initializable {
     @FXML
     private Button homeButton, searchButton, favouritesButton, accountButton;
     private AppController appController;
-    private AppModel model;
 
     public void setAppController(AppController appController){ this.appController = appController; }
 
@@ -81,11 +76,28 @@ public class MenuController implements Initializable {
         appController.openLogInScreen();
     }
 
-    public void setFocusOnFavourites() {
-        favouritesButton.requestFocus();
+    public void setFocusOnHome() {
+        homeButton.setId("homeButtonFocused");
+        searchButton.setId("searchButton");
+        favouritesButton.setId("favouritesButton");
+        accountButton.setId("accountButton");
     }
 
-    public void setModel(AppModel model) {
-        this.model = model;
+    public void setFocusOnSearch(){
+        homeButton.setId("homeButton");
+        searchButton.setId("searchButtonFocused");
+        favouritesButton.setId("favouritesButton");
+        accountButton.setId("accountButton");
+    }
+
+    public void setFocusOnFavourites() {
+        homeButton.setId("homeButton");
+        searchButton.setId("searchButton");
+        favouritesButton.setId("favouritesButtonFocused");
+        accountButton.setId("accountButton");
+    }
+
+    public void requestFocusOnFavourites(){
+        favouritesButton.requestFocus();
     }
 }

@@ -4,17 +4,23 @@ import dk.easv.entities.Movie;
 import dk.easv.entities.Rating;
 import dk.easv.entities.User;
 
-import java.io.IOException;
+import java.io.*;
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.StandardOpenOption;
 import java.util.*;
 import java.util.stream.Collectors;
+
+import static java.nio.file.StandardOpenOption.APPEND;
 
 public class DataAccessManager {
     private HashMap<Integer, User> users = new HashMap<>();
     private HashMap<Integer, Movie> movies = new HashMap<>();
     private List<String> genres = new ArrayList<>();
     private List<Rating> ratings = new ArrayList<>();
+    private HashMap<User, Movie> favouriteMovies = new HashMap<>();
 
     // Loads all data from disk and stores in memory
     // For performance, data is only updated if updateCacheFromDisk() is called
@@ -30,12 +36,14 @@ public class DataAccessManager {
         return movies;
     }
 
-    public List<Rating> getAllRatings(){
+    public List<Rating> getAllRatings() {
         return ratings;
     }
+    public HashMap<User, Movie> getFavouriteMovies() {
+        return favouriteMovies;
+    }
 
-
-    public void updateCacheFromDisk(){
+    public void updateCacheFromDisk() {
         loadAllRatings();
     }
 
@@ -49,20 +57,19 @@ public class DataAccessManager {
                 var title = split[2];
                 var year = Integer.parseInt(split[1]);
                 var length = split.length;
-                if(length >= 6){
+                if (length >= 6) {
                     var posterFilepath = Arrays.stream(split).filter(s -> s.contains("https")).findFirst().orElse("N/A");
                     var posterFilepathIndex = Arrays.asList(split).indexOf(posterFilepath);
-                    var movieGenres = Arrays.stream(split).skip(posterFilepathIndex+1).limit(split.length-posterFilepathIndex-2).collect(Collectors.joining(", "));
+                    var movieGenres = Arrays.stream(split).skip(posterFilepathIndex + 1).limit(split.length - posterFilepathIndex - 2).collect(Collectors.joining(", "));
                     for (var genre : movieGenres.split(", ")
-                        ) {
-                        if(!genres.contains(genre))
+                    ) {
+                        if (!genres.contains(genre))
                             genres.add(genre);
                     }
-                    var movieDescription = Arrays.stream(split).skip(3).limit(posterFilepathIndex-3).collect(Collectors.joining(","));
-                    var ratingIMDB = split[length-1].equals("N/A") ? 0.0+"" : split[length-1];
+                    var movieDescription = Arrays.stream(split).skip(3).limit(posterFilepathIndex - 3).collect(Collectors.joining(","));
+                    var ratingIMDB = split[length - 1].equals("N/A") ? 0.0 + "" : split[length - 1];
                     movie = new Movie(id, title, year, movieGenres, posterFilepath, movieDescription, ratingIMDB);
-                }
-                else
+                } else
                     movie = new Movie(id, title, year);
                 movies.put(movie.getId(), movie);
             }
@@ -89,6 +96,7 @@ public class DataAccessManager {
     private void loadAllRatings() {
         loadAllMovies();
         loadAllUsers();
+        loadAllFavourites();
         try {
             List<String> ratingLines = Files.readAllLines(Path.of("data/ratings.txt"));
             for (String ratingLine : ratingLines) {
@@ -103,6 +111,51 @@ public class DataAccessManager {
             }
         } catch (IOException e) {
             e.printStackTrace();
+        }
+    }
+
+    private void loadAllFavourites() {
+        loadAllMovies();
+        loadAllUsers();
+        try {
+            List<String> favouriteLines = Files.readAllLines(Path.of("data/favourites.txt"));
+            for (String favouriteLine : favouriteLines) {
+                String[] split = favouriteLine.split(",");
+                int movieId = Integer.parseInt(split[0]);
+                int userId = Integer.parseInt(split[1]);
+                users.get(userId).getFavouriteMovies().add(movies.get(movieId));
+                favouriteMovies.put(users.get(userId), movies.get(movieId));
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void addToFavourites(Movie movie, User user) {
+        try {
+            String movieLine = movie.getId() + "," + user.getId() + "\n";
+            Files.writeString(Path.of("data/favourites.txt"), movieLine, APPEND);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * Files.lines gets a Stream<String> of the lines of the file, filter takes out the lines we don't want,
+     * then collect puts all the lines of the new file into a List. We then write the list over top of the existing file
+     * with Files.write, using the additional option TRUNCATE so the old contents of the file are replaced.
+     */
+
+    public void removeMovieFromFavourites(Movie movie, User user) {
+        File file = new File("data/favourites.txt");
+        List<String> out = null;
+        try {
+            out = Files.lines(file.toPath())
+                    .filter(line -> !line.contains(movie.getId()+","+user.getId()))
+                    .collect(Collectors.toList());
+            Files.write(file.toPath(), out, StandardOpenOption.WRITE, StandardOpenOption.TRUNCATE_EXISTING);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 }

@@ -5,10 +5,10 @@ import dk.easv.entities.Movie;
 import dk.easv.presentation.model.AppModel;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
@@ -17,17 +17,18 @@ import java.util.*;
 
 public class MovieViewFactory {
     private final RoundImageCorners roundImageCorners = new RoundImageCorners();
-    private AppModel model;
 
     public HBox constructMovieView(Movie movie){
+        AppModel model = AppModel.getInstance();
+        long timerStartMillis = System.currentTimeMillis();
+
         //Create an HBox to hold everything
         HBox mainContainer = new HBox(10);
         mainContainer.getStyleClass().addAll("movieDisplayHBox", "rounded", "shadow");
-
         mainContainer.setPrefWidth(400);
         mainContainer.setPrefHeight(200);
-
         mainContainer.setPadding(new Insets(10,10,10,10));
+
         ImageView moviePoster;
         try{
             moviePoster = new ImageView(new Image(movie.getPosterFilepath()));
@@ -62,9 +63,22 @@ public class MovieViewFactory {
         userIcon.setFitHeight(20);
         Label userRating = new Label(String.format(Locale.US, "%.1f", movie.getAverageRating()));
 
+        //Create a like button
+        ImageView likeButtonGraphic = new ImageView();
+        Button likeButton = new Button("", likeButtonGraphic);
+        likeButton.setMaxWidth(20);
+        likeButton.setMaxHeight(20);
+        likeButtonGraphic.setFitWidth(20);
+        likeButtonGraphic.setFitHeight(18.4);
+
+        if(model.getObsLoggedInUser().getFavouriteMovies().contains(movie))
+            likeButtonGraphic.setImage(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/electricLilac/heart.png"))));
+        else
+            likeButtonGraphic.setImage(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/electricLilac/heart-outline.png"))));
+
         //Create an HBox to hold the ratings
         VBox fillerVBox = new VBox();
-        HBox ratings = new HBox(5, imdbIcon, imdbRating, fillerVBox, userIcon, userRating);
+        HBox ratings = new HBox(10, imdbIcon, imdbRating, userIcon, userRating, fillerVBox, likeButton);
         ratings.setAlignment(Pos.BOTTOM_LEFT);
         ratings.setHgrow(fillerVBox, Priority.SOMETIMES);
 
@@ -78,10 +92,8 @@ public class MovieViewFactory {
         mainContainer.getChildren().addAll(moviePoster, movieInfo);
         mainContainer.setHgrow(movieInfo, Priority.ALWAYS);
         model.updateHashMap(movie.getId(), mainContainer);
-        return  mainContainer;
-    }
 
-    public void setModel(AppModel model) {
-        this.model = model;
+        //System.out.println(movie.getTitle() + "took : " + (System.currentTimeMillis() - timerStartMillis) + "ms");
+        return  mainContainer;
     }
 }

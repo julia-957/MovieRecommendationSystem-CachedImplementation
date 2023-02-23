@@ -153,4 +153,17 @@ public class LogicManager {
         }
         return filtered;
     }
+
+    public void addMovieToFavourites(Movie movie, User user){
+        dataMgr.addToFavourites(movie, user);
+    }
+
+    public void removeMovieFromFavourites(Movie movie, User user){
+        dataMgr.removeMovieFromFavourites(movie, user);
+    }
+
+    public HashMap<User, Movie> getFavouriteMovies() {
+        return dataMgr.getFavouriteMovies();
+    }
 }
+
