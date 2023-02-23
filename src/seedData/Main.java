@@ -46,7 +46,7 @@ public class Main {
             movieLines = Files.readAllLines(Path.of("data/movie_titles.txt"));
             System.out.println(movieLines.size()/1000);
             CountDownLatch latch = new CountDownLatch( (int)(movieLines.size()/1000));
-            for (int i = 0; i < 1; i++) {
+            for (int i = 0; i < (int)movieLines.size()/1000.0; i++) {
                 var thread = new SeedDataThread(listOfKeys.get(i),movieLines.stream().skip(i*1000).limit(1000).toList(),latch, i+1+"");
                 listOfThreads.add(thread);
                 thread.start();

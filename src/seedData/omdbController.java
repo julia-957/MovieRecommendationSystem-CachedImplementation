@@ -68,11 +68,12 @@ public class omdbController {
     private JSONObject searchImdbByName(String searchData){
         // Get all the movie data for the searched MovieTitle
         String splitSearchData = searchData.split(" ")[0];
-        while (splitSearchData.length() > 0){
+        int i = 0;
+        while (splitSearchData.length() > i){
             JSONObject movieObject = getDataFromImdb(splitSearchData);
             if(movieObject != null)
                 return movieObject;
-            splitSearchData = splitSearchData.substring(0,splitSearchData.length()-1);
+            splitSearchData = splitSearchData.substring(i++,splitSearchData.length());
         }
         return null;
     }
