@@ -30,10 +30,17 @@ public class SeedDataThread extends Thread {
             }
             String[] split = movieList.get(j).split(",");
             try {
-                outputList.add((movieList.get(j) + "," + omdbController.searchImdb(this.key,split[2],split[1])).replace("\n"," "));
+                if(movieList.get(j).contains(",,,,"))
+                    outputList.add((split[0] + "," + split[1] + "," + split[2] + "," + omdbController.searchImdb(this.key,split[2],split[1])).replace("\n"," "));
+                else
+                    outputList.add(movieList.get(j));
             } catch (Exception e) {
-                outputList.add(movieList.get(j) + ",,,,");
+                outputList.add(movieList.get(j));
             }
+            /*System.out.println(j);
+            System.out.println(movieList.get(j));
+            System.out.println(outputList.get(j));
+            System.out.println("------------------------------------------------------------------");*/
             //System.out.println(movieList.get(j));
         }
         try(BufferedWriter writer = Files.newBufferedWriter(Path.of("data/movie_titles"+name+".txt"), Charset.forName("UTF-8"))){
