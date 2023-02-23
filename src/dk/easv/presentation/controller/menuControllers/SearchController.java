@@ -68,6 +68,8 @@ public class SearchController implements Initializable {
         searchBorderPane.setCenter(genresScene);
         genresController.clearShownMovies();
         genresController.addMovies(20);
+        genresController.createGenreButtons(model.getAllGenres());
+
     }
 
     @FXML

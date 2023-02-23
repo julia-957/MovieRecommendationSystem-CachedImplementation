@@ -17,6 +17,32 @@
     -fx-text-fill: -fx-electric-lilac;
 }
 
+/* Genres list buttons */
+.genresButtons{
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+    -fx-border-color: -fx-medium-indigo;
+    -fx-padding: 7;
+}
+
+.genresButtons:hover{
+    -fx-border-color: -fx-electric-lilac;
+}
+
+.genresButtons:pressed{
+    -fx-background-color: -fx-electric-lilac;
+    -fx-text-fill: -fx-dark-indigo;
+}
+
+.genresButtonsFocused{
+    -fx-font-weight: bold;
+    -fx-font-size: 15px;
+    -fx-border-color: -fx-medium-indigo;
+    -fx-padding: 7;
+    -fx-background-color: -fx-electric-lilac;
+    -fx-text-fill: -fx-dark-indigo;
+}
+
 /* Search menu buttons */
 .searchMenuButtons{
     -fx-font-weight: bold;
@@ -84,15 +110,15 @@
 
 /* Favourites menu button */
 #favouritesButton #favouritesIconView{
-    -fx-image: url(/icons/mediumIndigo/star-bold.png);
+    -fx-image: url(/icons/mediumIndigo/heart-outline.png);
 }
 
 #favouritesButton:focused #favouritesIconView{
-    -fx-image: url(/icons/electricLilac/star-bold.png);
+    -fx-image: url(/icons/electricLilac/heart-outline.png);
 }
 
 #favouritesButtonFocused #favouritesIconView{
-    -fx-image: url(/icons/electricLilac/star-bold.png);
+    -fx-image: url(/icons/electricLilac/heart-outline.png);
 }
 
 

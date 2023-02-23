@@ -8,10 +8,12 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.ScrollBar;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 
 import java.net.URL;
 import java.util.List;
@@ -20,9 +22,13 @@ import java.util.ResourceBundle;
 public class GenresController extends BudgetMother implements Initializable {
     private final AppModel model = AppModel.getInstance();
     @FXML private FlowPane flowPane;
-    @FXML private ScrollPane scrollPane;
+    @FXML private ScrollPane scrollPane, genresScrollPane;
+    @FXML
+    private VBox genresVBox;
     private ObservableList<Movie> filteredMovies = FXCollections.observableArrayList();
     private final ObservableList<HBox> shownMovies = FXCollections.observableArrayList();
+
+    private List<String> genres;
 
     @Override
     public void initialize(URL location, ResourceBundle resources){
@@ -30,12 +36,26 @@ public class GenresController extends BudgetMother implements Initializable {
         flowPane.minWidthProperty().bind(scrollPane.widthProperty());
         flowPane.minHeightProperty().bind(scrollPane.heightProperty());
 
+        //Show the initial 50 movies
         filteredMovies.setAll(model.getTopAverageRatedMoviesUserDidNotSee(model.getObsLoggedInUser()));
         setUpListeners();
     }
 
     private void setUpListeners(){
         scrollPane.vvalueProperty().addListener(this::scrolled);
+    }
+
+    //TODO make bootiful buttons
+    public void createGenreButtons(List<String> genres){
+        genresVBox.setSpacing(8);
+        for (String g: genres) {
+            if(!g.trim().equals("N/A")){
+                Button genrebutton = new Button(g);
+                genrebutton.getStyleClass().addAll("genresButtons", "rounded");
+                genresVBox.getChildren().add(genrebutton);
+            }
+        }
+
     }
 
     void scrolled(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {

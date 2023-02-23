@@ -60,11 +60,12 @@ public class DataAccessManager {
                 if (length >= 6) {
                     var posterFilepath = Arrays.stream(split).filter(s -> s.contains("https")).findFirst().orElse("N/A");
                     var posterFilepathIndex = Arrays.asList(split).indexOf(posterFilepath);
-                    var movieGenres = Arrays.stream(split).skip(posterFilepathIndex + 1).limit(split.length - posterFilepathIndex - 2).collect(Collectors.joining(", "));
-                    for (var genre : movieGenres.split(", ")
-                    ) {
-                        if (!genres.contains(genre))
-                            genres.add(genre);
+                    var movieGenres = Arrays.stream(split).skip(posterFilepathIndex+1).limit(split.length-posterFilepathIndex-2).collect(Collectors.joining(", "));
+                    for (var genre : movieGenres.split(",")
+                        ) {
+                        if(!genre.equals("N/A"))
+                            if(!genres.contains(genre.trim()))
+                                genres.add(genre.trim());
                     }
                     var movieDescription = Arrays.stream(split).skip(3).limit(posterFilepathIndex - 3).collect(Collectors.joining(","));
                     var ratingIMDB = split[length - 1].equals("N/A") ? 0.0 + "" : split[length - 1];
@@ -76,6 +77,10 @@ public class DataAccessManager {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public List<String> getAllGenres(){
+        return genres;
     }
 
     private void loadAllUsers() {
