@@ -6,6 +6,8 @@ import dk.easv.presentation.model.AppModel;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
@@ -16,6 +18,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
 import java.net.URL;
+import java.util.Collection;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -45,20 +48,36 @@ public class GenresController extends BudgetMother implements Initializable {
         scrollPane.vvalueProperty().addListener(this::scrolled);
     }
 
-    //TODO make bootiful buttons
     public void createGenreButtons(List<String> genres){
+
         genresVBox.setSpacing(8);
+        genresVBox.getChildren().clear();
         for (String g: genres) {
             if(!g.trim().equals("N/A")){
-                Button genrebutton = new Button(g);
-                genrebutton.getStyleClass().addAll("genresButtons", "rounded");
-                genresVBox.getChildren().add(genrebutton);
+                Button genreButton = new Button(g);
+                genreButton.getStyleClass().addAll("genresButtons", "rounded");
+                genresVBox.getChildren().add(genreButton);
+                genreButton.setOnAction(new EventHandler<ActionEvent>() {
+                    @Override
+                    public void handle(ActionEvent event) {
+                        System.out.println(genreButton.getText());
+                        //setGenreMovieList(genreButton.getText());
+                    }
+                });
             }
         }
-
+    }
+    //TODO figure out how to be smart and apply new skills here please
+    public void setGenreMovieList(String genre){
+        shownMovies.clear();
+        for(Movie m: filteredMovies){
+            if(m.getGenre() != null && m.getGenre().contains(genre)){
+                shownMovies.addAll();
+            }
+        }
     }
 
-    void scrolled(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
+    public void scrolled(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
         double value = newValue.doubleValue();
         ScrollBar bar = getVerticalScrollbar(scrollPane);
         if (value == bar.getMax()) {
@@ -72,7 +91,7 @@ public class GenresController extends BudgetMother implements Initializable {
         shownMovies.clear();
         flowPane.getChildren().clear();
         scrollPane.setVvalue(0);
-        filteredMovies.setAll(model.getTopAverageRatedMoviesUserDidNotSee(model.getObsLoggedInUser()));
+        filteredMovies.setAll(model.getAllMovies());
     }
 
     public void addMovies(int amount){

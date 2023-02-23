@@ -142,6 +142,10 @@ public class AppModel {
         }
     }
 
+    public List<Movie> getAllMovies(){
+        return logic.getAllMovies();
+    }
+
     public ObservableList<Movie> getTopMoviesSimilarUsersMovies() {
         return topMoviesSimilarUsersMovies;
     }
