@@ -22,7 +22,7 @@ import java.util.ResourceBundle;
 public class GenresController extends BudgetMother implements Initializable {
     private final AppModel model = AppModel.getInstance();
     @FXML private FlowPane flowPane;
-    @FXML private ScrollPane scrollPane;
+    @FXML private ScrollPane scrollPane, genresScrollPane;
     @FXML
     private VBox genresVBox;
     private ObservableList<Movie> filteredMovies = FXCollections.observableArrayList();
@@ -36,6 +36,7 @@ public class GenresController extends BudgetMother implements Initializable {
         flowPane.minWidthProperty().bind(scrollPane.widthProperty());
         flowPane.minHeightProperty().bind(scrollPane.heightProperty());
 
+        //Show the initial 50 movies
         filteredMovies.setAll(model.getTopAverageRatedMoviesUserDidNotSee(model.getObsLoggedInUser()));
         setUpListeners();
     }
@@ -44,11 +45,17 @@ public class GenresController extends BudgetMother implements Initializable {
         scrollPane.vvalueProperty().addListener(this::scrolled);
     }
 
-    //TODO
-    private void createGenreButtons(List<String> genres){
-        for (String g: genres)
-            //genresVBox.getChildren().add(new Button(g.toString()));
-            System.out.println(g);
+    //TODO make bootiful buttons
+    public void createGenreButtons(List<String> genres){
+        genresVBox.setSpacing(8);
+        for (String g: genres) {
+            if(!g.trim().equals("N/A")){
+                Button genrebutton = new Button(g);
+                genrebutton.getStyleClass().addAll("genresButtons", "rounded");
+                genresVBox.getChildren().add(genrebutton);
+            }
+        }
+
     }
 
     void scrolled(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {

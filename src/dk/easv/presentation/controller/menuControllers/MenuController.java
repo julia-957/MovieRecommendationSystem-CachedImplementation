@@ -41,7 +41,7 @@ public class MenuController implements Initializable {
         searchButton.setText("");
         searchButton.setGraphic(searchIconView);
 
-        ImageView favouritesIconView = new ImageView(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/mediumIndigo/star-bold.png"))));
+        ImageView favouritesIconView = new ImageView(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/mediumIndigo/heart-outline.png"))));
         favouritesIconView.setId("favouritesIconView");
         favouritesIconView.setFitHeight(35);
         favouritesIconView.setFitWidth(35);
