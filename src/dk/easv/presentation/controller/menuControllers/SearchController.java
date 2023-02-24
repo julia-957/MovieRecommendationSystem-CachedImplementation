@@ -69,7 +69,6 @@ public class SearchController implements Initializable {
         genresController.clearShownMovies();
         genresController.addMovies(20);
         genresController.createGenreButtons(model.getAllGenres());
-
     }
 
     @FXML

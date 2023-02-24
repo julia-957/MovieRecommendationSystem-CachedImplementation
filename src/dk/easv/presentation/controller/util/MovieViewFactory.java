@@ -3,6 +3,8 @@ package dk.easv.presentation.controller.util;
 import dk.easv.Main;
 import dk.easv.entities.Movie;
 import dk.easv.presentation.model.AppModel;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
@@ -66,6 +68,23 @@ public class MovieViewFactory {
         //Create a like button
         ImageView likeButtonGraphic = new ImageView();
         Button likeButton = new Button("", likeButtonGraphic);
+        likeButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                if(model.getObsLoggedInUser().getFavouriteMovies().contains(movie)){
+                    likeButtonGraphic.setImage(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/electricLilac/heart-outline.png"))));
+                    model.removeMovieFromFavourites(movie, model.getObsLoggedInUser());
+                    model.getObsLoggedInUser().getFavouriteMovies().remove(movie);
+                }
+
+                else {
+                    likeButtonGraphic.setImage(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/electricLilac/heart.png"))));
+                    model.addMovieToFavourites(movie, model.getObsLoggedInUser());
+                    model.getObsLoggedInUser().getFavouriteMovies().add(movie);
+                }
+                likeButton.setGraphic(likeButtonGraphic);
+            }
+        });
         likeButton.setMaxWidth(20);
         likeButton.setMaxHeight(20);
         likeButtonGraphic.setFitWidth(20);

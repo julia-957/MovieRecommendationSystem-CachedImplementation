@@ -48,6 +48,7 @@ public class GenresController extends BudgetMother implements Initializable {
     //TODO make bootiful buttons
     public void createGenreButtons(List<String> genres){
         genresVBox.setSpacing(8);
+        genresVBox.getChildren().clear();
         for (String g: genres) {
             if(!g.trim().equals("N/A")){
                 Button genrebutton = new Button(g);
