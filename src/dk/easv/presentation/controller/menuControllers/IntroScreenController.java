@@ -2,6 +2,7 @@ package dk.easv.presentation.controller.menuControllers;
 
 import dk.easv.Main;
 import dk.easv.entities.Movie;
+import dk.easv.entities.MovieView;
 import dk.easv.entities.User;
 import dk.easv.presentation.controller.BudgetMother;
 import dk.easv.presentation.controller.util.RoundImageCorners;
@@ -95,6 +96,14 @@ public class IntroScreenController extends BudgetMother implements Initializable
             model.addMovieToFavourites(featuredMovies.get(moviePosition), user);
             user.getFavouriteMovies().add(featuredMovies.get(moviePosition));
         }
+
+        //TODO update the heart if movie is in the shown movies
+        if (shownMovies.contains(featuredMovies.get(moviePosition).getMovieView())){
+            featuredMovies.get(moviePosition).getMovieView().updateHeart();
+            int index = flowPane.getChildren().indexOf(featuredMovies.get(moviePosition).getMovieView());
+            flowPane.getChildren().remove(index);
+            flowPane.getChildren().add(index, featuredMovies.get(moviePosition).getMovieView());
+        }
         favouriteBtn.setText("");
         favouriteBtn.setGraphic(favouriteHeart);
     }
@@ -103,7 +112,6 @@ public class IntroScreenController extends BudgetMother implements Initializable
         if(user.getFavouriteMovies().contains(featuredMovies.get(moviePosition))) {
             favouriteHeart.setImage(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/electricLilac/heart.png"))));
         }
-
         else {
             favouriteHeart.setImage(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/electricLilac/heart-outline.png"))));
         }
@@ -160,7 +168,13 @@ public class IntroScreenController extends BudgetMother implements Initializable
     public void setFeaturedMovies(){
         featuredMovies = model.getTopAverageRatedMoviesUserDidNotSee(model.getObsLoggedInUser());
         setFeaturedMovie(featuredMovies, moviePosition);
+        featuredMovies.get(0).setMovieView(new MovieView(featuredMovies.get(0)));
         setFavouriteHeart();
+    }
+
+    public void addMovieView() {
+        shownMovies.add(featuredMovies.get(0).getMovieView());
+        flowPane.getChildren().setAll(featuredMovies.get(0).getMovieView());
     }
 }
 

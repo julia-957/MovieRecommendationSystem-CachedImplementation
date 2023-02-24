@@ -9,6 +9,7 @@ public class Movie {
     private String ratingIMDB;
     private int year;
     private List<Rating> ratings;
+    private MovieView movieView;
 
     public Movie(int id, String title, int year) {
         this.id = id;
@@ -102,5 +103,21 @@ public class Movie {
         return  title + ", " + year +
                 ", ratings=" + ratings.size() +
                 ", avg="+ Math.round(getAverageRating()*10)/10.0;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setRatings(List<Rating> ratings) {
+        this.ratings = ratings;
+    }
+
+    public MovieView getMovieView() {
+        return movieView;
+    }
+
+    public void setMovieView(MovieView movieView) {
+        this.movieView = movieView;
     }
 }

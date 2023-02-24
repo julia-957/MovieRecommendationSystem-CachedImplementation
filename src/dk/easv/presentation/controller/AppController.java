@@ -75,9 +75,11 @@ public class AppController implements Initializable {
 
     public void openIntroScreen() {
         introScreenController.clearShownMovies();
-        introScreenController.addMovies(20);
+
+        //introScreenController.addMovies(20);
         introScreenController.setUser(model.getObsLoggedInUser());
         introScreenController.setFeaturedMovies();
+        introScreenController.addMovieView();
 
         borderPane.setCenter(introScene);
         menuController.setFocusOnHome();
