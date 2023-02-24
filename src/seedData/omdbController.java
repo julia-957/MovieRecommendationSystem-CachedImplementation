@@ -24,6 +24,8 @@ public class omdbController {
      */
     public String searchImdb(String key,String nameOfMove, String yearOfMovie){
         JSONObject movieObject = getDataFromImdb(key,nameOfMove,yearOfMovie);
+        if(tryGetValueFromJsonObject(movieObject,"Error").equals("Movie not found!"))
+            movieObject = searchImdbByName(nameOfMove);
         var poster = tryGetValueFromJsonObject(movieObject,"Poster");
         var genres = tryGetValueFromJsonObject(movieObject,"Genre");
         var description = tryGetValueFromJsonObject(movieObject,"Plot");
@@ -36,5 +38,43 @@ public class omdbController {
         }catch (Exception e){
             return "";
         }
+    }
+    /**
+     * Getting data(Name,Poste,Rating,Genres) from the omdbapi - open IMDB api.
+     * @param searchData - Name of the movie you want to search for.
+     * @return JSONObject - The all the movie data for the searched movie
+     */
+    private JSONObject getDataFromImdb(String searchData){
+        // Search the movie
+        HttpResponse<String> searchResponse = Unirest.get("http://www.omdbapi.com/?s="+searchData.trim()+"&apikey=b712184d")
+                .asString();
+        var searchDataResponse = new JSONObject(searchResponse.getBody());
+        try {
+            // If no movie is found throw an Exception
+            // From the list of movies, get the ID of the first movie.
+            String imdbID = new JSONObject(searchResponse.getBody()).getJSONArray("Search").getJSONObject(0).getString("imdbID");
+            // Search the movie again, but with corresponding id, to get all the data for the corresponding movie.
+            HttpResponse<String> movieResponse = Unirest.get("http://www.omdbapi.com/?i="+imdbID+"&apikey=b712184d")
+                    .asString();
+            return new JSONObject(movieResponse.getBody());
+        }catch (Exception e) {
+            return null;
+        }
+    }
+
+    /**
+     * Search the movie in the IMDB and fill the fields with the data from the IMDB
+     */
+    private JSONObject searchImdbByName(String searchData){
+        // Get all the movie data for the searched MovieTitle
+        String splitSearchData = searchData.split(" ")[0];
+        int i = 0;
+        while (splitSearchData.length() > i){
+            JSONObject movieObject = getDataFromImdb(splitSearchData);
+            if(movieObject != null)
+                return movieObject;
+            splitSearchData = splitSearchData.substring(i++,splitSearchData.length());
+        }
+        return null;
     }
 }

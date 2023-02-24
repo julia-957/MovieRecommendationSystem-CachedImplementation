@@ -1,6 +1,6 @@
 7001,1938,Love Finds Andy Hardy,Andy has problems raising the last payment for a used car and juggling three pretty girls with an upcoming country club dance scheduled.,https://m.media-amazon.com/images/M/MV5BNDBkZjdiNzctMTVkOS00ODIzLWJkN2ItM2Y5OTgyZTNjNGJlXkEyXkFqcGdeQXVyMDI2NDg0NQ@@._V1_SX300.jpg,Comedy, Romance,6.7
 7002,1999,Supreme Sanction,An assassin for the U.S. government becomes the next target of her employers when she spares the life of a nationally known TV reporter.,https://m.media-amazon.com/images/M/MV5BMTg5MTQ0ODcxMl5BMl5BanBnXkFtZTcwMTgwODkyMQ@@._V1_SX300.jpg,Action, Adventure, Crime,4.7
-7003,2005,National Geographic: Arlington: Field of Honor,,,,
+7003,2005,National Geographic: Arlington: Field of Honor,A historian races to find the legendary Templar Treasure before a team of mercenaries.,https://m.media-amazon.com/images/M/MV5BMTY3NTc4OTYxMF5BMl5BanBnXkFtZTcwMjk5NzUyMw@@._V1_SX300.jpg,Action, Adventure, Mystery,6.9
 7004,1997,Free Willy 3: The Rescue,16-year-old Jesse and old friend Randolph try to foil an illegal whaler threatening Willy and his pregnant mate.,https://m.media-amazon.com/images/M/MV5BMTA2ZmNkZDYtZjE2MC00ZmY0LWI5YjctMTI3NDcxMTNiMDIxXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg,Adventure, Drama, Family,4.7
 7005,1998,Basil,A lonely young aristocrat in turn-of the century England stuggles to meet the approval of his over-bearing, class-conscious father while trying to please the selfish woman he loves.,https://m.media-amazon.com/images/M/MV5BMjFjNDM5MjMtMWFjMS00NTcwLWE4NGEtNDYxNDVhOTk3MDA3XkEyXkFqcGdeQXVyMTk5MjAyMjM@._V1_SX300.jpg,Drama, Romance,5.9
 7006,1947,Body and Soul,A talented boxer's young career hits difficult terrain when an unethical promoter takes interest in him.,https://m.media-amazon.com/images/M/MV5BMWUwZjc3ODQtMzAxZi00ZmY0LTg2MGEtNGQxY2U5ZTc0YjJhXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg,Drama, Film-Noir, Sport,7.6
@@ -9,13 +9,13 @@
 7009,2002,Undercover Brother,When "The Man" tries to derail a black candidate's presidential campaign, Undercover Brother and his fellow secret agents come to the rescue.,https://m.media-amazon.com/images/M/MV5BMTBjODAzZDItZGY5My00YWMyLWE5NDItZGUyNTI2MWZkYTUyXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg,Action, Comedy,5.9
 7010,1984,The Hotel New Hampshire,The film talks about a family that weathers all sorts of disasters and keeps going in spite of it all. It is noted for its wonderful assortment of oddball characters.,https://m.media-amazon.com/images/M/MV5BMTA2NjQyNzYyMjNeQTJeQWpwZ15BbWU3MDAwNDcwNjQ@._V1_SX300.jpg,Comedy, Drama,5.9
 7011,2002,A Loving Father,While the whole world thinks writer Léo Shepherd is dead, he is kidnapped by his son Paul.,https://m.media-amazon.com/images/M/MV5BMTU2OTMwMzc3MV5BMl5BanBnXkFtZTcwOTA3OTYyMQ@@._V1_SX300.jpg,Drama,6.2
-7012,1976,Beach Girls/Pom Pom Girls,,,,
+7012,1976,Beach Girls/Pom Pom Girls,On vacation in Thailand, Richard sets out for an island rumored to be a solitary beach paradise.,https://m.media-amazon.com/images/M/MV5BNTljZTUzYWUtOTI4YS00NmZlLWE5MmQtZjFlZDZhNjg4MjQxXkEyXkFqcGdeQXVyNTc1NTQxODI@._V1_SX300.jpg,Adventure, Drama, Romance,6.6
 7013,1999,In the Dead of Space,,,,
 7014,1994,To Live,After Fugui and Jiazhen lose their personal fortunes, they raise a family and survive difficult cultural changes during 1940s to 1970s China.,https://m.media-amazon.com/images/M/MV5BOGU0OGY2NWItNDA0MC00NmRjLWI4YWQtMTUyNWJmM2RmYjA4XkEyXkFqcGdeQXVyNjQ2MjQ5NzM@._V1_SX300.jpg,Drama, War,8.3
-7015,2001,Megadeth: VH1 Behind the Music: Extended Version,,,,
-7016,1980,Raging Bull: Collector's Edition: Bonus Material,,,,
-7017,2003,Civil Brand,,,,
-7018,2000,Baby Van Gogh,,,,
+7015,2001,Megadeth: VH1 Behind the Music: Extended Version,Filmed live at Obras Stadium, Buenos Aires, Argentina on October 9, 2005!,https://m.media-amazon.com/images/M/MV5BMjA3MTU1NTYxNV5BMl5BanBnXkFtZTcwODI3MTI2MQ@@._V1_SX300.jpg,Documentary, Music,8.5
+7016,1980,Raging Bull: Collector's Edition: Bonus Material,The life of boxer Jake LaMotta, whose violence and temper that led him to the top in the ring destroyed his life outside of it.,https://m.media-amazon.com/images/M/MV5BYjRmODkzNDItMTNhNi00YjJlLTg0ZjAtODlhZTM0YzgzYThlXkEyXkFqcGdeQXVyNzQ1ODk3MTQ@._V1_SX300.jpg,Biography, Drama, Sport,8.2
+7017,2003,Civil Brand,Political involvement in the Avengers' affairs causes a rift between Captain America and Iron Man.,https://m.media-amazon.com/images/M/MV5BMjQ0MTgyNjAxMV5BMl5BanBnXkFtZTgwNjUzMDkyODE@._V1_SX300.jpg,Action, Sci-Fi,7.8
+7018,2000,Baby Van Gogh,A determined woman works with a hardened boxing trainer to become a professional.,https://m.media-amazon.com/images/M/MV5BMTkxNzA1NDQxOV5BMl5BanBnXkFtZTcwNTkyMTIzMw@@._V1_SX300.jpg,Drama, Sport,8.1
 7019,1999,Anywhere But Here,A mother and daughter search for success in Beverly Hills.,https://m.media-amazon.com/images/M/MV5BNzAxYjVhODctMTAxZS00MGE4LThkNjEtNTExY2FkNWFkZjUyXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_SX300.jpg,Comedy, Drama,6.2
 7020,1997,Love Stories,Four stories of love: yearned-for, betrayed, found. In the confessional, a priest is confronted for the first time by his eleven-year-old daughter (and seeks advice from his mother); a married colonel in the Polish Army is reunite...,https://m.media-amazon.com/images/M/MV5BOTVmMDlhYmUtZjk4Yi00Yzg0LWI0ZjQtNjgyNTgyNzU1ODJiXkEyXkFqcGdeQXVyMTc4MzI2NQ@@._V1_SX300.jpg,Romance, Comedy,7.0
 7021,1995,Stuart Saves His Family,A self-help advocate struggles to put his dysfunctional family in its place.,https://m.media-amazon.com/images/M/MV5BZWZiZWQ4NmMtYmVhYi00MDRhLWFjMmUtODA0NWFkMjdmNWQ5XkEyXkFqcGdeQXVyMTQ3Njg3MQ@@._V1_SX300.jpg,Comedy, Drama,5.3
@@ -24,65 +24,65 @@
 7024,2002,Welcome to Collinwood,Cosimo gets a plan for a huge job from his cellmate. He asks his woman to find a patsy for his bungled car theft, offering $15,000. Suddenly, 7 are involved.,https://m.media-amazon.com/images/M/MV5BMTc0NTI1MjMwMl5BMl5BanBnXkFtZTYwNTE2NzY3._V1_SX300.jpg,Comedy, Crime,6.3
 7025,2003,Born Rich,A documentary on children of the insanely rich. Directed by one of their own, Johnson &amp; Johnson heir, Jamie Johnson.,https://m.media-amazon.com/images/M/MV5BMTIxNDIzODU5Ml5BMl5BanBnXkFtZTcwMDA3NTYyMQ@@._V1_SX300.jpg,Documentary,6.5
 7026,1987,The Dame Edna Experience: The Christmas Specials,,,,
-7027,1999,Heat of the Sun,,,,
-7028,2004,Wire in the Blood: Season 2,,,,
-7029,1997,Red Shoe Diaries: Temple of Flesh,,,,
+7027,1999,Heat of the Sun,A group of high-end professional thieves start to feel the heat from the LAPD when they unknowingly leave a clue at their latest heist.,https://m.media-amazon.com/images/M/MV5BYjZjNTJlZGUtZTE1Ny00ZDc4LTgwYjUtMzk0NDgwYzZjYTk1XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg,Action, Crime, Drama,8.3
+7028,2004,Wire in the Blood: Season 2,The Baltimore drug scene, as seen through the eyes of drug dealers and law enforcement.,https://m.media-amazon.com/images/M/MV5BNTllYzFhMjAtZjExNS00MjM4LWE5YmMtOGFiZGRlOTU5YzJiXkEyXkFqcGdeQXVyNDIzMzcwNjc@._V1_SX300.jpg,Crime, Drama, Thriller,9.3
+7029,1997,Red Shoe Diaries: Temple of Flesh,When his peaceful life is threatened by a high-tech assassin, former black-ops agent Frank Moses reassembles his old team in a last-ditch effort to survive and uncover his assailants.,https://m.media-amazon.com/images/M/MV5BMzg2Mjg1OTk0NF5BMl5BanBnXkFtZTcwMjQ4MTA3Mw@@._V1_SX300.jpg,Action, Comedy, Crime,7.0
 7030,2003,The Collected Shorts of Jan Svankmajer: Vol. 2,,,,
-7031,1968,Support Your Local Sheriff!,,,,
+7031,1968,Support Your Local Sheriff!,In the old west, a man becomes a Sheriff just for the pay, figuring he can decamp if things get tough. In the end, he uses ingenuity instead.,https://m.media-amazon.com/images/M/MV5BNjM3NDY3NDYtYTQwYi00NTUyLTg0MmYtZDg1ZmVhYjA4YzMwXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg,Comedy, Romance, Western,7.5
 7032,2002,Austin Powers in Goldmember,Upon learning that his father has been kidnapped, Austin Powers must travel to 1975 and defeat the aptly named villain Goldmember, who is working with Dr. Evil.,https://m.media-amazon.com/images/M/MV5BMTI3NTkzODI0MF5BMl5BanBnXkFtZTYwNjc5MTA3._V1_SX300.jpg,Action, Adventure, Comedy,6.2
 7033,2004,A Date with Shahrukh,,,,
-7034,2003,Dawson's Creek: Series Finale,,,,
-7035,2004,Sumo East and West,,,,
+7034,2003,Dawson's Creek: Series Finale,Four friends in a small coastal town help each other cope with adolescence.,https://m.media-amazon.com/images/M/MV5BNjhjNzBiNGMtZGI0ZC00NjEyLTgxM2EtYzU3OWYwOTdhOTE3XkEyXkFqcGdeQXVyNjQ2MjQ5NzM@._V1_SX300.jpg,Drama, Romance,6.7
+7035,2004,Sumo East and West,Chronicling the turmoil and pandemonium that ensues at a derelict university sumo club, and the rise of some unlikely heroes.,https://m.media-amazon.com/images/M/MV5BM2FiMGE2NTUtMmNhNi00NWQ2LWI0NmItNWZjOTU2MjUxZjY2XkEyXkFqcGdeQXVyNjI0NjE1NDA@._V1_SX300.jpg,Comedy, Drama, Sport,7.2
 7036,1955,The Man with the Golden Arm: 50th Anniversary Special Edition,,,,
 7037,2002,The Land Before Time IX: Journey to Big Water,Littlefoot befriends with a mysterious, fun-loving dolphin-like creature named Mo, who is trapped in "new water" caused by heavy rain. The gang then goes on an adventure to the "big water" to bring Mo home.,https://m.media-amazon.com/images/M/MV5BMTI4MDk0ODk5Ml5BMl5BanBnXkFtZTcwMDYyOTkyMQ@@._V1_SX300.jpg,Animation, Adventure, Family,5.8
-7038,1970,Airport / Airport 1975: Double Feature,,,,
-7039,2002,James Cameron's Expedition: Bismarck,,,,
+7038,1970,Airport / Airport 1975: Double Feature,A bomber on board an airplane, an airport almost closed by snow, and various personal problems of the people involved.,https://m.media-amazon.com/images/M/MV5BMzI2NGUzMjMtOTg5ZC00MGFkLWJiMmUtNGE3YjM4ODMzY2FiXkEyXkFqcGdeQXVyMTUzMDUzNTI3._V1_SX300.jpg,Action, Drama, Thriller,6.6
+7039,2002,James Cameron's Expedition: Bismarck,Robert Ford, who's idolized Jesse James since childhood, tries hard to join the reforming gang of the Missouri outlaw, but gradually becomes resentful of the bandit leader.,https://m.media-amazon.com/images/M/MV5BMTY2NDI2MTc2NV5BMl5BanBnXkFtZTcwNjA2NTQzMw@@._V1_SX300.jpg,Biography, Crime, Drama,7.5
 7040,1998,Dr. Dolittle,,,,
 7041,2003,The Murder of Emmett Till: American Experience,,,,
 7042,1985,North & South: The Complete Collection,Two friends, one northern and one southern, struggle to maintain their friendship as events build towards the American Civil War.,https://m.media-amazon.com/images/M/MV5BZjdlZTExMTgtY2Q3Ny00NmU4LTgxOTUtZWIyMjBjOTZjMGU3XkEyXkFqcGdeQXVyNTE1NjY5Mg@@._V1_SX300.jpg,Drama, History, Romance,8.0
 7043,2002,The Forsyte Saga: Series 1,,,,
-7044,1999,Phantom Quest Corp: Perfect Collection,,,,
-7045,1995,Highlander: Finale,,,,
+7044,1999,Phantom Quest Corp: Perfect Collection,Two Jedi escape a hostile blockade to find allies and come across a young boy who may bring balance to the Force, but the long dormant Sith resurface to claim their original glory.,https://m.media-amazon.com/images/M/MV5BYTRhNjcwNWQtMGJmMi00NmQyLWE2YzItODVmMTdjNWI0ZDA2XkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg,Action, Adventure, Fantasy,6.5
+7045,1995,Highlander: Finale,An immortal Scottish swordsman must confront the last of his immortal opponent, a murderously brutal barbarian who lusts for the fabled "Prize".,https://m.media-amazon.com/images/M/MV5BMjc3YmU3MzQtNTA4OC00ZjljLWFmODAtZDU1YzY5ZTNkZDU3XkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg,Action, Adventure, Fantasy,7.1
 7046,1992,The Lost World,Two rivaling professors - a journalist, a young wealthy woman and a teenage boy - travel through Africa in search of "The Lost World", a place where dinosaurs still roam.,https://m.media-amazon.com/images/M/MV5BOWU1ZGE5MmItZjNhMy00Njg3LWEzYTktMjVhNjE2NmZiZDU2XkEyXkFqcGdeQXVyNTM3MDMyMDQ@._V1_SX300.jpg,Adventure, Fantasy, Sci-Fi,5.3
 7047,1965,Red Beard,In 19th-century Japan, a rough-tempered yet charitable town doctor trains a young intern.,https://m.media-amazon.com/images/M/MV5BNDU5ZjE1OWUtZjcxNS00NjAzLThhZTQtOWY0MDc3NDQ1YTE2XkEyXkFqcGdeQXVyMTIyNzY1NzM@._V1_SX300.jpg,Drama,8.3
 7048,2003,Agent Cody Banks,A government agent trains Cody Banks in the ways of covert operations that require younger participants.,https://m.media-amazon.com/images/M/MV5BNzMwMjc5NzUyNF5BMl5BanBnXkFtZTcwNjA5MDcyNA@@._V1_SX300.jpg,Action, Adventure, Comedy,5.1
 7049,1965,The Munsters: Season 2,,,,
-7050,2002,Backflash,,,,
-7051,2003,MacArthur Park,,,,
-7052,2004,Masters of Poker: Vol. 1: Phil Hellmuth's Million Dollar Poker System,,,,
+7050,2002,Backflash,A woman is released from prison and heads home to help outwit a local mob boss and pull off the scam of a lifetime.,https://m.media-amazon.com/images/M/MV5BMjM2Nzg0NDk5MV5BMl5BanBnXkFtZTgwMzM2NTAwNzE@._V1_SX300.jpg,Action, Crime, Drama, Thriller,5.3
+7051,2003,MacArthur Park,Biopic of General Douglas MacArthur covering his war exploits during WW2 and the Korean War.,https://m.media-amazon.com/images/M/MV5BNTRjMjYzNDEtMjNmNy00NzJiLWE0NDgtZDk1N2IzYjgzYTMwXkEyXkFqcGdeQXVyMTMxMTY0OTQ@._V1_SX300.jpg,Biography, Drama, History,6.5
+7052,2004,Masters of Poker: Vol. 1: Phil Hellmuth's Million Dollar Poker System,The heroic warrior He-Man battles against the evil lord Skeletor and his armies of darkness for control of Castle Grayskull.,https://m.media-amazon.com/images/M/MV5BYzRlMzQzNDEtYTg5My00NTFjLWFiYzYtMjJkMzUyYzJjMzgyXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg,Action, Adventure, Fantasy,5.3
 7053,1988,Vice Versa,A divorced executive named Marshall and his 11-year-old son, Charlie, casually touch a magical Tibetan skull, releasing a mysterious power that transfers Marshall's mind to Charlie's body and vice versa. Their problems have just b...,https://m.media-amazon.com/images/M/MV5BNTlkZGZkOTktODZiZi00Yzc2LThlYTYtYzNkMDE3ZmE2ZWM1XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg,Comedy, Fantasy,5.9
-7054,2000,Cold Heart,,,,
+7054,2000,Cold Heart,In the waning days of the American Civil War, a wounded soldier embarks on a perilous journey back home to Cold Mountain, North Carolina to reunite with his sweetheart.,https://m.media-amazon.com/images/M/MV5BMTY3NTc5NzcyOF5BMl5BanBnXkFtZTcwMDM0NjQyMQ@@._V1_SX300.jpg,Adventure, Drama, Romance,7.2
 7055,1995,Get Shorty,A mobster travels to Hollywood to collect a debt, and discovers that the movie business is much the same as his current job.,https://m.media-amazon.com/images/M/MV5BMjAwODYzNDY4Ml5BMl5BanBnXkFtZTcwODkwNTgzNA@@._V1_SX300.jpg,Comedy, Crime, Thriller,6.9
 7056,1985,Rainbow Brite and the Star Stealer,Rainbow Brite must stop an evil princess and her underlings from taking over the planet Spectra.,https://m.media-amazon.com/images/M/MV5BODY3ZTA1MjctMzhiNi00YjFhLWEzM2QtY2Y4ODUxM2FhYzA5XkEyXkFqcGdeQXVyMTY1MzUwMw@@._V1_SX300.jpg,Animation, Adventure, Family,6.7
-7057,2002,Lord of the Rings: The Two Towers: Extended Edition,,,,
+7057,2002,Lord of the Rings: The Two Towers: Extended Edition,A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.,https://m.media-amazon.com/images/M/MV5BN2EyZjM3NzUtNWUzMi00MTgxLWI0NTctMzY4M2VlOTdjZWRiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_SX300.jpg,Action, Adventure, Drama,8.8
 7058,1979,Zombie,Strangers searching for a young woman's missing father arrive at a tropical island where a doctor desperately seeks the cause and cure of a recent epidemic of the undead.,https://m.media-amazon.com/images/M/MV5BYjhiMjMxZGEtY2VmZC00OTVmLWExNTQtYmUyNjZiNDJlMWM4XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg,Horror,6.8
 7059,2003,The Job,CJ is a sexy, cold-blooded assassin who wants to quit the business. She agrees to carry out one last hit, but for the first time in her career as an assassin, she is unable to finish the job.,https://m.media-amazon.com/images/M/MV5BMTQ2NjQxNDIzN15BMl5BanBnXkFtZTcwMDU4MDUyMQ@@._V1_SX300.jpg,Action, Crime, Drama,4.3
 7060,1999,Eddie Izzard: Dress to Kill,Executive transvestite Eddie Izzard takes his show to San Francisco to give a brief history of pagan and Christian religions, the building of Stonehenge, the birth of the Church of England ...,https://m.media-amazon.com/images/M/MV5BYmM3MGEyMzItYzg4NS00YjlmLWFhNDQtNTU1ZGEwMGE5NGU3XkEyXkFqcGdeQXVyMTk3NDAwMzI@._V1_SX300.jpg,Documentary, Comedy,8.7
 7061,1998,Kizuna,Tetsuro Haga is a troubled gangster, living under the assumed identity Ise for ten years, to escape jail for gunning down his cruel adoptive father. His life begins to unravel when a journalist following him takes an interest in t...,https://m.media-amazon.com/images/M/MV5BZjQyNDA3Y2YtNjEzOS00MDEzLWFiNjUtOGJhMDdjZTdiYTYzXkEyXkFqcGdeQXVyOTg2Mzg5NTM@._V1_SX300.jpg,Crime, Drama,6.7
-7062,2003,Cyborg 009,,,,
-7063,1985,Girls on Top: Set 1,,,,
+7062,2003,Cyborg 009,A martial artist hunts a killer in a plague-infested urban dump of the future.,https://m.media-amazon.com/images/M/MV5BMDk0MmYyMWMtOWVhNS00ZTM4LWI0NGEtMTMxYWFjYjVhNWVlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg,Action, Sci-Fi, Thriller,5.0
+7063,1985,Girls on Top: Set 1,Cady Heron is a hit with The Plastics, the A-list girl clique at her new school, until she makes the mistake of falling for Aaron Samuels, the ex-boyfriend of alpha Plastic Regina George.,https://m.media-amazon.com/images/M/MV5BMjE1MDQ4MjI1OV5BMl5BanBnXkFtZTcwNzcwODAzMw@@._V1_SX300.jpg,Comedy,7.1
 7064,1980,Popeye,The adventures of the famous sailor man and his friends in the seaside town of Sweethaven.,https://m.media-amazon.com/images/M/MV5BMDgyNDg0YWUtZjNiMy00NzI1LTgzMmQtOGU5NGQwOTA2NDFkXkEyXkFqcGdeQXVyNjE5MjUyOTM@._V1_SX300.jpg,Adventure, Comedy, Family,5.3
 7065,1988,Evil Dead Trap,A late night TV presenter receives a snuff tape, in which a woman is brutally killed. She decides to take a crew out to a location indicated in the tape, but only death and despair await them.,https://m.media-amazon.com/images/M/MV5BMmFlN2RiNGMtY2ZkZi00NzcwLTgxNjAtMWViYjdiMmYyY2VhXkEyXkFqcGdeQXVyNDgzODE3NDk@._V1_SX300.jpg,Horror,6.2
 7066,2001,The Peter Rabbit Collection: The Tale of the Flopsy Bunnies and Mrs. Tittlemouse / The Tale of Pigling Bland,,,,
 7067,2003,Charlie's Angels: Full Throttle,The Angels investigate a series of murders which occur after the theft of a witness protection profile database.,https://m.media-amazon.com/images/M/MV5BMTM0MTg3OTU5N15BMl5BanBnXkFtZTYwMDc4MzU3._V1_SX300.jpg,Action, Adventure, Comedy,4.9
-7068,1969,Eric Idle's Personal Best,,,,
+7068,1969,Eric Idle's Personal Best,Eric Andre tries to host a talk show in a bizarre environment, where he is sometimes the player of pranks and sometimes the victim.,https://m.media-amazon.com/images/M/MV5BZWI4YTVhYmMtZmZjNS00MmFjLTkyMDItNzcxYjVjZjZmODliXkEyXkFqcGdeQXVyMzM4NjcxOTc@._V1_SX300.jpg,Comedy, Talk-Show,8.6
 7069,1998,The Newton Boys,The story of the Newton gang, the most successful bank robbers in history, owing to their good planning and minimal violence.,https://m.media-amazon.com/images/M/MV5BMWZmZDMwMjUtYjZiMC00ZWI4LWIwMjQtY2E3NzBlYzk1OWYxXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg,Action, Crime, Drama,6.1
 7070,1968,Once Upon a Time in the West,A mysterious stranger with a harmonica joins forces with a notorious desperado to protect a beautiful widow from a ruthless assassin working for the railroad.,https://m.media-amazon.com/images/M/MV5BODQ3NDExOGYtMzI3Mi00NWRlLTkwNjAtNjc4MDgzZGJiZTA1XkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_SX300.jpg,Western,8.5
 7071,1992,Orlando,After Queen Elizabeth I commands him not to grow old, a young nobleman struggles with love and his place in the world.,https://m.media-amazon.com/images/M/MV5BYmY1OTA3MjAtYjQxOC00OTlkLWExZWQtMjc3ZjExOWFhM2UwXkEyXkFqcGdeQXVyMTA0MjU0Ng@@._V1_SX300.jpg,Biography, Drama, Fantasy,7.1
 7072,2000,The Tao of Steve,Underachieving, overweight kindergarten teacher Dex finds a woman who forces him to reexamine his Zen-like system of seduction.,https://m.media-amazon.com/images/M/MV5BMTc4MzQ2NDQ5N15BMl5BanBnXkFtZTcwOTMzNTcxMQ@@._V1_SX300.jpg,Comedy, Drama, Romance,6.7
-7073,2002,Muslims,,,,
-7074,1993,Manufacturing Consent: Noam Chomsky and the Media,,,,
+7073,2002,Muslims,Comedians Negin Farsad and Dean Obeidallah lead an all-star Muslim comedy performing in big cities, small towns, liberal enclaves, conservative hotbeds, rural and everything in between to explore the issue of Islamophobia. Watch t...,https://m.media-amazon.com/images/M/MV5BNjE1ODA3ODUwMl5BMl5BanBnXkFtZTcwMjY3OTk0Nw@@._V1_SX300.jpg,Documentary, Comedy,6.4
+7074,1993,Manufacturing Consent: Noam Chomsky and the Media,A film about the noted American linguist/political dissident and his warning about corporate media's role in modern propaganda.,https://m.media-amazon.com/images/M/MV5BMTI2NDY5Nzc3NF5BMl5BanBnXkFtZTYwNjEyNTQ5._V1_SX300.jpg,Documentary, Biography, War,8.1
 7075,1959,The Cosmic Man,A spherical UFO proves to contain one alien visitor. How to deal with him? Investigators disagree...,https://m.media-amazon.com/images/M/MV5BY2FhOTJkMzgtOTZkNi00ODBhLWJhM2YtZmE4MzM4NzUzZWVjXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg,Adventure, Sci-Fi, Thriller,4.8
 7076,2002,Ted Bundy,The story of serial killer Ted Bundy.,https://m.media-amazon.com/images/M/MV5BNTVjZWE1OGUtN2Q4MC00Yjk2LTlmNTctNWNlZjcwNTMzMDZjXkEyXkFqcGdeQXVyNTM0NTU5Mg@@._V1_SX300.jpg,Biography, Crime, Drama,5.8
 7077,1994,To Die For,,,,
-7078,2001,Yellowstone: The World's First National Park,,,,
+7078,2001,Yellowstone: The World's First National Park,A ranching family in Montana faces off against others encroaching on their land.,https://m.media-amazon.com/images/M/MV5BOGFiZjU5NGEtNTAwNS00ZjI2LTg0YTktNjg0ODFlM2E0NGVhXkEyXkFqcGdeQXVyMzQ2MDI5NjU@._V1_SX300.jpg,Drama, Western,8.7
 7079,2003,A Painted House,A young boy, his family, and the migrant workers they hire to work their cotton farm struggle against difficult odds to raise and sell the crop. Meanwhile, the boy dreams of living in better conditions. However, with this particul...,https://m.media-amazon.com/images/M/MV5BYjZiOGE1NjMtOTMzOC00OTc2LWE2MjItYTZmZWRiZjczN2E3XkEyXkFqcGdeQXVyMjczOTU2NTI@._V1_SX300.jpg,Drama, Family,6.4
 7080,1988,Maniac Cop,A killer dressed in a police uniform begins murdering innocent people on the streets of New York City.,https://m.media-amazon.com/images/M/MV5BMzU1ZTJiMGYtZTcwNC00NmE1LThjNDItZGRhNDJhYzEzZjRjXkEyXkFqcGdeQXVyMTUzMDUzNTI3._V1_SX300.jpg,Action, Crime, Horror,6.0
 7081,1991,Cabeza De Vaca,A handful of survivors from a disastrous 1528 Spanish expedition to Florida journey across the coast until they reach Mexico.,https://m.media-amazon.com/images/M/MV5BMjA4MzQ5MDkwM15BMl5BanBnXkFtZTcwMjc1NTIyMQ@@._V1_SX300.jpg,Adventure, Biography, Drama,6.9
 7082,1955,The Long Gray Line,In 1898, Irish immigrant Martin Maher is hired as a civilian employee at West Point where, during a 50-year career, he rises to the rank of NCO and instructor.,https://m.media-amazon.com/images/M/MV5BNjYzZmNiYTMtOGRjZC00ZDc3LWIzYmUtMjQwZDVlYmJmM2UzXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg,Biography, Comedy, Drama,7.2
-7083,1996,Island of Dr. Moreau: Director's Cut,,,,
-7084,2001,Ghost Rig,,,,
-7085,2002,Lupin the 3rd: Dragon of Doom,,,,
+7083,1996,Island of Dr. Moreau: Director's Cut,In 1954, a U.S. Marshal investigates the disappearance of a murderer who escaped from a hospital for the criminally insane.,https://m.media-amazon.com/images/M/MV5BYzhiNDkyNzktNTZmYS00ZTBkLTk2MDAtM2U0YjU1MzgxZjgzXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg,Mystery, Thriller,8.2
+7084,2001,Ghost Rig,The IMF is shut down when it's implicated in the bombing of the Kremlin, causing Ethan Hunt and his new team to go rogue to clear their organization's name.,https://m.media-amazon.com/images/M/MV5BMTY4MTUxMjQ5OV5BMl5BanBnXkFtZTcwNTUyMzg5Ng@@._V1_SX300.jpg,Action, Adventure, Thriller,7.4
+7085,2002,Lupin the 3rd: Dragon of Doom,Inspired by the adventures of Arsène Lupin, gentleman thief Assane Diop sets out to avenge his father for an injustice inflicted by a wealthy family.,https://m.media-amazon.com/images/M/MV5BZjEyMmUyYmYtNTAwYi00OWUwLWJlNzEtMDM2N2QxNzIwMTdjXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg,Action, Crime, Drama,7.5
 7086,1987,Brain Damage (Limited Edition),,,,
 7087,2002,Global Warning: Australia,,,,
 7088,2002,Prince: Live at the Aladdin Las Vegas,,,,
@@ -91,7 +91,7 @@
 7091,2000,The House of Mirth,A woman risks losing her chance of happiness with the only man she has ever loved.,https://m.media-amazon.com/images/M/MV5BOTk4NWFjOWEtNDdiZC00N2IyLWIwZTYtZDU2YTNlOTFmOWNjXkEyXkFqcGdeQXVyMTk3NDAwMzI@._V1_SX300.jpg,Romance, Drama,7.0
 7092,1994,A Shadow You Soon Will Be,A computer programmer who, after his train breaks down, takes to wandering aimlessly through remote regions of La Pampa, Viedma and Carhue. he meets a succession of equally lost souls, including a globe-trotting gambler, a circus ...,https://m.media-amazon.com/images/M/MV5BMTIxNzg1OTg0OV5BMl5BanBnXkFtZTcwMTk3NjAwMQ@@._V1_SX300.jpg,Drama,6.0
 7093,1995,Jeff Buckley: Live in Chicago,,,,
-7094,2005,Tales from the Crypt: From Comic Books to Television,,,,
+7094,2005,Tales from the Crypt: From Comic Books to Television,Captain Jack Sparrow is pursued by old rival Captain Salazar and a crew of deadly ghosts who have escaped from the Devil's Triangle. They're determined to kill every pirate at sea...notably Jack.,https://m.media-amazon.com/images/M/MV5BMTYyMTcxNzc5M15BMl5BanBnXkFtZTgwOTg2ODE2MTI@._V1_SX300.jpg,Action, Adventure, Fantasy,6.5
 7095,1995,Violet's Visit,,,,
 7096,2001,On Any Sunday: Motocross,,,,
 7097,2005,Raging Sharks,After debris from an alien spaceship lands in the waters, great white sharks begin terrorizing marine researchers (Corin Nemec, Vanessa Angel, Corbin Bernsen) in the Pacific Ocean.,https://m.media-amazon.com/images/M/MV5BMTU5ODk1MzAyMV5BMl5BanBnXkFtZTcwMDIzMjM5OA@@._V1_SX300.jpg,Action, Adventure, Horror, Sci-Fi, Thriller,2.6
@@ -100,7 +100,7 @@
 7100,2005,Auschwitz: Inside the Nazi State,The history of the Final Solution phase of the Nazi Holocaust, particularly with the most infamous of the death camps.,https://m.media-amazon.com/images/M/MV5BMjQxMmRmZWQtNGEyMC00NDQ3LWI4MjUtZjkzYjljNTk3OWY3XkEyXkFqcGdeQXVyNTgyNTA4MjM@._V1_SX300.jpg,Documentary, History, War,8.6
 7101,1985,Heart of Dragon,Tat, ex SWAT turned CID cop in HK, has a 29 y.o. Disabled brother, behaving like the small boys, he plays with, always getting into trouble. Tat struggles to care for him - at the expense of his cute girlfriend and dreams.,https://m.media-amazon.com/images/M/MV5BODkzZTBmY2UtMWIzOS00NzVmLWJhNjMtMGIxNDcwNTEyZDJlXkEyXkFqcGdeQXVyNjU5MjcxOTg@._V1_SX300.jpg,Action, Comedy, Crime,6.3
 7102,2003,Ninja Scroll: The Series,Fourteen years after defeating the immortal warrior Himuro Genma and thwarting the Shogun of the Dark's evil plans, Kibagami Jubei continues to roam all over Japan as a masterless swordsman. During his journey, he meets Shigure, a...,https://m.media-amazon.com/images/M/MV5BYTA0MzI3NGYtNzhkNi00ZjVlLWI5NzItZDI0MGMwM2Q4MmZlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg,Animation, Action, Adventure,6.9
-7103,1997,DNA,,,,
+7103,1997,DNA,Five years after his daughter's disappearance, Danish police officer Rolf discovers a fatal flaw in the DNA database and might finally be able to find her.,https://m.media-amazon.com/images/M/MV5BODZiOWFjNGUtYTQ0OS00M2VjLWFhMGEtMjg3YWJkOGRlZTY5XkEyXkFqcGdeQXVyMTEwMTk2MDE0._V1_SX300.jpg,Crime, Drama, Mystery,7.4
 7104,2002,Home Movies: Season 2,,,,
 7105,1957,Truffaut Shorts: Antoine & Collette/Les Mistons,,,,
 7106,2002,Dead Above Ground,Students and teachers begin dying the same way as a video depicts.,https://m.media-amazon.com/images/M/MV5BMTIzMzU0NjA4NF5BMl5BanBnXkFtZTcwNzUxNTYyMQ@@._V1_SX300.jpg,Crime, Horror,3.1
@@ -113,7 +113,7 @@
 7113,2004,Happy Lesson,,,,
 7114,2002,Discovering the Real World of Harry Potter,,,,
 7115,2003,Chevelle: Live from the Norva,,,,
-7116,2004,ABC News Presents: Jesus,,,,
+7116,2004,ABC News Presents: Jesus,In 1933, retired detective Hercule Poirot is targeted by a taunting killer who sends letters signed "ABC", which Poirot must decode in order to discover the identity of the murderer.,https://m.media-amazon.com/images/M/MV5BYmJmNzU0NTgtOGM5Ni00MWJiLTgwZmMtNDIyNjYzZDAzNzI5XkEyXkFqcGdeQXVyMjExMjk0ODk@._V1_SX300.jpg,Crime, Drama, Mystery,6.6
 7117,1938,The Lady Vanishes,While travelling in continental Europe, a rich young playgirl realizes that an elderly lady seems to have disappeared from the train.,https://m.media-amazon.com/images/M/MV5BNjk3YzFjYTktOGY0ZS00Y2EwLTk2NTctYTI1Nzc2OWNiN2I4XkEyXkFqcGdeQXVyNzM0MTUwNTY@._V1_SX300.jpg,Mystery, Thriller,7.8
 7118,1962,The Beverly Hillbillies Vol. 1: 10 Classic Episodes,,,,
 7119,2003,Andromeda: Season 4,,,,
@@ -121,7 +121,7 @@
 7121,1991,Oscar,A gangster attempts to keep the promise he made to his dying father: that he would give up his life of crime and "go straight".,https://m.media-amazon.com/images/M/MV5BMjRhYjg3YWEtOTYzZS00ZWY5LWJkNmEtYWE0YmQ3NDY2OWZlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg,Comedy, Crime,6.5
 7122,2004,The Graffiti Artist,Adrift in a lush, nocturnal urban landscape, Nick is a post-modern urban hero asserting his anarchistic agenda on the endless maze of virgin exterior walls that comprise downtown Seattle and Portland. For writer/director Bolton's ...,https://m.media-amazon.com/images/M/MV5BMjAzMjg3ODU4Ml5BMl5BanBnXkFtZTcwNTAyMjkyMQ@@._V1_SX300.jpg,Drama, Romance,6.1
 7123,1976,Harry and Walter Go to New York,In 1892, two vaudevillians and petty con artists get involved, together with the most notorious bank robber, in a New York City bank heist.,https://m.media-amazon.com/images/M/MV5BYzVhMGJjNTUtYzg2Ny00OTU5LTgwYWQtZjlkNTcwMTJiZDJkL2ltYWdlXkEyXkFqcGdeQXVyMjI4MjA5MzA@._V1_SX300.jpg,Comedy, Crime,5.4
-7124,2003,American Chopper: Season 1,,,,
+7124,2003,American Chopper: Season 1,A sexually frustrated suburban father has a mid-life crisis after becoming infatuated with his daughter's best friend.,https://m.media-amazon.com/images/M/MV5BNTBmZWJkNjctNDhiNC00MGE2LWEwOTctZTk5OGVhMWMyNmVhXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg,Drama,8.4
 7125,1988,Bloodsport,"Bloodsport" follows Frank Dux, an American martial artist serving in the military, who decides to leave the army to compete in a martial arts tournament in Hong Kong where fights to the death can occur.,https://m.media-amazon.com/images/M/MV5BNTJmMGEzMTQtMzQzMi00YjE1LWI4MTctNjY0NWZiYzE2MDVhXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg,Action, Biography, Drama,6.8
 7126,2004,Celsius 41.11,This film attempts to correct the record when it comes to the left's attacks on President Bush, 9/11 and the war in Iraq and Kerry's 20-year tenure in the Senate.,https://m.media-amazon.com/images/M/MV5BOTI1MjQ0ODQ1MF5BMl5BanBnXkFtZTYwNDQ0MTU3._V1_SX300.jpg,Documentary, War,4.3
 7127,1970,Five Easy Pieces,A dropout from upper-class America picks up work along the way on oil rigs when his life isn't spent in a squalid succession of bars, motels, and other points of interest.,https://m.media-amazon.com/images/M/MV5BMTRiY2VkMjctNWQzZC00NjAyLTkzNjktYzAwN2M2ODNhOTA1XkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_SX300.jpg,Drama,7.4
@@ -145,13 +145,13 @@
 7145,1984,Star Trek III: The Search for Spock,Admiral Kirk and his bridge crew risk their careers stealing the decommissioned U.S.S. Enterprise to return to the restricted Genesis Planet to recover Spock's body.,https://m.media-amazon.com/images/M/MV5BMmFiMTczYjgtMWQwOC00MjFlLWFlZjUtMjJjNTcxNjAzY2Q1XkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_SX300.jpg,Action, Adventure, Sci-Fi,6.6
 7146,1991,Light Sleeper,,,,
 7147,1987,MacGyver: Season 3,,,,
-7148,1978,Doctor Who: The Ribos Operation,,,,
+7148,1978,Doctor Who: The Ribos Operation,While on a journey of physical and spiritual healing, a brilliant neurosurgeon is drawn into the world of the mystic arts.,https://m.media-amazon.com/images/M/MV5BNjgwNzAzNjk1Nl5BMl5BanBnXkFtZTgwMzQ2NjI1OTE@._V1_SX300.jpg,Action, Adventure, Fantasy,7.5
 7149,2002,Personal Velocity,Three women's escapes from their afflicted lives. Each struggles to flee from the men who confine their personal freedom.,https://m.media-amazon.com/images/M/MV5BMzMwMDVkNDYtMWQ0MC00MTQ2LWE0NWUtNmE5ZGVjNGY3ZGJjXkEyXkFqcGdeQXVyMTMxMTY0OTQ@._V1_SX300.jpg,Drama, Romance,6.5
 7150,1995,The Langoliers,Most of the passengers on an airplane disappear, and the remainder land the plane in a mysteriously barren airport.,https://m.media-amazon.com/images/M/MV5BNWNmNmVhZDYtM2Y1Yi00ZmNjLThlNTEtN2JiNjY4NGVhOTcyXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg,Horror, Mystery, Sci-Fi,6.1
 7151,1975,Ballet Shoes,Pauline, Petrova, and Posy Fossil live with Sylvia Brown, their guardian. Money is tight and as the story opens, three boarders - a garage owner, a retired English professor, and a dance teacher - come to stay. Theo Dane, the danc...,https://m.media-amazon.com/images/M/MV5BMjA2MTI3NTkxN15BMl5BanBnXkFtZTcwMzYzNDMyMQ@@._V1_SX300.jpg,Drama, Family,6.9
 7152,1989,Breaking In,Professional thief Ernie takes Mike on as an apprentice, but while Mike clearly has "larceny in his heart", it will take him a long time to get as good as Ernie.,https://m.media-amazon.com/images/M/MV5BOGRlYWQxMGItNDc4YS00OTE2LWFkYzQtMjE2NzE0OTgyNmVlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg,Adventure, Comedy,6.1
 7153,1972,Hanzo the Razor: Sword of Justice,Hanzo Itami is an incorruptible Edo officer who learns that an infamous killer has fled from his island prison. Hanzo begins tracking him down using his unorthodox interrogation techniques.,https://m.media-amazon.com/images/M/MV5BMTAyNTcyNTM5NzleQTJeQWpwZ15BbWU4MDcyMzQ5MjYx._V1_SX300.jpg,Action,6.6
-7154,1995,Saved by the Bell: The New Class: Season 3,,,,
+7154,1995,Saved by the Bell: The New Class: Season 3,A white midwestern girl moves to Chicago, where her new boyfriend is a black teen from the South Side with a rough, semi-criminal past.,https://m.media-amazon.com/images/M/MV5BNjkzMjFkNmQtYTQ2Yy00NTRhLWE0ZGYtNjBmYTcyOTgxNGYxL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg,Drama, Music, Romance,6.2
 7155,1993,The Pelican Brief,A law student uncovers a conspiracy, putting herself and others in danger.,https://m.media-amazon.com/images/M/MV5BMjYwNGRmMGUtMmI0ZC00MGM0LWI2MTQtNGM0ZGNkMzRhNmY5XkEyXkFqcGdeQXVyODU2MDg1NzU@._V1_SX300.jpg,Crime, Drama, Mystery,6.6
 7156,2003,Ark,Making of Russian Ark (2002), with on camera personal views by members of the cast and crew of the major film.,https://m.media-amazon.com/images/M/MV5BMjEyNDEwOTU0NV5BMl5BanBnXkFtZTYwNjk0NTk5._V1_SX300.jpg,Documentary, Short,7.2
 7157,2001,Jack Kerouac: King of the Beats,,,,
@@ -176,16 +176,16 @@
 7176,2003,The I Inside,,,,
 7177,1996,Palookaville,,,,
 7178,2001,Extreme Honor,A highly decorated Navy Seal is forced out of retirement in order to save his son's life and bring justice to the man who destroyed his career.,https://m.media-amazon.com/images/M/MV5BMjE3Nzc4OTg1Nl5BMl5BanBnXkFtZTcwNTAyNTAzMQ@@._V1_SX300.jpg,Action, Drama,3.4
-7179,1973,Robin Hood (Disney),,,,
+7179,1973,Robin Hood (Disney),In twelfth-century England, Robin Longstride and his band of marauders confront corruption in a local village and lead an uprising against the crown that will forever alter the balance of world power.,https://m.media-amazon.com/images/M/MV5BMTM5NzcwMzEwOF5BMl5BanBnXkFtZTcwNjg5MTgwMw@@._V1_SX300.jpg,Action, Adventure, Drama,6.6
 7180,1995,The Englishman Who Went Up a Hill but Came Down a Mountain,When an English cartographer must tell a Welsh village that their mountain is only a hill, the offended community sets out to change that.,https://m.media-amazon.com/images/M/MV5BODNhNTI3ZWQtYzg1My00OGJmLTk3MGYtMDM2MmJkNWExMzNiXkEyXkFqcGdeQXVyNTM0NTU5Mg@@._V1_SX300.jpg,Comedy, Drama, Romance,6.6
-7181,1999,Sexual Matrix,,,,
+7181,1999,Sexual Matrix,A teenage boy with a sex therapist mother teams up with a high school classmate to set up an underground sex therapy clinic at school.,https://m.media-amazon.com/images/M/MV5BOTE0MjQ1NDU3OV5BMl5BanBnXkFtZTgwNTI4MTgwNzM@._V1_SX300.jpg,Comedy, Drama,8.3
 7182,1989,Dead Bang,A man kills a storekeeper and a cop. LASD homicide detective Jerry Beck gets the case. His murder suspect is connected to a heavily armed white supremacy group.,https://m.media-amazon.com/images/M/MV5BZjk0M2FlZmItMTA3YS00MmQzLWEzYjItZGFhMmZiZWQ5MmJhXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg,Action, Crime, Drama,6.1
 7183,1957,The Black Scorpion,Volcanic activity frees giant scorpions from the earth who wreak havoc in the rural countryside and eventually threaten Mexico City.,https://m.media-amazon.com/images/M/MV5BZDYzOWZjYWUtZGI5Yy00ZWFkLTkwNDQtOWYzNThlYTA1YWFjXkEyXkFqcGdeQXVyMjI4MjA5MzA@._V1_SX300.jpg,Horror, Sci-Fi,5.4
 7184,2005,Racing Stripes,An abandoned zebra grows up believing he is a racehorse, and, with the help of his barnyard friends and a teenage girl, sets out to achieve his dream of racing with thoroughbreds.,https://m.media-amazon.com/images/M/MV5BMjE0NDA2MTQwM15BMl5BanBnXkFtZTcwMzYxNDcyMQ@@._V1_SX300.jpg,Adventure, Comedy, Drama,5.2
 7185,1994,Plastic Little: The Adventures of Captain Tita,Tita Mu Koshigaya is a young woman who captains a ship, the Cha-Cha Maru, whose business is capturing exotic creatures in the 'sea of clouds' of the planet Ietta, and selling them to ...,https://m.media-amazon.com/images/M/MV5BMTYzOTE1OTU5Ml5BMl5BanBnXkFtZTcwNTgzMjUyMQ@@._V1_SX300.jpg,Animation, Comedy, Sci-Fi, Thriller,5.8
 7186,1995,Jeffrey,A poignant romantic comedy about the quest for love and intimacy in the age of AIDS. A story of a thirtyish gay actor/waiter who decides to become celibate...the risk of AIDS has taken all the joy from sex.,https://m.media-amazon.com/images/M/MV5BMWM0ODdjOWEtOTJhYy00NmQ0LThmOTctMDNmZTEwNzA5MGM1XkEyXkFqcGdeQXVyNjk1Njg5NTA@._V1_SX300.jpg,Comedy, Drama,6.8
 7187,2000,Mr. Ice Cream Man,,,,
-7188,2001,Gundam Mobile Suit: Movie I: Special Edition,,,,
+7188,2001,Gundam Mobile Suit: Movie I: Special Edition,After thirty years, Maverick is still pushing the envelope as a top naval aviator, but must confront ghosts of his past when he leads TOP GUN's elite graduates on a mission that demands the ultimate sacrifice from those chosen to ...,https://m.media-amazon.com/images/M/MV5BZWYzOGEwNTgtNWU3NS00ZTQ0LWJkODUtMmVhMjIwMjA1ZmQwXkEyXkFqcGdeQXVyMjkwOTAyMDU@._V1_SX300.jpg,Action, Drama,8.3
 7189,1968,The Avengers '68,,,,
 7190,1963,The Servant,Upper-class Tony hires servant Hugo Barrett, who turns out to have a hidden agenda.,https://m.media-amazon.com/images/M/MV5BZmM5ODI3ODItYmJiNC00YzAzLTk4M2QtNjViMjM3MDE4YTZiXkEyXkFqcGdeQXVyMTMxMTY0OTQ@._V1_SX300.jpg,Drama,7.8
 7191,1971,Requiem for a Vampire,,,,
@@ -195,13 +195,13 @@
 7195,2004,Crusty Demons: Global Assault Tour,,,,
 7196,1979,Autumn Marathon,School teacher is cheating on his wife and lies about it.,https://m.media-amazon.com/images/M/MV5BMjMxZmI4NDgtYTNkNy00ODhjLThlNzgtNDg0YTQ1MGVhMGEzXkEyXkFqcGdeQXVyNjg3MTIwODI@._V1_SX300.jpg,Comedy, Drama, Romance,7.8
 7197,1996,7th Heaven: Season 1,,,,
-7198,2002,Tony Hawk's Trick Tips: Vol. 3: Secrets of Skateboarding,,,,
-7199,2003,NFL: Dallas Cowboys Team History,,,,
+7198,2002,Tony Hawk's Trick Tips: Vol. 3: Secrets of Skateboarding,When technical illustrator Tony Takitani asks his wife to resist her all-consuming obsession for designer clothes, the consequences are tragic.,https://m.media-amazon.com/images/M/MV5BMTMzOTY1NDAwMl5BMl5BanBnXkFtZTcwMzY1MTUzMQ@@._V1_SX300.jpg,Drama,7.3
+7199,2003,NFL: Dallas Cowboys Team History,Coverage of professional football featuring teams from the National Football League airing on Monday nights during the NFL's regular season.,https://m.media-amazon.com/images/M/MV5BMjFiZWRiNGItMDQ4Yi00M2NjLTg1YWUtNjE3NDU5MzBlYjM4XkEyXkFqcGdeQXVyMTAyMzA4Mzg0._V1_SX300.jpg,Sport,8.2
 7200,2005,Platinum Comedy Series: Paul Rodriguez: Live in San Quentin,,,,
 7201,2004,Hitman's Code,,,,
 7202,1964,Bewitched: Season 1,,,,
 7203,1991,Deep Blues,,,,
-7204,2001,Backstreet Boys: Black and Blue: Around the World,,,,
+7204,2001,Backstreet Boys: Black and Blue: Around the World,After the Rebels are brutally overpowered by the Empire on the ice planet Hoth, Luke Skywalker begins Jedi training with Yoda, while his friends are pursued across the galaxy by Darth Vader and bounty hunter Boba Fett.,https://m.media-amazon.com/images/M/MV5BYmU1NDRjNDgtMzhiMi00NjZmLTg5NGItZDNiZjU5NTU4OTE0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg,Action, Adventure, Fantasy,8.7
 7205,1995,Stonewall,A group of homosexual people try to live with dignity and self-respect while events build to the opening battle in the major gay rights movement.,https://m.media-amazon.com/images/M/MV5BMTUxMDk3NDU3N15BMl5BanBnXkFtZTcwNzc3OTIyMQ@@._V1_SX300.jpg,Comedy, Drama, Romance,7.1
 7206,1973,Scenes from a Marriage (TV Version),,,,
 7207,1997,America's Atomic Bomb Tests,One of the few atomic testing operations ever to be conducted by the U.S. Department of Defense at both the Pacific Proving Grounds and the Nevada Test Site, Operation Hardtack combined ...,https://m.media-amazon.com/images/M/MV5BMjE4NzYyMzM2Nl5BMl5BanBnXkFtZTcwNjEyODkxMQ@@._V1_SX300.jpg,Documentary, History, War,5.9
@@ -225,7 +225,7 @@
 7225,1993,Hear No Evil,A deaf woman becomes the target of a ruthless and corrupt cop.,https://m.media-amazon.com/images/M/MV5BNjVlN2E1YWItN2JjOC00MWJiLWJhNjktYzk1YzNlMTIzNGIyXkEyXkFqcGdeQXVyNjU0NTI0Nw@@._V1_SX300.jpg,Thriller,5.0
 7226,2000,Jerome,,,,
 7227,2004,Hellboy: Bonus Material,,,,
-7228,1996,Gamera 2: Attack of Legion,,,,
+7228,1996,Gamera 2: Attack of Legion,Nine noble families fight for control over the lands of Westeros, while an ancient enemy returns after being dormant for millennia.,https://m.media-amazon.com/images/M/MV5BYTRiNDQwYzAtMzVlZS00NTI5LWJjYjUtMzkwNTUzMWMxZTllXkEyXkFqcGdeQXVyNDIzMzcwNjc@._V1_SX300.jpg,Action, Adventure, Drama,9.2
 7229,1968,Pippi Longstocking: TV Series,,,,
 7230,2001,The Lord of the Rings: The Fellowship of the Ring: Extended Edition,,,,
 7231,2005,Audioslave: Live in Cuba,Filmed at The Anti-Imperialist Plaza in Havana in 2005, Audioslave's Live in Cuba features hits from the band's three albums plus hits from Soundgarden and Rage Against the Machine.,https://m.media-amazon.com/images/M/MV5BMTQwNTE2MTE5OF5BMl5BanBnXkFtZTcwNjY0NDIzMQ@@._V1_SX300.jpg,Documentary, Music,8.0
@@ -287,8 +287,8 @@
 7288,1998,Halloweentown / Halloweentown 2: Double Feature,,,,
 7289,1967,Thoroughly Modern Millie,In New York City during the Roaring Twenties, would-be flapper Millie Dillmount's self-appointed mission to marry her boss is complicated by white slavers and true love.,https://m.media-amazon.com/images/M/MV5BZTlhYTc4MzEtZDNlYi00NjM2LTk2ZjQtZTUyZmRlMmYzODAyXkEyXkFqcGdeQXVyMjI4MjA5MzA@._V1_SX300.jpg,Comedy, Musical, Romance,6.9
 7290,2000,The Specials,The sixth or seventh best superhero team in the world pursue their rightful place in the harshly competitive world of toy tie-ins and fighting evil.,https://m.media-amazon.com/images/M/MV5BMTgzMTI5MDYwM15BMl5BanBnXkFtZTcwNDk0MzEyMQ@@._V1_SX300.jpg,Action, Comedy, Fantasy,5.7
-7291,2002,Sugar Sweet,,,,
-7292,1986,Project A-ko: Uncivil Wars,,,,
+7291,2002,Sugar Sweet,Two South Africans set out to discover what happened to their unlikely musical hero, the mysterious 1970s rock n roller, Rodriguez.,https://m.media-amazon.com/images/M/MV5BMWYyMzgxNDQtMDI2Mi00NmMzLWI5MTAtMmUwNDg3Yjg3N2U3XkEyXkFqcGdeQXVyNzI1NzMxNzM@._V1_SX300.jpg,Documentary, Biography, Music,8.2
+7292,1986,Project A-ko: Uncivil Wars,Three film students vanish after traveling into a Maryland forest to film a documentary on the local Blair Witch legend, leaving only their footage behind.,https://m.media-amazon.com/images/M/MV5BNzQ1NDBlNDItMDAyYS00YTI2LTgwMmYtMzAwMzg4NDFlM2ZmXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg,Horror, Mystery,6.5
 7293,1995,Antonia's Line,A Dutch matron establishes and, for several generations, oversees a close-knit, matriarchal community where feminism and liberalism thrive.,https://m.media-amazon.com/images/M/MV5BNDVmNjdhMzEtNDMzMy00NzI0LWI1ZmUtNjJiNGEzMDExZDY5XkEyXkFqcGdeQXVyMjM5NDQzNTk@._V1_SX300.jpg,Comedy, Drama,7.4
 7294,1996,Fools Rush In,,,,
 7295,1957,Oedipus Rex,The land ruled by King Oedipus is plagued by ill-fortune and the people are promised relief by the gods if the slayer of the former king is apprehended and punished. This does not bode well for King Oedipus and his Queen. (Perform...,https://m.media-amazon.com/images/M/MV5BY2UwOTAzOWEtZTk1My00YTU0LWJhMWEtNzkwMTc0NGUxNTM1XkEyXkFqcGdeQXVyNzQzNzQxNzI@._V1_SX300.jpg,Drama,6.5
@@ -305,7 +305,7 @@
 7306,2002,Sade: Lovers Live,Concert film of Sade's 2001 tour promoting their new album Lovers Rock. They perform new tracks from that album and many old favorites. Also features backstage footage, a music video of "...,https://m.media-amazon.com/images/M/MV5BNzUyZGEyNTEtZmU3Zi00ZGJkLWFjYzctNmU4MjIyNzA2MTU5XkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_SX300.jpg,Documentary, Music,8.4
 7307,1981,New Order: 316,,,,
 7308,1992,Bad Lieutenant,While investigating a young nun's rape, a corrupt New York City police detective, with a serious drug and gambling addiction, tries to change his ways and find forgiveness and redemption.,https://m.media-amazon.com/images/M/MV5BNjZmYzAzOGUtMWFlNy00OWExLThmYWQtMjJlYWIxMDczOGE4XkEyXkFqcGdeQXVyNTc1NTQxODI@._V1_SX300.jpg,Crime, Drama, Thriller,7.0
-7309,1999,Mystery Science Theater 3000: Merlin's Shop of Mystical Wonders,,,,
+7309,1999,Mystery Science Theater 3000: Merlin's Shop of Mystical Wonders,A world-class playboy and part-time secret agent from the 1960s emerges after thirty years in a cryogenic state to battle with his nemesis Dr. Evil.,https://m.media-amazon.com/images/M/MV5BMTRhZTY0MDItY2I1Yi00MGE3LTk1ZDEtMjA0ZGZhNDQyNGU0XkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_SX300.jpg,Adventure, Comedy,7.0
 7310,2002,The Firm Body Sculpting: Body Sculpt,,,,
 7311,1986,Summer,An aspiring teenage cartoonist and his friends come to the aid of a singer trying to save her family property from developers.,https://m.media-amazon.com/images/M/MV5BMGNjN2ZmM2UtZjQzMS00NmM1LWJkZjUtMzg5Njc5OWQwODEyL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg,Comedy, Romance,6.3
 7312,1960,Playgirls and the Vampire,Five beautiful showgirls are trapped by a storm and find refuge in a creepy old castle. The owner of the castle, a strange nobleman, has a secret laboratory in the basement and has his own plans for the girls.,https://m.media-amazon.com/images/M/MV5BYzU0OWY0MjgtZTEyMy00YWNkLTlhZDYtOTQ0YTBkZmU4YjNiXkEyXkFqcGdeQXVyMDM0NzcxMQ@@._V1_SX300.jpg,Horror,5.0
@@ -330,18 +330,18 @@
 7331,2004,Secret Window,A successful writer in the midst of a painful divorce is stalked at his remote lake house by a would-be scribe who accuses him of plagiarism.,https://m.media-amazon.com/images/M/MV5BNmI5MWNlMjYtZTAxNy00N2Q3LTkwZDgtMWRjOWQ1ZjJiN2Y4XkEyXkFqcGdeQXVyNDQ2MTMzODA@._V1_SX300.jpg,Drama, Mystery, Thriller,6.5
 7332,1997,Frasier: Season 5,,,,
 7333,2005,Kelly Clarkson: Behind Hazel Eyes,N/A,https://m.media-amazon.com/images/M/MV5BNGQyZGUyMDAtNzc0MC00MjRhLWI5YzctNjg5ZmVhODkwYjFiXkEyXkFqcGdeQXVyMjgzMzAzMjE@._V1_SX300.jpg,Documentary, Short, Music,9.0
-7334,1998,Midsomer Murders: Death in Disguise,,,,
+7334,1998,Midsomer Murders: Death in Disguise,A veteran Detective Chief Inspector and his young Sergeant investigate murders around the regional community of Midsomer County.,https://m.media-amazon.com/images/M/MV5BMjA5MmM5NjEtYjY2Yy00MzVmLThkMTYtYzcxMGE5MGFjMDQ2XkEyXkFqcGdeQXVyNDQ3NDM5OQ@@._V1_SX300.jpg,Crime, Drama, Mystery,7.9
 7335,1996,Maachis,A realistic, hard-hitting portrayal of terrorism and youth in the Punjab after the 1984 riots.,https://m.media-amazon.com/images/M/MV5BNWJhNjIzYTEtYWM2Yi00Yzk3LThkZTEtOWYxNmIwMGQ0NDJiXkEyXkFqcGdeQXVyNDUzOTQ5MjY@._V1_SX300.jpg,Action, Crime, Drama,7.7
 7336,1984,Blood Simple,The owner of a seedy small-town Texas bar discovers that one of his employees is having an affair with his wife. A chaotic chain of misunderstandings, lies and mischief ensues after he devises a plot to have them murdered.,https://m.media-amazon.com/images/M/MV5BZmI5YzM1MjItMzFmNy00NGFkLThlMDUtZjZmYTZkM2QxMjU3XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg,Crime, Drama, Thriller,7.6
 7337,1999,Thicker than Water,In Los Angeles, two rival gang leaders are also trying to be music producers. When DJ's equipment shorts out and Lonzo is cut out of the action by a record producer, the two join forces, which also requires a tentative peace betwe...,https://m.media-amazon.com/images/M/MV5BMTA2OTc3MzMwOTJeQTJeQWpwZ15BbWU3MDMzNDIwMDE@._V1_SX300.jpg,Drama,4.7
 7338,1994,I'll Do Anything,An aspiring actor's life gets upended when his ex-wife dumps their bossy, wild little daughter into his custody.,https://m.media-amazon.com/images/M/MV5BYmZlM2ZlNGQtYmNmYS00ZDkxLWJiMWEtMmViZmI2MGNkNDE1XkEyXkFqcGdeQXVyMTMxMTY0OTQ@._V1_SX300.jpg,Comedy, Drama,5.5
 7339,2002,The Code,Either you make decisions or life makes them for you. For an ex-con struggling to go straight, the temptation of money, women and power prove too much, especially when his best friend promises him an easy heist.,https://m.media-amazon.com/images/M/MV5BZDI0NmQ4ZDEtNTBiYS00MDcyLTlhYTEtNzcwYTgyOWI1ODNjXkEyXkFqcGdeQXVyMTY5Nzc4MDY@._V1_SX300.jpg,Action, Crime, Thriller,5.5
-7340,2003,Johnstown Flood,,,,
+7340,2003,Johnstown Flood,An ex-hit-man comes out of retirement to track down the gangsters that killed his dog and took his car.,https://m.media-amazon.com/images/M/MV5BMTU2NjA1ODgzMF5BMl5BanBnXkFtZTgwMTM2MTI4MjE@._V1_SX300.jpg,Action, Crime, Thriller,7.4
 7341,2001,Shiner,,,,
 7342,2004,The Green Butchers,,,,
 7343,1967,Doctor Dolittle,After the animal communicating veterinarian goes too far for his clientele, he and his friends escape their hometown to the sea in search of the Great Pink Sea Snail.,https://m.media-amazon.com/images/M/MV5BMjMxOTM3NzU4M15BMl5BanBnXkFtZTgwNDU0MDUxMDE@._V1_SX300.jpg,Adventure, Comedy, Family,6.2
 7344,2003,Helen of Troy,The abduction of beautiful Helen, wife of Spartan King Menelaus, by Paris of Troy triggers a long war.,https://m.media-amazon.com/images/M/MV5BMTIyNTMxNTI4Ml5BMl5BanBnXkFtZTcwNDM1NTMyMQ@@._V1_SX300.jpg,Action, Adventure, Drama,6.2
-7345,1991,God of Gamblers II,,,,
+7345,1991,God of Gamblers II,In the slums of Rio, two kids' paths diverge as one struggles to become a photographer and the other a kingpin.,https://m.media-amazon.com/images/M/MV5BOTMwYjc5ZmItYTFjZC00ZGQ3LTlkNTMtMjZiNTZlMWQzNzI5XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg,Crime, Drama,8.6
 7346,1992,The Ben Stiller Show,This comedy/variety show specialized in parodies of movies and television shows and commercials. Often, they would also have a special guest (e.g., a TV actor) join them.,https://m.media-amazon.com/images/M/MV5BMTc0MjIzNzgwOF5BMl5BanBnXkFtZTYwNDY3Njk5._V1_SX300.jpg,Comedy,7.0
 7347,1991,My Own Private Idaho,Two best friends living on the streets of Portland as hustlers embark on a journey of self discovery and find their relationship stumbling along the way.,https://m.media-amazon.com/images/M/MV5BZDgxMGU3YTEtODEzOC00MGVlLTk4OWUtYmY0ODU0OTI1NmMxL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg,Drama,7.0
 7348,1977,The Greatest: Muhammad Ali,,,,
@@ -355,7 +355,7 @@
 7356,1998,Deep Impact,A comet is discovered to be on a collision course with Earth. As doomsday nears, the human race prepares for the worst.,https://m.media-amazon.com/images/M/MV5BYTUwMTY1YmMtN2U5NC00YjkzLTg0YWQtZmEwNTEzZjdkNzQ2XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg,Action, Drama, Sci-Fi,6.2
 7357,1995,Othello,The Moorish General Othello is manipulated into thinking that his new wife Desdemona has been carrying on an affair with his Lieutenant Michael Cassio, when in reality, it is all part of the scheme of a bitter Ensign named Iago.,https://m.media-amazon.com/images/M/MV5BNzVlMjhjYzctNjQ4My00OGMwLThmZTktODE4MWI3NzNkOWYyXkEyXkFqcGdeQXVyNjMwMjk0MTQ@._V1_SX300.jpg,Drama, Romance,6.9
 7358,1998,The Brave Little Toaster Goes to Mars,Thomas M. Disch's sequel, based on the book sequel, has our heroes zooming off to, of all places, Mars.,https://m.media-amazon.com/images/M/MV5BMjNkMzAzNDItZWZkMi00OGUxLTljNTItNTgyNjQwYjc0YzVhXkEyXkFqcGdeQXVyMTk5MjAyMjM@._V1_SX300.jpg,Animation, Adventure, Family, Sci-Fi,5.7
-7359,2003,Dora the Explorer: Super Silly Fiesta!,,,,
+7359,2003,Dora the Explorer: Super Silly Fiesta!,Teenage explorer Dora leads her friends on an adventure to save her parents and solve the mystery behind a lost city of gold.,https://m.media-amazon.com/images/M/MV5BOTVhMzYxNjgtYzYwOC00MGIwLWJmZGEtMjgwMzgxMWUwNmRhXkEyXkFqcGdeQXVyNjg2NjQwMDQ@._V1_SX300.jpg,Action, Adventure, Comedy,6.1
 7360,1967,El Dorado,,,,
 7361,1999,The 1900 House,A modern English family embark on a real-life time-travel adventure to late Victorian London.,https://m.media-amazon.com/images/M/MV5BNTdkZjQyNjQtODU5NS00ZDRlLWIyYjktNzZlYjdmYmEyNjI0XkEyXkFqcGdeQXVyMTAwMzM3NDI3._V1_SX300.jpg,Documentary, History,8.0
 7362,2003,Haggard,After she breaks up with Ryan, Glauren is rumored to have been hooking up with heavy metal Hellboy. Ryan enlists the help of his friends Valo and Falcone to find out the truth.,https://m.media-amazon.com/images/M/MV5BMTgzMjEzNzY4NF5BMl5BanBnXkFtZTcwODYxMjMyMQ@@._V1_SX300.jpg,Comedy, Romance,6.3
@@ -373,20 +373,20 @@
 7374,1976,The Last Tycoon,F. Scott Fitzgerald's novel is brought to life in this story of a movie producer slowly working himself to death.,https://m.media-amazon.com/images/M/MV5BMjk0YTNjNmMtNGY0NS00NmE3LTljYWEtYzAwYmE0NzFiOWRiXkEyXkFqcGdeQXVyMTUzMDUzNTI3._V1_SX300.jpg,Drama, Romance,6.3
 7375,1974,School of the Holy Beast,,,,
 7376,2001,Beyblade,Four beybladers and their genius friend travel the world as team 'Bladebreakers' to win a championship, realizing there's much more at stake on the go.,https://m.media-amazon.com/images/M/MV5BNGIzNDViMjAtYzYwZS00MzJlLTkyZTUtYzZlOWFkYmEyMTdlXkEyXkFqcGdeQXVyNjk1Njg5NTA@._V1_SX300.jpg,Animation, Action, Adventure,6.8
-7377,2001,Billy Connolly: Live: The Greatest Hits,,,,
-7378,2002,Jamie Foxx Unleashed: Lost,,,,
+7377,2001,Billy Connolly: Live: The Greatest Hits,In order to inherit his fed up father's hotel empire, an immature and lazy man must repeat grades 1-12 all over again.,https://m.media-amazon.com/images/M/MV5BMzcyMjZmNjctNGNhMS00ZmQxLWFkNzQtYTIxYjVkYmU1NmNmXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg,Comedy,6.3
+7378,2002,Jamie Foxx Unleashed: Lost,Feature film adaptation of the musical about a teenager from Sheffield, England who wants to be a drag queen.,https://m.media-amazon.com/images/M/MV5BOTQwMjRmNWQtYzFmMC00ZTBhLTlkYzMtNDFmZGY0NjlkNTJhXkEyXkFqcGdeQXVyMTA2MDQ3MTQ3._V1_SX300.jpg,Biography, Comedy, Drama,6.5
 7379,1981,Diva,Two tapes, two Parisian mob killers, one corrupt policeman, an opera fan, a teenage thief, and the coolest philosopher ever filmed all twist their way through an intricate and stylish French-language thriller.,https://m.media-amazon.com/images/M/MV5BZjZkOWYyOWYtZmNlOS00YWMwLWFjN2UtM2IyOGQxYjc3MmM0XkEyXkFqcGdeQXVyNDE0OTU3NDY@._V1_SX300.jpg,Crime, Music, Thriller,7.2
 7380,2001,The String Cheese Incident: Evolution,,,,
 7381,1997,Flubber,An absent-minded professor discovers "flubber," a rubber-like super-bouncy substance.,https://m.media-amazon.com/images/M/MV5BZDlkOTA0OTUtOThmMi00NTMyLTg0NDgtZWZiYmRjZWI4MDY4XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg,Comedy, Family, Sci-Fi,5.3
-7382,2005,WWE: Tombstone: The History of the Undertaker,,,,
+7382,2005,WWE: Tombstone: The History of the Undertaker,The superstars of World Wrestling Entertainment's "RAW" brand collide each and every week on WWE Monday Night.,https://m.media-amazon.com/images/M/MV5BNjU2ZjBiZjgtMmNjZC00ZmYxLTg1MTgtNDYyMjViODI4YTVkXkEyXkFqcGdeQXVyOTQxNzM2MjY@._V1_SX300.jpg,Action, Sport,7.8
 7383,2000,Where the Money Is,Old bank robber Henry, paralyzed from a stroke, is moved from a prison hospital to a retirement home, where Carol is a nurse. She doesn't believe he's paralyzed and sees him as a way out of her boring life.,https://m.media-amazon.com/images/M/MV5BNmY2ZTM0NjYtOTlhZC00YjA2LThjZTktOTUwMDExZjM3ZjU0XkEyXkFqcGdeQXVyMTMxMTY0OTQ@._V1_SX300.jpg,Drama, Comedy, Crime,6.3
 7384,2002,Aragami: The Raging God of Battle,,,,
 7385,1996,Odyssey into the Mind's Eye,-Strap yourself in for a mesmerizing, light-speed voyage to the far frontiers of human imagination with this breath-taking computer-generated flight of fancy. Powered by a soaring original ...,https://m.media-amazon.com/images/M/MV5BMTQwMzY0MDM4OV5BMl5BanBnXkFtZTcwMTA1MzcxMQ@@._V1_SX300.jpg,Animation,7.3
 7386,1996,Ninja Cadets,During Japan's feudal era, there is a war between two ninja clans: the Byakuro and the Kabusu. Then, one night, the Kabusu stage a fierce attack on the Byakuro castle in hopes of kidnapping the clan's infant princess. Their missio...,https://m.media-amazon.com/images/M/MV5BNjdkMjE0ZTEtOThkOC00OGUyLWI3NWEtODE5MmIxOTYxZmExXkEyXkFqcGdeQXVyMTA1OTEwNjE@._V1_SX300.jpg,Animation, Action, Adventure,4.4
 7387,1965,Repulsion,A sex-repulsed woman who disapproves of her sister's boyfriend sinks into depression and has horrific visions of rape and violence.,https://m.media-amazon.com/images/M/MV5BMzdiZmRhNGItMGZkMC00ZWQyLTg0ZjYtYTkwYzRhZjAwZjMwXkEyXkFqcGdeQXVyMTUzMDUzNTI3._V1_SX300.jpg,Drama, Horror, Thriller,7.6
 7388,2002,The Art of Piano: Great Pianists of the 20th Century,,,,
-7389,2001,Project Greenlight: Season 1,,,,
-7390,1994,Cadfael: One Corpse Too Many,,,,
+7389,2001,Project Greenlight: Season 1,Three film students vanish after traveling into a Maryland forest to film a documentary on the local Blair Witch legend, leaving only their footage behind.,https://m.media-amazon.com/images/M/MV5BNzQ1NDBlNDItMDAyYS00YTI2LTgwMmYtMzAwMzg4NDFlM2ZmXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg,Horror, Mystery,6.5
+7390,1994,Cadfael: One Corpse Too Many,The medieval era cases of a Crusader-turned-Monk who investigates mysteries in the Norman English town of Shrewsbury.,https://m.media-amazon.com/images/M/MV5BYzhjNmZkOTctYzc2Yi00MzAxLTk2MjQtODk1NjQ0NzhiOTBhXkEyXkFqcGdeQXVyMjExMjk0ODk@._V1_SX300.jpg,Crime, Drama, Mystery,8.1
 7391,2000,The Watcher,David Allen Griffin is a cool killer- time and time again, he chooses a female victim, studies her for weeks till he knows her routine to the smallest detail, makes meticulous preparations using his forensic knowledge to gain entr...,https://m.media-amazon.com/images/M/MV5BZGE4ZDRiNmItOTdhNy00YjFkLWEzMWQtYTZkZjhmNTg3ZGYyXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_SX300.jpg,Crime, Drama, Mystery,5.3
 7392,1998,The King of Queens: Season 1,,,,
 7393,1993,Prime Suspect 3,Assigned to a Vice squad, Detective Chief Inspector Jane Tennison (Dame Helen Mirren) investigates a child murder and discovers a sinister link to the police.,https://m.media-amazon.com/images/M/MV5BMjAyNDAxOTIyNl5BMl5BanBnXkFtZTcwMDYzOTMyMQ@@._V1_SX300.jpg,Crime, Drama, Mystery,8.1
@@ -396,7 +396,7 @@
 7397,1993,Mrs. Doubtfire,After a bitter divorce, an actor disguises himself as a female housekeeper to spend time with his children held in custody by his former wife.,https://m.media-amazon.com/images/M/MV5BMjExMDUzODE1N15BMl5BanBnXkFtZTgwNTU5NTYxMTE@._V1_SX300.jpg,Comedy, Drama,7.1
 7398,1951,The Lost Continent,,,,
 7399,1996,Phenomenon,An ordinary man sees a bright light descend from the sky, and discovers he now has super-intelligence and telekinesis.,https://m.media-amazon.com/images/M/MV5BMjAwMDA2NzEyMl5BMl5BanBnXkFtZTgwNTA2MjgxMTE@._V1_SX300.jpg,Drama, Fantasy, Romance,6.4
-7400,1991,Inspector Morse 19: Greeks Bearing Gifts,,,,
+7400,1991,Inspector Morse 19: Greeks Bearing Gifts,A security guard's dreams come true when he is selected to be transformed into a cybernetic police officer.,https://m.media-amazon.com/images/M/MV5BN2RhYTQ5YmYtZTNkMS00M2YwLTliMjctNzg0OGYwMDQ5NDg0XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg,Action, Adventure, Comedy,4.1
 7401,1997,Picture Perfect,A young advertising executive's life becomes increasingly complicated when, in order to impress her boss, she pretends to be engaged to a man she has just met.,https://m.media-amazon.com/images/M/MV5BY2UwN2E0ZGItYmM3NC00ODVkLTkxOGItNGQ1NDMxMDdiMjQ0XkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_SX300.jpg,Comedy, Drama, Romance,5.5
 7402,1994,Brainscan,A teenager is part of an interactive video game where he kills innocent victims. Later, the murders become real.,https://m.media-amazon.com/images/M/MV5BZTYwNDM1ZmItNzM5Mi00YTRiLWJkNmYtMzBjYmRlODc3NWFiXkEyXkFqcGdeQXVyNjE5MjUyOTM@._V1_SX300.jpg,Horror, Sci-Fi,6.0
 7403,1995,An Awfully Big Adventure,Set right after World War II, a naive teenage girl joins a shabby theatre troupe in Liverpool. During a winter production of Peter Pan, the play quickly turns into a dark metaphor for youth as she becomes drawn into a web of sexua...,https://m.media-amazon.com/images/M/MV5BN2I1ZGQzM2YtYTlhYy00MmRiLTlhYWUtMjk2OTMyODNjNjgyXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg,Comedy, Drama, Romance,5.8
@@ -406,18 +406,18 @@
 7407,1969,The Dick Cavett Show: Rock Icons,,,,
 7408,2004,Burn Up Scramble,N/A,https://m.media-amazon.com/images/M/MV5BMTEzN2Q5NTUtODBjMi00YTNlLWFiY2ItNGNmZDQ4ZTg3OGUzXkEyXkFqcGdeQXVyMTA1OTEwNjE@._V1_SX300.jpg,Animation,6.2
 7409,1977,The Bad News Bears in Breaking Training,A troubled, rebellious teen drives his rambunctious baseball team out to Houston where they play an exhibition game and the boy meets his estranged father, and hires him as the teams coach.,https://m.media-amazon.com/images/M/MV5BNjI0ZTRmNTEtYjVhMC00MTM0LWFjNDQtYjBhNTNlNWRlMDgxXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg,Comedy, Family, Sport,5.6
-7410,1997,Leonardo da Vinci: Renaissance Master,,,,
+7410,1997,Leonardo da Vinci: Renaissance Master,The series recounts Leonardo da Vinci's extraordinary life through the works that made him famous, through the stories hidden within those works, revealing little by little the inner torment of a man obsessed with attaining perfec...,https://m.media-amazon.com/images/M/MV5BMGVjZDlhMjctZmM0My00ZWIwLWFiMTItMmVhY2JhY2JiMTkxXkEyXkFqcGdeQXVyMTA4NTIwNDQw._V1_SX300.jpg,Biography, Drama, History,7.2
 7411,1957,Le Notti Bianche,A humble clerk courts a woman who awaits her lover's return night after night.,https://m.media-amazon.com/images/M/MV5BNzU2ZTljMzAtYzYyOS00ZTFiLWIzMmUtM2RkYzhjY2I2YzY1XkEyXkFqcGdeQXVyMzk4OTI2MjM@._V1_SX300.jpg,Drama, Romance,7.8
 7412,1981,Dead and Buried,,,,
 7413,1959,4D Man,A scientist discovers a formula enabling him to pass through solid surfaces, but he also rapidly ages, which forces him to kill humans in order to reverse the aging process by absorbing his victims' energies.,https://m.media-amazon.com/images/M/MV5BNzU5ZDdkMzUtMWUxMC00NmYyLWFlM2EtOTIwYTUzNTA1YmNkL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMjQ0NDgwNjA@._V1_SX300.jpg,Action, Horror, Romance,5.8
 7414,1987,G.I. Joe: The Movie,The heroic G.I. Joe action force must oppose the ruthless Cobra organization that has secretly allied with a subterranean reptilian people who were their founders.,https://m.media-amazon.com/images/M/MV5BMTQ0MzIxMTU5N15BMl5BanBnXkFtZTcwMzIzMDUxMQ@@._V1_SX300.jpg,Animation, Action, Adventure, Family, Fantasy, Sci-Fi,7.1
-7415,1993,Inspector Morse 3: Service of All the Dead,,,,
+7415,1993,Inspector Morse 3: Service of All the Dead,A security guard's dreams come true when he is selected to be transformed into a cybernetic police officer.,https://m.media-amazon.com/images/M/MV5BN2RhYTQ5YmYtZTNkMS00M2YwLTliMjctNzg0OGYwMDQ5NDg0XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg,Action, Adventure, Comedy,4.1
 7416,1939,Gone with the Wind: Collector's Edition,,,,
 7417,1986,Under the Cherry Moon,Two con artist brothers attempt to swindle a soon-to-be wealthy heiress, but things get complicated when one falls in love with her.,https://m.media-amazon.com/images/M/MV5BM2NlM2Y5NDMtN2MwNC00MmY4LTg1MWUtMmE3MjgyZDEwMjI2XkEyXkFqcGdeQXVyNjMwMjk0MTQ@._V1_SX300.jpg,Comedy, Drama, Music,4.9
 7418,2003,From Justin to Kelly: The Tale of Two American Idols,,,,
 7419,1978,The Boys from Brazil,A Nazi hunter in Paraguay discovers a sinister and bizarre plot to rekindle the Third Reich.,https://m.media-amazon.com/images/M/MV5BZjgxYjVmODctOTRhMy00MmE1LTgwOWUtYjY1OGQwYjBiMzg1XkEyXkFqcGdeQXVyMTMxMTY0OTQ@._V1_SX300.jpg,Drama, Mystery, Sci-Fi,7.0
 7420,1977,That Obscure Object of Desire,Recounted in flashback are the romantic perils of Mathieu, a middle-aged French sophisticate as he falls for his nineteen-year-old former chambermaid Conchita.,https://m.media-amazon.com/images/M/MV5BNGQzZGQxZTctMzE2Mi00OGFiLTg2ZjQtZTAwYzMyMjExN2JiXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_SX300.jpg,Comedy, Drama, Romance,7.8
-7421,1995,Space Ghost Coast to Coast: Vol. 2,,,,
+7421,1995,Space Ghost Coast to Coast: Vol. 2,After uncovering a mysterious artifact buried beneath the Lunar surface, a spacecraft is sent to Jupiter to find its origins - a spacecraft manned by two men and the supercomputer H.A.L. 9000.,https://m.media-amazon.com/images/M/MV5BMmNlYzRiNDctZWNhMi00MzI4LThkZTctMTUzMmZkMmFmNThmXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg,Adventure, Sci-Fi,8.3
 7422,1997,The Saltmen of Tibet,,,,
 7423,1987,Epidemic,A director and screenwriter pen a script and, in the process, blur the line between fiction and reality.,https://m.media-amazon.com/images/M/MV5BY2VmOGI4MTMtNjg0MC00N2VhLWE1OTktOGY3YjRjNjM3NmZkXkEyXkFqcGdeQXVyNDkzNTM2ODg@._V1_SX300.jpg,Drama, Horror,6.0
 7424,1946,The Big Sleep,Private detective Philip Marlowe is hired by a wealthy family. Before the complex case is over, he's seen murder, blackmail, and what might be love.,https://m.media-amazon.com/images/M/MV5BOGJjMGVjMGYtMzllNC00ZGYxLWI2OWMtZWQ5NjQyMmFlZjNhXkEyXkFqcGdeQXVyMjUxODE0MDY@._V1_SX300.jpg,Crime, Film-Noir, Mystery,7.9
@@ -426,15 +426,15 @@
 7427,1992,The Larry Sanders Show: Season 1,,,,
 7428,2005,Bigger Than the Sky,A man with a boring personality, job, life, and dumped by girlfriend, auditions at the community theater and gets the lead role as Cyrano despite no acting experience. It changes his life forever.,https://m.media-amazon.com/images/M/MV5BMjEyODE0OTk3NF5BMl5BanBnXkFtZTcwODM4MzgyMQ@@._V1_SX300.jpg,Comedy, Drama, Romance,6.0
 7429,2000,The Most Terrible Time in My Life,,,,
-7430,2001,Six Feet Under: Season 1,,,,
+7430,2001,Six Feet Under: Season 1,A chronicle of the lives of a dysfunctional family who run an independent funeral home in Los Angeles.,https://m.media-amazon.com/images/M/MV5BN2FmMjg0Y2YtYmMyYi00MTBjLTllYzMtN2VjYzRhOTVmNWRlXkEyXkFqcGdeQXVyNDIzMzcwNjc@._V1_SX300.jpg,Comedy, Drama,8.7
 7431,1999,George Carlin: You are All Diseased,Legendary comic Carlin comes back to the Beacon theater to angrily rant about airport security, germs, cigars, angels, children and parents, men, names, religion, god, advertising, Bill Jeff and minorities.,https://m.media-amazon.com/images/M/MV5BYWNiYjk5ZWEtM2Q5ZC00YWM0LWE1NTItODMxMTczYmI5ZGNlXkEyXkFqcGdeQXVyMTA0MTM5NjI2._V1_SX300.jpg,Documentary, Comedy,8.5
-7432,1999,Greatest Places: IMAX,,,,
+7432,1999,Greatest Places: IMAX,A writer and wall street trader, Nick, finds himself drawn to the past and lifestyle of his millionaire neighbor, Jay Gatsby.,https://m.media-amazon.com/images/M/MV5BMTkxNTk1ODcxNl5BMl5BanBnXkFtZTcwMDI1OTMzOQ@@._V1_SX300.jpg,Drama, Romance,7.2
 7433,1995,Fallen Angels,This Hong Kong-set crime drama follows the lives of a hitman, hoping to get out of the business, and his elusive female partner.,https://m.media-amazon.com/images/M/MV5BMTc3NzI0MzQ3M15BMl5BanBnXkFtZTcwMzA0MDMzNA@@._V1_SX300.jpg,Comedy, Crime, Drama,7.6
 7434,1993,Swing Kids,A group of teens adores forbidden music in Nazi Germany just before the outbreak of World War II.,https://m.media-amazon.com/images/M/MV5BNmM2YTg5MjctZmJjNy00YWVjLTgyMjMtOWYxYzZlYjNiMDk3XkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg,Drama, Music,6.7
 7435,1987,Less Than Zero,A college freshman returns to L.A. for the holidays at his ex-girlfriend's request, but discovers that his former best friend has an out-of-control drug habit.,https://m.media-amazon.com/images/M/MV5BMzJhNGRkMjYtNTdmZS00NTE0LWJkM2EtZTFjYTFiNGM2YjYyXkEyXkFqcGdeQXVyMTUzMDUzNTI3._V1_SX300.jpg,Crime, Drama,6.4
 7436,1963,Lord of the Flies,Schoolboys marooned on a Pacific island create their own savage civilization.,https://m.media-amazon.com/images/M/MV5BM2FjM2VlYzgtYzI1OS00MTM2LWJmNjQtNTZkNTJjNzQzYzk5XkEyXkFqcGdeQXVyMzU4Nzk4MDI@._V1_SX300.jpg,Adventure, Drama, Thriller,6.9
 7437,1989,The Rachel Papers,Charles Highway (Dexter Fletcher) is in control of his life; he is about to finish sixth form college and start at Oxford. He is nineteen and wants an "older" woman before he turns twenty. Enter the beautiful Rachel Noyce (Ione Sk...,https://m.media-amazon.com/images/M/MV5BOTFlMDdlOWItZGE5ZS00MGQ0LThlM2ItZDI3YjIxYTI4NGFlXkEyXkFqcGdeQXVyMzM4MjM0Nzg@._V1_SX300.jpg,Drama, Romance,6.0
-7438,2003,Timecop 2: The Berlin Decision,,,,
+7438,2003,Timecop 2: The Berlin Decision,A faded television actor and his stunt double strive to achieve fame and success in the final years of Hollywood's Golden Age in 1969 Los Angeles.,https://m.media-amazon.com/images/M/MV5BOTg4ZTNkZmUtMzNlZi00YmFjLTk1MmUtNWQwNTM0YjcyNTNkXkEyXkFqcGdeQXVyNjg2NjQwMDQ@._V1_SX300.jpg,Comedy, Drama,7.6
 7439,1982,Barbarosa,A young cowboy hooks up with a legendary outlaw, and before long both are on the run from the law.,https://m.media-amazon.com/images/M/MV5BYWY5ZWYwODktZmEyZi00OTZhLWJmMTktYjljNzhiNmFjODEwL2ltYWdlXkEyXkFqcGdeQXVyNzc5MjA3OA@@._V1_SX300.jpg,Western,6.4
 7440,2004,Jewel: Live at Humphrey's by the Bay,,,,
 7441,2003,Perfect Strangers,A woman goes home with the best-looking stranger, only to discover she's been kidnapped.,https://m.media-amazon.com/images/M/MV5BMTg5MjM4MTQzNF5BMl5BanBnXkFtZTcwODc2MTgyMQ@@._V1_SX300.jpg,Drama, Romance, Thriller,5.2
@@ -445,22 +445,22 @@
 7446,2001,The Office: Series 1: Bonus Material,,,,
 7447,1995,Indigo Girls: Watershed: Ten Years of Underground Video,,,,
 7448,1948,Abbott & Costello Meet Frankenstein,The Wolf Man tries to warn a dimwitted porter that Dracula wants his brain for Frankenstein monster's body.,https://m.media-amazon.com/images/M/MV5BNTZiZTQ4YjItY2Y4ZC00MTVhLThmYTEtYWM5NmRlNDI5Y2JmXkEyXkFqcGdeQXVyNDY2MTk1ODk@._V1_SX300.jpg,Comedy, Family, Fantasy,7.3
-7449,2004,World in the Balance: Nova,,,,
+7449,2004,World in the Balance: Nova,When the Dark Elves attempt to plunge the universe into darkness, Thor must embark on a perilous and personal journey that will reunite him with doctor Jane Foster.,https://m.media-amazon.com/images/M/MV5BMTQyNzAwOTUxOF5BMl5BanBnXkFtZTcwMTE0OTc5OQ@@._V1_SX300.jpg,Action, Adventure, Fantasy,6.8
 7450,1992,Mr. Saturday Night,The life of Buddy Young, a comic legend in flashbacks but an old man looking for work in the present.,https://m.media-amazon.com/images/M/MV5BYTUyZWRhZmItNWMzYi00NzE0LTk2Y2UtNjMyOGM3ZmJkMWU1XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg,Comedy, Drama,5.9
 7451,1990,Funny About Love,NYC cartoonist Duffy meets the bad cappuccino maker, chef Meg, and falls in love. She moves in with him, marries him - but they have problems having a baby.,https://m.media-amazon.com/images/M/MV5BMjIxZTU0YmYtNzAyYi00MjVmLWIzYmMtMTdmNzgwNmFkZGY2XkEyXkFqcGdeQXVyNzc5MjA3OA@@._V1_SX300.jpg,Comedy, Romance,4.9
 7452,1989,Chopper Chicks in Zombietown,A gang of tough women bikers are the only thing that stands between a crowd of zombies, which have been accidentally let out of their secure cave, and those still alive in the town.,https://m.media-amazon.com/images/M/MV5BODc4NjljMWUtYmJhZS00NDMyLWI1MGYtMDY4M2RkMzU5MWI1XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg,Comedy, Horror,4.1
 7453,2002,The Badge,Sheriff Hardwick investigates the death of Mona, a transexual woman. The judge asks that the case is archived to prevent it impacting the upcoming elections, but the evidence keeps coming in.,https://m.media-amazon.com/images/M/MV5BMjE4MDU5NzUyNl5BMl5BanBnXkFtZTcwNDQyMTc5Nw@@._V1_SX300.jpg,Crime, Drama, Mystery,6.1
-7454,1999,Hercules: The Legendary Journeys: Season 6,,,,
+7454,1999,Hercules: The Legendary Journeys: Season 6,The son of Zeus and Hera is stripped of his immortality as an infant and must become a true hero in order to reclaim it.,https://m.media-amazon.com/images/M/MV5BZDcwYjEyNWItMGI1Mi00MjI1LWIyMDEtMTQ4YjhkNjM4NDU3XkEyXkFqcGdeQXVyNDUyOTg3Njg@._V1_SX300.jpg,Animation, Adventure, Comedy,7.3
 7455,1974,Blood for Dracula,An ailing vampire count travels to Italy with his servant to find a bride.,https://m.media-amazon.com/images/M/MV5BZGU2ZGJmODYtZWUwZS00NTcxLWE2ZGMtMWY1NzUxOGJiZTM0XkEyXkFqcGdeQXVyOTc5MDI5NjE@._V1_SX300.jpg,Horror,6.1
-7456,1987,Ninja Checkmate,,,,
-7457,1991,Inspector Morse 16: Second Time Around,,,,
+7456,1987,Ninja Checkmate,When a kingpin threatens New York City, a group of mutated turtle warriors must emerge from the shadows to protect their home.,https://m.media-amazon.com/images/M/MV5BNjUzODQ5MDY5NV5BMl5BanBnXkFtZTgwOTc1NzcyMjE@._V1_SX300.jpg,Action, Adventure, Comedy,5.8
+7457,1991,Inspector Morse 16: Second Time Around,A security guard's dreams come true when he is selected to be transformed into a cybernetic police officer.,https://m.media-amazon.com/images/M/MV5BN2RhYTQ5YmYtZTNkMS00M2YwLTliMjctNzg0OGYwMDQ5NDg0XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg,Action, Adventure, Comedy,4.1
 7458,1999,Mummy (Documentary),,,,
 7459,2000,God's Army,Life as a Mormon missionary isn't what 19-year-old Brandon Allen expected: so many rules and so few successes. Los Angeles is as unrepentant as Sodom and Gomorrah. He's forced to share a small apartment with five young prank-lovin...,https://m.media-amazon.com/images/M/MV5BYWIxOTQ2MDgtZWMyMC00YTA3LWIyODktMmRjYzZhZjQ4MzE5XkEyXkFqcGdeQXVyMjk1NzAxNg@@._V1_SX300.jpg,Drama,6.2
 7460,2002,The Day of the Wacko,,,,
-7461,2002,Love Forbidden,,,,
+7461,2002,Love Forbidden,A middle-aged husband's life changes dramatically when his wife asks him for a divorce. He seeks to rediscover his manhood with the help of a newfound friend, Jacob, learning to pick up girls at bars.,https://m.media-amazon.com/images/M/MV5BMTg2MjkwMTM0NF5BMl5BanBnXkFtZTcwMzc4NDg2NQ@@._V1_SX300.jpg,Comedy, Drama, Romance,7.4
 7462,2001,Dancing at the Blue Iguana,,,,
-7463,1999,Strangers with Candy: Season 1,,,,
-7464,1967,Doctor Who: The Tomb of the Cybermen,,,,
+7463,1999,Strangers with Candy: Season 1,A psychopath forces a tennis star to comply with his theory that two strangers can get away with murder.,https://m.media-amazon.com/images/M/MV5BNWJjOGM4NmEtNDE2YS00OGEyLTkwZWItMGM4YzdhZDZhMzNhXkEyXkFqcGdeQXVyMDI2NDg0NQ@@._V1_SX300.jpg,Crime, Drama, Film-Noir,7.9
+7464,1967,Doctor Who: The Tomb of the Cybermen,While on a journey of physical and spiritual healing, a brilliant neurosurgeon is drawn into the world of the mystic arts.,https://m.media-amazon.com/images/M/MV5BNjgwNzAzNjk1Nl5BMl5BanBnXkFtZTgwMzQ2NjI1OTE@._V1_SX300.jpg,Action, Adventure, Fantasy,7.5
 7465,2004,The Life,An anthropology student exploring the nature of prostitution is drawn deeper into that profession than she ever expected.,https://m.media-amazon.com/images/M/MV5BMTgyMDY3MjQzN15BMl5BanBnXkFtZTcwODc5MTcyMQ@@._V1_SX300.jpg,Drama,4.2
 7466,1997,Beast City,,,,
 7467,1982,Best Friends,After five successful years of living and working together, a couple decide to get married. But what they don't count on is how to survive the honeymoon.,https://m.media-amazon.com/images/M/MV5BM2FiN2RhNTMtYmU1OS00MGE1LWI5YzctMGUxOTQyMmE2NmRlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg,Comedy, Drama, Romance,5.5
@@ -472,9 +472,9 @@
 7473,1983,The Best of He-Man and the Masters of the Universe,,,,
 7474,2000,South of Heaven,A U.S. Marshal tracks a destructive clan of outlaws, while a government man claims that the Marshal is actually a ghost of his deceased self.,https://m.media-amazon.com/images/M/MV5BNDczNDg4NDM4OV5BMl5BanBnXkFtZTcwNDU2ODEyMQ@@._V1_SX300.jpg,Drama, Western,4.2
 7475,1988,Running on Empty,The eldest son of a fugitive family comes of age and wants to live a life of his own.,https://m.media-amazon.com/images/M/MV5BMzYzYmZkZjUtZjJhNy00ZGEzLTljNTYtZmM5MDY1MTgyZjRiXkEyXkFqcGdeQXVyMTAwMzUyOTc@._V1_SX300.jpg,Crime, Drama, Music,7.6
-7476,1974,Space Battleship Yamato: The Movie,,,,
+7476,1974,Space Battleship Yamato: The Movie,After uncovering a mysterious artifact buried beneath the Lunar surface, a spacecraft is sent to Jupiter to find its origins - a spacecraft manned by two men and the supercomputer H.A.L. 9000.,https://m.media-amazon.com/images/M/MV5BMmNlYzRiNDctZWNhMi00MzI4LThkZTctMTUzMmZkMmFmNThmXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg,Adventure, Sci-Fi,8.3
 7477,2002,Hunting Humans,Meet Aric Blue. He's young. He's handsome. He's successful. He's also a serial killer. He picks his victims at random, stalking them and taking advantage of the patterns in their life to ...,https://m.media-amazon.com/images/M/MV5BNDI4NjE5OTgzN15BMl5BanBnXkFtZTgwODI4NTAwNzE@._V1_SX300.jpg,Drama, Horror, Mystery,4.2
-7478,1987,Tour of Duty: Season 1,,,,
+7478,1987,Tour of Duty: Season 1,Follow Jeremy, Richard and James, as they embark on an adventure across the globe, driving new and exciting automobiles from manufacturers all over the world.,https://m.media-amazon.com/images/M/MV5BYjkyOWIyZGYtYzU3ZS00NWM2LThjZGEtMDZjZjg2MTI2NzBhXkEyXkFqcGdeQXVyNjI4OTg2Njg@._V1_SX300.jpg,Comedy, Sport, Talk-Show,8.7
 7479,1995,Attack of the 60 Foot Centerfold,,,,
 7480,1985,Night Train to Terror,God and Satan are on a train discussing the fate of three individuals. The stories of the people in question are told in a trio of very strange vignettes. One involves an insane asylums with some very interesting treatment plans. ...,https://m.media-amazon.com/images/M/MV5BM2Q4YzgxOTQtNTk3Zi00MTNjLTkyYzAtMWYzYmExZGM3Mjk4XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg,Drama, Fantasy, Horror,4.2
 7481,1997,Joe Cocker: Across From Midnight Tour,,,,
@@ -490,10 +490,10 @@
 7491,1994,Quiet Days in Hollywood,,,,
 7492,2003,Seven Signs of Christ's Return,,,,
 7493,1999,Detroit Rock City,In 1978, four rebellious teenagers try to scam their way into a KISS concert.,https://m.media-amazon.com/images/M/MV5BMmU5ZTJmOWQtNTMwMi00NmIzLTk0ZTAtMjNkMTE4YTA0Yzg4XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg,Adventure, Comedy, Music,6.8
-7494,1997,Jackie Brown: Collector's Series,,,,
+7494,1997,Jackie Brown: Collector's Series,A flight attendant with a criminal past gets nabbed by the ATF for smuggling. Under pressure to become an informant against the drug dealer she works for, she must find a way to secure her future without getting killed.,https://m.media-amazon.com/images/M/MV5BNmY5ODRmYTItNWU0Ni00MWE3LTgyYzUtYjZlN2Q5YTcyM2NmXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg,Crime, Drama, Thriller,7.5
 7495,1954,This Island Earth,,,,
 7496,2001,Sealab 2021: Season 1,,,,
-7497,2005,Masters of Poker: Annie Duke's Advanced Texas Hold 'em Secrets: How to Beat the Big Boys,,,,
+7497,2005,Masters of Poker: Annie Duke's Advanced Texas Hold 'em Secrets: How to Beat the Big Boys,The heroic warrior He-Man battles against the evil lord Skeletor and his armies of darkness for control of Castle Grayskull.,https://m.media-amazon.com/images/M/MV5BYzRlMzQzNDEtYTg5My00NTFjLWFiYzYtMjJkMzUyYzJjMzgyXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg,Action, Adventure, Fantasy,5.3
 7498,1989,Rhea Gall Force,The last remaining human soldiers of a devastated Earth fight against the machines for one last chance for their species to escape and survive.,https://m.media-amazon.com/images/M/MV5BMTc1MDgzMDkxMV5BMl5BanBnXkFtZTcwOTY3NjYxMQ@@._V1_SX300.jpg,Animation, Action, Adventure, Sci-Fi,7.0
 7499,1996,Independence Day: Bonus Material,,,,
 7500,2002,Mutant X: Season 2,,,,
@@ -528,7 +528,7 @@
 7529,1994,Sharpe 3: Sharpe's Company,,,,
 7530,2003,Good Times,A tabloid journalist (Sammi Cheng) falls for an impotent police officer (Louis Koo), while her now-celibate ex-lover tries to resist a young temptress (Charlene Choi).,https://m.media-amazon.com/images/M/MV5BMjA0Nzc4NDg2NF5BMl5BanBnXkFtZTcwODkyMzQyMQ@@._V1_SX300.jpg,Comedy, Romance,5.5
 7531,1999,Evgeny Kissin: The Gift of Music,,,,
-7532,2003,National Lampoon's Gold Diggers,,,,
+7532,2003,National Lampoon's Gold Diggers,A historian races to find the legendary Templar Treasure before a team of mercenaries.,https://m.media-amazon.com/images/M/MV5BMTY3NTc4OTYxMF5BMl5BanBnXkFtZTcwMjk5NzUyMw@@._V1_SX300.jpg,Action, Adventure, Mystery,6.9
 7533,1999,East Is East,In early 1970s England, a Pakistani father finds the authority he has previously maintained challenged by his increasingly Anglicized children.,https://m.media-amazon.com/images/M/MV5BMjdmYzk1OGEtZjRmNC00MDEwLTkzOTgtNjgwOTUxZGU4MTQ1XkEyXkFqcGdeQXVyMTMxMTY0OTQ@._V1_SX300.jpg,Comedy, Drama,6.9
 7534,1987,Adventures in Babysitting,A babysitter must battle her way through the big city after being stranded there with the kids she's looking after.,https://m.media-amazon.com/images/M/MV5BZmI3MjM2YTYtZTAxMS00NDA5LWIxODctZjhjMmNkMmRmMWI5XkEyXkFqcGdeQXVyNTI4MjkwNjA@._V1_SX300.jpg,Adventure, Comedy, Crime,6.9
 7535,1980,Sergeant Cribb: Set 1,,,,
@@ -558,7 +558,7 @@
 7559,1996,Jane Street,Life for the young and beautiful Kim becomes unbearable. Her boss, Marshall, helped to find her apartment - where the previous tenant was killed. Kim begins to suspect Marshall may be the murderer.,https://m.media-amazon.com/images/M/MV5BYmVkOWMyNDgtZWUwNy00OWM4LThiZjAtMjdmYzMyMjI3MjU5XkEyXkFqcGdeQXVyMzY0MTE3NzU@._V1_SX300.jpg,Drama, Romance, Thriller,4.8
 7560,2002,New Best Friend,A North Carolina sheriff investigates the near-fatal drug overdose of an underachieving college girl, and uncovers many sordid details of her life before and during her descent into drugs and debauchery.,https://m.media-amazon.com/images/M/MV5BMDRhNmRmMzgtZjE1ZS00MzM1LWJhOGQtYTZhNTk4ZWM2MDM1XkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_SX300.jpg,Drama, Mystery, Thriller,5.2
 7561,1966,Su Excelencia,,,,
-7562,2005,Lost Reality 2: More of the Worst,,,,
+7562,2005,Lost Reality 2: More of the Worst,A squad of U.S. Marines becomes the last line of defense against a global invasion.,https://m.media-amazon.com/images/M/MV5BMDg2NzQwOGMtMGRkNC00YjAwLTg4NjgtZWQwYzljZmM1YzA4XkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_SX300.jpg,Action, Adventure, Sci-Fi,5.7
 7563,1998,Primary Colors,A man joins the political campaign of a smooth-operator candidate for President of the U.S.,https://m.media-amazon.com/images/M/MV5BOTk5OWE1ZWItYWMxZC00Yzc3LTk2YjctZjAzYWViZDk5YjIyXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg,Comedy, Drama,6.7
 7564,1972,The Life of Leonardo Da Vinci,,,,
 7565,2002,Straight Up: Helicopters in Action: IMAX,,,,
@@ -576,7 +576,7 @@
 7577,2003,Horatio Hornblower: The New Adventures,,,,
 7578,1984,Who's the Boss?: Season 1,,,,
 7579,1994,The Glass Shield,Two cops become compelled to act against corruption and discrimination within their police precinct.,https://m.media-amazon.com/images/M/MV5BNzdkNTg5YWQtNGI4Mi00NTIzLTkzNTItYTFjM2JhYTgwYzc1XkEyXkFqcGdeQXVyNjU5MjcxOTg@._V1_SX300.jpg,Crime, Drama,6.1
-7580,2004,UFC 50: Ultimate Fighting Championship: The War of '04,,,,
+7580,2004,UFC 50: Ultimate Fighting Championship: The War of '04,The Ultimate Fighting Championship debuts, as eight fighters enter the Octagon for a one-night tournament to determine the superior fighting style, including Royce Gracie, Ken Shamrock, and Gerard Gordeau.,https://m.media-amazon.com/images/M/MV5BMDc2MmFhOGEtYzUwZC00MDlmLWIzZDYtOTJmNDdiNmZlY2MxXkEyXkFqcGdeQXVyNDI1MDYyODY@._V1_SX300.jpg,Sport,7.7
 7581,2001,In Desert and Wilderness,,,,
 7582,2000,The Road,Es la historia de el joven Manuel, quien en su veloz moto sale a recorrer la Patagonia argentina en busca de su padre, y de si mismo. En medio de su viaje encontrará lo inesperado, que se llama Carolina, y entre ellos nacerá algo ...,https://m.media-amazon.com/images/M/MV5BMjA0NjUyNzU1MV5BMl5BanBnXkFtZTcwMjQ1OTAyMQ@@._V1_SX300.jpg,Action, Drama, Romance,5.6
 7583,1998,Overnight Delivery,Wyatt writes an angry letter to his girlfriend, believing she's dating Ricker. Ricker's a dog. Helped by stripper Ivy, he tries to get the letter off a truck the next 24 hours.,https://m.media-amazon.com/images/M/MV5BYTFlMmQ2ZDEtNGVmNS00NTI1LTljZTYtNjk0Njc1OTQxZDMwXkEyXkFqcGdeQXVyMTQ4NDY5OTc@._V1_SX300.jpg,Comedy, Romance,6.1
@@ -591,7 +591,7 @@
 7592,2001,The Surge,,,,
 7593,2001,Reversal,Leo Leone has been wrestling since he was seven years old. As the only son of wrestling coach (and ex-state champion) Edward Leone, Leo's dedication to the sport was tied up in his love for his father. Now Leo is seventeen. His li...,https://m.media-amazon.com/images/M/MV5BMTQ1ODE2OTcxMF5BMl5BanBnXkFtZTcwNTU1ODMyMQ@@._V1_SX300.jpg,Drama, Romance, Sport,6.1
 7594,1957,Nights of Cabiria,A waifish prostitute wanders the streets of Rome looking for true love but finds only heartbreak.,https://m.media-amazon.com/images/M/MV5BOTdhNmUxZmQtNmMwNC00MzE3LWE1MTUtZDgxZTYwYjEzZjcwXkEyXkFqcGdeQXVyNTA1NjYyMDk@._V1_SX300.jpg,Drama,8.1
-7595,1992,Batman the Animated Series: Vol. 1,,,,
+7595,1992,Batman the Animated Series: Vol. 1,After training with his mentor, Batman begins his fight to free crime-ridden Gotham City from corruption.,https://m.media-amazon.com/images/M/MV5BOTY4YjI2N2MtYmFlMC00ZjcyLTg3YjEtMDQyM2ZjYzQ5YWFkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg,Action, Crime, Drama,8.2
 7596,1996,Absolutely Fabulous: Absolutely Special,,,,
 7597,1999,I Stand Alone,,,,
 7598,1972,Dr. Seuss: The Lorax,,,,
@@ -599,22 +599,22 @@
 7600,1993,In the Name of the Father,A man's coerced confession to an I.R.A. bombing he did not commit results in the imprisonment of his father as well. An English lawyer fights to free them.,https://m.media-amazon.com/images/M/MV5BMmYyOTgwYWItYmU3Ny00M2E2LTk0NWMtMDVlNmQ0MWZiMTMxXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg,Biography, Crime, Drama,8.1
 7601,1943,Son of Dracula / House of Dracula,,,,
 7602,1999,Bats,Genetically mutated bats escape and it's up to a bat expert and the local sheriff to stop them.,https://m.media-amazon.com/images/M/MV5BOTdhZDJkNDgtODVkMS00ZDcxLWE3N2ItMDNkNzNiYmQyNmJhXkEyXkFqcGdeQXVyNzc5MjA3OA@@._V1_SX300.jpg,Horror, Sci-Fi, Thriller,4.0
-7603,1975,Doctor Who: Lost in Time: The William Hartnell Years,,,,
+7603,1975,Doctor Who: Lost in Time: The William Hartnell Years,While on a journey of physical and spiritual healing, a brilliant neurosurgeon is drawn into the world of the mystic arts.,https://m.media-amazon.com/images/M/MV5BNjgwNzAzNjk1Nl5BMl5BanBnXkFtZTgwMzQ2NjI1OTE@._V1_SX300.jpg,Action, Adventure, Fantasy,7.5
 7604,2001,Running Out of Time 2,Ho Sheung Sang finds himself wrapped up in another cat-and-mouse game, this time against a tricky magician.,https://m.media-amazon.com/images/M/MV5BMmNmYmZmNzYtZDU4Ny00OWFiLWIwMmUtOWNjYTJmOGU4MzMwXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg,Crime, Mystery,5.8
-7605,2004,Queer as Folk: Season 4,,,,
+7605,2004,Queer as Folk: Season 4,The lives and loves of a group of gay friends living in Pittsburgh, Pennsylvania.,https://m.media-amazon.com/images/M/MV5BZTkyZjA0Y2UtMzdhNy00OGQxLTgxNDYtOTE5NzE3ODA5Mzc0XkEyXkFqcGdeQXVyOTA3MTMyOTk@._V1_SX300.jpg,Drama, Romance,8.5
 7606,1980,The Long Riders,The origins, exploits and the ultimate fate of the Jesse James gang is told in a sympathetic portrayal of the bank robbers made up of brothers who begin their legendary bank raids because of revenge.,https://m.media-amazon.com/images/M/MV5BZGY1MGUzZjctZTM5OS00NWJmLWE0YzAtNmFhZjA4OTUwZmJjXkEyXkFqcGdeQXVyMTUzMDUzNTI3._V1_SX300.jpg,Biography, Crime, Western,6.9
 7607,2004,Dirty Dancing: Havana Nights,High school senior Katey moves to Havana in November 1958, when her dad gets a promotion at Ford. She meets a local waiter, who introduces her to sensual Cuban music/dance. They enter a big dance contest for the prize when he gets...,https://m.media-amazon.com/images/M/MV5BMTAyMjUyNTk5MzNeQTJeQWpwZ15BbWU2MDI0NTYyNw@@._V1_SX300.jpg,Drama, Music, Romance,5.9
 7608,2004,Saikano,,,,
 7609,1998,Bear in the Big Blue House: Sleepy Time,,,,
 7610,1973,Benji,,,,
-7611,2005,Saturday Night Live: Live from New York: The First 5 Years,,,,
-7612,2004,Miracle at Oxford,,,,
+7611,2005,Saturday Night Live: Live from New York: The First 5 Years,Anxious about his future after high school, a 19-year-old Italian-American from Brooklyn tries to escape the harsh reality of his bleak family life by dominating the dance floor at the local disco.,https://m.media-amazon.com/images/M/MV5BOWU0NjZhMWEtMWU2Zi00NTgwLWI1OTQtNDJlNDAyNzdlZjljXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg,Drama, Music,6.8
+7612,2004,Miracle at Oxford,The true story of Herb Brooks, the player-turned-coach who led the 1980 U.S. Olympic hockey team to victory over the seemingly invincible Soviet squad.,https://m.media-amazon.com/images/M/MV5BMjEyOTk1OTcyNV5BMl5BanBnXkFtZTYwNjMzNDU3._V1_SX300.jpg,Biography, Drama, History,7.4
 7613,1982,Tron,A computer hacker is abducted into the digital world and forced to participate in gladiatorial games where his only chance of escape is with the help of a heroic security program.,https://m.media-amazon.com/images/M/MV5BZjgxYzk3NjItNDliMC00YzE5LWEzZDQtZjJjZWUyNjE2MGFkXkEyXkFqcGdeQXVyMTUzMDUzNTI3._V1_SX300.jpg,Action, Adventure, Sci-Fi,6.7
 7614,1963,Any Number Can Win,Charles (Jean Gabin), a sixtyish career criminal fresh out of jail, rejects his wife's plan for a quiet life of bourgeois respectability. He enlists a former cellmate, Francis (Alain Delon), to assist him in pulling off one final ...,https://m.media-amazon.com/images/M/MV5BMDJmZjRmYTAtY2U2Zi00NWU4LWIxZTEtNDFiNmMwZWNlZGIyXkEyXkFqcGdeQXVyNjg2NjExMzY@._V1_SX300.jpg,Crime, Drama, Romance,7.3
 7615,1988,Killer Klowns from Outer Space,Aliens who look like clowns come from outer space and terrorize a small town.,https://m.media-amazon.com/images/M/MV5BMDM5YzZmZjUtMjkzOS00ODBkLWE1OWUtODdmMTYzOTQwNDRkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg,Comedy, Horror, Sci-Fi,6.2
 7616,1980,The Idolmaker,Based on the life of rock promoter/producer Bob Marcucci, who discovered, among others, Frankie Avalon and Fabian.,https://m.media-amazon.com/images/M/MV5BMTkxMjAwMzU5OF5BMl5BanBnXkFtZTcwODgzNzA2NA@@._V1_SX300.jpg,Biography, Drama, Music,6.9
 7617,1987,Dirty Dancing,Spending the summer at a Catskills resort with her family, Frances "Baby" Houseman falls in love with the camp's dance instructor, Johnny Castle.,https://m.media-amazon.com/images/M/MV5BMTc3MDY3ODQ2OV5BMl5BanBnXkFtZTgwOTQ2NTYxMTE@._V1_SX300.jpg,Drama, Music, Romance,7.0
-7618,1985,Ken Burns' America: The Shakers,,,,
+7618,1985,Ken Burns' America: The Shakers,Ken Park is about several Californian skateboarders' lives and relationships with and without their parents.,https://m.media-amazon.com/images/M/MV5BZDU4ZTVjMmMtYmY2My00YmQxLTliODItYWVlMzFlMWYwZjg3XkEyXkFqcGdeQXVyMTQ4NDY5OTc@._V1_SX300.jpg,Drama,5.8
 7619,1995,Newsradio: Seasons 1 and 2,,,,
 7620,1997,Millennium: Season 2,,,,
 7621,1994,Africa: The Serengeti: IMAX,,,,
@@ -635,8 +635,8 @@
 7636,1991,An American Tail: Fievel Goes West,Fievel's family decides to move out to the West, unaware that they are falling into a trap perpetrated by a smooth-talking cat.,https://m.media-amazon.com/images/M/MV5BZmUyOTE4YmItN2E0Zi00M2ViLWIxMTctMmZhMDRhMDZhOWZlXkEyXkFqcGdeQXVyNjExODE1MDc@._V1_SX300.jpg,Animation, Adventure, Family,6.4
 7637,1975,The Man in the Glass Booth,Mossad agents kidnap an American Jewish man, accuse him of being a fugitive Nazi war criminal and take him to Jerusalem to face trial for genocide.,https://m.media-amazon.com/images/M/MV5BNDJkMjE4MGEtNWRhOS00NDMzLTkyYjgtOWQwYjE4MzU4NTdlXkEyXkFqcGdeQXVyMTMxMTY0OTQ@._V1_SX300.jpg,Drama,7.0
 7638,2004,Saturday Night Live: The Best of Tom Hanks,N/A,https://m.media-amazon.com/images/M/MV5BMDkzZGNjMmQtMWNkOC00MThhLTk2MDctMzgwZjE5ZThiOGNlXkEyXkFqcGdeQXVyMTI2OTM0NzQ@._V1_SX300.jpg,Comedy,7.2
-7639,2004,Star Wars Trilogy: Bonus Material,,,,
-7640,1987,Miss Marple: Collection 1,,,,
+7639,2004,Star Wars Trilogy: Bonus Material,Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a Wookiee and two droids to save the galaxy from the Empire's world-destroying battle station, while also attempting to rescue Princess Leia from the mysterious Darth ...,https://m.media-amazon.com/images/M/MV5BOTA5NjhiOTAtZWM0ZC00MWNhLThiMzEtZDFkOTk2OTU1ZDJkXkEyXkFqcGdeQXVyMTA4NDI1NTQx._V1_SX300.jpg,Action, Adventure, Fantasy,8.6
+7640,1987,Miss Marple: Collection 1,A family determined to get their young daughter into the finals of a beauty pageant take a cross-country trip in their VW bus.,https://m.media-amazon.com/images/M/MV5BMTgzNTgzODU0NV5BMl5BanBnXkFtZTcwMjEyMjMzMQ@@._V1_SX300.jpg,Comedy, Drama,7.8
 7641,1990,Stella,Chronicling a strong, but eccentric woman's devoted relationship to her daughter through the years.,https://m.media-amazon.com/images/M/MV5BNGYxYzFmNjgtNDAwMS00OTQzLThlODctMjVkZWRiMzFmNWFhXkEyXkFqcGdeQXVyNzc5MjA3OA@@._V1_SX300.jpg,Drama, Romance,6.1
 7642,1940,Rebecca,A self-conscious woman juggles adjusting to her new role as an aristocrat's wife and avoiding being intimidated by his first wife's spectral presence.,https://m.media-amazon.com/images/M/MV5BYTcxYWExOTMtMWFmYy00ZjgzLWI0YjktNWEzYzJkZTg0NDdmL2ltYWdlXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg,Drama, Film-Noir, Mystery,8.1
 7643,1987,Empire of the Sun,A young English boy struggles to survive under Japanese occupation of China during World War II.,https://m.media-amazon.com/images/M/MV5BMmQwNzczZDItNmI0OS00MjRmLTliYWItZWIyMjk1MTU4ZTQ4L2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg,Drama, War,7.7
@@ -648,22 +648,22 @@
 7649,2001,Sister Wendy's American Collection,The British nun and art historian visits works at several of the United States' finest museums.,https://m.media-amazon.com/images/M/MV5BMTQ0NjMyODUxMl5BMl5BanBnXkFtZTcwMzE2NjcyMQ@@._V1_SX300.jpg,Documentary,8.2
 7650,1997,The Matchmaker,Marcy is an assistant to Senator John McGlory, who is having problems with a re-election campaign. Desperate for Irish votes, McGlory's chief of staff Nick sends Marcy to Ireland to trace McGlory's relatives or ancestors. Marcy ar...,https://m.media-amazon.com/images/M/MV5BNzJlZTNmMzMtOGM1MS00ODZhLWFmMGMtZmZmYjBjYmU0YWZjXkEyXkFqcGdeQXVyNjMwMjk0MTQ@._V1_SX300.jpg,Comedy, Romance,6.5
 7651,2000,Isn't She Great,Bette Midler and Nathan Lane star in this comedy about Jacqueline Susann, the ambitious woman of dubious talent who wrote Valley of the Dolls, a best-selling novel that became a sensation.,https://m.media-amazon.com/images/M/MV5BYmYyYmY5MWYtMjA0Yi00ZjgzLWE5ZjItNjdhOGRjMTc0MzY0XkEyXkFqcGdeQXVyNjU0NTI0Nw@@._V1_SX300.jpg,Biography, Comedy, Drama,5.3
-7652,1978,Best of The Muppet Show: Mark Hamill / Paul Simon / Raquel Welch,,,,
+7652,1978,Best of The Muppet Show: Mark Hamill / Paul Simon / Raquel Welch,When a woman's long-time friend reveals he's engaged, she realizes she loves him herself and sets out to get him, with only days before the wedding.,https://m.media-amazon.com/images/M/MV5BMzRiMGE2MmMtM2RhMy00OWNiLTljYTktOThmMmE1YjY1NjYyXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg,Comedy, Drama, Romance,6.3
 7653,2003,CKY: Infiltrate,A series of music videos for all the songs of the album "Infiltrate, Destroy, Rebuild." Contains everything from psycho killers, drug addicts, suicide-fetishes, to a 1984-esque claymation segment.,https://m.media-amazon.com/images/M/MV5BMTM5NjE4NzI3Nl5BMl5BanBnXkFtZTcwMjQ0OTQyMQ@@._V1_SX300.jpg,Documentary, Music,7.3
 7654,1896,Lumiere Brothers' First Films,,,,
 7655,1996,The Best Bits of Mr. Bean,,,,
-7656,1999,George Michael: Ladies & Gentlemen: The Best of George Michael,,,,
-7657,1999,SpongeBob SquarePants: Tide and Seek,,,,
+7656,1999,George Michael: Ladies & Gentlemen: The Best of George Michael,A man raised in the jungle by apes falls in love with a wealthy American heiress.,https://m.media-amazon.com/images/M/MV5BNTdiM2VjYjYtZjEwNS00ZWU5LWFkZGYtZGYxMDcwMzY1OTEzL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTczNjQwOTY@._V1_SX300.jpg,Action, Adventure, Comedy,5.5
+7657,1999,SpongeBob SquarePants: Tide and Seek,The misadventures of a talking sea sponge who works at a fast food restaurant, attends a boating school, and lives in an underwater pineapple.,https://m.media-amazon.com/images/M/MV5BNTk2NzEyNTQtZTQ5MS00MjAyLTgzMDMtNDNkYTBkM2M2OTU3XkEyXkFqcGdeQXVyODUwNjEzMzg@._V1_SX300.jpg,Animation, Comedy, Family,8.2
 7658,2004,Ray: Bonus Material,,,,
 7659,1994,Barcelona,An American working in Barcelona, having sworn off beautiful women, is forced to be host to his playboy cousin in this witty comedy of good intentions and mixed signals.,https://m.media-amazon.com/images/M/MV5BNWU2YzE2YzctNDg1OS00ZDdhLWI3M2ItYWY1MzExZjlmOGM5XkEyXkFqcGdeQXVyNjQ2MjQ5NzM@._V1_SX300.jpg,Comedy, Drama, Romance,7.0
 7660,1925,Seven Chances (Silent),,,,
-7661,2005,SpongeBob SquarePants: Home Sweet Pineapple,,,,
-7662,1976,Doctor Who: The Robots of Death,,,,
-7663,1985,Ken Burns' America: Huey Long,,,,
-7664,2000,Gladiator: Extended Edition,,,,
+7661,2005,SpongeBob SquarePants: Home Sweet Pineapple,The misadventures of a talking sea sponge who works at a fast food restaurant, attends a boating school, and lives in an underwater pineapple.,https://m.media-amazon.com/images/M/MV5BNTk2NzEyNTQtZTQ5MS00MjAyLTgzMDMtNDNkYTBkM2M2OTU3XkEyXkFqcGdeQXVyODUwNjEzMzg@._V1_SX300.jpg,Animation, Comedy, Family,8.2
+7662,1976,Doctor Who: The Robots of Death,While on a journey of physical and spiritual healing, a brilliant neurosurgeon is drawn into the world of the mystic arts.,https://m.media-amazon.com/images/M/MV5BNjgwNzAzNjk1Nl5BMl5BanBnXkFtZTgwMzQ2NjI1OTE@._V1_SX300.jpg,Action, Adventure, Fantasy,7.5
+7663,1985,Ken Burns' America: Huey Long,Ken Park is about several Californian skateboarders' lives and relationships with and without their parents.,https://m.media-amazon.com/images/M/MV5BZDU4ZTVjMmMtYmY2My00YmQxLTliODItYWVlMzFlMWYwZjg3XkEyXkFqcGdeQXVyMTQ4NDY5OTc@._V1_SX300.jpg,Drama,5.8
+7664,2000,Gladiator: Extended Edition,A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery.,https://m.media-amazon.com/images/M/MV5BMDliMmNhNDEtODUyOS00MjNlLTgxODEtN2U3NzIxMGVkZTA1L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg,Action, Adventure, Drama,8.5
 7665,2001,Donnie Darko: Director's Cut: Bonus Material,,,,
 7666,1987,Nayagan: Tamil,,,,
-7667,2004,Justice League: Starcrossed the Movie,,,,
+7667,2004,Justice League: Starcrossed the Movie,On a weekend trip to Hawaii, a plastic surgeon convinces his loyal assistant to pose as his soon-to-be-divorced wife in order to cover up a careless lie he told to his much-younger girlfriend.,https://m.media-amazon.com/images/M/MV5BMTM3MzM3NDE5MV5BMl5BanBnXkFtZTcwNDE5MTUxNA@@._V1_SX300.jpg,Comedy, Romance,6.4
 7668,2004,NFL Films Super Bowl Collection: Super Bowl XI-XX,,,,
 7669,2004,Desperate Housewives: Season 1,,,,
 7670,1974,Caged Heat,In a women's prison, a group of inmates band together to combat the repressive and abusive policies of the warden and the corrupt prison doctor.,https://m.media-amazon.com/images/M/MV5BZGY2YzliN2ItYzM1MS00MjVlLWFhNDYtODE1NzI2ZjJmYjdjL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNzc5MjA3OA@@._V1_SX300.jpg,Action, Comedy, Drama,5.3
@@ -673,7 +673,7 @@
 7674,2002,The Junction Boys,Story of Bear Bryant's first summer as head football coach at Texas A&amp;M. Bear takes his charges out onto the scorched plains and sees who survives.,https://m.media-amazon.com/images/M/MV5BNTUxOTAzMzQ1NV5BMl5BanBnXkFtZTcwNTQwODkxMQ@@._V1_SX300.jpg,Drama, Sport,6.3
 7675,1995,Megaman: A Hero is Born,,,,
 7676,1992,Black Cat 2,Scientists install a micro chip, called Black Cat, inside the brain of a violence prone girl named Catherine in an attempt to refine and control her fits of rage. Their plan is to turn her into the perfect government secret agent ...,https://m.media-amazon.com/images/M/MV5BOTNmYTY5OGMtMzE2ZS00NmY4LTk1NjAtODc3MDJiNDZjNmZhXkEyXkFqcGdeQXVyMjQwMjk0NjI@._V1_SX300.jpg,Action, Crime, Thriller,5.0
-7677,1996,Danielle Steel's The Ring,,,,
+7677,1996,Danielle Steel's The Ring,Auntie Danielle, supposedly in ailing health but in reality just a nasty old bitch, lives with a paid housekeeper who she regularly abuses. When the housekeeper dies falling off a ladder, Danielle moves in with her great-nephew an...,https://m.media-amazon.com/images/M/MV5BOWE0ZjIyMDUtZDFkYy00YWM4LWIyOWMtYmVhODRiMjI5OGNkXkEyXkFqcGdeQXVyNzA5NjUyNjM@._V1_SX300.jpg,Comedy, Drama, Romance,7.1
 7678,1962,Billy Rose's Jumbo,A debt-ridden circus is saved by a well-meaning but inept publicity man.,https://m.media-amazon.com/images/M/MV5BMTQxNzgwNjU3OF5BMl5BanBnXkFtZTgwNzAzMDIxMTE@._V1_SX300.jpg,Comedy, Musical, Romance,6.1
 7679,1968,Lady in Cement,During an ocean dive, Miami gumshoe Tony Rome (Frank Sinatra) finds a woman's body with her feet encased in a concrete block and sets out to solve the murder case.,https://m.media-amazon.com/images/M/MV5BNmIxYzhlMTAtNTMxOC00YTFhLWFkMDYtYzY5NjI5ZjU5MDgxXkEyXkFqcGdeQXVyNjUwMzI2NzU@._V1_SX300.jpg,Comedy, Crime, Drama,5.8
 7680,1952,Hi-Yo Silver/ Legend of the Lone Ranger,,,,
@@ -681,10 +681,10 @@
 7682,2003,Mail Order Bride,Anthony Santini, nephew of Mob boss Tony Santini, is sent to Russia to find a gorgeous mail-order bride who scammed five would-be grooms out of their money. One of them is part of ''the family'' and it's up to Anthony to set thing...,https://m.media-amazon.com/images/M/MV5BNGMyZGFlYTEtYzI1ZS00OWNmLWJjNTktNzhiOGZkMWU1ZmYwXkEyXkFqcGdeQXVyMTY5Nzc4MDY@._V1_SX300.jpg,Comedy,4.1
 7683,1988,Cinema Paradiso: Director's Cut,,,,
 7684,1996,The Jamie Foxx Show: Season 1,,,,
-7685,2003,Dora the Explorer: Pirate Adventure,,,,
+7685,2003,Dora the Explorer: Pirate Adventure,Teenage explorer Dora leads her friends on an adventure to save her parents and solve the mystery behind a lost city of gold.,https://m.media-amazon.com/images/M/MV5BOTVhMzYxNjgtYzYwOC00MGIwLWJmZGEtMjgwMzgxMWUwNmRhXkEyXkFqcGdeQXVyNjg2NjQwMDQ@._V1_SX300.jpg,Action, Adventure, Comedy,6.1
 7686,1996,Cannibal! The Musical,,,,
 7687,1992,Raju Ban Gaya Gentleman,Raju comes to Bombay chasing his dreams, but keeps losing out on opportunities. His love, Renu helps him find a job. Success goes to his head until one day a tragic accident destroys his reputation.,https://m.media-amazon.com/images/M/MV5BNzFiYTk0ZmYtYWY3OC00MGQ1LWFjZGEtMjZmOTQyZWFjYjg2XkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_SX300.jpg,Comedy, Musical, Romance,6.8
-7688,1997,Cadfael: The Rose Rent,,,,
+7688,1997,Cadfael: The Rose Rent,The medieval era cases of a Crusader-turned-Monk who investigates mysteries in the Norman English town of Shrewsbury.,https://m.media-amazon.com/images/M/MV5BYzhjNmZkOTctYzc2Yi00MzAxLTk2MjQtODk1NjQ0NzhiOTBhXkEyXkFqcGdeQXVyMjExMjk0ODk@._V1_SX300.jpg,Crime, Drama, Mystery,8.1
 7689,1995,Bruce Springsteen and the E Street Band: Blood Brothers,,,,
 7690,2001,Air Bud: Seventh Inning Fetch,,,,
 7691,1968,Romeo & Juliet,When two young members of feuding families meet, forbidden love ensues.,https://m.media-amazon.com/images/M/MV5BM2I5ZDRhMjMtNzVmMy00YTExLWJiZjktODdjMjM0ZDYyY2ZjXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_SX300.jpg,Drama, Romance,7.6
@@ -719,26 +719,26 @@
 7720,1999,Moonlight Whispers,Two seemingly innocent school kids are obsessed in fetishistic s&amp;m games.,https://m.media-amazon.com/images/M/MV5BYmM4YWU0YTItZDQ2OC00ZDcwLWIxNWUtNTc1YTRkNzY5NzE3XkEyXkFqcGdeQXVyMTEwNDU1MzEy._V1_SX300.jpg,Drama, Romance,6.9
 7721,2002,The Jury,Twelve men and women are called for jury service in the retrial of a man accused of a triple murder after the High Court overturns the original verdict.,https://m.media-amazon.com/images/M/MV5BMTcwMDU5MDA0NF5BMl5BanBnXkFtZTcwMjIwMTM5MQ@@._V1_SX300.jpg,Drama,7.7
 7722,1999,Power Stone: Vol. 1: Mystery of the Stones,,,,
-7723,1989,Baby Cakes,,,,
-7724,2003,Love Hina: Spring Movie,,,,
+7723,1989,Baby Cakes,A determined woman works with a hardened boxing trainer to become a professional.,https://m.media-amazon.com/images/M/MV5BMTkxNzA1NDQxOV5BMl5BanBnXkFtZTcwNTkyMTIzMw@@._V1_SX300.jpg,Drama, Sport,8.1
+7724,2003,Love Hina: Spring Movie,A middle-aged husband's life changes dramatically when his wife asks him for a divorce. He seeks to rediscover his manhood with the help of a newfound friend, Jacob, learning to pick up girls at bars.,https://m.media-amazon.com/images/M/MV5BMTg2MjkwMTM0NF5BMl5BanBnXkFtZTcwMzc4NDg2NQ@@._V1_SX300.jpg,Comedy, Drama, Romance,7.4
 7725,1984,Hong Kong 1941,Years later, a woman narrates her personal story of the Japanese takeover of Hong Kong in 1941. She's Nam, young, attractive, daughter of a wealthy rice merchant, and prey to painful, disabling seizures. Her boyhood friend is Cool...,https://m.media-amazon.com/images/M/MV5BMGZlZDljZGYtYjk3Mi00MDAzLWJjNjItZTBjYjhmNzJiNjkxXkEyXkFqcGdeQXVyMjQwMjk0NjI@._V1_SX300.jpg,Drama, War,6.7
 7726,2000,Brady Bunch Home Movies,,,,
-7727,1988,Dragon Family,,,,
+7727,1988,Dragon Family,A hapless young Viking who aspires to hunt dragons becomes the unlikely friend of a young dragon himself, and learns there may be more to the creatures than he assumed.,https://m.media-amazon.com/images/M/MV5BMjA5NDQyMjc2NF5BMl5BanBnXkFtZTcwMjg5ODcyMw@@._V1_SX300.jpg,Animation, Action, Adventure,8.1
 7728,2000,Panic,Alex, a hit man, tries to get out of the family business, but his father won't let him do so. While seeking the help of a therapist, he meets a sexually charged 23-year-old woman with whom he falls in love.,https://m.media-amazon.com/images/M/MV5BNTRhNjQzMmItZDMzMC00YjI1LWE5ZDktNDEzODBkYmJkYmNkXkEyXkFqcGdeQXVyNTE1NjY5Mg@@._V1_SX300.jpg,Comedy, Crime, Drama,6.7
-7729,1988,Inspector Wears Skirts,,,,
+7729,1988,Inspector Wears Skirts,A security guard's dreams come true when he is selected to be transformed into a cybernetic police officer.,https://m.media-amazon.com/images/M/MV5BN2RhYTQ5YmYtZTNkMS00M2YwLTliMjctNzg0OGYwMDQ5NDg0XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg,Action, Adventure, Comedy,4.1
 7730,1988,The New Adventures of Pippi Longstocking,After her father's ship is carried off by a sudden storm, the spunky Pippi Longstocking is stranded with her horse, Alfonso, and monkey, Mr. Nilsson, and takes up residence in the old family home, which is thought by neighborhood ...,https://m.media-amazon.com/images/M/MV5BYzJmOTQ2N2ItMDYyMS00NGNhLWI5MGEtOWM2MGUwZDZjNzczXkEyXkFqcGdeQXVyNzc5MjA3OA@@._V1_SX300.jpg,Adventure, Family, Fantasy,5.8
 7731,1980,Don't Answer the Phone,A deeply disturbed Vietnam veteran terrorizes the young women of Los Angeles and taunts a radio psychologist with descriptions of his grisly crimes.,https://m.media-amazon.com/images/M/MV5BYjBhMWQ3NTUtNDdmNS00ODdjLWI5NjAtZWVlMjlhYTc5MzdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg,Horror, Thriller,4.8
 7732,1999,Made Men,While hiding in a small town, a former mobster finds out the man he snitched on is sending men to kill him.,https://m.media-amazon.com/images/M/MV5BMWFmMGZmZjQtYjhlMi00NWEzLWJlOGUtMzc3YTk5M2NjMDZmXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg,Action, Comedy, Thriller,6.0
 7733,2000,Barney's Super Singing Circus,Barney's Super-dee-duper Singing Circus has arrived! And it's got everything children want to see: a marching band, a carful of silly clowns, a flying squirrel on a trapeze, prancing ponies...,https://m.media-amazon.com/images/M/MV5BMTkzMjA3ODI4OF5BMl5BanBnXkFtZTgwMzk0MTA2MDE@._V1_SX300.jpg,Family,5.3
-7734,2003,George Harrison: The Quiet One,,,,
+7734,2003,George Harrison: The Quiet One,A man raised in the jungle by apes falls in love with a wealthy American heiress.,https://m.media-amazon.com/images/M/MV5BNTdiM2VjYjYtZjEwNS00ZWU5LWFkZGYtZGYxMDcwMzY1OTEzL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTczNjQwOTY@._V1_SX300.jpg,Action, Adventure, Comedy,5.5
 7735,1997,Rurouni Kenshin,The war against the Tokugawa Shogunate ended years ago. But there are some who are not happy with the outcome. Takimi Shigure watched his friends and family get cut down in the name of freedom and prosperity. Now he and a band of ...,https://m.media-amazon.com/images/M/MV5BYzEyODk3NmQtZTMwYS00MjllLTkwNWEtMjQ1MGNiOTkxNGU1XkEyXkFqcGdeQXVyMzM4MjM0Nzg@._V1_SX300.jpg,Animation, Action, Drama,7.3
 7736,1964,The Train,In 1944, a German colonel loads a train with French art treasures to send to Germany. The Resistance must stop it without damaging the cargo.,https://m.media-amazon.com/images/M/MV5BNTc2MmJhYzYtOTY2Zi00YWJlLTkzNDYtYWFjYzVhYjQzNGM2XkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg,Action, Thriller, War,7.8
-7737,2005,Saved by the Bell: Season 5,,,,
+7737,2005,Saved by the Bell: Season 5,A white midwestern girl moves to Chicago, where her new boyfriend is a black teen from the South Side with a rough, semi-criminal past.,https://m.media-amazon.com/images/M/MV5BNjkzMjFkNmQtYTQ2Yy00NTRhLWE0ZGYtNjBmYTcyOTgxNGYxL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg,Drama, Music, Romance,6.2
 7738,1966,Is Paris Burning?,August 1944. The Allies are approaching Paris and resistance groups within the city start to plan an uprising against the Germans. However, Hitler wants the city destroyed if it looks like the Allies will take it.,https://m.media-amazon.com/images/M/MV5BNDA4MjAyOWQtYzg3Yi00ZWMyLWI1YTEtNzJlMjllNTA5MmE2XkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_SX300.jpg,Drama, History, War,6.8
 7739,1999,The Astronaut's Wife,After an explosion in space and subsequent two-minute radio-out period, two astronauts return home to their wives. Slightly it's revealed that they're not the same as they were.,https://m.media-amazon.com/images/M/MV5BMTUxNGI2NzUtYzgwNy00NmIyLTgwNjMtZGMzYjhlYjY1MThkXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg,Drama, Sci-Fi, Thriller,5.4
 7740,1980,Super Fuzz,Red powder from a nuclear explosion gives a police officer super powers as long as he doesn't see anything red. He is eventually framed for murder and is unsuccessfully executed by many different methods.,https://m.media-amazon.com/images/M/MV5BNGRiZTZlMDUtODkxOC00NDA1LTg3MDktYmJiNzc1ZDhhY2YyXkEyXkFqcGdeQXVyODc0OTEyNDU@._V1_SX300.jpg,Action, Comedy, Fantasy,6.3
 7741,1943,Sherlock Holmes in Washington,Sherlock Holmes and Doctor Watson travel to Washington D.C. in order to prevent a secret document from falling into enemy hands.,https://m.media-amazon.com/images/M/MV5BZGRkNWFlNGItZTc1OC00YmRjLWFjNDEtNWRlZWU1MDVkNzg2XkEyXkFqcGdeQXVyMzg1ODEwNQ@@._V1_SX300.jpg,Mystery, Thriller, War,6.7
-7742,2003,Six Feet Under: Season 3,,,,
+7742,2003,Six Feet Under: Season 3,A chronicle of the lives of a dysfunctional family who run an independent funeral home in Los Angeles.,https://m.media-amazon.com/images/M/MV5BN2FmMjg0Y2YtYmMyYi00MTBjLTllYzMtN2VjYzRhOTVmNWRlXkEyXkFqcGdeQXVyNDIzMzcwNjc@._V1_SX300.jpg,Comedy, Drama,8.7
 7743,2000,Ultimate Weapon,N/A,N/A,N/A,N/A
 7744,2002,SpongeBob SquarePants: Sea Stories,N/A,N/A,Animation, Comedy, Family, Fantasy,N/A
 7745,1995,Apollo 13,NASA must devise a strategy to return Apollo 13 to Earth safely after the spacecraft undergoes massive internal damage putting the lives of the three astronauts on board in jeopardy.,https://m.media-amazon.com/images/M/MV5BMjc4MzZlNmQtN2ZlOS00OGQzLWI5YjEtNDQ2YmZlN2FjNTIxXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_SX300.jpg,Adventure, Drama, History,7.7
@@ -749,7 +749,7 @@
 7750,1983,Koyaanisqatsi: Life Out of Balance,,,,
 7751,1985,Anne of Green Gables,An orphan girl, sent to an elderly brother and sister by mistake, charms her new home and community with her fiery spirit and imagination.,https://m.media-amazon.com/images/M/MV5BNjBmYjU2YjQtNjc3NS00NmMzLTk3OWUtNDM0ZDEyOGQ4ZWI0XkEyXkFqcGdeQXVyMzU3MTc5OTE@._V1_SX300.jpg,Drama, Family,8.5
 7752,1999,Dish Dogs,,,,
-7753,1983,All Creatures Great and Small: The Specials,,,,
+7753,1983,All Creatures Great and Small: The Specials,A middle-aged Chinese immigrant is swept up into an insane adventure in which she alone can save existence by exploring other universes and connecting with the lives she could have led.,https://m.media-amazon.com/images/M/MV5BYTdiOTIyZTQtNmQ1OS00NjZlLWIyMTgtYzk5Y2M3ZDVmMDk1XkEyXkFqcGdeQXVyMTAzMDg4NzU0._V1_SX300.jpg,Action, Adventure, Comedy,8.0
 7754,2002,Bleacher Bums,,,,
 7755,2003,Touching the Void,The true story of two climbers and their perilous journey up the west face of Siula Grande in the Peruvian Andes in 1985.,https://m.media-amazon.com/images/M/MV5BMjExMzQ1NzMxOV5BMl5BanBnXkFtZTcwOTcyMDUyMQ@@._V1_SX300.jpg,Documentary, Adventure, Drama,8.0
 7756,1979,...And Justice for All,A lawyer is forced to defend a guilty judge, while defending other innocent clients, and trying to find punishment for the guilty and provide justice for the innocent.,https://m.media-amazon.com/images/M/MV5BZmRhOTc3MzctYjc3Yi00N2I0LWFkYTktZThmYTc4ZDk5OGFiXkEyXkFqcGdeQXVyMTUzMDUzNTI3._V1_SX300.jpg,Crime, Drama, Thriller,7.4
@@ -760,12 +760,12 @@
 7761,1992,The Return of Spinal Tap,,,,
 7762,1996,Down Periscope,Lt. Cmdr. Tom Dodge is assigned as Captain to the USS Stingray, an old diesel driven submarine that has seen better days.,https://m.media-amazon.com/images/M/MV5BMTlkNGU1NDctNDAwZC00ZThlLWE4YTgtMWU5YjJjYzIyY2VjXkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_SX300.jpg,Comedy,6.1
 7763,1979,La Cage aux Folles,,,,
-7764,1996,Evil Ed,,,,
-7765,2000,Saturday Night Live: The Best of Steve Martin,,,,
+7764,1996,Evil Ed,A special military unit fights a powerful, out-of-control supercomputer and hundreds of scientists who have mutated into flesh-eating creatures after a laboratory accident.,https://m.media-amazon.com/images/M/MV5BZmI1ZGRhNDYtOGVjZC00MmUyLThlNTktMTQyZGE3MzE1ZTdlXkEyXkFqcGdeQXVyNDE5MTU2MDE@._V1_SX300.jpg,Action, Horror, Sci-Fi,6.6
+7765,2000,Saturday Night Live: The Best of Steve Martin,Anxious about his future after high school, a 19-year-old Italian-American from Brooklyn tries to escape the harsh reality of his bleak family life by dominating the dance floor at the local disco.,https://m.media-amazon.com/images/M/MV5BOWU0NjZhMWEtMWU2Zi00NTgwLWI1OTQtNDJlNDAyNzdlZjljXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg,Drama, Music,6.8
 7766,2002,Endangered Species,A killing machine from another world comes to Earth to kill humans.,https://m.media-amazon.com/images/M/MV5BODYyZGZkZjItOGRmYS00ODYxLWE0ZjUtNjJkMDk2MjExMDc0XkEyXkFqcGdeQXVyMTY5Nzc4MDY@._V1_SX300.jpg,Horror, Sci-Fi, Thriller,4.2
 7767,2000,O Brother,In the deep south during the 1930s, three escaped convicts search for hidden treasure while a relentless lawman pursues them.,https://m.media-amazon.com/images/M/MV5BMjZkOTdmMWItOTkyNy00MDdjLTlhNTQtYzU3MzdhZjA0ZDEyXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg,Adventure, Comedy, Crime,7.7
 7768,2003,The Berenstain Bears: Adventure & Fun for Everyone,,,,
-7769,1994,Little Buddha,,,,
+7769,1994,Little Buddha,A family determined to get their young daughter into the finals of a beauty pageant take a cross-country trip in their VW bus.,https://m.media-amazon.com/images/M/MV5BMTgzNTgzODU0NV5BMl5BanBnXkFtZTcwMjEyMjMzMQ@@._V1_SX300.jpg,Comedy, Drama,7.8
 7770,1988,Piece of Cake,Stories of the men of the RAF Hornet Squadron during the early days of World War II.,https://m.media-amazon.com/images/M/MV5BMTk2MDQ3OTI0N15BMl5BanBnXkFtZTcwOTUxODAwMQ@@._V1_SX300.jpg,Drama, War,8.1
 7771,1986,The Best of Times,A small-town loser determines to have one more shot at the big time by winning a football game.,https://m.media-amazon.com/images/M/MV5BZGRhOWZlMjctOWJlMi00ZGEzLThkZjMtMTcyYjA2MTlkYjI4XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg,Comedy, Drama, Sport,6.0
 7772,1975,Master of the Flying Guillotine,,,,
@@ -784,7 +784,7 @@
 7785,2005,Elvis Has Left the Building,,,,
 7786,2003,The Station Agent,When his only friend dies, a man born with dwarfism moves to rural New Jersey to live a life of solitude, only to meet a chatty hot dog vendor and a woman dealing with her own personal loss.,https://m.media-amazon.com/images/M/MV5BMTUzNDgyMzg3Ml5BMl5BanBnXkFtZTcwMzIxNTAwMQ@@._V1_SX300.jpg,Comedy, Drama,7.6
 7787,1962,La Commare Secca,,,,
-7788,2002,Strawberry Shortcake: Spring for Strawberry Shortcake,,,,
+7788,2002,Strawberry Shortcake: Spring for Strawberry Shortcake,This Oscar-nominated film is the story of two men who are opposites: one gay, the other straight; one a fierce communist, the other a fierce individualist; one suspicious, the other accepting; and how they come to love each other.,https://m.media-amazon.com/images/M/MV5BMzhjMDQ1YTctNTNmNS00NDZjLWFjYjUtM2FhZTA2NmYxZjJlXkEyXkFqcGdeQXVyMTA0MjU0Ng@@._V1_SX300.jpg,Comedy, Drama, Romance,7.4
 7789,1996,Leprechaun 4: In Space,Our deadly leprechaun is in space to woo a beautiful princess who is impressed with his gold and desires to separate him from it.,https://m.media-amazon.com/images/M/MV5BMTU2MTUxOTU0N15BMl5BanBnXkFtZTcwOTgzOTgxMQ@@._V1_SX300.jpg,Comedy, Fantasy, Horror, Sci-Fi,3.5
 7790,2005,Hopeless Pictures: Season 1,,,,
 7791,1983,The Day After,The effects of a devastating nuclear holocaust on small-town residents of eastern Kansas.,https://m.media-amazon.com/images/M/MV5BMTA3MDEyYWYtMTZlOS00MzAwLTljMDUtZTAwNGFhNjE5ZmI5XkEyXkFqcGdeQXVyMTEwODg2MDY@._V1_SX300.jpg,Drama, Sci-Fi,7.0
@@ -800,20 +800,20 @@
 7801,1989,The Abyss: Bonus Material,,,,
 7802,2003,Dance for Camera,N/A,N/A,Musical,6.8
 7803,1988,Deadbeat at Dawn,One last job separates the leader of the Ravens gang from an early retirement. When he finds his girlfriend beaten to death by members of a rival gang, he seeks revenge, knowing that he may be dead by dawn. Will more blood bring h...,https://m.media-amazon.com/images/M/MV5BNWRhOTU1ZjYtNTE1MS00NzAwLTg5NTktMzVhZGQ1MTBkMzZlXkEyXkFqcGdeQXVyMTQ2MjQyNDc@._V1_SX300.jpg,Action, Crime, Horror,6.5
-7804,1987,Full House: Season 1,,,,
+7804,1987,Full House: Season 1,A pragmatic U.S. Marine observes the dehumanizing effects the Vietnam War has on his fellow recruits from their brutal boot camp training to the bloody street fighting in Hue.,https://m.media-amazon.com/images/M/MV5BNzkxODk0NjEtYjc4Mi00ZDI0LTgyYjEtYzc1NDkxY2YzYTgyXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg,Drama, War,8.3
 7805,1997,Cracker,Unconventional psychologist Gerry "Fitz" Fitzgerald is one of the best police interrogators in the business, mostly because his own quirks and perversities help him get inside the criminal mind.,https://m.media-amazon.com/images/M/MV5BNWI3MDNlZmMtYjg1ZS00Y2RmLTk5ZTQtYjZkZjAxM2ZmY2IzXkEyXkFqcGdeQXVyMTk5MjAyMjM@._V1_SX300.jpg,Crime, Drama, Mystery,N/A
 7806,1997,Classic Albums: The Band,An interview show with discussion of how the eponymous album was recorded; all surviving members of The Band participated...,https://m.media-amazon.com/images/M/MV5BMTMyNzU1NTMyOF5BMl5BanBnXkFtZTcwMzk5MTgyMQ@@._V1_SX300.jpg,Documentary, Music,7.8
 7807,2003,Off the Map,An eleven-year-old girl watches her father come down with a crippling depression. Over one summer, she learns answers to several mysteries, and comes to terms with love and loss.,https://m.media-amazon.com/images/M/MV5BMTY5Nzc2ODk0OV5BMl5BanBnXkFtZTcwOTAxMzgyMQ@@._V1_SX300.jpg,Drama,7.1
 7808,1974,Uptown Saturday Night,At Madame Zenobia's illegal nightclub, when Steve Jackson and Wardell Franklin get robbed of their wallets containing a winning lottery ticket, they set out to recover it.,https://m.media-amazon.com/images/M/MV5BNGE1YzlhYzctNzgyYS00YzU0LTk4MjYtNWVkZWNkZDA1MmEwL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNzc5MjA3OA@@._V1_SX300.jpg,Action, Comedy, Crime,6.6
-7809,2000,Dark Angel: Season 1,,,,
-7810,2002,MTV: The Real World: Decade of Bloopers,,,,
-7811,2003,King of Bandit Jing,,,,
+7809,2000,Dark Angel: Season 1,When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.,https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_SX300.jpg,Action, Crime, Drama,9.0
+7810,2002,MTV: The Real World: Decade of Bloopers,The story of eight young adults who come to spend the summer in the hottest beach town on the Gulf Coast, Panama City Beach, to party it up and put the real world on hold for just a little bit longer.,https://m.media-amazon.com/images/M/MV5BMTBmY2IwZjItMWViNS00NmUwLWIwZDItNTA1Mzc5N2JmZTJiXkEyXkFqcGdeQXVyMTg0NjE3NDQ@._V1_SX300.jpg,Reality-TV,5.2
+7811,2003,King of Bandit Jing,Gandalf and Aragorn lead the World of Men against Sauron's army to draw his gaze from Frodo and Sam as they approach Mount Doom with the One Ring.,https://m.media-amazon.com/images/M/MV5BNzA5ZDNlZWMtM2NhNS00NDJjLTk4NDItYTRmY2EwMWZlMTY3XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg,Action, Adventure, Drama,9.0
 7812,1932,Freaks,A circus' beautiful trapeze artist agrees to marry the leader of side-show performers, but his deformed friends discover she is only marrying him for his inheritance.,https://m.media-amazon.com/images/M/MV5BMjMyYjgyOTQtZDVlZS00NTQ0LWJiNDItNGRlZmM3Yzc0N2Y0XkEyXkFqcGdeQXVyNTA4NzY1MzY@._V1_SX300.jpg,Drama, Horror,7.8
 7813,1970,Venus in Furs,,,,
 7814,1984,Protocol,A woman (Goldie Hawn) saves life of Emir of Ohtar (Richard Romanus) in Washington.,https://m.media-amazon.com/images/M/MV5BMTIzZWVkNTgtMmRiZS00MjYzLWFhNDItZTkyNGU5M2Q5MjM0XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg,Comedy,5.4
 7815,2003,Gilmore Girls: Season 4,,,,
 7816,2004,Almost Peaceful,,,,
-7817,1967,King of Hearts,,,,
+7817,1967,King of Hearts,Gandalf and Aragorn lead the World of Men against Sauron's army to draw his gaze from Frodo and Sam as they approach Mount Doom with the One Ring.,https://m.media-amazon.com/images/M/MV5BNzA5ZDNlZWMtM2NhNS00NDJjLTk4NDItYTRmY2EwMWZlMTY3XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg,Action, Adventure, Drama,9.0
 7818,1973,Legend of Paul and Paula,Paul and Paula have had bad experiences with love: Paul is financially well off but has lost all affection for his wife, and Paula leads a troublesome life raising two children on her own. They meet and discover a strong passion f...,https://m.media-amazon.com/images/M/MV5BZTYzMGIzYzgtNTY1Yy00NGY3LWI4YjUtN2Y1ZmQzNzc3ZTBhXkEyXkFqcGdeQXVyMDM0NzcxMQ@@._V1_SX300.jpg,Comedy, Drama, Romance,6.8
 7819,1964,First Men in the Moon,When a spaceship lands on the moon, it is hailed as a new accomplishment, before it becomes clear that a Victorian party completed the journey in 1899, leading investigators to that mission's last survivor.,https://m.media-amazon.com/images/M/MV5BMmE3ZWZjYjYtMGJiZS00OTRiLWIzMTQtMTM4ZjFiN2JjMDE0XkEyXkFqcGdeQXVyMzg1ODEwNQ@@._V1_SX300.jpg,Adventure, Sci-Fi,6.5
 7820,2002,Brown Sugar,Friends since childhood, a magazine editor and a hip-hop record executive stumble into romantic territory.,https://m.media-amazon.com/images/M/MV5BNDU4ODk1NzM0Ml5BMl5BanBnXkFtZTYwOTcxMDg5._V1_SX300.jpg,Comedy, Drama, Music,6.4
@@ -823,13 +823,13 @@
 7824,1995,Moll Flanders,,,,
 7825,2001,Prince Charming,After an extramarital indiscretion, a fairy-tale Prince and his sidekick are turned into frogs for all eternity, or until the Prince can convince a maiden to kiss, and then marry him.,https://m.media-amazon.com/images/M/MV5BMjU1MzY4NDk2MV5BMl5BanBnXkFtZTcwNTc4NDQyMQ@@._V1_SX300.jpg,Adventure, Comedy, Family,6.0
 7826,1990,Another 48 Hrs.,Jack Cates once again enlists the aid of ex-con Reggie Hammond - this time to take down The Iceman, a ruthless drug lord operating in the San Francisco bay area.,https://m.media-amazon.com/images/M/MV5BNTAzOTE4MzgwNV5BMl5BanBnXkFtZTgwNDgwNTg4NjE@._V1_SX300.jpg,Action, Comedy, Crime,5.9
-7827,1989,National Lampoon's Christmas Vacation: Special Edition,,,,
+7827,1989,National Lampoon's Christmas Vacation: Special Edition,A historian races to find the legendary Templar Treasure before a team of mercenaries.,https://m.media-amazon.com/images/M/MV5BMTY3NTc4OTYxMF5BMl5BanBnXkFtZTcwMjk5NzUyMw@@._V1_SX300.jpg,Action, Adventure, Mystery,6.9
 7828,1999,Cruel Intentions,Two vicious step-siblings of an elite Manhattan prep school make a wager: to deflower the new headmaster's daughter before the start of term.,https://m.media-amazon.com/images/M/MV5BMjMxNjM5OTQ2M15BMl5BanBnXkFtZTgwNjUxNzYxMTE@._V1_SX300.jpg,Drama, Romance,6.8
-7829,1990,Red Surf,,,,
+7829,1990,Red Surf,When his peaceful life is threatened by a high-tech assassin, former black-ops agent Frank Moses reassembles his old team in a last-ditch effort to survive and uncover his assailants.,https://m.media-amazon.com/images/M/MV5BMzg2Mjg1OTk0NF5BMl5BanBnXkFtZTcwMjQ4MTA3Mw@@._V1_SX300.jpg,Action, Comedy, Crime,7.0
 7830,2004,Bob the Builder: Snowed Under / The Bobblesberg Winter Games,,,,
 7831,1988,Critters 2: The Main Course,Eggs of the small but voracious alien creatures called Crites are left behind on earth and, after hatching, set their appetites on the small farm town of Grover's Bend.,https://m.media-amazon.com/images/M/MV5BMjdkM2E1Y2EtOWViOS00OTcwLTlkYWItMTcwZGNlNWZhOTE1XkEyXkFqcGdeQXVyNzc5MjA3OA@@._V1_SX300.jpg,Comedy, Horror, Sci-Fi,5.5
 7832,1951,When Worlds Collide,As a new star and planet hurtle toward a doomed Earth, a small group of survivalists frantically work to complete the rocket which will take them to their new home.,https://m.media-amazon.com/images/M/MV5BNDE2MGEwZDMtNGU3OC00NTA5LWJkMmQtMTg0ODlkM2Y0YTFhL2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_SX300.jpg,Action, Sci-Fi, Thriller,6.6
-7833,2004,Arrested Development: Season 2,,,,
+7833,2004,Arrested Development: Season 2,Level-headed son Michael Bluth takes over family affairs after his father is imprisoned. But the rest of his spoiled, dysfunctional family are making his job unbearable.,https://m.media-amazon.com/images/M/MV5BNTFlYTE2YTItZmQ1NS00ZWQ5LWI3OGUtYTQzNDMyZmEyYTZjXkEyXkFqcGdeQXVyNDg4NjY5OTQ@._V1_SX300.jpg,Comedy,8.7
 7834,2002,Video Visits: Merida,,,,
 7835,1982,Zu: Warriors from the Magic Mountain,,,,
 7836,1965,King Rat,Fast-talking wheeler-dealer Corporal King is stuck in a Malaysian P.O.W. camp during World War II and uses bribery and larceny to take de-facto control of the camp.,https://m.media-amazon.com/images/M/MV5BOGUyYzkxY2QtZDg0Ni00M2VjLTkwNzctMWNjYjFlYTdkZGJiXkEyXkFqcGdeQXVyMjI4MjA5MzA@._V1_SX300.jpg,Drama, War,7.5
@@ -858,10 +858,10 @@
 7859,1983,Pat Benatar: Live in New Haven,Rock-n-roll maven Pat Benatar performs live in concert on the 1983 "Get Nervous" world tour.,https://m.media-amazon.com/images/M/MV5BMjE0OTI5NzYxMF5BMl5BanBnXkFtZTcwNzgwNTgxMQ@@._V1_SX300.jpg,Music,8.1
 7860,2000,The Wyvern Mystery,After hastening the death of a tenant with whom he has been feuding, Squire Fairfield brings the dead man's young daughter to live in Wyvern Manor. Alice falls in love with one of the squire's two sons. She and Charles elope, incu...,https://m.media-amazon.com/images/M/MV5BMmJjOTBhYjMtNTQ0ZS00YjFjLWE5MjgtZDUyOWY4ZDZkOGY5XkEyXkFqcGdeQXVyMjExMjk0ODk@._V1_SX300.jpg,Drama, Horror, Mystery,5.7
 7861,2001,The Crusaders,Towards the end of the 11th century, three friends - bell founder Peter, baron's son Richard and shepherd Andrew - set off to join The Crusades, after watching soldiers returning from Jerusalem.,https://m.media-amazon.com/images/M/MV5BNDMwY2I1ODgtN2RkOC00ZDJiLTkyNGMtMTczYzQ4ZTY1OTUxXkEyXkFqcGdeQXVyMTY5Nzc4MDY@._V1_SX300.jpg,Adventure, Drama,5.6
-7862,2002,WWE: Survivor Series 2002,,,,
+7862,2002,WWE: Survivor Series 2002,The superstars of World Wrestling Entertainment's "RAW" brand collide each and every week on WWE Monday Night.,https://m.media-amazon.com/images/M/MV5BNjU2ZjBiZjgtMmNjZC00ZmYxLTg1MTgtNDYyMjViODI4YTVkXkEyXkFqcGdeQXVyOTQxNzM2MjY@._V1_SX300.jpg,Action, Sport,7.8
 7863,2003,Shelter Island,Lou, a former professional golfer, turned motivational speaker, seems to have it all: fame, money, and a beautiful live-in girlfriend, Alex. Her seemingly perfect life is turned upside down when she is attacked near her home in Ma...,https://m.media-amazon.com/images/M/MV5BMjgxNTZiODEtMzU2MC00MDdmLTkyNzUtNDc3ZGE1N2NhN2RmXkEyXkFqcGdeQXVyMTY5Nzc4MDY@._V1_SX300.jpg,Thriller,3.9
 7864,1986,About Last Night...,A man and woman meet and try to have a romantic affair, despite their personal problems and the interference of their disapproving friends.,https://m.media-amazon.com/images/M/MV5BODY3ZjRmODYtYjM0My00ZmRlLWJiZDQtZGQ2Y2NmMDVhMThhXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg,Comedy, Drama, Romance,6.2
-7865,1999,Star Trek: Voyager: Season 6,,,,
+7865,1999,Star Trek: Voyager: Season 6,Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a Wookiee and two droids to save the galaxy from the Empire's world-destroying battle station, while also attempting to rescue Princess Leia from the mysterious Darth ...,https://m.media-amazon.com/images/M/MV5BOTA5NjhiOTAtZWM0ZC00MWNhLThiMzEtZDFkOTk2OTU1ZDJkXkEyXkFqcGdeQXVyMTA4NDI1NTQx._V1_SX300.jpg,Action, Adventure, Fantasy,8.6
 7866,2002,Monster Garage: Season 1,,,,
 7867,1969,The Valley of Gwangi,A cowboy named Tuck Kirby seeks fame and fortune by capturing an Allosaurus living in the Forbidden Valley and putting it in a Mexican circus. His victim, called the Gwangi, turns out to have an aversion to being shown in public.,https://m.media-amazon.com/images/M/MV5BYWNlNjk0MTAtMjExYi00Yjc4LWEyNzEtZjlkYjllNjNkMzliXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg,Action, Adventure, Sci-Fi,6.2
 7868,1998,Gasaraki,The US and fictional Middle-Eastern Belgistan are at war. The US takes heavy loses when Belgistan uses their giant robots, but they get help in military aid from Japan including a superb giant robot and its Japanese pilot.,https://m.media-amazon.com/images/M/MV5BZjI3ZmM2NTUtNjViNC00OWRjLWEzMTMtZDM0ZTA5Mzg5M2ZjXkEyXkFqcGdeQXVyMTA3OTEyODI1._V1_SX300.jpg,Animation, Action, Adventure,6.5
@@ -875,18 +875,18 @@
 7876,1995,Sailor Moon SuperS,When the Evil Madame Vadiane kidnaps Chibi-Usa, the senshi rush to her rescue with the aid of Chibi-Usa's new friend, Peruru. After trying to find Chibi-Usa and fight off Vadiane's henchmen to no avail, the three outer senshi (Nep...,https://m.media-amazon.com/images/M/MV5BZjlmYWRiNzYtZWJiNy00ZjVlLWFkNDMtODU4N2YyMzNiMmVjL2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMzM4MjM0Nzg@._V1_SX300.jpg,Animation, Action, Comedy,7.4
 7877,1980,Atlantic City,In a corrupt city, a small-time gangster and the estranged wife of a pot dealer find themselves thrown together in an escapade of love, money, drugs and danger.,https://m.media-amazon.com/images/M/MV5BNmM3MzA5ODAtMWJlNC00OGUwLTkzM2YtMDdlNjU3ZjkzOWJjXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_SX300.jpg,Crime, Drama, Romance,7.3
 7878,2001,The Party's Over,,,,
-7879,2002,Super Troopers,,,,
+7879,2002,Super Troopers,During the summer of 1979, a group of friends witness a train crash and investigate subsequent unexplained events in their small town.,https://m.media-amazon.com/images/M/MV5BMjIzNjEyMzcwOF5BMl5BanBnXkFtZTcwMTkyMjE0NQ@@._V1_SX300.jpg,Action, Mystery, Sci-Fi,7.0
 7880,1968,Columbo: Season 1,,,,
 7881,1979,Hanover Street,Margaret is a nurse in England during WW2, and married to a secret agent. Things get complicated when she falls for David, an American pilot.,https://m.media-amazon.com/images/M/MV5BNGMyMGJjNTYtMDM0ZS00MTM0LWFlN2YtMzJmZTBiNzk4OTFjXkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_SX300.jpg,Action, Adventure, Drama,6.0
 7882,2002,Blood Work,Still recovering from a heart transplant, retired F.B.I. profiler Terry McCaleb (Clint Eastwood) returns to service when his own blood analysis offers clues to the identity of a serial killer.,https://m.media-amazon.com/images/M/MV5BMTIxMDMzMDk1NV5BMl5BanBnXkFtZTYwNzgxNDY3._V1_SX300.jpg,Action, Crime, Drama,6.4
-7883,1992,Saturday Night Live: The Best of Chris Rock,,,,
+7883,1992,Saturday Night Live: The Best of Chris Rock,Anxious about his future after high school, a 19-year-old Italian-American from Brooklyn tries to escape the harsh reality of his bleak family life by dominating the dance floor at the local disco.,https://m.media-amazon.com/images/M/MV5BOWU0NjZhMWEtMWU2Zi00NTgwLWI1OTQtNDJlNDAyNzdlZjljXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg,Drama, Music,6.8
 7884,2002,The Other Side of the Bed,Two couples entwine on their search for love.,https://m.media-amazon.com/images/M/MV5BYzI4MmFkOGYtYTFjNi00NDZjLTk3NzQtMDZhNWRkNjdhMzQxXkEyXkFqcGdeQXVyMTA0MjU0Ng@@._V1_SX300.jpg,Comedy, Drama, Musical,6.4
 7885,2002,Taken,Three families experience alien abductions over a period of five decades.,https://m.media-amazon.com/images/M/MV5BMTI0NTI0NjAxMV5BMl5BanBnXkFtZTYwOTM3MTg5._V1_SX300.jpg,Drama, Mystery, Sci-Fi,7.8
 7886,2000,The Big Kahuna,,,,
 7887,2001,The Price of Milk,,,,
 7888,2001,Geneshaft,In the 21st century mankind was on the brink of destruction. Through genetic engineering however they eradicated such feelings as love and the desire for power. Since women are naturally less aggressive than men, women to man rati...,https://m.media-amazon.com/images/M/MV5BZWI1NjI3MTctN2NjZi00NWQ5LTkzOWMtODViNDQ2OGI0ZDNjXkEyXkFqcGdeQXVyMTA1OTEwNjE@._V1_SX300.jpg,Animation, Sci-Fi,6.5
 7889,1984,Swann in Love,In the late nineteenth century Paris, Briton Charles Swann, a man of wealth and culture, runs among the social set. That life is threatened when he falls in love with Odette de Crécy, a courtesan, that love all consuming in that h...,https://m.media-amazon.com/images/M/MV5BMzRlOGQwODktNzZiOS00Y2YwLWFjMTQtMmM5M2NlMGJmOTdhXkEyXkFqcGdeQXVyNTI2ODA2NTc@._V1_SX300.jpg,Drama, Romance,6.5
-7890,1977,Best of The Muppet Show: George Burns / Bob Hope / Dom DeLuise,,,,
+7890,1977,Best of The Muppet Show: George Burns / Bob Hope / Dom DeLuise,When a woman's long-time friend reveals he's engaged, she realizes she loves him herself and sets out to get him, with only days before the wedding.,https://m.media-amazon.com/images/M/MV5BMzRiMGE2MmMtM2RhMy00OWNiLTljYTktOThmMmE1YjY1NjYyXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg,Comedy, Drama, Romance,6.3
 7891,2005,Kyo Kara Maoh: God Save Our King,,,,
 7892,1999,True Crime,Can an over-the-hill journalist uncover the evidence that can prove a death row inmate's innocence just hours before his execution?,https://m.media-amazon.com/images/M/MV5BNzYxMzJlNTUtYzBiNi00NWJmLThmOTAtYTMyYjdlY2Y4YzE0XkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_SX300.jpg,Crime, Drama, Mystery,6.6
 7893,2004,A Place Called Home,Tula Jetters (Ann Margret) is a stubborn widow who still mourns the death of her husband from years ago called "The Captain." She lives alone in a big beautiful home by a lake, but her independence may be threatened by the reality...,https://m.media-amazon.com/images/M/MV5BMjE5NjAxNjIxOF5BMl5BanBnXkFtZTgwMjkwMDA2MDE@._V1_SX300.jpg,Drama, Family,6.4
@@ -898,14 +898,14 @@
 7899,1994,Junior,As part of a fertility research project, a male scientist agrees to carry a pregnancy in his own body.,https://m.media-amazon.com/images/M/MV5BZDFhMmY3YjItYzRmOS00MTZlLWFkNzEtOWY5ZDA3NDAwNmRlXkEyXkFqcGdeQXVyNjk1Njg5NTA@._V1_SX300.jpg,Comedy, Romance, Sci-Fi,4.7
 7900,2001,Kept,A murderous couple commit a series of sex related murders while two police detectives investigate the crimes.,https://m.media-amazon.com/images/M/MV5BMjExOTEyNDcwOV5BMl5BanBnXkFtZTYwNzE3Mzk4._V1_SX300.jpg,Drama, Thriller,4.2
 7901,2000,Sudden Manhattan,,,,
-7902,1997,Cadfael: St. Peter's Fair,,,,
-7903,1992,Adventures of Batman & Robin: Poison Ivy/The Penguin,,,,
+7902,1997,Cadfael: St. Peter's Fair,The medieval era cases of a Crusader-turned-Monk who investigates mysteries in the Norman English town of Shrewsbury.,https://m.media-amazon.com/images/M/MV5BYzhjNmZkOTctYzc2Yi00MzAxLTk2MjQtODk1NjQ0NzhiOTBhXkEyXkFqcGdeQXVyMjExMjk0ODk@._V1_SX300.jpg,Crime, Drama, Mystery,8.1
+7903,1992,Adventures of Batman & Robin: Poison Ivy/The Penguin,Intrepid reporter Tintin and Captain Haddock set off on a treasure hunt for a sunken ship commanded by Haddock's ancestor.,https://m.media-amazon.com/images/M/MV5BNDE5MDExNTQ1OF5BMl5BanBnXkFtZTcwMDIxMTM5Ng@@._V1_SX300.jpg,Animation, Action, Adventure,7.3
 7904,2002,Punch-Drunk Love,Socially frustrated Barry Egan calls a phone-sex line to curb his loneliness. Little does he know it will land him in deep trouble and will jeopardize his burgeoning romance with the mysterious Lena.,https://m.media-amazon.com/images/M/MV5BYmE1OTY4NjgtYjcwNC00NWE4LWJiNGMtZmVhYTdlMWE1YzIxXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg,Comedy, Drama, Romance,7.3
 7905,1962,The Twilight Zone: Vol. 1,,,,
 7906,2003,NFL Films Super Bowl Collection: Super Bowl I-X,,,,
-7907,2001,Midsomer Murders: Dark Autumn,,,,
+7907,2001,Midsomer Murders: Dark Autumn,A veteran Detective Chief Inspector and his young Sergeant investigate murders around the regional community of Midsomer County.,https://m.media-amazon.com/images/M/MV5BMjA5MmM5NjEtYjY2Yy00MzVmLThkMTYtYzcxMGE5MGFjMDQ2XkEyXkFqcGdeQXVyNDQ3NDM5OQ@@._V1_SX300.jpg,Crime, Drama, Mystery,7.9
 7908,1947,Quai des Orfevres,A flirtatious wife runs off to meet an older man and the husband closes in with intend to murder him, but finds the deed already done.,https://m.media-amazon.com/images/M/MV5BZDQ4NDBkNzMtYTM1Mi00ODE3LWE5YTQtYjk5YjZiNDA0MmZhXkEyXkFqcGdeQXVyNTA1NjYyMDk@._V1_SX300.jpg,Crime, Drama,7.7
-7909,2002,Ranma 1/2: Ranma Forever: Vol. 2: The Depths of Despair,,,,
+7909,2002,Ranma 1/2: Ranma Forever: Vol. 2: The Depths of Despair,A girl is involuntarily engaged to a boy who turns female when hit with cold water and male when hit with hot.,https://m.media-amazon.com/images/M/MV5BMDQ0OGEwNDItNzVmZi00NGI0LTk3YWUtNmQzN2Y1YzYwY2NmXkEyXkFqcGdeQXVyNzA5NjUyNjM@._V1_SX300.jpg,Animation, Action, Comedy,7.9
 7910,1987,The Living Daylights,James Bond is sent to investigate a KGB policy to kill all enemy spies and uncovers an arms deal that potentially has major global ramifications.,https://m.media-amazon.com/images/M/MV5BZjI4MjBmYzItYTY5OC00OWYzLWE0NWYtZDQxNDQxM2QzYjA4XkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg,Action, Adventure, Thriller,6.7
 7911,2001,Bones,Over 20 years after his death by a gunshot, Jimmy Bones comes back as a ghost to wreak revenge on those who killed him and to clean up his neighborhood.,https://m.media-amazon.com/images/M/MV5BMGU0NDRiNzMtNmNhNi00MmFkLWE1MjUtZTk4ZDk3ODRlZmE0XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg,Crime, Horror,4.4
 7912,1960,L'Avventura,A woman disappears during a Mediterranean boating trip. During the search, her lover and her best friend become attracted to each other.,https://m.media-amazon.com/images/M/MV5BNmJlYTVjZTYtZDg1Yy00NzFiLWJmYzYtYTJhMjliY2I2ZTlhXkEyXkFqcGdeQXVyMjgyNjk3MzE@._V1_SX300.jpg,Drama, Mystery, Romance,7.8
@@ -925,7 +925,7 @@
 7926,1997,Ellis Island,The story of the Ellis Island immigration station, as related by historians and the immigrants themselves.,N/A,Documentary, History,N/A
 7927,1997,The Peacekeeper,When a terrorist group steals the US President's personal communications computer for launching the US arsenal in case of war, only a heroic Major has the key to prevent a Presidential assassination or a nuclear holocaust.,https://m.media-amazon.com/images/M/MV5BOWEyNzI2ODktYjczYy00MDFjLWI1MjktMjg1YzI0NWM0NzFmL2ltYWdlXkEyXkFqcGdeQXVyNDc2NjEyMw@@._V1_SX300.jpg,Action,5.0
 7928,2002,Antwone Fisher,Antwone Fisher, a young navy man, is forced to see a psychiatrist after a violent outburst against a fellow crewman. During the course of treatment a painful past is revealed and a new hope begins.,https://m.media-amazon.com/images/M/MV5BMDY5MTIyNjEtNGVmYi00MzFkLWE2ODEtZjVjZjc5NGJhZGU5XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg,Biography, Drama,7.3
-7929,2003,Dragon Ball: The Path to Power,,,,
+7929,2003,Dragon Ball: The Path to Power,A hapless young Viking who aspires to hunt dragons becomes the unlikely friend of a young dragon himself, and learns there may be more to the creatures than he assumed.,https://m.media-amazon.com/images/M/MV5BMjA5NDQyMjc2NF5BMl5BanBnXkFtZTcwMjg5ODcyMw@@._V1_SX300.jpg,Animation, Action, Adventure,8.1
 7930,2004,The Purifiers,The story of martial arts clubs who have created their own city infrastructure after tiring of government initiatives. Responding to the greed and corruption creeping into the other clubs, headed by capitalist-wannabe Moses, The P...,https://m.media-amazon.com/images/M/MV5BMjEzMTIxNzQ3N15BMl5BanBnXkFtZTgwMjQwMDA2MDE@._V1_SX300.jpg,Action,3.2
 7931,1993,8 Man After: Perfect Collection,,,,
 7932,1934,The Three Stooges: Goofs on the Loose,,,,
@@ -939,15 +939,15 @@
 7940,1985,Robotech,An alien spaceship crash lands on Earth and the technology and secrets she bears lead Earth into three destructive interplanetary wars.,https://m.media-amazon.com/images/M/MV5BMTkwNDA0NjAxN15BMl5BanBnXkFtZTgwMDU5MjAxMzE@._V1_SX300.jpg,Animation, Action, Adventure,8.5
 7941,2004,The Inspector Lynley Mysteries: If Wishes Were Horses,,,,
 7942,1960,Inherit the Wind,Based on a real-life case in 1925, two great lawyers argue the case for and against a Tennessee science teacher accused of the crime of teaching evolution.,https://m.media-amazon.com/images/M/MV5BZjcwZjhlZmEtNjg3ZC00OTEwLWFjY2MtMDg2OTQwZWJmMGM3XkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_SX300.jpg,Biography, Drama, History,8.1
-7943,1998,Secrets of War: Spy Games of World War II,,,,
-7944,2004,UFC 48: Ultimate Fighting Championship: Payback,,,,
+7943,1998,Secrets of War: Spy Games of World War II,A spy organisation recruits a promising street kid into the agency's training program, while a global threat emerges from a twisted tech genius.,https://m.media-amazon.com/images/M/MV5BYTM3ZTllNzItNTNmOS00NzJiLTg1MWMtMjMxNDc0NmJhODU5XkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_SX300.jpg,Action, Adventure, Comedy,7.7
+7944,2004,UFC 48: Ultimate Fighting Championship: Payback,The Ultimate Fighting Championship debuts, as eight fighters enter the Octagon for a one-night tournament to determine the superior fighting style, including Royce Gracie, Ken Shamrock, and Gerard Gordeau.,https://m.media-amazon.com/images/M/MV5BMDc2MmFhOGEtYzUwZC00MDlmLWIzZDYtOTJmNDdiNmZlY2MxXkEyXkFqcGdeQXVyNDI1MDYyODY@._V1_SX300.jpg,Sport,7.7
 7945,2001,Pyaar Tune Kya Kiya,A obsessive woman determines to do what it takes to get her lover - at any cost.,https://m.media-amazon.com/images/M/MV5BOTExMWJmMjMtNjhiYy00MWE2LTg2YjEtNmIzZDBmNjgwOWEzXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_SX300.jpg,Drama, Romance, Thriller,5.7
 7946,2004,Rugrats: Holiday Celebration,,,,
 7947,1985,Tuff Turf,The new kid in school must battle a gang of street toughs after stealing the gang leader's girl.,https://m.media-amazon.com/images/M/MV5BM2NmYzE2OGItZTI1Ni00YjcyLWEzM2UtMDAzODYzNzRmYmIwXkEyXkFqcGdeQXVyNzc5MjA3OA@@._V1_SX300.jpg,Action, Comedy, Drama,6.0
 7948,1969,Satan's Sadists,The "Satans" are a very cruel biker gang led by Anchor. The gang goes to a diner in the middle of nowhere in the California desert where they begin to terrorize Lew and his patrons and his waitress, Tracy. After a little killing, ...,https://m.media-amazon.com/images/M/MV5BMWZhOGRjNzAtMmEzYy00NzYzLTkxYjQtZGEwNDJkZWEyZmRjXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg,Action, Drama, Horror,4.7
 7949,2004,WWE Divas: South of the Border,N/A,https://m.media-amazon.com/images/M/MV5BMzAyY2JlODctYmQwOC00ZTRhLWI4OGEtMzRiZmY1ZDAyMDNkXkEyXkFqcGdeQXVyMTEyMDcwNw@@._V1_SX300.jpg,Documentary, Action, Sport,7.7
 7950,1981,Le Professionnel,,,,
-7951,2003,Agatha Christie's Poirot: Five Little Pigs,,,,
+7951,2003,Agatha Christie's Poirot: Five Little Pigs,An elderly spinster living in the village of St. Mary Mead helps her friends and relatives solve mysterious murders.,https://m.media-amazon.com/images/M/MV5BMDdhMzBlOWEtOWZiYi00NzRmLTgxMTktZDBkOWY0NmI5ODc3XkEyXkFqcGdeQXVyMjExMjk0ODk@._V1_SX300.jpg,Crime, Drama, Mystery,7.8
 7952,2000,Dune,A three-part miniseries on politics, betrayal, lust, greed and the coming of a Messiah. Based on Frank Herbert's classic science fiction novel.,https://m.media-amazon.com/images/M/MV5BMTU4MjMyMTkxN15BMl5BanBnXkFtZTYwODA5OTU5._V1_SX300.jpg,Adventure, Drama, Sci-Fi,6.9
 7953,2005,Noise,N/A,N/A,Short,7.5
 7954,1928,The Fall of the House of Usher,Allan visits the sinister Usher family mansion, where his friend Roderick is painting a portrait of his sickly wife Madeline. The portrait seems to be draining the life out of Madeline, slowly leading to her death.,https://m.media-amazon.com/images/M/MV5BNDU4ODcwODMzNl5BMl5BanBnXkFtZTYwMTAzMTE5._V1_SX300.jpg,Drama, Fantasy, Horror,7.3
@@ -959,7 +959,7 @@
 7960,1948,The Lady from Shanghai,,,,
 7961,2000,The Cherry Orchard,,,,
 7962,1992,Sailor Moon: Vol. 1: A Heroine Is Chosen,,,,
-7963,1987,Married... with Children: The Most Outrageous Episodes: Vol. 1,,,,
+7963,1987,Married... with Children: The Most Outrageous Episodes: Vol. 1,Al is the quintessential working class dad. Peggy, his wife, always wants more from him. With their children, they go through the highs and lows of ordinary life.,https://m.media-amazon.com/images/M/MV5BMzk2OWYzNDUtNGE5NC00MDI0LTkyMDktY2RmZjE0NGNmMWE1XkEyXkFqcGdeQXVyMzU3MTc5OTE@._V1_SX300.jpg,Comedy,8.1
 7964,2004,Thomas & Friends: It's Great to be an Engine,Thomas Grey's Rainy Day is an 11 minute film about the apocolyptic dreams of a hustler who is struggling with his conscience.,https://m.media-amazon.com/images/M/MV5BMjA0ODc5MzI1Ml5BMl5BanBnXkFtZTcwMDQ4ODMzMQ@@._V1_SX300.jpg,Short, Crime, Drama,6.6
 7965,1993,Married to It,,,,
 7966,1981,First Monday in October,For the first time in history a woman is appointed to the U.S. Supreme Court, where she becomes a friendly rival to a liberal associate.,https://m.media-amazon.com/images/M/MV5BNDU0OThlOGYtNmJiZC00NzgzLWE1NmYtYzIwZTdlNDkwZTdiXkEyXkFqcGdeQXVyMTUzMDUzNTI3._V1_SX300.jpg,Comedy, Drama,6.4
@@ -972,7 +972,7 @@
 7973,1995,The Sum of Us,,,,
 7974,2002,Real Bout High School,,,,
 7975,2005,Saiyuki: The Movie: Requiem,,,,
-7976,1988,Ninja Academy,,,,
+7976,1988,Ninja Academy,When a kingpin threatens New York City, a group of mutated turtle warriors must emerge from the shadows to protect their home.,https://m.media-amazon.com/images/M/MV5BNjUzODQ5MDY5NV5BMl5BanBnXkFtZTgwOTc1NzcyMjE@._V1_SX300.jpg,Action, Adventure, Comedy,5.8
 7977,1980,Maniac!,A psychopathic man goes on a killing and mutilation spree in New York City.,https://m.media-amazon.com/images/M/MV5BNzliZTJmOWYtNWIyYi00ZTY4LThjNDMtZGQyMTNlZDRhMjFhXkEyXkFqcGdeQXVyMTUzMDUzNTI3._V1_SX300.jpg,Crime, Drama, Horror,6.4
 7978,2001,U2: Elevation 2001: Live from Boston,,,,
 7979,2005,The Muppets Wizard of Oz,This version of The Wizard of Oz is played by the Muppets!,https://m.media-amazon.com/images/M/MV5BMjE0OTUzOTMyNF5BMl5BanBnXkFtZTcwNTk5NDAzMQ@@._V1_SX300.jpg,Adventure, Comedy, Family,5.1
@@ -980,8 +980,8 @@
 7981,2001,The Infinite Worlds of H.G. Wells,H.G. Wells foresaw the future in such visionary novels as The Time Machine and The War of the Worlds. On a night in London in 1946, newspaper reporter Ellen McGillivray arrives at the home of legendary literary figure, Herbert Geo...,https://m.media-amazon.com/images/M/MV5BYjA2NWU3ZmMtNjQ3Ni00ZjFmLWEzNTItMWE5ZGUyMDEyOWY5XkEyXkFqcGdeQXVyNjg2NjQwMDQ@._V1_SX300.jpg,Drama, Fantasy, Horror,7.5
 7982,2003,The Bathers,Sexy, gritty and as provocative as a lap dance, The Bathers takes an insider's look at the lives of six women working as dancers at a seedy Parisian peep show. Governed by their overprotective boss, the girls' routine of glittery ...,https://m.media-amazon.com/images/M/MV5BMTQwNDgwNzY3OV5BMl5BanBnXkFtZTcwNDExNTAwMQ@@._V1_SX300.jpg,Adult, Drama,3.5
 7983,1990,An Angel at My Table,Janet Frame was a brilliant child who, as a teen, was misdiagnosed with schizophrenia. Explore Janet's discovery of the world and her life in Europe as her books are published to acclaim.,https://m.media-amazon.com/images/M/MV5BZGViMGM0ZGItMWRkOC00NjA5LWE0MDgtNWJjZTJjMjk5ZmM1XkEyXkFqcGdeQXVyMTAwMzUyOTc@._V1_SX300.jpg,Biography, Drama,7.5
-7984,1993,Star Trek: Deep Space Nine: Season 1,,,,
-7985,1968,Star Trek: The Original Series: Vols. 29-40,,,,
+7984,1993,Star Trek: Deep Space Nine: Season 1,Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a Wookiee and two droids to save the galaxy from the Empire's world-destroying battle station, while also attempting to rescue Princess Leia from the mysterious Darth ...,https://m.media-amazon.com/images/M/MV5BOTA5NjhiOTAtZWM0ZC00MWNhLThiMzEtZDFkOTk2OTU1ZDJkXkEyXkFqcGdeQXVyMTA4NDI1NTQx._V1_SX300.jpg,Action, Adventure, Fantasy,8.6
+7985,1968,Star Trek: The Original Series: Vols. 29-40,Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a Wookiee and two droids to save the galaxy from the Empire's world-destroying battle station, while also attempting to rescue Princess Leia from the mysterious Darth ...,https://m.media-amazon.com/images/M/MV5BOTA5NjhiOTAtZWM0ZC00MWNhLThiMzEtZDFkOTk2OTU1ZDJkXkEyXkFqcGdeQXVyMTA4NDI1NTQx._V1_SX300.jpg,Action, Adventure, Fantasy,8.6
 7986,1955,Love Is a Many-Splendored Thing,A widowed Chinese-English doctor falls in love with a married American correspondent in Hong Kong during China's Communist revolution.,https://m.media-amazon.com/images/M/MV5BMzVjZTBlZDktZGIwOS00MDZjLTlkOTYtZjA2Y2NjNmY5ZGJkXkEyXkFqcGdeQXVyMTAwMzUyOTc@._V1_SX300.jpg,Biography, Drama, Romance,6.4
 7987,2003,Wrong Turn,Chris and a group of five friends are left stranded deep in the middle of the woods after their cars collide. As they venture deeper into the woods, they face an uncertain and bloodcurdling fate.,https://m.media-amazon.com/images/M/MV5BMTQwMTkyMTY4M15BMl5BanBnXkFtZTYwMDc0NDE3._V1_SX300.jpg,Horror, Thriller,6.1
 7988,2000,Vampires Anonymous,,,,

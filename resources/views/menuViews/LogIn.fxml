@@ -15,7 +15,7 @@
       <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
    </rowConstraints>
    <children>
-      <VBox alignment="CENTER" style="-fx-background-color: #2D2449;" styleClass="shadow" GridPane.halignment="CENTER" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
+      <VBox alignment="CENTER" style="-fx-background-color: #2D2449;" styleClass="shadow-xl" GridPane.halignment="CENTER" GridPane.valignment="CENTER" GridPane.vgrow="ALWAYS">
          <children>
             <HBox alignment="CENTER">
                <children>
@@ -69,7 +69,7 @@
             </HBox>
          </children>
       </VBox>
-      <VBox styleClass="movieBg" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS">
+      <VBox fx:id="imageVBox" styleClass="movieBg" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS">
       </VBox>
    </children>
 </GridPane>
