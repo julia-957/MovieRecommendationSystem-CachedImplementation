@@ -1,8 +1,10 @@
 package dk.easv.dataaccess;
 
 import dk.easv.entities.Movie;
+import dk.easv.entities.MovieView;
 import dk.easv.entities.Rating;
 import dk.easv.entities.User;
+import javafx.application.Platform;
 
 import java.io.*;
 import java.nio.charset.Charset;
@@ -72,6 +74,7 @@ public class DataAccessManager {
                     movie = new Movie(id, title, year, movieGenres, posterFilepath, movieDescription, ratingIMDB);
                 } else
                     movie = new Movie(id, title, year);
+                movie.setMovieView(new MovieView(movie));
                 movies.put(movie.getId(), movie);
             }
         } catch (IOException e) {

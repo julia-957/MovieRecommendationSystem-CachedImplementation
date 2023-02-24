@@ -20,16 +20,14 @@ import java.util.Locale;
 import java.util.Objects;
 
 public class MovieView extends HBox {
-    private final Movie movie;
     private final AppModel model = AppModel.getInstance();
     private final RoundImageCorners roundImageCorners = new RoundImageCorners();
-    private ImageView likeButtonGraphic;
+    private final ImageView likeButtonGraphic;
     private final Image heartFilled = new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/electricLilac/heart.png")));
     private final Image heartOutline = new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/electricLilac/heart-outline.png")));
 
     public MovieView(Movie movie) {
         super(10);
-        this.movie = movie;
         this.getStyleClass().setAll("movieDisplayHBox", "rounded", "shadow");
         this.setPrefWidth(400);
         this.setPrefHeight(200);

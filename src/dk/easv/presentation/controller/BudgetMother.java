@@ -1,24 +1,17 @@
 package dk.easv.presentation.controller;
 
-import dk.easv.Main;
 import dk.easv.entities.Movie;
-import dk.easv.entities.User;
 import dk.easv.presentation.controller.util.MovieViewFactory;
 import dk.easv.presentation.model.AppModel;
-import javafx.event.ActionEvent;
 import javafx.geometry.Orientation;
 import javafx.scene.Node;
-import javafx.scene.control.Button;
 import javafx.scene.control.ScrollBar;
 import javafx.scene.control.ScrollPane;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Objects;
 
 public class BudgetMother {
     private final MovieViewFactory movieViewFactory = new MovieViewFactory();

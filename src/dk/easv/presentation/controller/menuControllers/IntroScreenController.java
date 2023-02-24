@@ -97,7 +97,6 @@ public class IntroScreenController extends BudgetMother implements Initializable
             user.getFavouriteMovies().add(featuredMovies.get(moviePosition));
         }
 
-        //TODO update the heart if movie is in the shown movies
         if (shownMovies.contains(featuredMovies.get(moviePosition).getMovieView())){
             featuredMovies.get(moviePosition).getMovieView().updateHeart();
             int index = flowPane.getChildren().indexOf(featuredMovies.get(moviePosition).getMovieView());
