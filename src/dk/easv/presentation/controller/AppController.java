@@ -7,8 +7,11 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.effect.BlurType;
+import javafx.scene.effect.InnerShadow;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
 
 import java.io.IOException;
 import java.net.URL;
@@ -96,6 +99,7 @@ public class AppController implements Initializable {
     public void openLogInScreen() {
         borderPane.setLeft(null);
         borderPane.setCenter(logInScene);
+        ((VBox) borderPane.lookup("#imageVBox")).setEffect(new InnerShadow(BlurType.GAUSSIAN, Color.BLACK,30,0,5,0));
     }
 }
 
