@@ -92,6 +92,7 @@ public class AppController implements Initializable {
     public void openFavouritesScreen() {
         favouritesController.clearShownMovies();
         favouritesController.addMovies(20);
+
         borderPane.setCenter(favouritesScene);
         menuController.setFocusOnFavourites();
     }

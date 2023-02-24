@@ -50,17 +50,10 @@ public class ForYouController extends BudgetMother implements Initializable {
         }
     }
 
-    public void setBestSimilarMovies(List<Movie> movies){
-        bestSimilarMovies.setAll(movies);
-    }
-
     public void clearShownMovies(){
         shownMovies.clear();
         flowPane.getChildren().clear();
         scrollPane.setVvalue(0);
-    }
-
-    private void likeButtonAction(){
-
+        bestSimilarMovies.setAll(model.getTopMoviesSimilarUsersMovies());
     }
 }

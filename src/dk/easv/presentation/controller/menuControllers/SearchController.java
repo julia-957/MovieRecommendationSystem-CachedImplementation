@@ -89,7 +89,6 @@ public class SearchController implements Initializable {
         btnSearchTitles.setId("");
         btnGenres.setId("");
 
-        forYouController.setBestSimilarMovies(model.getTopMoviesSimilarUsersMovies());
         forYouController.clearShownMovies();
         forYouController.addMovies(20);
         searchBorderPane.setCenter(forYouScene);
