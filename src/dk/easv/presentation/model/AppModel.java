@@ -39,18 +39,18 @@ public class AppModel {
         obsUsers.addAll(logic.getAllUsers());
     }
 
-    public void loadData(User user) {
+    public void loadData(List<Movie> topAverageRatedMovies,List<Movie> topAverageRatedMoviesUserDidNotSee, List<UserSimilarity> topSimilarUsers, List<TopMovie> topMoviesFromSimilarPeople){
         obsTopMovieSeen.clear();
-        obsTopMovieSeen.addAll(logic.getTopAverageRatedMovies(user));
+        obsTopMovieSeen.addAll(topAverageRatedMovies);
 
         obsTopMovieNotSeen.clear();
-        obsTopMovieNotSeen.addAll(logic.getTopAverageRatedMoviesUserDidNotSee(user));
+        obsTopMovieNotSeen.addAll(topAverageRatedMoviesUserDidNotSee);
 
         obsSimilarUsers.clear();
-        obsSimilarUsers.addAll(logic.getTopSimilarUsers(user));
+        obsSimilarUsers.addAll(topSimilarUsers);
 
         obsTopMoviesSimilarUsers.clear();
-        obsTopMoviesSimilarUsers.addAll(logic.getTopMoviesFromSimilarPeople(user));
+        obsTopMoviesSimilarUsers.addAll(topMoviesFromSimilarPeople);
 
         for (TopMovie topMovie: obsTopMoviesSimilarUsers){
             topMoviesSimilarUsersMovies.add(topMovie.getMovie());
@@ -101,20 +101,20 @@ public class AppModel {
         this.obsLoggedInUser.set(obsLoggedInUser);
     }
 
-    public boolean loginUserFromUsername(String userName) {
+    public User loginUserFromUsername(String userName) {
         User u = logic.getUser(userName);
         obsLoggedInUser.set(u);
-        if (u==null)
-            return false;
+        if (u!=null)
+            return u;
         else{
-            loadData(u);
-            return true;
+            return null;
         }
     }
 
     public List<String> getAllGenres(){
         return logic.getAllGenres();
     }
+    public LogicManager getLogic() { return logic; }
 
     public ObservableList<Movie> searchMovies(String query) {
         return logic.searchMovies(query);
