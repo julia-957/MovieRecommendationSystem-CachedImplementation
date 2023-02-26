@@ -139,26 +139,16 @@ public class AppModel {
         List<Movie> removed = new ArrayList<>();
         if (list.size() > 0) {
             int size = Math.min(list.size(), amount);
-
             int i = 0;
-            int j = 0;
             while (i < size) {
-                if (j == list.size()-1) {
-                    break;
+                if (list.get(0).getMovieView() == null){
+                    list.get(0).setMovieView(new MovieView(list.get(0)));
                 }
-                else {
-                    if (list.get(0).getMovieView() == null){
-                        list.get(0).setMovieView(new MovieView(list.get(0)));
-                        i++;
-                    }
-                    removed.add(list.remove(0));
-                    j++;
-                }
+                i++;
+                removed.add(list.remove(0));
             }
-            if (removed.size()>0) {
-                for (i = removed.size()-1; i>=0; i--) {
-                    list.add(0, removed.get(i));
-                }
+            for (i = removed.size()-1; i>=0; i--) {
+                list.add(0, removed.get(i));
             }
         }
     }
