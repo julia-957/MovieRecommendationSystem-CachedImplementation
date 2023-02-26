@@ -153,11 +153,11 @@ public class DataAccessManager {
                     .collect(Collectors.toList());
             Files.write(file.toPath(), out, StandardOpenOption.WRITE, StandardOpenOption.TRUNCATE_EXISTING);
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
     }
 
-    public void updateRating(User user, Movie movie) {
+    public void addRating(User user, Movie movie) {
 
     }
 }
