@@ -50,6 +50,7 @@ public class LogInController {
                 stage.initStyle(StageStyle.UNDECORATED);
                 stage.initStyle(StageStyle.TRANSPARENT);
                 stage.show();
+                stage.centerOnScreen();
             });
 
             // perform long running operation
