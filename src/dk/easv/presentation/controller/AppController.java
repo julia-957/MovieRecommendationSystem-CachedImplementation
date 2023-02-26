@@ -75,11 +75,9 @@ public class AppController implements Initializable {
 
     public void openIntroScreen() {
         introScreenController.clearShownMovies();
-
-        introScreenController.addMovies(20);
+        introScreenController.addMovies(5);
         introScreenController.setUser(model.getObsLoggedInUser());
         introScreenController.setFeaturedMovies();
-        //introScreenController.addMovieView();
 
         borderPane.setCenter(introScene);
         menuController.setFocusOnHome();
@@ -93,7 +91,7 @@ public class AppController implements Initializable {
 
     public void openFavouritesScreen() {
         favouritesController.clearShownMovies();
-        favouritesController.addMovies(20);
+        //favouritesController.addMovies(20);
 
         borderPane.setCenter(favouritesScene);
         menuController.setFocusOnFavourites();

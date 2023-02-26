@@ -38,11 +38,12 @@ public class FavouritesController extends BudgetMother implements Initializable 
         if (value == bar.getMax()) {
             double targetValue = value * shownMovies.size();
             if (shownMovies.size() < favouriteMovies.size())
-                addMovies(6);
+                //addMovies(6);
             bar.setValue(targetValue / shownMovies.size());
         }
     }
 
+    /*
     public void addMovies(int amount){
         amount = Math.min(favouriteMovies.size(), amount);
         List[] results = super.addMovies(amount, favouriteMovies);
@@ -50,6 +51,8 @@ public class FavouritesController extends BudgetMother implements Initializable 
         favouriteMovies = FXCollections.observableArrayList(results[1]);
         flowPane.getChildren().setAll(shownMovies);
     }
+
+     */
 
     public void clearShownMovies(){
         flowPane.getChildren().clear();

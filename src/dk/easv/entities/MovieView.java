@@ -1,7 +1,6 @@
 package dk.easv.entities;
 
 import dk.easv.Main;
-import dk.easv.presentation.controller.util.MovieViewFactory;
 import dk.easv.presentation.controller.util.RoundImageCorners;
 import dk.easv.presentation.model.AppModel;
 import javafx.event.ActionEvent;
@@ -20,6 +19,7 @@ import java.util.Locale;
 import java.util.Objects;
 
 public class MovieView extends HBox {
+    private final Movie movie;
     private final AppModel model = AppModel.getInstance();
     private final RoundImageCorners roundImageCorners = new RoundImageCorners();
     private final ImageView likeButtonGraphic;
@@ -28,6 +28,8 @@ public class MovieView extends HBox {
 
     public MovieView(Movie movie) {
         super(10);
+        this.movie = movie;
+
         this.getStyleClass().setAll("movieDisplayHBox", "rounded", "shadow");
         this.setPrefWidth(400);
         this.setPrefHeight(200);
@@ -66,16 +68,14 @@ public class MovieView extends HBox {
         //Create a like button
         likeButtonGraphic = new ImageView();
         Button likeButton = new Button("", likeButtonGraphic);
-        likeButton.setOnAction(new EventHandler<ActionEvent>() {
+        likeButton.setOnAction(new EventHandler<>() {
             @Override
             public void handle(ActionEvent event) {
-                if(model.getObsLoggedInUser().getFavouriteMovies().contains(movie)){
+                if (model.getObsLoggedInUser().getFavouriteMovies().contains(movie)) {
                     likeButtonGraphic.setImage(heartOutline);
                     model.removeMovieFromFavourites(movie, model.getObsLoggedInUser());
                     model.getObsLoggedInUser().getFavouriteMovies().remove(movie);
-                }
-
-                else {
+                } else {
                     likeButtonGraphic.setImage(heartFilled);
                     model.addMovieToFavourites(movie, model.getObsLoggedInUser());
                     model.getObsLoggedInUser().getFavouriteMovies().add(movie);
@@ -117,5 +117,9 @@ public class MovieView extends HBox {
         }
         else
             likeButtonGraphic.setImage(heartOutline);
+    }
+
+    public Movie getMovie() {
+        return movie;
     }
 }

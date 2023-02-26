@@ -110,7 +110,7 @@ public class MovieViewFactory {
         //Add all elements into the main HBox and add it into a HashMap of loaded movie views in model
         mainContainer.getChildren().addAll(moviePoster, movieInfo);
         mainContainer.setHgrow(movieInfo, Priority.ALWAYS);
-        model.updateHashMap(movie.getId(), mainContainer);
+        //model.updateHashMap(movie.getId(), mainContainer);
 
         //System.out.println(movie.getTitle() + "took : " + (System.currentTimeMillis() - timerStartMillis) + "ms");
         return  mainContainer;

@@ -8,8 +8,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.layout.HBox;
 
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 public class AppModel {
     private static AppModel instance = null;
@@ -25,6 +24,7 @@ public class AppModel {
 
     private final SimpleObjectProperty<User> obsLoggedInUser = new SimpleObjectProperty<>();
 
+    private Map<Integer, Movie> allMovies = new HashMap<>();
     private final HashMap<Integer, HBox> loadedMovies = new HashMap<>();
     private final MovieViewFactory movieViewFactory = new MovieViewFactory();
 
@@ -56,6 +56,8 @@ public class AppModel {
             topMoviesSimilarUsersMovies.add(topMovie.getMovie());
         }
 
+        setAllMovies();
+
         long timerStartMillis = System.currentTimeMillis();
         loadMovies(20, obsTopMovieNotSeen);
         System.out.println("Loading took : " + (System.currentTimeMillis() - timerStartMillis) + "ms");
@@ -66,7 +68,9 @@ public class AppModel {
     }
 
     public List<Movie> getTopAverageRatedMoviesUserDidNotSee(User u) {
-        return logic.getTopAverageRatedMoviesUserDidNotSee(user);
+        List<Movie> movies = logic.getTopAverageRatedMoviesUserDidNotSee(user);
+        loadMovies(20, movies);
+        return movies;
     }
 
     public ObservableList<User> getObsUsers() {
@@ -124,25 +128,13 @@ public class AppModel {
         return loadedMovies;
     }
 
-    public void updateHashMap(int movieID, HBox mainContainer){
+    public void updateHashMap(int movieID, MovieView mainContainer){
         loadedMovies.put(movieID, mainContainer);
     }
 
-    private void loadMovies(int amount, List<Movie> list){
-        if (list.size() > 0) {
-            int size = Math.min(list.size(), amount);
-
-            int i = 0;
-            while (i < size) {
-                if (loadedMovies.get(list.get(0).getId()) == null)
-                    movieViewFactory.constructMovieView(list.get(0));
-                list.remove(0);
-                i++;
-            }
-        }
-    }
-
     public ObservableList<Movie> getTopMoviesSimilarUsersMovies() {
+        loadMovies(20, topMoviesSimilarUsersMovies);
+        System.out.println(topMoviesSimilarUsersMovies.get(0).getMovieView());
         return topMoviesSimilarUsersMovies;
     }
 
@@ -156,5 +148,28 @@ public class AppModel {
 
     public HashMap<User, Movie> getFavouriteMovies() {
         return logic.getFavouriteMovies();
+    }
+
+    public void setAllMovies(){
+        allMovies = logic.getAllMovies();
+    }
+
+    private void loadMovies(int amount, List<Movie> list){
+        List<Movie> removed = new ArrayList<>();
+        if (list.size() > 0) {
+            int size = Math.min(list.size(), amount);
+
+            int i = 0;
+            while (i < size) {
+                if (list.get(0).getMovieView() == null){
+                    list.get(0).setMovieView(new MovieView(list.get(0)));
+                    i++;
+                }
+                removed.add(list.remove(0));
+            }
+            for (i = removed.size()-1; i>=0; i--) {
+                list.add(0, removed.get(i));
+            }
+        }
     }
 }

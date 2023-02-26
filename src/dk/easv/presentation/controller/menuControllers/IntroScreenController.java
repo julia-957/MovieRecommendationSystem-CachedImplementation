@@ -39,8 +39,8 @@ public class IntroScreenController extends BudgetMother implements Initializable
     @FXML private ScrollPane scrollPane;
     private int moviePosition = 0;
     private List<Movie> featuredMovies = new ArrayList<>();
-    private ObservableList<Movie> movieBestSimilarMovies = FXCollections.observableArrayList();
-    private final ObservableList<HBox> shownMovies = FXCollections.observableArrayList();
+    private final ObservableList<Movie> movieBestSimilarMovies = FXCollections.observableArrayList();
+    private final ObservableList<MovieView> shownMovies = FXCollections.observableArrayList();
     private User user;
     private final AppModel model = AppModel.getInstance();
     private RoundImageCorners roundImageCorners = new RoundImageCorners();
@@ -97,14 +97,19 @@ public class IntroScreenController extends BudgetMother implements Initializable
             user.getFavouriteMovies().add(featuredMovies.get(moviePosition));
         }
 
-        if (shownMovies.contains(featuredMovies.get(moviePosition).getMovieView())){
-            featuredMovies.get(moviePosition).getMovieView().updateHeart();
-            int index = flowPane.getChildren().indexOf(featuredMovies.get(moviePosition).getMovieView());
-            flowPane.getChildren().remove(index);
-            flowPane.getChildren().add(index, featuredMovies.get(moviePosition).getMovieView());
-        }
         favouriteBtn.setText("");
         favouriteBtn.setGraphic(favouriteHeart);
+
+        //TODO featured movie view and movie view do not hold the same movie view object
+        for (MovieView m: shownMovies) {
+            if (m.getMovie() == featuredMovies.get(moviePosition)){
+                featuredMovies.get(moviePosition).getMovieView().updateHeart();
+                int index = flowPane.getChildren().indexOf(featuredMovies.get(moviePosition).getMovieView());
+                flowPane.getChildren().remove(index);
+                flowPane.getChildren().add(index, featuredMovies.get(moviePosition).getMovieView());
+                return;
+            }
+        }
     }
 
     private void setFavouriteHeart() {
@@ -146,9 +151,10 @@ public class IntroScreenController extends BudgetMother implements Initializable
 
     public void addMovies(int amount){
         amount = Math.min(movieBestSimilarMovies.size(), amount);
-        List[] results = super.addMovies(amount, movieBestSimilarMovies);
-        shownMovies.addAll(results[0]);
-        movieBestSimilarMovies = FXCollections.observableArrayList(results[1]);
+        for (int i = 0; i < amount; i++) {
+            shownMovies.add(movieBestSimilarMovies.get(0).getMovieView());
+            movieBestSimilarMovies.remove(0);
+        }
         flowPane.getChildren().setAll(shownMovies);
     }
 
@@ -171,9 +177,8 @@ public class IntroScreenController extends BudgetMother implements Initializable
         setFavouriteHeart();
     }
 
-    public void addMovieView() {
-        shownMovies.add(featuredMovies.get(0).getMovieView());
-        flowPane.getChildren().setAll(featuredMovies.get(0).getMovieView());
+    private boolean compareMovieViews(MovieView movieView1, MovieView movieView2){
+        return movieView1.getMovie().equals(movieView2.getMovie());
     }
 }
 

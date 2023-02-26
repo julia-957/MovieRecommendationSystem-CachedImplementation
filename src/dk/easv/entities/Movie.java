@@ -5,7 +5,8 @@ import java.util.List;
 
 public class Movie {
     private int id;
-    private String title, genre, posterFilepath, movieDescription;
+    private String title, genre,movieDescription;
+    private String posterFilepath = "\\/images/cats_2_3.png\\";
     private String ratingIMDB;
     private int year;
     private List<Rating> ratings;
@@ -16,7 +17,6 @@ public class Movie {
         this.title = title;
         this.year = year;
         this.ratings = new ArrayList<>();
-        this.posterFilepath = "\\/images/cats_2_3.png\\";
         this.ratingIMDB = "N/A";
     }
 
@@ -26,6 +26,8 @@ public class Movie {
         this.movieDescription = movieDescription;
         this.posterFilepath = posterFilepath;
         this.ratingIMDB = ratingIMDB;
+        if (posterFilepath.equals("N/A"))
+            this.posterFilepath = "\\/images/cats_2_3.png\\";
     }
 
     public double getAverageRating(){
@@ -96,13 +98,6 @@ public class Movie {
 
     public int getRatingsSize(){
         return ratings.size();
-    }
-
-    @Override
-    public String toString() {
-        return  title + ", " + year +
-                ", ratings=" + ratings.size() +
-                ", avg="+ Math.round(getAverageRating()*10)/10.0;
     }
 
     public void setId(int id) {

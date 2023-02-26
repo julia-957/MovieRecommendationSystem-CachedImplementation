@@ -36,8 +36,6 @@ public class GenresController extends BudgetMother implements Initializable {
         flowPane.minWidthProperty().bind(scrollPane.widthProperty());
         flowPane.minHeightProperty().bind(scrollPane.heightProperty());
 
-        //Show the initial 50 movies
-        filteredMovies.setAll(model.getTopAverageRatedMoviesUserDidNotSee(model.getObsLoggedInUser()));
         setUpListeners();
     }
 
@@ -64,7 +62,7 @@ public class GenresController extends BudgetMother implements Initializable {
         ScrollBar bar = getVerticalScrollbar(scrollPane);
         if (value == bar.getMax()) {
             double targetValue = value * shownMovies.size();
-            addMovies(6);
+            //addMovies(6);
             bar.setValue(targetValue / shownMovies.size());
         }
     }
@@ -76,6 +74,7 @@ public class GenresController extends BudgetMother implements Initializable {
         filteredMovies.setAll(model.getTopAverageRatedMoviesUserDidNotSee(model.getObsLoggedInUser()));
     }
 
+    /*
     public void addMovies(int amount){
         amount = Math.min(filteredMovies.size(), amount);
         List[] results = super.addMovies(amount, filteredMovies);
@@ -83,4 +82,6 @@ public class GenresController extends BudgetMother implements Initializable {
         filteredMovies = FXCollections.observableArrayList(results[1]);
         flowPane.getChildren().setAll(shownMovies);
     }
+
+     */
 }

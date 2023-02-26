@@ -32,6 +32,7 @@ public class ForYouController extends BudgetMother implements Initializable {
         flowPane.minHeightProperty().bind(scrollPane.heightProperty());
     }
 
+    /*
     public void addMovies(int amount){
         amount = Math.min(bestSimilarMovies.size(), amount);
         List[] results = super.addMovies(amount, bestSimilarMovies);
@@ -40,12 +41,14 @@ public class ForYouController extends BudgetMother implements Initializable {
         flowPane.getChildren().setAll(shownMovies);
     }
 
+     */
+
     void scrolled(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
         double value = newValue.doubleValue();
         ScrollBar bar = getVerticalScrollbar(scrollPane);
         if (value == bar.getMax()) {
             double targetValue = value * shownMovies.size();
-            addMovies(6);
+            //addMovies(6);
             bar.setValue(targetValue / shownMovies.size());
         }
     }
