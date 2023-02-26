@@ -1,7 +1,7 @@
-package dk.easv.presentation.controller.util;
+package dk.easv.entities;
 
 import dk.easv.Main;
-import dk.easv.entities.Movie;
+import dk.easv.presentation.controller.util.RoundImageCorners;
 import dk.easv.presentation.model.AppModel;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -15,29 +15,29 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 
-import java.util.*;
+import java.util.Locale;
+import java.util.Objects;
 
-public class MovieViewFactory {
+public class MovieView extends HBox {
+    private final Movie movie;
+    private final AppModel model = AppModel.getInstance();
     private final RoundImageCorners roundImageCorners = new RoundImageCorners();
+    private final ImageView likeButtonGraphic;
+    private final Image heartFilled = new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/electricLilac/heart.png")));
+    private final Image heartOutline = new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/electricLilac/heart-outline.png")));
 
-    public HBox constructMovieView(Movie movie){
-        AppModel model = AppModel.getInstance();
-        long timerStartMillis = System.currentTimeMillis();
+    public MovieView(Movie movie) {
+        super(10);
+        this.movie = movie;
 
-        //Create an HBox to hold everything
-        HBox mainContainer = new HBox(10);
-        mainContainer.getStyleClass().addAll("movieDisplayHBox", "rounded", "shadow");
-        mainContainer.setPrefWidth(400);
-        mainContainer.setPrefHeight(200);
-        mainContainer.setPadding(new Insets(10,10,10,10));
+        this.getStyleClass().setAll("movieDisplayHBox", "rounded", "shadow");
+        this.setPrefWidth(400);
+        this.setPrefHeight(200);
+        this.setPadding(new Insets(10,10,10,10));
 
-        ImageView moviePoster;
-        try{
-            moviePoster = new ImageView(new Image(movie.getPosterFilepath()));
-        }
-        catch (Exception e){
-            moviePoster = new ImageView(new Image( Objects.requireNonNull(Main.class.getResourceAsStream("/images/cats_2_3.png"))));
-        }
+        //Movie poster
+        ImageView moviePoster = new ImageView();
+        moviePoster.setImage(new Image(movie.getPosterFilepath()));
         moviePoster.setFitWidth(120);
         moviePoster.setFitHeight(180);
         roundImageCorners.clipImage(moviePoster);
@@ -60,25 +60,23 @@ public class MovieViewFactory {
         Label imdbRating = new Label(movie.getRatingIMDB());
 
         //Create average user rating icon and text
-        ImageView userIcon = new ImageView(new Image(Objects.requireNonNull(Main.class.getResourceAsStream(   "/icons/electricLilac/users-icon.png"))));
+        ImageView userIcon = new ImageView(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/electricLilac/users-icon.png"))));
         userIcon.setFitWidth(30);
         userIcon.setFitHeight(20);
         Label userRating = new Label(String.format(Locale.US, "%.1f", movie.getAverageRating()));
 
         //Create a like button
-        ImageView likeButtonGraphic = new ImageView();
+        likeButtonGraphic = new ImageView();
         Button likeButton = new Button("", likeButtonGraphic);
-        likeButton.setOnAction(new EventHandler<ActionEvent>() {
+        likeButton.setOnAction(new EventHandler<>() {
             @Override
             public void handle(ActionEvent event) {
-                if(model.getObsLoggedInUser().getFavouriteMovies().contains(movie)){
-                    likeButtonGraphic.setImage(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/electricLilac/heart-outline.png"))));
+                if (model.getObsLoggedInUser().getFavouriteMovies().contains(movie)) {
+                    likeButtonGraphic.setImage(heartOutline);
                     model.removeMovieFromFavourites(movie, model.getObsLoggedInUser());
                     model.getObsLoggedInUser().getFavouriteMovies().remove(movie);
-                }
-
-                else {
-                    likeButtonGraphic.setImage(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/electricLilac/heart.png"))));
+                } else {
+                    likeButtonGraphic.setImage(heartFilled);
                     model.addMovieToFavourites(movie, model.getObsLoggedInUser());
                     model.getObsLoggedInUser().getFavouriteMovies().add(movie);
                 }
@@ -91,9 +89,9 @@ public class MovieViewFactory {
         likeButtonGraphic.setFitHeight(18.4);
 
         if(model.getObsLoggedInUser().getFavouriteMovies().contains(movie))
-            likeButtonGraphic.setImage(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/electricLilac/heart.png"))));
+            likeButtonGraphic.setImage(heartFilled);
         else
-            likeButtonGraphic.setImage(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/electricLilac/heart-outline.png"))));
+            likeButtonGraphic.setImage(heartOutline);
 
         //Create an HBox to hold the ratings
         VBox fillerVBox = new VBox();
@@ -108,11 +106,20 @@ public class MovieViewFactory {
         movieInfo.setVgrow(fillerHBox, Priority.ALWAYS);
 
         //Add all elements into the main HBox and add it into a HashMap of loaded movie views in model
-        mainContainer.getChildren().addAll(moviePoster, movieInfo);
-        mainContainer.setHgrow(movieInfo, Priority.ALWAYS);
-        //model.updateHashMap(movie.getId(), mainContainer);
+        this.getChildren().addAll(moviePoster, movieInfo);
+        this.setHgrow(movieInfo, Priority.ALWAYS);
+        model.updateHashMap(movie.getId(), this);
+    }
 
-        //System.out.println(movie.getTitle() + "took : " + (System.currentTimeMillis() - timerStartMillis) + "ms");
-        return  mainContainer;
+    public void updateHeart(){
+        if (likeButtonGraphic.getImage().equals(heartOutline)){
+            likeButtonGraphic.setImage(heartFilled);
+        }
+        else
+            likeButtonGraphic.setImage(heartOutline);
+    }
+
+    public Movie getMovie() {
+        return movie;
     }
 }

@@ -2,14 +2,12 @@ package dk.easv.presentation.model;
 
 import dk.easv.entities.*;
 import dk.easv.logic.LogicManager;
-import dk.easv.presentation.controller.util.MovieViewFactory;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.layout.HBox;
 
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 public class AppModel {
     private static AppModel instance = null;
@@ -22,11 +20,12 @@ public class AppModel {
     private final ObservableList<UserSimilarity>  obsSimilarUsers = FXCollections.observableArrayList();
     private final ObservableList<TopMovie> obsTopMoviesSimilarUsers = FXCollections.observableArrayList();
     private final ObservableList<Movie> topMoviesSimilarUsersMovies = FXCollections.observableArrayList();
+    private ObservableList<Movie> favouriteMovies = FXCollections.observableArrayList();
 
     private final SimpleObjectProperty<User> obsLoggedInUser = new SimpleObjectProperty<>();
 
+    private Map<Integer, Movie> allMovies = new HashMap<>();
     private final HashMap<Integer, HBox> loadedMovies = new HashMap<>();
-    private final MovieViewFactory movieViewFactory = new MovieViewFactory();
 
     public static AppModel getInstance(){
         if(instance == null)
@@ -39,34 +38,31 @@ public class AppModel {
         obsUsers.addAll(logic.getAllUsers());
     }
 
-    public void loadData(User user) {
+    public void loadData(List<Movie> topAverageRatedMovies,List<Movie> topAverageRatedMoviesUserDidNotSee, List<UserSimilarity> topSimilarUsers, List<TopMovie> topMoviesFromSimilarPeople){
+        long timerStartMillis = System.currentTimeMillis();
         obsTopMovieSeen.clear();
-        obsTopMovieSeen.addAll(logic.getTopAverageRatedMovies(user));
+        obsTopMovieSeen.addAll(topAverageRatedMovies);
+        loadMovies(20, obsTopMovieSeen);
 
         obsTopMovieNotSeen.clear();
-        obsTopMovieNotSeen.addAll(logic.getTopAverageRatedMoviesUserDidNotSee(user));
+        obsTopMovieNotSeen.addAll(topAverageRatedMoviesUserDidNotSee);
+        loadMovies(20, obsTopMovieNotSeen);
 
         obsSimilarUsers.clear();
-        obsSimilarUsers.addAll(logic.getTopSimilarUsers(user));
+        obsSimilarUsers.addAll(topSimilarUsers);
 
         obsTopMoviesSimilarUsers.clear();
-        obsTopMoviesSimilarUsers.addAll(logic.getTopMoviesFromSimilarPeople(user));
-
+        obsTopMoviesSimilarUsers.addAll(topMoviesFromSimilarPeople);
         for (TopMovie topMovie: obsTopMoviesSimilarUsers){
             topMoviesSimilarUsersMovies.add(topMovie.getMovie());
         }
-
-        long timerStartMillis = System.currentTimeMillis();
-        loadMovies(20, obsTopMovieNotSeen);
-        System.out.println("Loading took : " + (System.currentTimeMillis() - timerStartMillis) + "ms");
-
-        timerStartMillis = System.currentTimeMillis();
         loadMovies(20, topMoviesSimilarUsersMovies);
-        System.out.println("Loading took : " + (System.currentTimeMillis() - timerStartMillis) + "ms");
-    }
 
-    public List<Movie> getTopAverageRatedMoviesUserDidNotSee(User u) {
-        return logic.getTopAverageRatedMoviesUserDidNotSee(user);
+        favouriteMovies.setAll(obsLoggedInUser.get().getFavouriteMovies());
+        loadMovies(20,favouriteMovies);
+
+        setAllMovies();
+        System.out.println("Loading took : " + (System.currentTimeMillis() - timerStartMillis) + "ms");
     }
 
     public ObservableList<User> getObsUsers() {
@@ -101,20 +97,20 @@ public class AppModel {
         this.obsLoggedInUser.set(obsLoggedInUser);
     }
 
-    public boolean loginUserFromUsername(String userName) {
+    public User loginUserFromUsername(String userName) {
         User u = logic.getUser(userName);
         obsLoggedInUser.set(u);
-        if (u==null)
-            return false;
+        if (u!=null)
+            return u;
         else{
-            loadData(u);
-            return true;
+            return null;
         }
     }
 
     public List<String> getAllGenres(){
         return logic.getAllGenres();
     }
+    public LogicManager getLogic() { return logic; }
 
     public ObservableList<Movie> searchMovies(String query) {
         return logic.searchMovies(query);
@@ -124,7 +120,7 @@ public class AppModel {
         return loadedMovies;
     }
 
-    public void updateHashMap(int movieID, HBox mainContainer){
+    public void updateHashMap(int movieID, MovieView mainContainer){
         loadedMovies.put(movieID, mainContainer);
     }
 
@@ -142,11 +138,13 @@ public class AppModel {
         }
     }
 
-    public List<Movie> getAllMovies(){
+    public List<Movie> getAllMovies() {
         return logic.getAllMovies();
     }
 
-    public ObservableList<Movie> getTopMoviesSimilarUsersMovies() {
+
+        public ObservableList<Movie> getTopMoviesSimilarUsersMovies() {
+        loadMovies(20, topMoviesSimilarUsersMovies);
         return topMoviesSimilarUsersMovies;
     }
 
@@ -158,7 +156,29 @@ public class AppModel {
         logic.removeMovieFromFavourites(movie, user);
     }
 
-    public HashMap<User, Movie> getFavouriteMovies() {
-        return logic.getFavouriteMovies();
+    public List<Movie> getFavouriteMovies() {
+        return favouriteMovies;
+    }
+
+    public void setAllMovies(){
+        allMovies = logic.getAllMovies();
+    }
+
+    public void loadMovies(int amount, List<Movie> list){
+        List<Movie> removed = new ArrayList<>();
+        if (list.size() > 0) {
+            int size = Math.min(list.size(), amount);
+            int i = 0;
+            while (i < size) {
+                if (list.get(0).getMovieView() == null){
+                    list.get(0).setMovieView(new MovieView(list.get(0)));
+                }
+                i++;
+                removed.add(list.remove(0));
+            }
+            for (i = removed.size()-1; i>=0; i--) {
+                list.add(0, removed.get(i));
+            }
+        }
     }
 }

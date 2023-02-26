@@ -2,6 +2,7 @@ package dk.easv.presentation.controller.menuControllers;
 
 import dk.easv.Main;
 import dk.easv.entities.Movie;
+import dk.easv.entities.MovieView;
 import dk.easv.entities.Rating;
 import dk.easv.entities.User;
 import dk.easv.presentation.controller.BudgetMother;
@@ -39,8 +40,8 @@ public class IntroScreenController extends BudgetMother implements Initializable
     @FXML private ScrollPane scrollPane;
     private int moviePosition = 0;
     private List<Movie> featuredMovies = new ArrayList<>();
-    private ObservableList<Movie> movieBestSimilarMovies = FXCollections.observableArrayList();
-    private final ObservableList<HBox> shownMovies = FXCollections.observableArrayList();
+    private final ObservableList<Movie> movieBestSimilarMovies = FXCollections.observableArrayList();
+    private final ObservableList<MovieView> shownMovies = FXCollections.observableArrayList();
     private User user;
     private final AppModel model = AppModel.getInstance();
     private RoundImageCorners roundImageCorners = new RoundImageCorners();
@@ -100,15 +101,25 @@ public class IntroScreenController extends BudgetMother implements Initializable
             model.addMovieToFavourites(featuredMovies.get(moviePosition), user);
             user.getFavouriteMovies().add(featuredMovies.get(moviePosition));
         }
+
         favouriteBtn.setText("");
         favouriteBtn.setGraphic(favouriteHeart);
+
+        for (MovieView m: shownMovies) {
+            if (m.getMovie() == featuredMovies.get(moviePosition)){
+                featuredMovies.get(moviePosition).getMovieView().updateHeart();
+                int index = flowPane.getChildren().indexOf(featuredMovies.get(moviePosition).getMovieView());
+                flowPane.getChildren().remove(index);
+                flowPane.getChildren().add(index, featuredMovies.get(moviePosition).getMovieView());
+                return;
+            }
+        }
     }
 
     private void setFavouriteHeart() {
         if(user.getFavouriteMovies().contains(featuredMovies.get(moviePosition))) {
             favouriteHeart.setImage(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/electricLilac/heart.png"))));
         }
-
         else {
             favouriteHeart.setImage(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/electricLilac/heart-outline.png"))));
         }
@@ -137,6 +148,7 @@ public class IntroScreenController extends BudgetMother implements Initializable
         ScrollBar bar = getVerticalScrollbar(scrollPane);
         if (value == bar.getMax()) {
             double targetValue = value * shownMovies.size();
+            model.loadMovies(6, movieBestSimilarMovies);
             addMovies(6);
             bar.setValue(targetValue / shownMovies.size());
         }
@@ -144,9 +156,10 @@ public class IntroScreenController extends BudgetMother implements Initializable
 
     public void addMovies(int amount){
         amount = Math.min(movieBestSimilarMovies.size(), amount);
-        List[] results = super.addMovies(amount, movieBestSimilarMovies);
-        shownMovies.addAll(results[0]);
-        movieBestSimilarMovies = FXCollections.observableArrayList(results[1]);
+        for (int i = 0; i < amount; i++) {
+            shownMovies.add(movieBestSimilarMovies.get(0).getMovieView());
+            movieBestSimilarMovies.remove(0);
+        }
         flowPane.getChildren().setAll(shownMovies);
     }
 
@@ -163,9 +176,13 @@ public class IntroScreenController extends BudgetMother implements Initializable
     }
 
     public void setFeaturedMovies(){
-        featuredMovies = model.getTopAverageRatedMoviesUserDidNotSee(model.getObsLoggedInUser());
+        featuredMovies = model.getObsTopMovieNotSeen();
         setFeaturedMovie(featuredMovies, moviePosition);
         setFavouriteHeart();
+    }
+
+    private boolean compareMovieViews(MovieView movieView1, MovieView movieView2){
+        return movieView1.getMovie().equals(movieView2.getMovie());
     }
 }
 

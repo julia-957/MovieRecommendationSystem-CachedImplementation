@@ -5,8 +5,6 @@ import dk.easv.entities.Rating;
 import dk.easv.entities.User;
 
 import java.io.*;
-import java.nio.charset.Charset;
-import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.StandardOpenOption;
@@ -20,7 +18,6 @@ public class DataAccessManager {
     private HashMap<Integer, Movie> movies = new HashMap<>();
     private List<String> genres = new ArrayList<>();
     private List<Rating> ratings = new ArrayList<>();
-    private HashMap<User, Movie> favouriteMovies = new HashMap<>();
 
     // Loads all data from disk and stores in memory
     // For performance, data is only updated if updateCacheFromDisk() is called
@@ -38,9 +35,6 @@ public class DataAccessManager {
 
     public List<Rating> getAllRatings() {
         return ratings;
-    }
-    public HashMap<User, Movie> getFavouriteMovies() {
-        return favouriteMovies;
     }
 
     public void updateCacheFromDisk() {
@@ -129,7 +123,6 @@ public class DataAccessManager {
                 int movieId = Integer.parseInt(split[0]);
                 int userId = Integer.parseInt(split[1]);
                 users.get(userId).getFavouriteMovies().add(movies.get(movieId));
-                favouriteMovies.put(users.get(userId), movies.get(movieId));
             }
         } catch (IOException e) {
             e.printStackTrace();

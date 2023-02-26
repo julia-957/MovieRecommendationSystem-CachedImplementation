@@ -14,7 +14,6 @@ import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.HBox;
 
 import java.net.URL;
-import java.util.List;
 import java.util.ResourceBundle;
 
 public class FavouritesController extends BudgetMother implements Initializable {
@@ -37,17 +36,20 @@ public class FavouritesController extends BudgetMother implements Initializable 
         ScrollBar bar = getVerticalScrollbar(scrollPane);
         if (value == bar.getMax()) {
             double targetValue = value * shownMovies.size();
-            if (shownMovies.size() < favouriteMovies.size())
+            if (shownMovies.size() < favouriteMovies.size()){
+                model.loadMovies(6, favouriteMovies);
                 addMovies(6);
+            }
             bar.setValue(targetValue / shownMovies.size());
         }
     }
 
     public void addMovies(int amount){
         amount = Math.min(favouriteMovies.size(), amount);
-        List[] results = super.addMovies(amount, favouriteMovies);
-        shownMovies.addAll(results[0]);
-        favouriteMovies = FXCollections.observableArrayList(results[1]);
+        for (int i = 0; i < amount; i++) {
+            shownMovies.add(favouriteMovies.get(0).getMovieView());
+            favouriteMovies.remove(0);
+        }
         flowPane.getChildren().setAll(shownMovies);
     }
 
@@ -56,5 +58,6 @@ public class FavouritesController extends BudgetMother implements Initializable 
         shownMovies.clear();
         scrollPane.setVvalue(0);
         favouriteMovies = FXCollections.observableArrayList(model.getObsLoggedInUser().getFavouriteMovies());
+        System.out.println(favouriteMovies);
     }
 }

@@ -149,8 +149,8 @@ public class LogicManager {
         dataMgr.removeMovieFromFavourites(movie, user);
     }
 
-    public HashMap<User, Movie> getFavouriteMovies() {
-        return dataMgr.getFavouriteMovies();
+    public Map<Integer, Movie> getAllMovies(){
+        return dataMgr.getAllMovies();
     }
 }
 

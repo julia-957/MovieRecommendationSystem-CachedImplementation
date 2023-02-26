@@ -45,7 +45,7 @@ public class SearchController implements Initializable {
             genresScene = genresFxmlLoader.load();
             forYouScene = forYouFxmlLoader.load();
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
     }
 
@@ -69,7 +69,6 @@ public class SearchController implements Initializable {
         genresController.clearShownMovies();
         genresController.addMovies(20);
         genresController.createGenreButtons(model.getAllGenres());
-
     }
 
     @FXML

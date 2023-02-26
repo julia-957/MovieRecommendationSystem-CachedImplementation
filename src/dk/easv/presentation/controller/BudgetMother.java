@@ -15,6 +15,7 @@ import java.util.List;
 
 public class BudgetMother {
     private final MovieViewFactory movieViewFactory = new MovieViewFactory();
+    private final AppModel model = AppModel.getInstance();
 
     protected ScrollBar getVerticalScrollbar(ScrollPane scrollPane) {
         ScrollBar result = null;
@@ -27,26 +28,6 @@ public class BudgetMother {
             }
         }
         return result;
-    }
-
-    protected List[] addMovies(int amount, List<Movie> moviesToLoad){
-        HashMap<Integer, HBox> loadedMovies = AppModel.getInstance().getLoadedMovies();
-        List<HBox> shownMovies = new ArrayList<>();
-        if (moviesToLoad.size() > 0){
-            HBox movieView;
-            int i = 0;
-            while (i < amount){
-                if (loadedMovies.get(moviesToLoad.get(0).getId()) == null) {
-                    movieView = movieViewFactory.constructMovieView(moviesToLoad.get(0));
-                } else {
-                    movieView = loadedMovies.get(moviesToLoad.get(0).getId());
-                }
-                shownMovies.add(movieView);
-                moviesToLoad.remove(0);
-                i++;
-            }
-        }
-        return new List[] {shownMovies, moviesToLoad};
     }
 
     /*

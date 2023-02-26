@@ -33,7 +33,6 @@ public class TitleSearchController extends BudgetMother implements Initializable
         flowPane.minWidthProperty().bind(scrollPane.widthProperty());
         flowPane.minHeightProperty().bind(scrollPane.heightProperty());
 
-        filteredMovies.setAll(model.getTopAverageRatedMoviesUserDidNotSee(model.getObsLoggedInUser()));
         setUpListeners();
 
         //TODO figure this out
@@ -53,7 +52,7 @@ public class TitleSearchController extends BudgetMother implements Initializable
         txtSearchBar.textProperty().addListener((observable, oldValue, newValue) -> {
             if (txtSearchBar.getText().isEmpty()){
                 shownMovies.clear();
-                filteredMovies.setAll(model.getTopAverageRatedMoviesUserDidNotSee(model.getObsLoggedInUser()));
+                filteredMovies.setAll(model.getObsTopMovieNotSeen());
                 addMovies(20);
             }
         });
@@ -63,6 +62,7 @@ public class TitleSearchController extends BudgetMother implements Initializable
                 shownMovies.clear();
                 scrollPane.setVvalue(0);
                 filteredMovies.setAll(model.searchMovies(txtSearchBar.getText().trim().toLowerCase()));
+                model.loadMovies(15, model.searchMovies(txtSearchBar.getText().trim().toLowerCase()));
                 addMovies(15);
             }
         });
@@ -73,16 +73,19 @@ public class TitleSearchController extends BudgetMother implements Initializable
         ScrollBar bar = getVerticalScrollbar(scrollPane);
         if (value == bar.getMax()) {
             double targetValue = value * shownMovies.size();
+            model.loadMovies(6, filteredMovies);
             addMovies(6);
             bar.setValue(targetValue / shownMovies.size());
         }
     }
 
+
     public void addMovies(int amount){
         amount = Math.min(filteredMovies.size(), amount);
-        List[] results = super.addMovies(amount, filteredMovies);
-        shownMovies.addAll(results[0]);
-        filteredMovies = FXCollections.observableArrayList(results[1]);
+        for (int i = 0; i < amount; i++) {
+            shownMovies.add(filteredMovies.get(0).getMovieView());
+            filteredMovies.remove(0);
+        }
         flowPane.getChildren().setAll(shownMovies);
     }
 
@@ -90,6 +93,6 @@ public class TitleSearchController extends BudgetMother implements Initializable
         shownMovies.clear();
         flowPane.getChildren().clear();
         scrollPane.setVvalue(0);
-        filteredMovies.setAll(model.getTopAverageRatedMoviesUserDidNotSee(model.getObsLoggedInUser()));
+        filteredMovies.setAll(model.getObsTopMovieNotSeen());
     }
 }
