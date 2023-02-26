@@ -21,6 +21,7 @@
 .genresButtons{
     -fx-font-weight: bold;
     -fx-font-size: 15px;
+    -fx-text-fill: -fx-electric-lilac;
     -fx-border-color: -fx-medium-indigo;
     -fx-padding: 7;
 }

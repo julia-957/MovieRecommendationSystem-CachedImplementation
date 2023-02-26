@@ -2,6 +2,7 @@ package dk.easv.presentation.controller.menuControllers;
 
 import dk.easv.Main;
 import dk.easv.entities.Movie;
+import dk.easv.entities.Rating;
 import dk.easv.entities.User;
 import dk.easv.presentation.controller.BudgetMother;
 import dk.easv.presentation.controller.util.RoundImageCorners;
@@ -31,7 +32,7 @@ public class IntroScreenController extends BudgetMother implements Initializable
     @FXML private HBox featuredMovieView;
     @FXML private VBox saveUsJebus;
     @FXML private Rectangle lineDivider;
-    @FXML private ImageView featuredMoviePoster, iconIMDBrating, iconUserRatings, carouselRightView, carouselLeftView, favouriteHeart;
+    @FXML private ImageView featuredMoviePoster, iconIMDBrating, iconUserRatings, iconRatingCurrentUser, carouselRightView, carouselLeftView, favouriteHeart;
     @FXML private Label featuredMovieDescription, featuredMovieTitle, carouselGenreTxt, carouselRatingIMDB, carouselRatingUsers, carouselYearTxt;
     @FXML private Button favouriteBtn, carouselLeft, carouselRight;
     @FXML private FlowPane flowPane;
@@ -67,6 +68,10 @@ public class IntroScreenController extends BudgetMother implements Initializable
         iconUserRatings.setImage(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/electricLilac/users-icon.png"))));
         iconUserRatings.setFitWidth(30);
         iconUserRatings.setFitHeight(20);
+
+        iconRatingCurrentUser.setImage(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/electricLilac/user.png"))));
+        iconRatingCurrentUser.setFitWidth(30);
+        iconRatingCurrentUser.setFitHeight(20);
      }
 
      private void setFeaturedMovie(List<Movie> m, int moviePosition) {

@@ -49,7 +49,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <Label fx:id="carouselGenreTxt" layoutX="1.0" layoutY="100.0" prefHeight="20.0" prefWidth="362.0" text="Action, Comedy, Thriller" textFill="#f1edff">
+                        <Label fx:id="carouselGenreTxt" layoutX="1.0" layoutY="100.0" prefHeight="20.0" prefWidth="362.0" text="Genre: N/A" textFill="#f1edff">
                            <font>
                               <Font size="14.0" />
                            </font>
@@ -76,9 +76,15 @@
                                     <Font name="System Bold" size="12.0" />
                                  </font>
                               </Label>
+                              <ImageView fx:id="iconRatingCurrentUser" fitHeight="20.0" fitWidth="20.0" layoutX="72.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
+                              <Button fx:id="btnOneStar" mnemonicParsing="false" text="*" />
+                              <Button fx:id="btnTwoStar" layoutX="151.0" layoutY="10.0" mnemonicParsing="false" text="*" />
+                              <Button fx:id="btnThreeStar" layoutX="172.0" layoutY="10.0" mnemonicParsing="false" text="*" />
+                              <Button fx:id="btnFourStar" layoutX="194.0" layoutY="10.0" mnemonicParsing="false" text="*" />
+                              <Button fx:id="btnFiveStar" layoutX="216.0" layoutY="10.0" mnemonicParsing="false" text="*" />
                            </children>
                         </HBox>
-                        <Label fx:id="carouselYearTxt" layoutX="1.0" layoutY="80.0" prefHeight="20.0" prefWidth="362.0" text="2016" textFill="#f1edff">
+                        <Label fx:id="carouselYearTxt" layoutX="1.0" layoutY="80.0" prefHeight="20.0" prefWidth="362.0" text="Year: N/A" textFill="#f1edff">
                            <font>
                               <Font size="14.0" />
                            </font>

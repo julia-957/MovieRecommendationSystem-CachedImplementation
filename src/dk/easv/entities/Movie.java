@@ -15,6 +15,7 @@ public class Movie {
         this.title = title;
         this.year = year;
         this.ratings = new ArrayList<>();
+        this.genre = "Genre: N/A";
         this.posterFilepath = "\\/images/cats_2_3.png\\";
         this.ratingIMDB = "N/A";
     }

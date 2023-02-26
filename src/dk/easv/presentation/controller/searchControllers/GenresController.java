@@ -18,6 +18,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -30,6 +31,7 @@ public class GenresController extends BudgetMother implements Initializable {
     private VBox genresVBox;
     private ObservableList<Movie> filteredMovies = FXCollections.observableArrayList();
     private final ObservableList<HBox> shownMovies = FXCollections.observableArrayList();
+    private List<Button> buttons = new ArrayList<>();
 
     private List<String> genres;
 
@@ -49,32 +51,42 @@ public class GenresController extends BudgetMother implements Initializable {
     }
 
     public void createGenreButtons(List<String> genres){
-
         genresVBox.setSpacing(8);
         genresVBox.getChildren().clear();
         for (String g: genres) {
             if(!g.trim().equals("N/A")){
                 Button genreButton = new Button(g);
+
                 genreButton.getStyleClass().addAll("genresButtons", "rounded");
+
+                buttons.add(genreButton);
                 genresVBox.getChildren().add(genreButton);
                 genreButton.setOnAction(new EventHandler<ActionEvent>() {
                     @Override
                     public void handle(ActionEvent event) {
-                        System.out.println(genreButton.getText());
-                        //setGenreMovieList(genreButton.getText());
+                        for(Button b: buttons){
+                            b.getStyleClass().setAll("genresButtons", "rounded");
+                        }
+                        genreButton.getStyleClass().setAll("genresButtonsFocused", "rounded");
+                        setGenreMovieList(genreButton.getText());
                     }
                 });
             }
         }
     }
-    //TODO figure out how to be smart and apply new skills here please
-    public void setGenreMovieList(String genre){
+
+    private void setGenreMovieList(String genre){
+        List<Movie> temp = new ArrayList<>();
+        filteredMovies.setAll(model.getAllMovies());
         shownMovies.clear();
-        for(Movie m: filteredMovies){
-            if(m.getGenre() != null && m.getGenre().contains(genre)){
-                shownMovies.addAll();
-            }
+        flowPane.getChildren().clear();
+        for (Movie m: filteredMovies) {
+            if (m.getGenre().contains(genre))
+                temp.add((m));
         }
+        filteredMovies.clear();
+        filteredMovies.addAll(temp);
+        addMovies(20);
     }
 
     public void scrolled(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
