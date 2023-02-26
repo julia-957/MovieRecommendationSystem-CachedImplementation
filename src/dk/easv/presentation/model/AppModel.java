@@ -2,7 +2,6 @@ package dk.easv.presentation.model;
 
 import dk.easv.entities.*;
 import dk.easv.logic.LogicManager;
-import dk.easv.presentation.controller.util.MovieViewFactory;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -21,12 +20,12 @@ public class AppModel {
     private final ObservableList<UserSimilarity>  obsSimilarUsers = FXCollections.observableArrayList();
     private final ObservableList<TopMovie> obsTopMoviesSimilarUsers = FXCollections.observableArrayList();
     private final ObservableList<Movie> topMoviesSimilarUsersMovies = FXCollections.observableArrayList();
+    private ObservableList<Movie> favouriteMovies = FXCollections.observableArrayList();
 
     private final SimpleObjectProperty<User> obsLoggedInUser = new SimpleObjectProperty<>();
 
     private Map<Integer, Movie> allMovies = new HashMap<>();
     private final HashMap<Integer, HBox> loadedMovies = new HashMap<>();
-    private final MovieViewFactory movieViewFactory = new MovieViewFactory();
 
     public static AppModel getInstance(){
         if(instance == null)
@@ -40,37 +39,30 @@ public class AppModel {
     }
 
     public void loadData(List<Movie> topAverageRatedMovies,List<Movie> topAverageRatedMoviesUserDidNotSee, List<UserSimilarity> topSimilarUsers, List<TopMovie> topMoviesFromSimilarPeople){
+        long timerStartMillis = System.currentTimeMillis();
         obsTopMovieSeen.clear();
         obsTopMovieSeen.addAll(topAverageRatedMovies);
+        loadMovies(20, obsTopMovieSeen);
 
         obsTopMovieNotSeen.clear();
         obsTopMovieNotSeen.addAll(topAverageRatedMoviesUserDidNotSee);
+        loadMovies(20, obsTopMovieNotSeen);
 
         obsSimilarUsers.clear();
         obsSimilarUsers.addAll(topSimilarUsers);
 
         obsTopMoviesSimilarUsers.clear();
         obsTopMoviesSimilarUsers.addAll(topMoviesFromSimilarPeople);
-
         for (TopMovie topMovie: obsTopMoviesSimilarUsers){
             topMoviesSimilarUsersMovies.add(topMovie.getMovie());
         }
+        loadMovies(20, topMoviesSimilarUsersMovies);
+
+        favouriteMovies.setAll(obsLoggedInUser.get().getFavouriteMovies());
+        loadMovies(20,favouriteMovies);
 
         setAllMovies();
-
-        long timerStartMillis = System.currentTimeMillis();
-        loadMovies(20, obsTopMovieNotSeen);
         System.out.println("Loading took : " + (System.currentTimeMillis() - timerStartMillis) + "ms");
-
-        timerStartMillis = System.currentTimeMillis();
-        loadMovies(20, topMoviesSimilarUsersMovies);
-        System.out.println("Loading took : " + (System.currentTimeMillis() - timerStartMillis) + "ms");
-    }
-
-    public List<Movie> getTopAverageRatedMoviesUserDidNotSee(User u) {
-        List<Movie> movies = logic.getTopAverageRatedMoviesUserDidNotSee(user);
-        loadMovies(20, movies);
-        return movies;
     }
 
     public ObservableList<User> getObsUsers() {
@@ -134,7 +126,6 @@ public class AppModel {
 
     public ObservableList<Movie> getTopMoviesSimilarUsersMovies() {
         loadMovies(20, topMoviesSimilarUsersMovies);
-        System.out.println(topMoviesSimilarUsersMovies.get(0).getMovieView());
         return topMoviesSimilarUsersMovies;
     }
 
@@ -146,25 +137,24 @@ public class AppModel {
         logic.removeMovieFromFavourites(movie, user);
     }
 
-    public HashMap<User, Movie> getFavouriteMovies() {
-        return logic.getFavouriteMovies();
+    public List<Movie> getFavouriteMovies() {
+        return favouriteMovies;
     }
 
     public void setAllMovies(){
         allMovies = logic.getAllMovies();
     }
 
-    private void loadMovies(int amount, List<Movie> list){
+    public void loadMovies(int amount, List<Movie> list){
         List<Movie> removed = new ArrayList<>();
         if (list.size() > 0) {
             int size = Math.min(list.size(), amount);
-
             int i = 0;
             while (i < size) {
                 if (list.get(0).getMovieView() == null){
                     list.get(0).setMovieView(new MovieView(list.get(0)));
-                    i++;
                 }
+                i++;
                 removed.add(list.remove(0));
             }
             for (i = removed.size()-1; i>=0; i--) {

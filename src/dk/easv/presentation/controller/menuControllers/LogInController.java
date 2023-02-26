@@ -39,11 +39,11 @@ public class LogInController {
             model.loadUsers();
             User user = loginUserFromUsername(userId.getText());
             System.out.println(userId.getText());
+
             var a = model.getLogic().getTopAverageRatedMovies(user);
             var b = model.getLogic().getTopAverageRatedMoviesUserDidNotSee(user);
             var c = model.getLogic().getTopSimilarUsers(user);
             var d = model.getLogic().getTopMoviesFromSimilarPeople(user);
-
 
             // update UI with result
             Platform.runLater(() -> {
@@ -59,7 +59,6 @@ public class LogInController {
                 stage.close();
             });
         });
-
         thread.start();
     }
 

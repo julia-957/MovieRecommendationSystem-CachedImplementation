@@ -100,7 +100,6 @@ public class IntroScreenController extends BudgetMother implements Initializable
         favouriteBtn.setText("");
         favouriteBtn.setGraphic(favouriteHeart);
 
-        //TODO featured movie view and movie view do not hold the same movie view object
         for (MovieView m: shownMovies) {
             if (m.getMovie() == featuredMovies.get(moviePosition)){
                 featuredMovies.get(moviePosition).getMovieView().updateHeart();
@@ -144,6 +143,7 @@ public class IntroScreenController extends BudgetMother implements Initializable
         ScrollBar bar = getVerticalScrollbar(scrollPane);
         if (value == bar.getMax()) {
             double targetValue = value * shownMovies.size();
+            model.loadMovies(6, movieBestSimilarMovies);
             addMovies(6);
             bar.setValue(targetValue / shownMovies.size());
         }
@@ -171,9 +171,8 @@ public class IntroScreenController extends BudgetMother implements Initializable
     }
 
     public void setFeaturedMovies(){
-        featuredMovies = model.getTopAverageRatedMoviesUserDidNotSee(model.getObsLoggedInUser());
+        featuredMovies = model.getObsTopMovieNotSeen();
         setFeaturedMovie(featuredMovies, moviePosition);
-        featuredMovies.get(0).setMovieView(new MovieView(featuredMovies.get(0)));
         setFavouriteHeart();
     }
 

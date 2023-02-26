@@ -52,8 +52,8 @@ public class TitleSearchController extends BudgetMother implements Initializable
         txtSearchBar.textProperty().addListener((observable, oldValue, newValue) -> {
             if (txtSearchBar.getText().isEmpty()){
                 shownMovies.clear();
-                filteredMovies.setAll(model.getTopAverageRatedMoviesUserDidNotSee(model.getObsLoggedInUser()));
-                //addMovies(20);
+                filteredMovies.setAll(model.getObsTopMovieNotSeen());
+                addMovies(20);
             }
         });
 
@@ -62,7 +62,8 @@ public class TitleSearchController extends BudgetMother implements Initializable
                 shownMovies.clear();
                 scrollPane.setVvalue(0);
                 filteredMovies.setAll(model.searchMovies(txtSearchBar.getText().trim().toLowerCase()));
-                //addMovies(15);
+                model.loadMovies(15, model.searchMovies(txtSearchBar.getText().trim().toLowerCase()));
+                addMovies(15);
             }
         });
     }
@@ -72,26 +73,26 @@ public class TitleSearchController extends BudgetMother implements Initializable
         ScrollBar bar = getVerticalScrollbar(scrollPane);
         if (value == bar.getMax()) {
             double targetValue = value * shownMovies.size();
-            //addMovies(6);
+            model.loadMovies(6, filteredMovies);
+            addMovies(6);
             bar.setValue(targetValue / shownMovies.size());
         }
     }
 
-    /*
+
     public void addMovies(int amount){
         amount = Math.min(filteredMovies.size(), amount);
-        List[] results = super.addMovies(amount, filteredMovies);
-        shownMovies.addAll(results[0]);
-        filteredMovies = FXCollections.observableArrayList(results[1]);
+        for (int i = 0; i < amount; i++) {
+            shownMovies.add(filteredMovies.get(0).getMovieView());
+            filteredMovies.remove(0);
+        }
         flowPane.getChildren().setAll(shownMovies);
     }
-
-     */
 
     public void clearShownMovies(){
         shownMovies.clear();
         flowPane.getChildren().clear();
         scrollPane.setVvalue(0);
-        filteredMovies.setAll(model.getTopAverageRatedMoviesUserDidNotSee(model.getObsLoggedInUser()));
+        filteredMovies.setAll(model.getObsTopMovieNotSeen());
     }
 }

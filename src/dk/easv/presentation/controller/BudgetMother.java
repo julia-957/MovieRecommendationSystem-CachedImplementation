@@ -30,26 +30,6 @@ public class BudgetMother {
         return result;
     }
 
-    protected List[] addMovies(int amount, List<Movie> moviesToLoad){
-        HashMap<Integer, HBox> loadedMovies = model.getLoadedMovies();
-        List<HBox> shownMovies = new ArrayList<>();
-        if (moviesToLoad.size() > 0){
-            HBox movieView;
-            int i = 0;
-            while (i < amount){
-                if (loadedMovies.get(moviesToLoad.get(0).getId()) == null) {
-                    movieView = movieViewFactory.constructMovieView(moviesToLoad.get(0));
-                } else {
-                    movieView = loadedMovies.get(moviesToLoad.get(0).getId());
-                }
-                shownMovies.add(movieView);
-                moviesToLoad.remove(0);
-                i++;
-            }
-        }
-        return new List[] {shownMovies, moviesToLoad};
-    }
-
     /*
     protected void scrollBarAction(List<HBox> shownMovies, ScrollPane scrollPane, Number newValue){
         double value = newValue.doubleValue();

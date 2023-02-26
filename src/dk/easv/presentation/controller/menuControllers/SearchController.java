@@ -67,7 +67,7 @@ public class SearchController implements Initializable {
 
         searchBorderPane.setCenter(genresScene);
         genresController.clearShownMovies();
-        //genresController.addMovies(20);
+        genresController.addMovies(20);
         genresController.createGenreButtons(model.getAllGenres());
     }
 
@@ -79,7 +79,7 @@ public class SearchController implements Initializable {
 
         searchBorderPane.setCenter(searchTitlesScene);
         titleSearchController.clearShownMovies();
-        //titleSearchController.addMovies(20);
+        titleSearchController.addMovies(20);
     }
 
     @FXML
@@ -89,7 +89,7 @@ public class SearchController implements Initializable {
         btnGenres.setId("");
 
         forYouController.clearShownMovies();
-        //forYouController.addMovies(20);
+        forYouController.addMovies(20);
         searchBorderPane.setCenter(forYouScene);
     }
 
