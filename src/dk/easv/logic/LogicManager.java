@@ -145,5 +145,9 @@ public class LogicManager {
     public Map<Integer, Movie> getAllMovies(){
         return dataMgr.getAllMovies();
     }
+
+    //public void updateRating(User user){
+      //  dataMgr.updateRating(user);
+    //}
 }
 

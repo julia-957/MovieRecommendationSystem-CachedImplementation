@@ -15,6 +15,8 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 import java.util.Objects;
 
@@ -25,6 +27,9 @@ public class MovieView extends HBox {
     private final ImageView likeButtonGraphic;
     private final Image heartFilled = new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/electricLilac/heart.png")));
     private final Image heartOutline = new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/electricLilac/heart-outline.png")));
+    private final Image star = new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/electricLilac/star-bold.png")));
+    private final Image starFilled = new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/electricLilac/star-fill.png")));
+    private final List<ImageView> starButtonImgViews = new ArrayList<>();
 
     public MovieView(Movie movie) {
         super(10);
@@ -66,67 +71,111 @@ public class MovieView extends HBox {
         Label userRating = new Label(String.format(Locale.US, "%.1f", movie.getAverageRating()));
 
         //Create star buttons
-        Image star = new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/electricLilac/star-bold.png")));
-
         ImageView imgViewOneStar = new ImageView(star);
         imgViewOneStar.setFitWidth(20);
         imgViewOneStar.setFitHeight(20);
         Button btnOneStar = new Button("", imgViewOneStar);
+        starButtonImgViews.add(imgViewOneStar);
 
         ImageView imgViewTwoStar = new ImageView(star);
         imgViewTwoStar.setFitWidth(20);
         imgViewTwoStar.setFitHeight(20);
         Button btnTwoStar = new Button("", imgViewTwoStar);
+        starButtonImgViews.add(imgViewTwoStar);
 
         ImageView imgViewThreeStar = new ImageView(star);
         imgViewThreeStar.setFitWidth(20);
         imgViewThreeStar.setFitHeight(20);
         Button btnThreeStar = new Button("", imgViewThreeStar);
+        starButtonImgViews.add(imgViewThreeStar);
 
         ImageView imgViewFourStar = new ImageView(star);
         imgViewFourStar.setFitWidth(20);
         imgViewFourStar.setFitHeight(20);
         Button btnFourStar = new Button("", imgViewFourStar);
+        starButtonImgViews.add(imgViewFourStar);
 
         ImageView imgViewFiveStar = new ImageView(star);
         imgViewFiveStar.setFitWidth(20);
         imgViewFiveStar.setFitHeight(20);
         Button btnFiveStar = new Button("", imgViewFiveStar);
+        starButtonImgViews.add(imgViewFiveStar);
 
         btnOneStar.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-
+                if (imgViewOneStar.getImage() == star){
+                    imgViewOneStar.setImage(starFilled);
+                    imgViewTwoStar.setImage(star);
+                    imgViewThreeStar.setImage(star);
+                    imgViewFourStar.setImage(star);
+                    imgViewFiveStar.setImage(star);
+                }
+                else
+                    resetStars();
             }
         });
 
         btnTwoStar.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-
+                if (imgViewTwoStar.getImage() == star) {
+                    imgViewOneStar.setImage(starFilled);
+                    imgViewTwoStar.setImage(starFilled);
+                    imgViewThreeStar.setImage(star);
+                    imgViewFourStar.setImage(star);
+                    imgViewFiveStar.setImage(star);
+                }
+                else
+                    resetStars();
             }
         });
 
         btnThreeStar.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-
+                if (imgViewThreeStar.getImage() == star) {
+                    imgViewOneStar.setImage(starFilled);
+                    imgViewTwoStar.setImage(starFilled);
+                    imgViewThreeStar.setImage(starFilled);
+                    imgViewFourStar.setImage(star);
+                    imgViewFiveStar.setImage(star);
+                }
+                else
+                    resetStars();
             }
         });
 
         btnFourStar.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-
+                if (imgViewFourStar.getImage() == star) {
+                    imgViewOneStar.setImage(starFilled);
+                    imgViewTwoStar.setImage(starFilled);
+                    imgViewThreeStar.setImage(starFilled);
+                    imgViewFourStar.setImage(starFilled);
+                    imgViewFiveStar.setImage(star);
+                }
+                else
+                    resetStars();
             }
         });
 
         btnFiveStar.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-
+                if (imgViewFiveStar.getImage() == star) {
+                    imgViewOneStar.setImage(starFilled);
+                    imgViewTwoStar.setImage(starFilled);
+                    imgViewThreeStar.setImage(starFilled);
+                    imgViewFourStar.setImage(starFilled);
+                    imgViewFiveStar.setImage(starFilled);
+                }
+                else
+                    resetStars();
             }
         });
+
         btnOneStar.setMaxWidth(20);
         btnOneStar.setMaxHeight(20);
         btnTwoStar.setMaxWidth(20);
@@ -191,6 +240,12 @@ public class MovieView extends HBox {
         }
         else
             likeButtonGraphic.setImage(heartOutline);
+    }
+
+    private void resetStars() {
+        for (ImageView imageView: starButtonImgViews){
+            imageView.setImage(star);
+        }
     }
 
     public Movie getMovie() {

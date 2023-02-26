@@ -156,4 +156,8 @@ public class DataAccessManager {
             throw new RuntimeException(e);
         }
     }
+
+    public void updateRating(User user, Movie movie) {
+
+    }
 }
