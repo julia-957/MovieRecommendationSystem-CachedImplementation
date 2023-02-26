@@ -65,6 +65,81 @@ public class MovieView extends HBox {
         userIcon.setFitHeight(20);
         Label userRating = new Label(String.format(Locale.US, "%.1f", movie.getAverageRating()));
 
+        //Create star buttons
+        Image star = new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/electricLilac/star-bold.png")));
+
+        ImageView imgViewOneStar = new ImageView(star);
+        imgViewOneStar.setFitWidth(20);
+        imgViewOneStar.setFitHeight(20);
+        Button btnOneStar = new Button("", imgViewOneStar);
+
+        ImageView imgViewTwoStar = new ImageView(star);
+        imgViewTwoStar.setFitWidth(20);
+        imgViewTwoStar.setFitHeight(20);
+        Button btnTwoStar = new Button("", imgViewTwoStar);
+
+        ImageView imgViewThreeStar = new ImageView(star);
+        imgViewThreeStar.setFitWidth(20);
+        imgViewThreeStar.setFitHeight(20);
+        Button btnThreeStar = new Button("", imgViewThreeStar);
+
+        ImageView imgViewFourStar = new ImageView(star);
+        imgViewFourStar.setFitWidth(20);
+        imgViewFourStar.setFitHeight(20);
+        Button btnFourStar = new Button("", imgViewFourStar);
+
+        ImageView imgViewFiveStar = new ImageView(star);
+        imgViewFiveStar.setFitWidth(20);
+        imgViewFiveStar.setFitHeight(20);
+        Button btnFiveStar = new Button("", imgViewFiveStar);
+
+        btnOneStar.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+
+            }
+        });
+
+        btnTwoStar.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+
+            }
+        });
+
+        btnThreeStar.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+
+            }
+        });
+
+        btnFourStar.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+
+            }
+        });
+
+        btnFiveStar.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+
+            }
+        });
+        btnOneStar.setMaxWidth(20);
+        btnOneStar.setMaxHeight(20);
+        btnTwoStar.setMaxWidth(20);
+        btnTwoStar.setMaxHeight(20);
+        btnThreeStar.setMaxWidth(20);
+        btnThreeStar.setMaxHeight(20);
+        btnFourStar.setMaxWidth(20);
+        btnFourStar.setMaxHeight(20);
+        btnFiveStar.setMaxWidth(20);
+        btnFiveStar.setMaxHeight(20);
+
+        HBox stars = new HBox(5, btnOneStar, btnTwoStar, btnThreeStar, btnFourStar, btnFiveStar);
+
         //Create a like button
         likeButtonGraphic = new ImageView();
         Button likeButton = new Button("", likeButtonGraphic);
@@ -101,7 +176,7 @@ public class MovieView extends HBox {
 
         //Create a VBox to hold the labels and ratings
         HBox fillerHBox = new HBox();
-        VBox movieInfo = new VBox(10, movieTitle, releaseYear, genres, fillerHBox, ratings);
+        VBox movieInfo = new VBox(10, movieTitle, releaseYear, genres, stars, fillerHBox, ratings);
         movieInfo.setPadding(new Insets(5));
         movieInfo.setVgrow(fillerHBox, Priority.ALWAYS);
 
@@ -117,9 +192,5 @@ public class MovieView extends HBox {
         }
         else
             likeButtonGraphic.setImage(heartOutline);
-    }
-
-    public Movie getMovie() {
-        return movie;
     }
 }

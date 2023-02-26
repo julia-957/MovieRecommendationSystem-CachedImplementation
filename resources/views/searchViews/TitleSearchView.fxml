@@ -8,7 +8,7 @@
 
 <VBox styleClass="backgroundPane" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <TextField fx:id="txtSearchBar" minHeight="30.0" minWidth="200.0" prefWidth="400.0" promptText="Movie title">
+      <TextField fx:id="txtSearchBar" minHeight="40.0" minWidth="200.0" prefWidth="400.0" promptText="Search for movie title, release year">
          <VBox.margin>
             <Insets left="30.0" right="30.0" />
          </VBox.margin>

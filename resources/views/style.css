@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap');
+
 * {
     -fx-deep-deep-indigo: #2D2449;
     -fx-deep-indigo: #2D2449;
@@ -10,6 +12,7 @@
 
 .backgroundPane{
     -fx-background-color: -fx-deep-indigo;
+    -fx-font-family: 'Kanit', sans-serif;
 }
 
 .button{
@@ -153,7 +156,12 @@
     -fx-text-fill: -fx-electric-lilac;
 }
 
-#hboxSearchBar {
+.labelTitle{
+    -fx-text-fill: -fx-electric-lilac;
+    -fx-font-size: 30;
+}
+
+.horizontalMenuHBox {
     -fx-background-color: #332E59;
     -fx-background-radius: 20px;
 }
@@ -161,7 +169,7 @@
 #txtSearchBar {
     -fx-background-color: #332E59;
     -fx-background-radius: 20px;
-    -fx-prompt-text-fill: gray;
+    -fx-prompt-text-fill: #989898;
     -fx-text-fill: -fx-electric-lilac;
 }
 

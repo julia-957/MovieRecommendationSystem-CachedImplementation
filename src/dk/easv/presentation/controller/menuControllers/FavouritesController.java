@@ -58,6 +58,5 @@ public class FavouritesController extends BudgetMother implements Initializable 
         shownMovies.clear();
         scrollPane.setVvalue(0);
         favouriteMovies = FXCollections.observableArrayList(model.getObsLoggedInUser().getFavouriteMovies());
-        System.out.println(favouriteMovies);
     }
 }
