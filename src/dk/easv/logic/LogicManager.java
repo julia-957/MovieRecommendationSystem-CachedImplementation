@@ -20,11 +20,11 @@ public class LogicManager {
     }
 
     //Gets all movies
-    public List<Movie> getAllMovies(){
+    /**public List<Movie> getAllMovies(){
         List<Movie> allMovies = new ArrayList<>();
         allMovies.addAll(dataMgr.getAllMovies().values());
         return allMovies;
-    }
+    }*/
 
     // Gets all rated movies for one user and returns them sorted by avg. best by all users.
     public List<Movie> getTopAverageRatedMovies(User u) {

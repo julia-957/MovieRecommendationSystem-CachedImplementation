@@ -65,6 +65,62 @@ public class MovieViewFactory {
         userIcon.setFitHeight(20);
         Label userRating = new Label(String.format(Locale.US, "%.1f", movie.getAverageRating()));
 
+        //Create star buttons
+        ImageView star = new ImageView();
+        star.setImage(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/electricLilac/star-bold.png"))));
+        Button btnOneStar = new Button("", star);
+        Button btnTwoStar = new Button("", star);
+        Button btnThreeStar = new Button("", star);
+        Button btnFourStar = new Button("", star);
+        Button btnFiveStar = new Button("", star);
+
+        btnOneStar.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+
+            }
+        });
+
+        btnTwoStar.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+
+            }
+        });
+
+        btnThreeStar.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+
+            }
+        });
+
+        btnFourStar.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+
+            }
+        });
+
+        btnFiveStar.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+
+            }
+        });
+        btnOneStar.setMaxWidth(20);
+        btnOneStar.setMaxHeight(20);
+        btnTwoStar.setMaxWidth(20);
+        btnTwoStar.setMaxHeight(20);
+        btnThreeStar.setMaxWidth(20);
+        btnThreeStar.setMaxHeight(20);
+        btnFourStar.setMaxWidth(20);
+        btnFourStar.setMaxHeight(20);
+        btnFiveStar.setMaxWidth(20);
+        btnFiveStar.setMaxHeight(20);
+        star.setFitWidth(20);
+        star.setFitHeight(20);
+
         //Create a like button
         ImageView likeButtonGraphic = new ImageView();
         Button likeButton = new Button("", likeButtonGraphic);

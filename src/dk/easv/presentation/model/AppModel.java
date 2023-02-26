@@ -124,24 +124,9 @@ public class AppModel {
         loadedMovies.put(movieID, mainContainer);
     }
 
-    private void loadMovies(int amount, List<Movie> list){
-        if (list.size() > 0) {
-            int size = Math.min(list.size(), amount);
-
-            int i = 0;
-            while (i < size) {
-                if (loadedMovies.get(list.get(0).getId()) == null)
-                    movieViewFactory.constructMovieView(list.get(0));
-                list.remove(0);
-                i++;
-            }
-        }
-    }
-
     public List<Movie> getAllMovies() {
-        return logic.getAllMovies();
+        return (List<Movie>) logic.getAllMovies();
     }
-
 
         public ObservableList<Movie> getTopMoviesSimilarUsersMovies() {
         loadMovies(20, topMoviesSimilarUsersMovies);

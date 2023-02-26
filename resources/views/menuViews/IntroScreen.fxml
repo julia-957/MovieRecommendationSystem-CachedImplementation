@@ -54,6 +54,11 @@
                               <Font size="14.0" />
                            </font>
                         </Label>
+                        <Label fx:id="carouselYearTxt" layoutX="1.0" layoutY="80.0" prefHeight="20.0" prefWidth="362.0" text="Year: N/A" textFill="#f1edff">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
                         <HBox alignment="CENTER_LEFT" layoutX="1.0" layoutY="130.0" prefHeight="20.0" prefWidth="362.0">
                            <children>
                               <ImageView fx:id="iconIMDBrating" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
@@ -76,19 +81,38 @@
                                     <Font name="System Bold" size="12.0" />
                                  </font>
                               </Label>
-                              <ImageView fx:id="iconRatingCurrentUser" fitHeight="20.0" fitWidth="20.0" layoutX="72.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" />
-                              <Button fx:id="btnOneStar" mnemonicParsing="false" text="*" />
-                              <Button fx:id="btnTwoStar" layoutX="151.0" layoutY="10.0" mnemonicParsing="false" text="*" />
-                              <Button fx:id="btnThreeStar" layoutX="172.0" layoutY="10.0" mnemonicParsing="false" text="*" />
-                              <Button fx:id="btnFourStar" layoutX="194.0" layoutY="10.0" mnemonicParsing="false" text="*" />
-                              <Button fx:id="btnFiveStar" layoutX="216.0" layoutY="10.0" mnemonicParsing="false" text="*" />
+                              <HBox>
+                                 <children>
+                                    <ImageView fx:id="iconRatingCurrentUser" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" />
+                                    <Button fx:id="btnOneStar" mnemonicParsing="false" prefHeight="15.0" prefWidth="15.0">
+                                       <graphic>
+                                          <ImageView fx:id="starOne" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" />
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="btnTwoStar" mnemonicParsing="false" prefHeight="15.0" prefWidth="15.0">
+                                       <graphic>
+                                          <ImageView fx:id="starTwo" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" />
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="btnThreeStar" mnemonicParsing="false" prefHeight="15.0" prefWidth="15.0">
+                                       <graphic>
+                                          <ImageView fx:id="starThree" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" />
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="btnFourStar" mnemonicParsing="false" prefHeight="15.0" prefWidth="15.0">
+                                       <graphic>
+                                          <ImageView fx:id="starFour" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" />
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="btnFiveStar" mnemonicParsing="false" prefHeight="15.0" prefWidth="15.0">
+                                       <graphic>
+                                          <ImageView fx:id="starFive" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" />
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </HBox>
                            </children>
                         </HBox>
-                        <Label fx:id="carouselYearTxt" layoutX="1.0" layoutY="80.0" prefHeight="20.0" prefWidth="362.0" text="Year: N/A" textFill="#f1edff">
-                           <font>
-                              <Font size="14.0" />
-                           </font>
-                        </Label>
                         <Button fx:id="favouriteBtn" layoutX="315.0" layoutY="272.0" mnemonicParsing="false" onAction="#clickFavourite" prefHeight="25.0" prefWidth="50.0">
                            <graphic>
                               <ImageView fx:id="favouriteHeart" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">

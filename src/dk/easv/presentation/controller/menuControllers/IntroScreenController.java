@@ -33,9 +33,9 @@ public class IntroScreenController extends BudgetMother implements Initializable
     @FXML private HBox featuredMovieView;
     @FXML private VBox saveUsJebus;
     @FXML private Rectangle lineDivider;
-    @FXML private ImageView featuredMoviePoster, iconIMDBrating, iconUserRatings, iconRatingCurrentUser, carouselRightView, carouselLeftView, favouriteHeart;
+    @FXML private ImageView featuredMoviePoster, iconIMDBrating, iconUserRatings, iconRatingCurrentUser, carouselRightView, carouselLeftView, favouriteHeart, starOne,starTwo,starThree,starFour,starFive;
     @FXML private Label featuredMovieDescription, featuredMovieTitle, carouselGenreTxt, carouselRatingIMDB, carouselRatingUsers, carouselYearTxt;
-    @FXML private Button favouriteBtn, carouselLeft, carouselRight;
+    @FXML private Button favouriteBtn, carouselLeft, carouselRight, btnOneStar, btnTwoStar, btnThreeStar, btnFourStar, btnFiveStar;
     @FXML private FlowPane flowPane;
     @FXML private ScrollPane scrollPane;
     private int moviePosition = 0;
@@ -73,6 +73,17 @@ public class IntroScreenController extends BudgetMother implements Initializable
         iconRatingCurrentUser.setImage(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/electricLilac/user.png"))));
         iconRatingCurrentUser.setFitWidth(30);
         iconRatingCurrentUser.setFitHeight(20);
+
+        starOne.setImage(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/electricLilac/star-bold.png"))));
+        btnOneStar.setGraphic(starOne);
+        starTwo.setImage(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/electricLilac/star-bold.png"))));
+        btnTwoStar.setGraphic(starTwo);
+        starThree.setImage(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/electricLilac/star-bold.png"))));
+        btnThreeStar.setGraphic(starThree);
+        starFour.setImage(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/electricLilac/star-bold.png"))));
+        btnFourStar.setGraphic(starFour);
+        starFive.setImage(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/electricLilac/star-bold.png"))));
+        btnFiveStar.setGraphic(starFive);
      }
 
      private void setFeaturedMovie(List<Movie> m, int moviePosition) {
