@@ -146,8 +146,16 @@ public class LogicManager {
         return dataMgr.getAllMovies();
     }
 
-    //public void updateRating(User user){
-      //  dataMgr.updateRating(user);
-    //}
+    public void addRating(Rating rating){
+        dataMgr.addRating(rating);
+    }
+
+    public void removeRating(Rating rating){
+        dataMgr.removeRating(rating);
+    }
+
+    public void editRating(Rating rating){
+        dataMgr.editRating(rating);
+    }
 }
 

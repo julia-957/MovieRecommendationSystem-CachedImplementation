@@ -148,4 +148,16 @@ public class AppModel {
             }
         }
     }
+
+    public void addRating(Rating rating){
+        logic.addRating(rating);
+    }
+
+    public void removeRating(Rating rating){
+        logic.removeRating(rating);
+    }
+
+    public void editRating(Rating rating){
+        logic.editRating(rating);
+    }
 }

@@ -157,7 +157,45 @@ public class DataAccessManager {
         }
     }
 
-    public void addRating(User user, Movie movie) {
+    public void addRating(Rating rating) {
+        try {
+            String ratingLine = rating.getMovie().getId() + "," + rating.getUser().getId() + "," + rating.getRating() + "\n";
+            Files.writeString(Path.of("data/ratings.txt"), ratingLine, APPEND);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
+    public void removeRating(Rating rating){
+        File file = new File("data/ratings.txt");
+        List<String> out = null;
+        try {
+            out = Files.lines(file.toPath())
+                    .filter(line -> !line.contains(rating.getMovie().getId() + "," + rating.getUser().getId() + "," + rating.getRating()))
+                    .collect(Collectors.toList());
+            Files.write(file.toPath(), out, StandardOpenOption.WRITE, StandardOpenOption.TRUNCATE_EXISTING);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void editRating(Rating rating) {
+        try {
+            List<String> ratingLines = Files.readAllLines(Path.of("data/ratings.txt"));
+            String output = "";
+            for (String ratingLine : ratingLines) {
+                String[] split = ratingLine.split(",");
+                if (Objects.equals(split[0], String.valueOf(rating.getMovie().getId()))
+                        && Objects.equals(split[1], String.valueOf(rating.getUser().getId()))) {
+                    ratingLine = String.valueOf(rating.getMovie().getId())
+                            + rating.getUser().getId() + rating.getRating();
+                }
+                output += "\n" + ratingLine;
+            }
+            Files.writeString(Path.of("data/ratings.txt"), output);
+        }
+        catch (IOException e){
+            e.printStackTrace();
+        }
     }
 }

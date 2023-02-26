@@ -174,9 +174,13 @@ public class MovieView extends HBox {
                     imgViewThreeStar.setImage(star);
                     imgViewFourStar.setImage(star);
                     imgViewFiveStar.setImage(star);
+                    model.addRating(new Rating(model.getObsLoggedInUser(), movie, -5));
                 }
-                else
+                else {
                     resetStars();
+                    model.removeRating(new Rating(model.getObsLoggedInUser(), movie, -5));
+                }
+
             }
         });
 
@@ -205,8 +209,10 @@ public class MovieView extends HBox {
                     imgViewFourStar.setImage(star);
                     imgViewFiveStar.setImage(star);
                 }
-                else
+                else{
                     resetStars();
+                }
+
             }
         });
 
