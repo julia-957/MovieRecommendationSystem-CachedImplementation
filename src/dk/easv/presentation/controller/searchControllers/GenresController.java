@@ -19,7 +19,6 @@ import javafx.scene.layout.VBox;
 
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -32,7 +31,6 @@ public class GenresController extends BudgetMother implements Initializable {
     private ObservableList<Movie> filteredMovies = FXCollections.observableArrayList();
     private final ObservableList<HBox> shownMovies = FXCollections.observableArrayList();
     private List<Button> buttons = new ArrayList<>();
-
     private List<String> genres;
 
     @Override
@@ -75,7 +73,7 @@ public class GenresController extends BudgetMother implements Initializable {
 
     private void setGenreMovieList(String genre){
         List<Movie> temp = new ArrayList<>();
-        filteredMovies.setAll(model.getAllMovies());
+        filteredMovies.setAll(model.getAllMovies().values());
         shownMovies.clear();
         flowPane.getChildren().clear();
         for (Movie m: filteredMovies) {
@@ -92,25 +90,22 @@ public class GenresController extends BudgetMother implements Initializable {
         ScrollBar bar = getVerticalScrollbar(scrollPane);
         if (value == bar.getMax()) {
             double targetValue = value * shownMovies.size();
-            model.loadMovies(6, filteredMovies);
             addMovies(6);
             bar.setValue(targetValue / shownMovies.size());
         }
+    }
+
+    public void addMovies(int amount){
+        List[] results = super.addMovies(amount, filteredMovies);
+        shownMovies.setAll(results[0]);
+        filteredMovies.setAll(results[1]);
+        flowPane.getChildren().setAll(shownMovies);
     }
 
     public void clearShownMovies() {
         shownMovies.clear();
         flowPane.getChildren().clear();
         scrollPane.setVvalue(0);
-        filteredMovies.setAll(model.getAllMovies());
-    }
-
-    public void addMovies(int amount){
-        amount = Math.min(filteredMovies.size(), amount);
-        for (int i = 0; i < amount; i++) {
-            shownMovies.add(filteredMovies.get(0).getMovieView());
-            filteredMovies.remove(0);
-        }
-        flowPane.getChildren().setAll(shownMovies);
+        filteredMovies.setAll(model.getAllMovies().values());
     }
 }

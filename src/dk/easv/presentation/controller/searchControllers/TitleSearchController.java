@@ -24,7 +24,7 @@ public class TitleSearchController extends BudgetMother implements Initializable
     @FXML private FlowPane flowPane;
     @FXML private ScrollPane scrollPane;
     private final AppModel model = AppModel.getInstance();
-    private ObservableList<Movie> filteredMovies = FXCollections.observableArrayList();
+    private final ObservableList<Movie> filteredMovies = FXCollections.observableArrayList();
     private final ObservableList<HBox> shownMovies = FXCollections.observableArrayList();
 
     @Override
@@ -34,15 +34,6 @@ public class TitleSearchController extends BudgetMother implements Initializable
         flowPane.minHeightProperty().bind(scrollPane.heightProperty());
 
         setUpListeners();
-
-        //TODO figure this out
-        /*
-        Platform.runLater(() -> {
-            HBox hbox = (HBox) flowPane.getChildren().get(0);
-            txtSearchBar.setMaxWidth(hbox.getPrefWidth());
-            txtSearchBar.relocate(hbox.getLayoutX(), txtSearchBar.getLayoutY());
-        });
-         */
     }
 
     private void setUpListeners(){
@@ -62,7 +53,6 @@ public class TitleSearchController extends BudgetMother implements Initializable
                 shownMovies.clear();
                 scrollPane.setVvalue(0);
                 filteredMovies.setAll(model.searchMovies(txtSearchBar.getText().trim().toLowerCase()));
-                model.loadMovies(15, model.searchMovies(txtSearchBar.getText().trim().toLowerCase()));
                 addMovies(15);
             }
         });
@@ -73,19 +63,15 @@ public class TitleSearchController extends BudgetMother implements Initializable
         ScrollBar bar = getVerticalScrollbar(scrollPane);
         if (value == bar.getMax()) {
             double targetValue = value * shownMovies.size();
-            model.loadMovies(6, filteredMovies);
             addMovies(6);
             bar.setValue(targetValue / shownMovies.size());
         }
     }
 
-
     public void addMovies(int amount){
-        amount = Math.min(filteredMovies.size(), amount);
-        for (int i = 0; i < amount; i++) {
-            shownMovies.add(filteredMovies.get(0).getMovieView());
-            filteredMovies.remove(0);
-        }
+        List[] results = super.addMovies(amount, filteredMovies);
+        shownMovies.setAll(results[0]);
+        filteredMovies.setAll(results[1]);
         flowPane.getChildren().setAll(shownMovies);
     }
 

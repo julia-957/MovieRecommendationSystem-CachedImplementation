@@ -14,6 +14,7 @@ import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.HBox;
 
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class ForYouController extends BudgetMother implements Initializable {
@@ -32,11 +33,9 @@ public class ForYouController extends BudgetMother implements Initializable {
     }
 
     public void addMovies(int amount){
-        amount = Math.min(bestSimilarMovies.size(), amount);
-        for (int i = 0; i < amount; i++) {
-            shownMovies.add(bestSimilarMovies.get(0).getMovieView());
-            bestSimilarMovies.remove(0);
-        }
+        List[] results = super.addMovies(amount, bestSimilarMovies);
+        shownMovies.setAll(results[0]);
+        bestSimilarMovies.setAll(results[1]);
         flowPane.getChildren().setAll(shownMovies);
     }
 
@@ -46,7 +45,6 @@ public class ForYouController extends BudgetMother implements Initializable {
         ScrollBar bar = getVerticalScrollbar(scrollPane);
         if (value == bar.getMax()) {
             double targetValue = value * shownMovies.size();
-            model.loadMovies(6, bestSimilarMovies);
             addMovies(6);
             bar.setValue(targetValue / shownMovies.size());
         }

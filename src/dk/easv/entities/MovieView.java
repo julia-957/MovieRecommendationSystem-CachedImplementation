@@ -193,4 +193,8 @@ public class MovieView extends HBox {
         else
             likeButtonGraphic.setImage(heartOutline);
     }
+
+    public Movie getMovie() {
+        return movie;
+    }
 }

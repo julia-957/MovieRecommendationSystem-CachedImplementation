@@ -30,15 +30,14 @@ public class BudgetMother {
         return result;
     }
 
-    /*
-    protected void scrollBarAction(List<HBox> shownMovies, ScrollPane scrollPane, Number newValue){
-        double value = newValue.doubleValue();
-        ScrollBar bar = getVerticalScrollbar(scrollPane);
-        if (value == bar.getMax()) {
-            double targetValue = value * shownMovies.size();
-            addMovies(6);
-            bar.setValue(targetValue / shownMovies.size());
+    protected List[] addMovies(int amount, List<Movie> moviesToLoad){
+        List<HBox> shownMovies = new ArrayList<>();
+        amount = Math.min(moviesToLoad.size(), amount);
+        model.loadMovies(amount, moviesToLoad);
+        for (int i = 0; i < amount; i++) {
+            shownMovies.add(moviesToLoad.get(0).getMovieView());
+            moviesToLoad.remove(0);
         }
+        return new List[] {shownMovies, moviesToLoad};
     }
-     */
 }

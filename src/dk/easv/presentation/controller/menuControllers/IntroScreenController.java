@@ -159,18 +159,15 @@ public class IntroScreenController extends BudgetMother implements Initializable
         ScrollBar bar = getVerticalScrollbar(scrollPane);
         if (value == bar.getMax()) {
             double targetValue = value * shownMovies.size();
-            model.loadMovies(6, movieBestSimilarMovies);
             addMovies(6);
             bar.setValue(targetValue / shownMovies.size());
         }
     }
 
     public void addMovies(int amount){
-        amount = Math.min(movieBestSimilarMovies.size(), amount);
-        for (int i = 0; i < amount; i++) {
-            shownMovies.add(movieBestSimilarMovies.get(0).getMovieView());
-            movieBestSimilarMovies.remove(0);
-        }
+        List[] results = super.addMovies(amount, movieBestSimilarMovies);
+        shownMovies.setAll(results[0]);
+        movieBestSimilarMovies.setAll(results[1]);
         flowPane.getChildren().setAll(shownMovies);
     }
 

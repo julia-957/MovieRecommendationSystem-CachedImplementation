@@ -7,6 +7,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.layout.HBox;
 
+import java.security.Key;
 import java.util.*;
 
 public class AppModel {
@@ -24,7 +25,7 @@ public class AppModel {
 
     private final SimpleObjectProperty<User> obsLoggedInUser = new SimpleObjectProperty<>();
 
-    private Map<Integer, Movie> allMovies = new HashMap<>();
+    private Map<Integer, Movie> allMoviesHashMap = new HashMap<>();
     private final HashMap<Integer, HBox> loadedMovies = new HashMap<>();
 
     public static AppModel getInstance(){
@@ -124,8 +125,8 @@ public class AppModel {
         loadedMovies.put(movieID, mainContainer);
     }
 
-    public List<Movie> getAllMovies() {
-        return (List<Movie>) logic.getAllMovies();
+    public Map<Integer, Movie> getAllMovies() {
+        return logic.getAllMovies();
     }
 
         public ObservableList<Movie> getTopMoviesSimilarUsersMovies() {
@@ -146,7 +147,7 @@ public class AppModel {
     }
 
     public void setAllMovies(){
-        allMovies = logic.getAllMovies();
+        allMoviesHashMap = logic.getAllMovies();
     }
 
     public void loadMovies(int amount, List<Movie> list){
