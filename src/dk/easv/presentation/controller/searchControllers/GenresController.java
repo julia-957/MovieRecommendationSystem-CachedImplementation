@@ -96,9 +96,7 @@ public class GenresController extends BudgetMother implements Initializable {
     }
 
     public void addMovies(int amount){
-        List[] results = super.addMovies(amount, filteredMovies);
-        shownMovies.setAll(results[0]);
-        filteredMovies.setAll(results[1]);
+        shownMovies.addAll(super.addMovies(amount, filteredMovies));
         flowPane.getChildren().setAll(shownMovies);
     }
 

@@ -3,7 +3,6 @@ package dk.easv.presentation.controller.menuControllers;
 import dk.easv.Main;
 import dk.easv.entities.Movie;
 import dk.easv.entities.MovieView;
-import dk.easv.entities.Rating;
 import dk.easv.entities.User;
 import dk.easv.presentation.controller.BudgetMother;
 import dk.easv.presentation.controller.util.RoundImageCorners;
@@ -165,9 +164,7 @@ public class IntroScreenController extends BudgetMother implements Initializable
     }
 
     public void addMovies(int amount){
-        List[] results = super.addMovies(amount, movieBestSimilarMovies);
-        shownMovies.setAll(results[0]);
-        movieBestSimilarMovies.setAll(results[1]);
+        shownMovies.addAll(super.addMovies(amount, movieBestSimilarMovies));
         flowPane.getChildren().setAll(shownMovies);
     }
 
@@ -187,10 +184,6 @@ public class IntroScreenController extends BudgetMother implements Initializable
         featuredMovies = model.getObsTopMovieNotSeen();
         setFeaturedMovie(featuredMovies, moviePosition);
         setFavouriteHeart();
-    }
-
-    private boolean compareMovieViews(MovieView movieView1, MovieView movieView2){
-        return movieView1.getMovie().equals(movieView2.getMovie());
     }
 }
 

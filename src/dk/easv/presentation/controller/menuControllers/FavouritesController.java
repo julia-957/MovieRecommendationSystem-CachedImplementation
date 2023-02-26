@@ -14,7 +14,6 @@ import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.HBox;
 
 import java.net.URL;
-import java.util.List;
 import java.util.ResourceBundle;
 
 public class FavouritesController extends BudgetMother implements Initializable {
@@ -45,9 +44,7 @@ public class FavouritesController extends BudgetMother implements Initializable 
     }
 
     public void addMovies(int amount){
-        List[] results = super.addMovies(amount, favouriteMovies);
-        shownMovies.setAll(results[0]);
-        favouriteMovies.setAll(results[1]);
+        shownMovies.addAll(super.addMovies(amount, favouriteMovies));
         flowPane.getChildren().setAll(shownMovies);
     }
 
