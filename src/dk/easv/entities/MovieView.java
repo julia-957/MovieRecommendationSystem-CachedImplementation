@@ -166,17 +166,17 @@ public class MovieView extends HBox {
         starButtonImgViews.add(imgViewFiveStar);
 
         for (Button btn: starButtons.keySet()) {
-            btn.setMaxWidth(20);
-            btn.setMaxHeight(20);
+            btn.setMaxWidth(15);
+            btn.setMaxHeight(15);
         }
 
         for (ImageView imageView: starButtonImgViews) {
-            imageView.setFitWidth(20);
-            imageView.setFitHeight(20);
+            imageView.setFitWidth(15);
+            imageView.setFitHeight(15);
         }
         updateStars(rating);
 
-        //TODO threading? making it work again
+        //TODO threading?
         btnOneStar.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
