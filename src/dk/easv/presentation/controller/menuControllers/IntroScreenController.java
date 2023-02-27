@@ -118,9 +118,6 @@ public class IntroScreenController extends BudgetMother implements Initializable
         for (MovieView m: shownMovies) {
             if (m.getMovie() == featuredMovies.get(moviePosition)){
                 featuredMovies.get(moviePosition).getMovieView().updateHeart();
-                int index = flowPane.getChildren().indexOf(featuredMovies.get(moviePosition).getMovieView());
-                flowPane.getChildren().remove(index);
-                flowPane.getChildren().add(index, featuredMovies.get(moviePosition).getMovieView());
                 return;
             }
         }
