@@ -41,8 +41,6 @@ public class MovieView extends HBox {
         var select = user.getRatings().stream().filter(r -> r.getMovie().getId() == movie.getId()).findFirst();
         this.rating = select.orElse(null);
 
-
-
         this.getStyleClass().setAll("movieDisplayHBox", "rounded", "shadow");
         this.setPrefWidth(400);
         this.setPrefHeight(200);
@@ -137,6 +135,7 @@ public class MovieView extends HBox {
     private void resetStars() {
         for (ImageView imageView: starButtonImgViews){
             imageView.setImage(star);
+            imageView.getStyleClass().setAll("empty");
         }
     }
 
@@ -175,24 +174,27 @@ public class MovieView extends HBox {
             imageView.setFitWidth(20);
             imageView.setFitHeight(20);
         }
-
         updateStars(rating);
 
         //TODO threading? making it work again
         btnOneStar.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                if (imgViewOneStar.getImage() == star){
-                    if (rating != null)
-                        model.removeRating(rating);
+                var select = starButtonImgViews.stream().filter(iv -> iv.getStyleClass().get(0) == "filled").toArray();
+                int filledCount = select.length;
+                if (filledCount == 0) {
                     rating = new Rating(user, movie, -5);
                     model.addRating(rating);
                     updateStars(rating);
-                }
-                else {
+                } else if (filledCount == 1) {
                     resetStars();
                     model.removeRating(new Rating(user, movie, -5));
                     rating = null;
+                } else {
+                    model.removeRating(rating);
+                    rating = new Rating(user, movie, -5);
+                    model.addRating(rating);
+                    updateStars(rating);
                 }
             }
         });
@@ -200,17 +202,21 @@ public class MovieView extends HBox {
         btnTwoStar.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                if (imgViewTwoStar.getImage() == star) {
-                    if (rating != null)
-                        model.removeRating(rating);
+                var select = starButtonImgViews.stream().filter(iv -> iv.getStyleClass().get(0) == "filled").toArray();
+                int filledCount = select.length;
+                if (filledCount == 0) {
                     rating = new Rating(user, movie, -3);
                     model.addRating(rating);
                     updateStars(rating);
-                }
-                else{
-                    model.removeRating(new Rating(user, movie, -3));
+                } else if (filledCount == 2) {
                     resetStars();
+                    model.removeRating(new Rating(user, movie, -3));
                     rating = null;
+                } else {
+                    model.removeRating(rating);
+                    rating = new Rating(user, movie, -3);
+                    model.addRating(rating);
+                    updateStars(rating);
                 }
             }
         });
@@ -218,17 +224,21 @@ public class MovieView extends HBox {
         btnThreeStar.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                if (imgViewThreeStar.getImage() == star) {
-                    if (rating != null)
-                        model.removeRating(rating);
+                var select = starButtonImgViews.stream().filter(iv -> iv.getStyleClass().get(0) == "filled").toArray();
+                int filledCount = select.length;
+                if (filledCount == 0) {
                     rating = new Rating(user, movie, 1);
                     model.addRating(rating);
                     updateStars(rating);
-                }
-                else{
-                    model.removeRating(new Rating(user, movie, 1));
+                } else if (filledCount == 3) {
                     resetStars();
+                    model.removeRating(new Rating(user, movie, 1));
                     rating = null;
+                } else {
+                    model.removeRating(rating);
+                    rating = new Rating(user, movie, 1);
+                    model.addRating(rating);
+                    updateStars(rating);
                 }
             }
         });
@@ -236,17 +246,21 @@ public class MovieView extends HBox {
         btnFourStar.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                if (imgViewFourStar.getImage() == star) {
-                    if (rating != null)
-                        model.removeRating(rating);
+                var select = starButtonImgViews.stream().filter(iv -> iv.getStyleClass().get(0) == "filled").toArray();
+                int filledCount = select.length;
+                if (filledCount == 0) {
                     rating = new Rating(user, movie, 3);
                     model.addRating(rating);
                     updateStars(rating);
-                }
-                else{
-                    model.removeRating(new Rating(user, movie, 3));
+                } else if (filledCount == 4) {
                     resetStars();
+                    model.removeRating(new Rating(user, movie, 3));
                     rating = null;
+                } else {
+                    model.removeRating(rating);
+                    rating = new Rating(user, movie, 3);
+                    model.addRating(rating);
+                    updateStars(rating);
                 }
             }
         });
@@ -254,17 +268,21 @@ public class MovieView extends HBox {
         btnFiveStar.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                if (imgViewFiveStar.getImage() == star) {
-                    if (rating != null)
-                        model.removeRating(rating);
+                var select = starButtonImgViews.stream().filter(iv -> iv.getStyleClass().get(0) == "filled").toArray();
+                int filledCount = select.length;
+                if (filledCount == 0) {
                     rating = new Rating(user, movie, 5);
                     model.addRating(rating);
                     updateStars(rating);
-                }
-                else{
-                    model.removeRating(new Rating(user, movie, 5));
+                } else if (filledCount == 5) {
                     resetStars();
+                    model.removeRating(new Rating(user, movie, 5));
                     rating = null;
+                } else {
+                    model.removeRating(rating);
+                    rating = new Rating(user, movie, 5);
+                    model.addRating(rating);
+                    updateStars(rating);
                 }
             }
         });
@@ -274,43 +292,59 @@ public class MovieView extends HBox {
         if (rating == null){
             for (ImageView iv: starButtonImgViews) {
                 iv.setImage(star);
+                iv.getStyleClass().setAll("empty");
             }
         }
         else {
             switch (rating.getRating()){
                 case -5:
                     starButtonImgViews.get(0).setImage(starFilled);
+                    starButtonImgViews.get(0).getStyleClass().setAll("filled");
                     for (int i = 1; i <= starButtonImgViews.size()-1; i++){
                         starButtonImgViews.get(i).setImage(star);
+                        starButtonImgViews.get(i).getStyleClass().setAll("empty");
                     }
                     break;
                 case -3:
-                    for (int i = 0; i < 2; i++){
-                        starButtonImgViews.get(i).setImage(starFilled);
-                    }
-                    for (int i = 2; i <= starButtonImgViews.size()-1; i++){
-                        starButtonImgViews.get(i).setImage(star);
+                    for (int i = 0; i <= starButtonImgViews.size()-1; i++){
+                        if (i < 2){
+                            starButtonImgViews.get(i).setImage(starFilled);
+                            starButtonImgViews.get(i).getStyleClass().setAll("filled");
+                        }
+                        else{
+                            starButtonImgViews.get(i).setImage(star);
+                            starButtonImgViews.get(i).getStyleClass().setAll("empty");
+                        }
                     }
                     break;
                 case 1:
-                    for (int i = 0; i < 3; i++){
-                        starButtonImgViews.get(i).setImage(starFilled);
-                    }
-                    for (int i = 3; i <= starButtonImgViews.size()-1; i++){
-                        starButtonImgViews.get(i).setImage(star);
+                    for (int i = 0; i <= starButtonImgViews.size()-1; i++){
+                        if (i < 3){
+                            starButtonImgViews.get(i).setImage(starFilled);
+                            starButtonImgViews.get(i).getStyleClass().setAll("filled");
+                        }
+                        else {
+                            starButtonImgViews.get(i).setImage(star);
+                            starButtonImgViews.get(i).getStyleClass().setAll("empty");
+                        }
                     }
                     break;
                 case 3:
-                    for (int i = 0; i < 4; i++){
-                        starButtonImgViews.get(i).setImage(starFilled);
-                    }
-                    for (int i = 4; i <= starButtonImgViews.size()-1; i++){
-                        starButtonImgViews.get(i).setImage(star);
+                    for (int i = 0; i <= starButtonImgViews.size()-1; i++){
+                        if (i < 4){
+                            starButtonImgViews.get(i).setImage(starFilled);
+                            starButtonImgViews.get(i).getStyleClass().setAll("filled");
+                        }
+                        else {
+                            starButtonImgViews.get(i).setImage(star);
+                            starButtonImgViews.get(i).getStyleClass().setAll("empty");
+                        }
                     }
                     break;
                 case 5:
                     for (int i = 0; i <= starButtonImgViews.size()-1; i++){
                         starButtonImgViews.get(i).setImage(starFilled);
+                        starButtonImgViews.get(i).getStyleClass().setAll("filled");
                     }
                     break;
             }
