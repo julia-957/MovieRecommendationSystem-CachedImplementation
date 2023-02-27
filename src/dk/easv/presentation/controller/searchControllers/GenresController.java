@@ -60,11 +60,18 @@ public class GenresController extends BudgetMother implements Initializable {
                 genreButton.setOnAction(new EventHandler<ActionEvent>() {
                     @Override
                     public void handle(ActionEvent event) {
-                        for(Button b: buttons){
-                            b.getStyleClass().setAll("genresButtons", "rounded");
+                        if (genreButton.getStyleClass().get(0).equals("genresButtonsFocused")){
+                            genreButton.getStyleClass().setAll("genresButtons", "rounded");
+                            setGenreMovieList("");
                         }
-                        genreButton.getStyleClass().setAll("genresButtonsFocused", "rounded");
-                        setGenreMovieList(genreButton.getText());
+                        else {
+                            genreButton.getStyleClass().setAll("genresButtonsFocused", "rounded");
+                            setGenreMovieList(genreButton.getText());
+                        }
+                        for(Button b: buttons){
+                            if (b != genreButton)
+                                b.getStyleClass().setAll("genresButtons", "rounded");
+                        }
                     }
                 });
             }
