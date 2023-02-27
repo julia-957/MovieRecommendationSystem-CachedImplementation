@@ -69,28 +69,28 @@ public class MovieView extends HBox {
         Image star = new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/electricLilac/star-bold.png")));
 
         ImageView imgViewOneStar = new ImageView(star);
-        imgViewOneStar.setFitWidth(20);
-        imgViewOneStar.setFitHeight(20);
+        imgViewOneStar.setFitWidth(15);
+        imgViewOneStar.setFitHeight(15);
         Button btnOneStar = new Button("", imgViewOneStar);
 
         ImageView imgViewTwoStar = new ImageView(star);
-        imgViewTwoStar.setFitWidth(20);
-        imgViewTwoStar.setFitHeight(20);
+        imgViewTwoStar.setFitWidth(15);
+        imgViewTwoStar.setFitHeight(15);
         Button btnTwoStar = new Button("", imgViewTwoStar);
 
         ImageView imgViewThreeStar = new ImageView(star);
-        imgViewThreeStar.setFitWidth(20);
-        imgViewThreeStar.setFitHeight(20);
+        imgViewThreeStar.setFitWidth(15);
+        imgViewThreeStar.setFitHeight(15);
         Button btnThreeStar = new Button("", imgViewThreeStar);
 
         ImageView imgViewFourStar = new ImageView(star);
-        imgViewFourStar.setFitWidth(20);
-        imgViewFourStar.setFitHeight(20);
+        imgViewFourStar.setFitWidth(15);
+        imgViewFourStar.setFitHeight(15);
         Button btnFourStar = new Button("", imgViewFourStar);
 
         ImageView imgViewFiveStar = new ImageView(star);
-        imgViewFiveStar.setFitWidth(20);
-        imgViewFiveStar.setFitHeight(20);
+        imgViewFiveStar.setFitWidth(15);
+        imgViewFiveStar.setFitHeight(15);
         Button btnFiveStar = new Button("", imgViewFiveStar);
 
         btnOneStar.setOnAction(new EventHandler<ActionEvent>() {
@@ -127,18 +127,18 @@ public class MovieView extends HBox {
 
             }
         });
-        btnOneStar.setMaxWidth(20);
-        btnOneStar.setMaxHeight(20);
-        btnTwoStar.setMaxWidth(20);
-        btnTwoStar.setMaxHeight(20);
-        btnThreeStar.setMaxWidth(20);
-        btnThreeStar.setMaxHeight(20);
-        btnFourStar.setMaxWidth(20);
-        btnFourStar.setMaxHeight(20);
-        btnFiveStar.setMaxWidth(20);
-        btnFiveStar.setMaxHeight(20);
+        btnOneStar.setMaxWidth(15);
+        btnOneStar.setMaxHeight(15);
+        btnTwoStar.setMaxWidth(15);
+        btnTwoStar.setMaxHeight(15);
+        btnThreeStar.setMaxWidth(15);
+        btnThreeStar.setMaxHeight(15);
+        btnFourStar.setMaxWidth(15);
+        btnFourStar.setMaxHeight(15);
+        btnFiveStar.setMaxWidth(15);
+        btnFiveStar.setMaxHeight(15);
 
-        HBox stars = new HBox(5, btnOneStar, btnTwoStar, btnThreeStar, btnFourStar, btnFiveStar);
+        HBox stars = new HBox(0, btnOneStar, btnTwoStar, btnThreeStar, btnFourStar, btnFiveStar);
 
         //Create a like button
         likeButtonGraphic = new ImageView();

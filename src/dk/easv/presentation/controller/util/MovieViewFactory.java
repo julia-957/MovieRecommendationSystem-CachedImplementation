@@ -19,7 +19,6 @@ import java.util.*;
 
 public class MovieViewFactory {
     private final RoundImageCorners roundImageCorners = new RoundImageCorners();
-
     public HBox constructMovieView(Movie movie){
         AppModel model = AppModel.getInstance();
         long timerStartMillis = System.currentTimeMillis();
@@ -108,18 +107,19 @@ public class MovieViewFactory {
 
             }
         });
-        btnOneStar.setMaxWidth(20);
-        btnOneStar.setMaxHeight(20);
-        btnTwoStar.setMaxWidth(20);
-        btnTwoStar.setMaxHeight(20);
-        btnThreeStar.setMaxWidth(20);
-        btnThreeStar.setMaxHeight(20);
-        btnFourStar.setMaxWidth(20);
-        btnFourStar.setMaxHeight(20);
-        btnFiveStar.setMaxWidth(20);
-        btnFiveStar.setMaxHeight(20);
-        star.setFitWidth(20);
-        star.setFitHeight(20);
+
+        btnOneStar.setMaxWidth(15);
+        btnOneStar.setMaxHeight(15);
+        btnTwoStar.setMaxWidth(15);
+        btnTwoStar.setMaxHeight(15);
+        btnThreeStar.setMaxWidth(15);
+        btnThreeStar.setMaxHeight(15);
+        btnFourStar.setMaxWidth(15);
+        btnFourStar.setMaxHeight(15);
+        btnFiveStar.setMaxWidth(15);
+        btnFiveStar.setMaxHeight(15);
+        star.setFitWidth(15);
+        star.setFitHeight(15);
 
         //Create a like button
         ImageView likeButtonGraphic = new ImageView();
