@@ -3,7 +3,6 @@ package dk.easv.presentation.controller.searchControllers;
 import dk.easv.entities.Movie;
 import dk.easv.presentation.controller.BudgetMother;
 import dk.easv.presentation.model.AppModel;
-import javafx.application.Platform;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -69,9 +68,7 @@ public class TitleSearchController extends BudgetMother implements Initializable
     }
 
     public void addMovies(int amount){
-        List[] results = super.addMovies(amount, filteredMovies);
-        shownMovies.setAll(results[0]);
-        filteredMovies.setAll(results[1]);
+        shownMovies.addAll(super.addMovies(amount, filteredMovies));
         flowPane.getChildren().setAll(shownMovies);
     }
 

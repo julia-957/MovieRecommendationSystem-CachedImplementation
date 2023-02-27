@@ -180,10 +180,9 @@ public class MovieView extends HBox {
         movieInfo.setPadding(new Insets(5));
         movieInfo.setVgrow(fillerHBox, Priority.ALWAYS);
 
-        //Add all elements into the main HBox and add it into a HashMap of loaded movie views in model
+        //Add all elements into the main HBox
         this.getChildren().addAll(moviePoster, movieInfo);
         this.setHgrow(movieInfo, Priority.ALWAYS);
-        model.updateHashMap(movie.getId(), this);
     }
 
     public void updateHeart(){

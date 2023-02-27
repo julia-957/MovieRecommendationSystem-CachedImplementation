@@ -5,16 +5,12 @@ import dk.easv.logic.LogicManager;
 import javafx.beans.property.SimpleObjectProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.scene.layout.HBox;
 
-import java.security.Key;
 import java.util.*;
 
 public class AppModel {
     private static AppModel instance = null;
     private final LogicManager logic = new LogicManager();
-    private final User user = new User();
-
     private final ObservableList<User>  obsUsers = FXCollections.observableArrayList();
     private final ObservableList<Movie> obsTopMovieSeen = FXCollections.observableArrayList();
     private final ObservableList<Movie> obsTopMovieNotSeen = FXCollections.observableArrayList();
@@ -22,11 +18,8 @@ public class AppModel {
     private final ObservableList<TopMovie> obsTopMoviesSimilarUsers = FXCollections.observableArrayList();
     private final ObservableList<Movie> topMoviesSimilarUsersMovies = FXCollections.observableArrayList();
     private ObservableList<Movie> favouriteMovies = FXCollections.observableArrayList();
-
     private final SimpleObjectProperty<User> obsLoggedInUser = new SimpleObjectProperty<>();
-
     private Map<Integer, Movie> allMoviesHashMap = new HashMap<>();
-    private final HashMap<Integer, HBox> loadedMovies = new HashMap<>();
 
     public static AppModel getInstance(){
         if(instance == null)
@@ -115,14 +108,6 @@ public class AppModel {
 
     public ObservableList<Movie> searchMovies(String query) {
         return logic.searchMovies(query);
-    }
-
-    public HashMap<Integer, HBox> getLoadedMovies() {
-        return loadedMovies;
-    }
-
-    public void updateHashMap(int movieID, MovieView mainContainer){
-        loadedMovies.put(movieID, mainContainer);
     }
 
     public Map<Integer, Movie> getAllMovies() {
