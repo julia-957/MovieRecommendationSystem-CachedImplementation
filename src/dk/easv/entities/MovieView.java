@@ -176,116 +176,34 @@ public class MovieView extends HBox {
         }
         updateStars(rating);
 
-        //TODO threading?
-        btnOneStar.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                var select = starButtonImgViews.stream().filter(iv -> iv.getStyleClass().get(0) == "filled").toArray();
-                int filledCount = select.length;
-                if (filledCount == 0) {
-                    rating = new Rating(user, movie, -5);
-                    model.addRating(rating);
-                    updateStars(rating);
-                } else if (filledCount == 1) {
-                    resetStars();
-                    model.removeRating(new Rating(user, movie, -5));
-                    rating = null;
-                } else {
-                    model.removeRating(rating);
-                    rating = new Rating(user, movie, -5);
-                    model.addRating(rating);
-                    updateStars(rating);
-                }
-            }
-        });
+        btnOneStar.setOnAction(event -> rateMovie(btnOneStar, 1));
 
-        btnTwoStar.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                var select = starButtonImgViews.stream().filter(iv -> iv.getStyleClass().get(0) == "filled").toArray();
-                int filledCount = select.length;
-                if (filledCount == 0) {
-                    rating = new Rating(user, movie, -3);
-                    model.addRating(rating);
-                    updateStars(rating);
-                } else if (filledCount == 2) {
-                    resetStars();
-                    model.removeRating(new Rating(user, movie, -3));
-                    rating = null;
-                } else {
-                    model.removeRating(rating);
-                    rating = new Rating(user, movie, -3);
-                    model.addRating(rating);
-                    updateStars(rating);
-                }
-            }
-        });
+        btnTwoStar.setOnAction(event -> rateMovie(btnTwoStar, 2));
 
-        btnThreeStar.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                var select = starButtonImgViews.stream().filter(iv -> iv.getStyleClass().get(0) == "filled").toArray();
-                int filledCount = select.length;
-                if (filledCount == 0) {
-                    rating = new Rating(user, movie, 1);
-                    model.addRating(rating);
-                    updateStars(rating);
-                } else if (filledCount == 3) {
-                    resetStars();
-                    model.removeRating(new Rating(user, movie, 1));
-                    rating = null;
-                } else {
-                    model.removeRating(rating);
-                    rating = new Rating(user, movie, 1);
-                    model.addRating(rating);
-                    updateStars(rating);
-                }
-            }
-        });
+        btnThreeStar.setOnAction(event -> rateMovie(btnThreeStar, 3));
 
-        btnFourStar.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                var select = starButtonImgViews.stream().filter(iv -> iv.getStyleClass().get(0) == "filled").toArray();
-                int filledCount = select.length;
-                if (filledCount == 0) {
-                    rating = new Rating(user, movie, 3);
-                    model.addRating(rating);
-                    updateStars(rating);
-                } else if (filledCount == 4) {
-                    resetStars();
-                    model.removeRating(new Rating(user, movie, 3));
-                    rating = null;
-                } else {
-                    model.removeRating(rating);
-                    rating = new Rating(user, movie, 3);
-                    model.addRating(rating);
-                    updateStars(rating);
-                }
-            }
-        });
+        btnFourStar.setOnAction(event -> rateMovie(btnFourStar, 4));
 
-        btnFiveStar.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                var select = starButtonImgViews.stream().filter(iv -> iv.getStyleClass().get(0) == "filled").toArray();
-                int filledCount = select.length;
-                if (filledCount == 0) {
-                    rating = new Rating(user, movie, 5);
-                    model.addRating(rating);
-                    updateStars(rating);
-                } else if (filledCount == 5) {
-                    resetStars();
-                    model.removeRating(new Rating(user, movie, 5));
-                    rating = null;
-                } else {
-                    model.removeRating(rating);
-                    rating = new Rating(user, movie, 5);
-                    model.addRating(rating);
-                    updateStars(rating);
-                }
-            }
-        });
+        btnFiveStar.setOnAction(event -> rateMovie(btnFiveStar, 5));
+    }
+
+    private void rateMovie(Button btn, int value){
+        var select = starButtonImgViews.stream().filter(iv -> iv.getStyleClass().get(0) == "filled").toArray();
+        int filledCount = select.length;
+        if (filledCount == 0) {
+            rating = new Rating(user, movie, starButtons.get(btn));
+            model.addRating(rating);
+            updateStars(rating);
+        } else if (filledCount == value) {
+            resetStars();
+            model.removeRating(new Rating(user, movie, starButtons.get(btn)));
+            rating = null;
+        } else {
+            model.removeRating(rating);
+            rating = new Rating(user, movie, starButtons.get(btn));
+            model.addRating(rating);
+            updateStars(rating);
+        }
     }
 
     private void updateStars(Rating rating){

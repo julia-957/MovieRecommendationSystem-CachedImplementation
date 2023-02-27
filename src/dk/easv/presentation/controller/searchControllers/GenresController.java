@@ -26,8 +26,7 @@ public class GenresController extends BudgetMother implements Initializable {
     private final AppModel model = AppModel.getInstance();
     @FXML private FlowPane flowPane;
     @FXML private ScrollPane scrollPane, genresScrollPane;
-    @FXML
-    private VBox genresVBox;
+    @FXML private VBox genresVBox;
     private ObservableList<Movie> filteredMovies = FXCollections.observableArrayList();
     private final ObservableList<HBox> shownMovies = FXCollections.observableArrayList();
     private List<Button> buttons = new ArrayList<>();
