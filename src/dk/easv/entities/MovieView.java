@@ -15,15 +15,15 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Locale;
-import java.util.Objects;
+import java.util.*;
 
 public class MovieView extends HBox {
     private final Movie movie;
+    private User user;
     private final AppModel model = AppModel.getInstance();
     private final RoundImageCorners roundImageCorners = new RoundImageCorners();
+    private Rating rating = null;
+
     private final ImageView likeButtonGraphic;
     private final Image heartFilled = new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/electricLilac/heart.png")));
     private final Image heartOutline = new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/electricLilac/heart-outline.png")));
@@ -31,10 +31,17 @@ public class MovieView extends HBox {
     private final Image starFilled = new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/electricLilac/star-fill.png")));
     private final List<ImageView> starButtonImgViews = new ArrayList<>();
     private Button btnOneStar, btnTwoStar, btnThreeStar, btnFourStar, btnFiveStar;
+    private final HashMap<Button, Integer> starButtons = new HashMap<>();
 
     public MovieView(Movie movie) {
         super(10);
         this.movie = movie;
+        this.user = model.getObsLoggedInUser();
+
+        var select = user.getRatings().stream().filter(r -> r.getMovie().getId() == movie.getId()).findFirst();
+        this.rating = select.orElse(null);
+
+
 
         this.getStyleClass().setAll("movieDisplayHBox", "rounded", "shadow");
         this.setPrefWidth(400);
@@ -80,14 +87,14 @@ public class MovieView extends HBox {
         likeButton.setOnAction(new EventHandler<>() {
             @Override
             public void handle(ActionEvent event) {
-                if (model.getObsLoggedInUser().getFavouriteMovies().contains(movie)) {
+                if (user.getFavouriteMovies().contains(movie)) {
                     likeButtonGraphic.setImage(heartOutline);
-                    model.removeMovieFromFavourites(movie, model.getObsLoggedInUser());
-                    model.getObsLoggedInUser().getFavouriteMovies().remove(movie);
+                    model.removeMovieFromFavourites(movie, user);
+                    user.getFavouriteMovies().remove(movie);
                 } else {
                     likeButtonGraphic.setImage(heartFilled);
-                    model.addMovieToFavourites(movie, model.getObsLoggedInUser());
-                    model.getObsLoggedInUser().getFavouriteMovies().add(movie);
+                    model.addMovieToFavourites(movie, user);
+                    user.getFavouriteMovies().add(movie);
                 }
                 likeButton.setGraphic(likeButtonGraphic);
             }
@@ -97,7 +104,7 @@ public class MovieView extends HBox {
         likeButtonGraphic.setFitWidth(20);
         likeButtonGraphic.setFitHeight(18.4);
 
-        if(model.getObsLoggedInUser().getFavouriteMovies().contains(movie))
+        if(user.getFavouriteMovies().contains(movie))
             likeButtonGraphic.setImage(heartFilled);
         else
             likeButtonGraphic.setImage(heartOutline);
@@ -134,53 +141,59 @@ public class MovieView extends HBox {
     }
 
     private void setUpStarButtons(){
-        //Create star buttons
         ImageView imgViewOneStar = new ImageView(star);
-        imgViewOneStar.setFitWidth(20);
-        imgViewOneStar.setFitHeight(20);
         btnOneStar = new Button("", imgViewOneStar); //one star = -5
+        starButtons.put(btnOneStar, -5);
         starButtonImgViews.add(imgViewOneStar);
 
         ImageView imgViewTwoStar = new ImageView(star);
-        imgViewTwoStar.setFitWidth(20);
-        imgViewTwoStar.setFitHeight(20);
         btnTwoStar = new Button("", imgViewTwoStar); //two stars = -3
+        starButtons.put(btnTwoStar, -3);
         starButtonImgViews.add(imgViewTwoStar);
 
         ImageView imgViewThreeStar = new ImageView(star);
-        imgViewThreeStar.setFitWidth(20);
-        imgViewThreeStar.setFitHeight(20);
         btnThreeStar = new Button("", imgViewThreeStar); //three stars = 1
+        starButtons.put(btnThreeStar, 1);
         starButtonImgViews.add(imgViewThreeStar);
 
         ImageView imgViewFourStar = new ImageView(star);
-        imgViewFourStar.setFitWidth(20);
-        imgViewFourStar.setFitHeight(20);
         btnFourStar = new Button("", imgViewFourStar); //four stars = 3
+        starButtons.put(btnFourStar, 3);
         starButtonImgViews.add(imgViewFourStar);
 
         ImageView imgViewFiveStar = new ImageView(star);
-        imgViewFiveStar.setFitWidth(20);
-        imgViewFiveStar.setFitHeight(20);
         btnFiveStar = new Button("", imgViewFiveStar); //five stars = 5
+        starButtons.put(btnFiveStar, 5);
         starButtonImgViews.add(imgViewFiveStar);
 
+        for (Button btn: starButtons.keySet()) {
+            btn.setMaxWidth(20);
+            btn.setMaxHeight(20);
+        }
+
+        for (ImageView imageView: starButtonImgViews) {
+            imageView.setFitWidth(20);
+            imageView.setFitHeight(20);
+        }
+
+        updateStars(rating);
+
+        //TODO threading? making it work again
         btnOneStar.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
                 if (imgViewOneStar.getImage() == star){
-                    imgViewOneStar.setImage(starFilled);
-                    imgViewTwoStar.setImage(star);
-                    imgViewThreeStar.setImage(star);
-                    imgViewFourStar.setImage(star);
-                    imgViewFiveStar.setImage(star);
-                    model.addRating(new Rating(model.getObsLoggedInUser(), movie, -5));
+                    if (rating != null)
+                        model.removeRating(rating);
+                    rating = new Rating(user, movie, -5);
+                    model.addRating(rating);
+                    updateStars(rating);
                 }
                 else {
                     resetStars();
-                    model.removeRating(new Rating(model.getObsLoggedInUser(), movie, -5));
+                    model.removeRating(new Rating(user, movie, -5));
+                    rating = null;
                 }
-
             }
         });
 
@@ -188,14 +201,17 @@ public class MovieView extends HBox {
             @Override
             public void handle(ActionEvent event) {
                 if (imgViewTwoStar.getImage() == star) {
-                    imgViewOneStar.setImage(starFilled);
-                    imgViewTwoStar.setImage(starFilled);
-                    imgViewThreeStar.setImage(star);
-                    imgViewFourStar.setImage(star);
-                    imgViewFiveStar.setImage(star);
+                    if (rating != null)
+                        model.removeRating(rating);
+                    rating = new Rating(user, movie, -3);
+                    model.addRating(rating);
+                    updateStars(rating);
                 }
-                else
+                else{
+                    model.removeRating(new Rating(user, movie, -3));
                     resetStars();
+                    rating = null;
+                }
             }
         });
 
@@ -203,16 +219,17 @@ public class MovieView extends HBox {
             @Override
             public void handle(ActionEvent event) {
                 if (imgViewThreeStar.getImage() == star) {
-                    imgViewOneStar.setImage(starFilled);
-                    imgViewTwoStar.setImage(starFilled);
-                    imgViewThreeStar.setImage(starFilled);
-                    imgViewFourStar.setImage(star);
-                    imgViewFiveStar.setImage(star);
+                    if (rating != null)
+                        model.removeRating(rating);
+                    rating = new Rating(user, movie, 1);
+                    model.addRating(rating);
+                    updateStars(rating);
                 }
                 else{
+                    model.removeRating(new Rating(user, movie, 1));
                     resetStars();
+                    rating = null;
                 }
-
             }
         });
 
@@ -220,14 +237,17 @@ public class MovieView extends HBox {
             @Override
             public void handle(ActionEvent event) {
                 if (imgViewFourStar.getImage() == star) {
-                    imgViewOneStar.setImage(starFilled);
-                    imgViewTwoStar.setImage(starFilled);
-                    imgViewThreeStar.setImage(starFilled);
-                    imgViewFourStar.setImage(starFilled);
-                    imgViewFiveStar.setImage(star);
+                    if (rating != null)
+                        model.removeRating(rating);
+                    rating = new Rating(user, movie, 3);
+                    model.addRating(rating);
+                    updateStars(rating);
                 }
-                else
+                else{
+                    model.removeRating(new Rating(user, movie, 3));
                     resetStars();
+                    rating = null;
+                }
             }
         });
 
@@ -235,50 +255,66 @@ public class MovieView extends HBox {
             @Override
             public void handle(ActionEvent event) {
                 if (imgViewFiveStar.getImage() == star) {
-                    imgViewOneStar.setImage(starFilled);
-                    imgViewTwoStar.setImage(starFilled);
-                    imgViewThreeStar.setImage(starFilled);
-                    imgViewFourStar.setImage(starFilled);
-                    imgViewFiveStar.setImage(starFilled);
+                    if (rating != null)
+                        model.removeRating(rating);
+                    rating = new Rating(user, movie, 5);
+                    model.addRating(rating);
+                    updateStars(rating);
                 }
-                else
+                else{
+                    model.removeRating(new Rating(user, movie, 5));
                     resetStars();
+                    rating = null;
+                }
             }
         });
+    }
 
-
-        if (model.getObsLoggedInUser().getRatings().stream().anyMatch(rating -> rating.getMovie().getId() == movie.getId())){
-            var select = model.getObsLoggedInUser().getRatings().stream().filter(r -> r.getMovie().getId() == movie.getId()).findFirst();
-            int rating = select.get().getRating();
-            switch (rating){
+    private void updateStars(Rating rating){
+        if (rating == null){
+            for (ImageView iv: starButtonImgViews) {
+                iv.setImage(star);
+            }
+        }
+        else {
+            switch (rating.getRating()){
                 case -5:
-                    btnOneStar.getOnAction().handle(null);
+                    starButtonImgViews.get(0).setImage(starFilled);
+                    for (int i = 1; i <= starButtonImgViews.size()-1; i++){
+                        starButtonImgViews.get(i).setImage(star);
+                    }
                     break;
                 case -3:
-                    btnTwoStar.getOnAction().handle(null);
+                    for (int i = 0; i < 2; i++){
+                        starButtonImgViews.get(i).setImage(starFilled);
+                    }
+                    for (int i = 2; i <= starButtonImgViews.size()-1; i++){
+                        starButtonImgViews.get(i).setImage(star);
+                    }
                     break;
                 case 1:
-                    btnThreeStar.getOnAction().handle(null);
+                    for (int i = 0; i < 3; i++){
+                        starButtonImgViews.get(i).setImage(starFilled);
+                    }
+                    for (int i = 3; i <= starButtonImgViews.size()-1; i++){
+                        starButtonImgViews.get(i).setImage(star);
+                    }
                     break;
                 case 3:
-                    btnFourStar.getOnAction().handle(null);
+                    for (int i = 0; i < 4; i++){
+                        starButtonImgViews.get(i).setImage(starFilled);
+                    }
+                    for (int i = 4; i <= starButtonImgViews.size()-1; i++){
+                        starButtonImgViews.get(i).setImage(star);
+                    }
                     break;
                 case 5:
-                    btnFiveStar.getOnAction().handle(null);
+                    for (int i = 0; i <= starButtonImgViews.size()-1; i++){
+                        starButtonImgViews.get(i).setImage(starFilled);
+                    }
                     break;
             }
         }
-
-        btnOneStar.setMaxWidth(20);
-        btnOneStar.setMaxHeight(20);
-        btnTwoStar.setMaxWidth(20);
-        btnTwoStar.setMaxHeight(20);
-        btnThreeStar.setMaxWidth(20);
-        btnThreeStar.setMaxHeight(20);
-        btnFourStar.setMaxWidth(20);
-        btnFourStar.setMaxHeight(20);
-        btnFiveStar.setMaxWidth(20);
-        btnFiveStar.setMaxHeight(20);
     }
 
     public Movie getMovie() {

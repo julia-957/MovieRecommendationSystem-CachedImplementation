@@ -99,14 +99,16 @@ public class DataAccessManager {
         try {
             List<String> ratingLines = Files.readAllLines(Path.of("data/ratings.txt"));
             for (String ratingLine : ratingLines) {
-                String[] split = ratingLine.split(",");
-                int movieId = Integer.parseInt(split[0]);
-                int userId = Integer.parseInt(split[1]);
-                int rating = Integer.parseInt(split[2]);
-                Rating ratingObj = new Rating(users.get(userId), movies.get(movieId), rating);
-                ratings.add(ratingObj);
-                users.get(userId).getRatings().add(ratingObj);
-                movies.get(movieId).getRatings().add(ratingObj);
+                if (!ratingLine.isEmpty()){
+                    String[] split = ratingLine.split(",");
+                    int movieId = Integer.parseInt(split[0]);
+                    int userId = Integer.parseInt(split[1]);
+                    int rating = Integer.parseInt(split[2]);
+                    Rating ratingObj = new Rating(users.get(userId), movies.get(movieId), rating);
+                    ratings.add(ratingObj);
+                    users.get(userId).getRatings().add(ratingObj);
+                    movies.get(movieId).getRatings().add(ratingObj);
+                }
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -159,7 +161,7 @@ public class DataAccessManager {
 
     public void addRating(Rating rating) {
         try {
-            String ratingLine = rating.getMovie().getId() + "," + rating.getUser().getId() + "," + rating.getRating() + "\n";
+            String ratingLine =  rating.getMovie().getId() + "," + rating.getUser().getId() + "," + rating.getRating() + "\n";
             Files.writeString(Path.of("data/ratings.txt"), ratingLine, APPEND);
         } catch (IOException e) {
             e.printStackTrace();
@@ -171,7 +173,8 @@ public class DataAccessManager {
         List<String> out = null;
         try {
             out = Files.lines(file.toPath())
-                    .filter(line -> !line.contains(rating.getMovie().getId() + "," + rating.getUser().getId() + "," + rating.getRating()))
+                    .filter(line -> !line.contains(rating.getMovie().getId() + "," + rating.getUser().getId() + "," + rating.getRating())
+                    && !line.isEmpty())
                     .collect(Collectors.toList());
             Files.write(file.toPath(), out, StandardOpenOption.WRITE, StandardOpenOption.TRUNCATE_EXISTING);
         } catch (IOException e) {
@@ -179,22 +182,16 @@ public class DataAccessManager {
         }
     }
 
-    public void editRating(Rating rating) {
+    public void editRating(Rating rating){
         try {
-            List<String> ratingLines = Files.readAllLines(Path.of("data/ratings.txt"));
-            String output = "";
-            for (String ratingLine : ratingLines) {
-                String[] split = ratingLine.split(",");
-                if (Objects.equals(split[0], String.valueOf(rating.getMovie().getId()))
-                        && Objects.equals(split[1], String.valueOf(rating.getUser().getId()))) {
-                    ratingLine = String.valueOf(rating.getMovie().getId())
-                            + rating.getUser().getId() + rating.getRating();
-                }
-                output += "\n" + ratingLine;
+            String output="";
+            for (Rating r: ratings){
+                if (r.getMovie() == rating.getMovie() && r.getUser() == rating.getUser())
+                    r = rating;
+                output +=  r.getMovie().getId() + "," + r.getUser().getId() + "," + r.getRating() + "\n";
             }
             Files.writeString(Path.of("data/ratings.txt"), output);
-        }
-        catch (IOException e){
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
