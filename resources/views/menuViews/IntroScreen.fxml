@@ -86,27 +86,27 @@
                                     <ImageView fx:id="iconRatingCurrentUser" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" />
                                     <Button fx:id="btnOneStar" mnemonicParsing="false" prefHeight="15.0" prefWidth="15.0">
                                        <graphic>
-                                          <ImageView fx:id="starOne" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" />
+                                          <ImageView fx:id="starOne" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" />
                                        </graphic>
                                     </Button>
                                     <Button fx:id="btnTwoStar" mnemonicParsing="false" prefHeight="15.0" prefWidth="15.0">
                                        <graphic>
-                                          <ImageView fx:id="starTwo" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" />
+                                          <ImageView fx:id="starTwo" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" />
                                        </graphic>
                                     </Button>
                                     <Button fx:id="btnThreeStar" mnemonicParsing="false" prefHeight="15.0" prefWidth="15.0">
                                        <graphic>
-                                          <ImageView fx:id="starThree" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" />
+                                          <ImageView fx:id="starThree" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" />
                                        </graphic>
                                     </Button>
                                     <Button fx:id="btnFourStar" mnemonicParsing="false" prefHeight="15.0" prefWidth="15.0">
                                        <graphic>
-                                          <ImageView fx:id="starFour" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" />
+                                          <ImageView fx:id="starFour" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" />
                                        </graphic>
                                     </Button>
                                     <Button fx:id="btnFiveStar" mnemonicParsing="false" prefHeight="15.0" prefWidth="15.0">
                                        <graphic>
-                                          <ImageView fx:id="starFive" fitHeight="15.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true" />
+                                          <ImageView fx:id="starFive" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" />
                                        </graphic>
                                     </Button>
                                  </children>
