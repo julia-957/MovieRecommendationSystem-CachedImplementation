@@ -8,10 +8,14 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.effect.DropShadow;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.IOException;
 
@@ -28,11 +32,25 @@ public class LogInController {
         Thread thread = new Thread(() -> {
             // show progress bar and status label
             Platform.runLater(() -> {
+                Rectangle rect = new Rectangle();
+                rect.setX(0.0);
+                rect.setY(0.0);
+                rect.setWidth(gridPane.getWidth());
+                rect.setHeight(gridPane.getHeight());
+                rect.setFill(Color.web("#3B3464",0.5));
+                gridPane.getChildren().add(rect);
+
                 VBox root = new VBox();
-                root.getChildren().add(new ImageView("https://i.gifer.com/YCZH.gif"));
+                var image = new ImageView("https://i.gifer.com/YCZH.gif");
+                root.getChildren().add(image);
                 Scene scene = new Scene(root, 414, 233);
+                scene.setFill(Color.TRANSPARENT);
+                root.setStyle("-fx-background-color: #F1EDFF;-fx-border-radius: 20;-fx-background-radius: 20");
                 stage.setScene(scene);
+                stage.initStyle(StageStyle.UNDECORATED);
+                stage.initStyle(StageStyle.TRANSPARENT);
                 stage.show();
+                stage.centerOnScreen();
             });
 
             // perform long running operation
