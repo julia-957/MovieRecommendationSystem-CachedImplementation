@@ -28,11 +28,13 @@ public class LogInController {
 
     public void logIn(ActionEvent actionEvent) throws IOException {
         Stage stage = new Stage();
+        ImageView image = new ImageView("https://i.gifer.com/YCZH.gif");
+        Rectangle rect = new Rectangle();
+        VBox root = new VBox();
 
         Thread thread = new Thread(() -> {
             // show progress bar and status label
             Platform.runLater(() -> {
-                Rectangle rect = new Rectangle();
                 rect.setX(0.0);
                 rect.setY(0.0);
                 rect.setWidth(gridPane.getWidth());
@@ -40,8 +42,6 @@ public class LogInController {
                 rect.setFill(Color.web("#3B3464",0.5));
                 gridPane.getChildren().add(rect);
 
-                VBox root = new VBox();
-                var image = new ImageView("https://i.gifer.com/YCZH.gif");
                 root.getChildren().add(image);
                 Scene scene = new Scene(root, 414, 233);
                 scene.setFill(Color.TRANSPARENT);
@@ -65,6 +65,9 @@ public class LogInController {
 
             // update UI with result
             Platform.runLater(() -> {
+                root.getChildren().remove(rect);
+                rect.setVisible(false);
+                //rect.isVisible(false);
                 if (user != null) {
                     model.loadData(a,b,c,d);
                     appController.openMenu();
@@ -72,7 +75,6 @@ public class LogInController {
                     Alert alert = new Alert(Alert.AlertType.ERROR, "Wrong username or password");
                     alert.showAndWait();
                 }
-
                 // hide progress bar and status label
                 stage.close();
             });
