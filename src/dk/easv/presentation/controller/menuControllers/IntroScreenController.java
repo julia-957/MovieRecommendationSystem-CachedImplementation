@@ -69,9 +69,9 @@ public class IntroScreenController extends BudgetMother implements Initializable
         iconUserRatings.setFitWidth(30);
         iconUserRatings.setFitHeight(20);
 
-        iconRatingCurrentUser.setImage(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/electricLilac/user.png"))));
-        iconRatingCurrentUser.setFitWidth(30);
-        iconRatingCurrentUser.setFitHeight(20);
+        //iconRatingCurrentUser.setImage(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/electricLilac/user.png"))));
+        //iconRatingCurrentUser.setFitWidth(30);
+        //iconRatingCurrentUser.setFitHeight(20);
 
         starOne.setImage(new Image(Objects.requireNonNull(Main.class.getResourceAsStream("/icons/electricLilac/star-bold.png"))));
         btnOneStar.setGraphic(starOne);
@@ -118,9 +118,6 @@ public class IntroScreenController extends BudgetMother implements Initializable
         for (MovieView m: shownMovies) {
             if (m.getMovie() == featuredMovies.get(moviePosition)){
                 featuredMovies.get(moviePosition).getMovieView().updateHeart();
-                int index = flowPane.getChildren().indexOf(featuredMovies.get(moviePosition).getMovieView());
-                flowPane.getChildren().remove(index);
-                flowPane.getChildren().add(index, featuredMovies.get(moviePosition).getMovieView());
                 return;
             }
         }

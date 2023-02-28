@@ -145,5 +145,17 @@ public class LogicManager {
     public Map<Integer, Movie> getAllMovies(){
         return dataMgr.getAllMovies();
     }
+
+    public void addRating(Rating rating){
+        dataMgr.addRating(rating);
+    }
+
+    public void removeRating(Rating rating){
+        dataMgr.removeRating(rating);
+    }
+
+    public void editRating(Rating rating){
+        dataMgr.editRating(rating);
+    }
 }
 

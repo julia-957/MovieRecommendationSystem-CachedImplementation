@@ -127,10 +127,6 @@ public class AppModel {
         logic.removeMovieFromFavourites(movie, user);
     }
 
-    public List<Movie> getFavouriteMovies() {
-        return favouriteMovies;
-    }
-
     public void setAllMovies(){
         allMoviesHashMap = logic.getAllMovies();
     }
@@ -151,5 +147,17 @@ public class AppModel {
                 list.add(0, removed.get(i));
             }
         }
+    }
+
+    public void addRating(Rating rating){
+        logic.addRating(rating);
+    }
+
+    public void removeRating(Rating rating){
+        logic.removeRating(rating);
+    }
+
+    public void editRating(Rating rating){
+        logic.editRating(rating);
     }
 }
